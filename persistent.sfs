@@ -11,7 +11,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/hexagonCircles
-	launchID = 19
+	launchID = 20
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
 	modded = False
@@ -197,7 +197,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 685115.6734242253
+		funds = 781415.57219908759
 	}
 	SCENARIO
 	{
@@ -219,23 +219,36 @@ GAME
 			}
 			RecordsAltitude
 			{
-				reached = 5987.1718933360189
-				record = 39124.158992632758
+				completed = 9978.1995771041366
+				record = 70000
 			}
 			RecordsDepth
 			{
-				reached = 1360.0403027334326
-				record = 0.32667610805947334
+				reached = 10806.80153999832
+				record = 0.75392735609784722
 			}
 			RecordsSpeed
 			{
-				reached = 5940.1346570073374
-				record = 1041.4763913222359
+				reached = 10689.290905231233
+				record = 1851.0180605478645
 			}
 			RecordsDistance
 			{
 				completed = 5988.131893336018
 				record = 100000
+			}
+			ReachedSpace
+			{
+				completed = 9978.219577104137
+				vessel
+				{
+					name = 长征3号
+					flag = Squad/Flags/hexagonCircles
+				}
+				crew
+				{
+					crews = Jebediah Kerman
+				}
 			}
 			Kerbin
 			{
@@ -285,7 +298,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 1.12277985
+		sci = 63.2859116
 		Tech
 		{
 			id = start
@@ -775,6 +788,72 @@ GAME
 			asc = True
 			cap = 5.20000029
 		}
+		Science
+		{
+			id = temperatureScan@KerbinInSpaceLow
+			title = 在距离Kerbin较近的太空中的温度扫描
+			dsc = 1
+			scv = 0
+			sbv = 1
+			sci = 8
+			asc = True
+			cap = 8
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinInSpaceLow
+			title = 在距离Kerbin较近的太空中的神秘黏性物质™观察结果
+			dsc = 1
+			scv = 0.00283600739
+			sbv = 1
+			sci = 12.9631319
+			asc = True
+			cap = 13
+		}
+		Science
+		{
+			id = crewReport@KerbinInSpaceLow
+			title = 在距离Kerbin较近的太空中的乘员报告
+			dsc = 1
+			scv = 0
+			sbv = 1
+			sci = 5
+			asc = True
+			cap = 5
+		}
+		Science
+		{
+			id = barometerScan@KerbinInSpaceLow
+			title = 在距离Kerbin较近的太空中的大气压扫描
+			dsc = 1
+			scv = 0
+			sbv = 1
+			sci = 12
+			asc = True
+			cap = 12
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfSplashedWater
+			title = 在Kerbin的水边的EVA报告
+			dsc = 1
+			scv = 0
+			sbv = 0.400000006
+			sci = 3.20000005
+			asc = True
+			cap = 3.20000005
+		}
+		Science
+		{
+			id = recovery@KerbinSubOrbited
+			title = 回收从亚轨道飞行返回的航天器。
+			dsc = 1
+			scv = 0.166666701
+			sbv = 8
+			sci = 8
+			asc = True
+			cap = 9.60000038
+		}
 	}
 	SCENARIO
 	{
@@ -785,7 +864,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 112.548004
+		rep = 138.074493
 	}
 	SCENARIO
 	{
@@ -1104,7 +1183,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 10192.379577108812
+		update = 10837.241539998984
 		version = 1.10.1
 		WEIGHTS
 		{
@@ -1112,7 +1191,7 @@ GAME
 			CometDetectionContract = 30
 			RecoverAsset = 30
 			PlantFlag = 30
-			PartTest = 90
+			PartTest = 89
 			GrandTour = 30
 			CollectScience = 30
 			TourismContract = 30
@@ -1139,61 +1218,11 @@ GAME
 			Moho = 30
 			Minmus = 30
 			Mun = 30
-			Kerbin = 90
+			Kerbin = 89
 			Sun = 30
 		}
 		CONTRACTS
 		{
-			CONTRACT
-			{
-				guid = 4819d0a5-affe-477f-aea7-494493453e29
-				type = PartTest
-				prestige = 0
-				seed = 174822077
-				state = Offered
-				viewed = Read
-				agent = 火箭联合公司
-				agentName = Rokea Inc
-				deadlineType = Floating
-				expiryType = Floating
-				values = 39187.2260445952,8346879.14749878,5784.4796271515,15184.258331709,5840.09957256318,2,3.920482,3,48230.7562857519,0,0,0
-				part = Separator.1
-				haul = False
-				dest = 1
-				sit = SPLASHED
-				exp = True
-				PARAM
-				{
-					name = PartTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = Separator.1
-					body = Kerbin
-					situation = SPLASHED
-					uniqueID = 0.65468090570284143
-					haul = False
-					repeatability = ALWAYS
-					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
-					PARAM
-					{
-						name = ReachDestination
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						dest = 1
-						title = 
-					}
-					PARAM
-					{
-						name = ReachSituation
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						sit = SPLASHED
-						title = 
-					}
-				}
-			}
 			CONTRACT
 			{
 				guid = 19aea074-1869-4c7c-97e3-3f3c2b3b08bc
@@ -1470,18 +1499,18 @@ GAME
 				type = PartTest
 				prestige = 1
 				seed = -1526885465
-				state = Active
+				state = Offered
 				viewed = Read
 				agent = 离子质子电子交响乐
 				agentName = Ionic Symphonic Protonic Electronics
 				deadlineType = Floating
 				expiryType = Floating
-				values = 21600,9201600,11250,28125,11250,4,8,5,22636.0799999993,10187.3195771087,9211787.31957711,0
+				values = 21600,9201600,11250,28125,11250,4,8,5,22636.0799999993,0,0,0
 				part = solidBooster1-1
 				haul = False
 				dest = 1
 				sit = FLYING
-				exp = False
+				exp = True
 				PARAM
 				{
 					name = PartTest
@@ -1529,6 +1558,74 @@ GAME
 						values = 0,0,0,0,0
 						minSpd = 330
 						maxSpd = 430
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 86c23cf3-6a22-4642-838a-db59c7239fcd
+				type = PartTest
+				prestige = 1
+				seed = -496729605
+				state = Offered
+				viewed = Read
+				agent = 马科索建筑玩具
+				agentName = Maxo Construction Toys
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,11250,28125,11250,4,8,5,31578.2595771041,0,0,0
+				part = radialDecoupler2
+				haul = False
+				dest = 1
+				sit = FLYING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = radialDecoupler2
+					body = Kerbin
+					situation = FLYING
+					uniqueID = 0.93397908468450441
+					haul = False
+					repeatability = BODYANDSITUATION
+					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
+					PARAM
+					{
+						name = ReachDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 42000
+						maxAlt = 46000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 700
+						maxSpd = 1690
 					}
 				}
 			}
@@ -1593,94 +1690,52 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = ab0a805b-420c-4c5d-8b71-638c240b534c
+				guid = 199cbcdb-bc6f-4a57-95b8-1aad005d55ca
 				type = PartTest
 				prestige = 1
-				seed = -1526702394
-				state = Active
+				seed = -562285609
+				state = Offered
 				viewed = Read
-				agent = O.M.B.爆破企业
-				agentName = O.M.B. Demolition Enterprises
+				agent = 坎巴拉运动有限公司
+				agentName = Kerbal Motion LLC
 				deadlineType = Floating
 				expiryType = Floating
-				values = 21600,9201600,8438,23203.4005029202,9281.8002011776,2,4.545455,4,22636.0999999993,10187.3195771087,9211787.31957711,0
-				part = HeatShield0
-				haul = True
+				values = 21600,9201600,24750,61875,24750,9,16,12,32285.9909052312,0,0,0
+				part = engineLargeSkipper.v2
+				haul = False
 				dest = 1
-				sit = FLYING
-				exp = False
+				sit = ESCAPING
+				exp = True
 				PARAM
 				{
 					name = PartTest
 					state = Incomplete
 					values = 0,0,0,0,0
-					part = HeatShield0
+					part = engineLargeSkipper.v2
 					body = Kerbin
-					situation = FLYING
-					uniqueID = 0.99939645128296595
-					haul = True
+					situation = ESCAPING
+					uniqueID = 0.82295885766994215
+					haul = False
 					repeatability = BODYANDSITUATION
-				}
-				PARAM
-				{
-					name = ReachDestination
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					dest = 1
-					title = 
-				}
-				PARAM
-				{
-					name = ReachSituation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					sit = FLYING
-					title = 
-				}
-				PARAM
-				{
-					name = ReachAltitudeEnvelope
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					minAlt = 32000
-					maxAlt = 44000
-				}
-				PARAM
-				{
-					name = ReachSpeedEnvelope
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					minSpd = 1720
-					maxSpd = 2180
-				}
-			}
-			CONTRACT
-			{
-				guid = cd0d1b37-31e9-4cac-a298-054bc306f173
-				type = ExplorationContract
-				prestige = 1
-				seed = 1848838631
-				state = Offered
-				viewed = Read
-				agent = Kerbin世界第一纪录保持协会
-				agentName = Kerbin World-Firsts Record-Keeping Society
-				deadlineType = None
-				expiryType = Floating
-				ignoresWeight = True
-				values = 64800,0,11200,20800,11200,4,8,0,64800.1,0,0,0
-				targetBody = 1
-				bodyRatio = 0
-				PARAM
-				{
-					name = ProgressTrackingParameter
-					state = Incomplete
-					values = 32000,0,4,8,0
-					targetBody = 1
-					targetType = REACHSPACE
+					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
+					PARAM
+					{
+						name = ReachDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = ESCAPING
+						title = 
+					}
 				}
 			}
 			CONTRACT
@@ -2486,6 +2541,52 @@ GAME
 			}
 			CONTRACT_FINISHED
 			{
+				guid = ae904d26-c19f-46b5-95ba-224914bebee8
+				type = SurveyContract
+				prestige = 0
+				seed = 934995408
+				state = Completed
+				viewed = Read
+				agent = 坎灵顿模型火箭和纸制品有限公司
+				agentName = Kerlington Model Rockets and Paper Products Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,46008000,7500,13250,7500,0,2,2,30122.5389838257,9322.05067084619,46017322.0506708,0
+				targetBody = 1
+				centerLatitude = -3.4989966701262865
+				centerLongitude = -78.095247981452175
+				dataName = 观测
+				anomalyName = 不一致
+				reportName = 报告
+				locationName = Kerbin^N
+				focusedSurvey = True
+				targetBand = LOW
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 17800
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = 1312460020
+					wpIndex = 0
+					wpTexture = report
+					wpLatitude = -3.4989959653287488
+					wpLongitude = -78.095259552933271
+					wpLandlocked = False
+					wpNavigationId = 83e851e2-f358-4059-98a2-f791e3f55a5f
+				}
+			}
+			CONTRACT_FINISHED
+			{
 				guid = 7c949bb4-c6c4-4efa-b751-372bb0ccbff2
 				type = SurveyContract
 				prestige = 0
@@ -2578,20 +2679,20 @@ GAME
 			}
 			CONTRACT_FINISHED
 			{
-				guid = 626f0141-3ff0-40cf-925f-0167f3b403ee
+				guid = 19adf458-ab57-4a1f-8bdf-933ef908abc9
 				type = SurveyContract
 				prestige = 0
-				seed = 1330029369
+				seed = 133380812
 				state = Completed
 				viewed = Read
-				agent = Dinkelstein Kerman建材商城
-				agentName = Dinkelstein Kerman's Construction Emporium
+				agent = 反应系统有限公司
+				agentName = Reaction Systems Ltd
 				deadlineType = Floating
 				expiryType = Floating
-				values = 64800,46008000,7724.99978542328,14329.8739511967,8111.24940633775,0,1.804179,1.95122,66985.9474487288,3728.37130614927,46011728.3713062,0
+				values = 129600,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,132886.610632322,4794.31107788866,46012794.3110779,0
 				targetBody = 1
-				centerLatitude = -1.3427003555103894
-				centerLongitude = -76.425811530713887
+				centerLatitude = 0.31043692470130602
+				centerLongitude = -75.325694381214447
 				dataName = 观测
 				anomalyName = 不一致
 				reportName = 报告
@@ -2608,18 +2709,18 @@ GAME
 					targetBody = 1
 					actionDescription = 写一份乘员报告
 					experiment = crewReport
-					flightThreshold = 16400
+					flightThreshold = 18000
 					band = 2
 					clusterState = MIXED
 					verified = True
 					contextual = False
-					wpSeed = 654909670
+					wpSeed = 651379161
 					wpIndex = 0
 					wpTexture = report
-					wpLatitude = -1.3427284208822003
-					wpLongitude = -76.425899490452323
+					wpLatitude = 0.3104411234143209
+					wpLongitude = -75.325698028008645
 					wpLandlocked = False
-					wpNavigationId = 57d678fe-7efd-4b3e-bb45-86609113d690
+					wpNavigationId = 5353305d-a25d-422d-bc6c-259a9c626c47
 				}
 			}
 			CONTRACT_FINISHED
@@ -2716,20 +2817,20 @@ GAME
 			}
 			CONTRACT_FINISHED
 			{
-				guid = 19adf458-ab57-4a1f-8bdf-933ef908abc9
+				guid = 626f0141-3ff0-40cf-925f-0167f3b403ee
 				type = SurveyContract
 				prestige = 0
-				seed = 133380812
+				seed = 1330029369
 				state = Completed
 				viewed = Read
-				agent = 反应系统有限公司
-				agentName = Reaction Systems Ltd
+				agent = Dinkelstein Kerman建材商城
+				agentName = Dinkelstein Kerman's Construction Emporium
 				deadlineType = Floating
 				expiryType = Floating
-				values = 129600,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,132886.610632322,4794.31107788866,46012794.3110779,0
+				values = 64800,46008000,7724.99978542328,14329.8739511967,8111.24940633775,0,1.804179,1.95122,66985.9474487288,3728.37130614927,46011728.3713062,0
 				targetBody = 1
-				centerLatitude = 0.31043692470130602
-				centerLongitude = -75.325694381214447
+				centerLatitude = -1.3427003555103894
+				centerLongitude = -76.425811530713887
 				dataName = 观测
 				anomalyName = 不一致
 				reportName = 报告
@@ -2746,18 +2847,18 @@ GAME
 					targetBody = 1
 					actionDescription = 写一份乘员报告
 					experiment = crewReport
-					flightThreshold = 18000
+					flightThreshold = 16400
 					band = 2
 					clusterState = MIXED
 					verified = True
 					contextual = False
-					wpSeed = 651379161
+					wpSeed = 654909670
 					wpIndex = 0
 					wpTexture = report
-					wpLatitude = 0.3104411234143209
-					wpLongitude = -75.325698028008645
+					wpLatitude = -1.3427284208822003
+					wpLongitude = -76.425899490452323
 					wpLandlocked = False
-					wpNavigationId = 5353305d-a25d-422d-bc6c-259a9c626c47
+					wpNavigationId = 57d678fe-7efd-4b3e-bb45-86609113d690
 				}
 			}
 			CONTRACT_FINISHED
@@ -2850,52 +2951,6 @@ GAME
 					wpLongitude = -75.527012044097546
 					wpLandlocked = False
 					wpNavigationId = 77eaf80e-a0a3-493f-9f35-3c2dbdf12a66
-				}
-			}
-			CONTRACT_FINISHED
-			{
-				guid = ae904d26-c19f-46b5-95ba-224914bebee8
-				type = SurveyContract
-				prestige = 0
-				seed = 934995408
-				state = Completed
-				viewed = Read
-				agent = 坎灵顿模型火箭和纸制品有限公司
-				agentName = Kerlington Model Rockets and Paper Products Inc
-				deadlineType = Floating
-				expiryType = Floating
-				values = 21600,46008000,7500,13250,7500,0,2,2,30122.5389838257,9322.05067084619,46017322.0506708,0
-				targetBody = 1
-				centerLatitude = -3.4989966701262865
-				centerLongitude = -78.095247981452175
-				dataName = 观测
-				anomalyName = 不一致
-				reportName = 报告
-				locationName = Kerbin^N
-				focusedSurvey = True
-				targetBand = LOW
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 17800
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = 1312460020
-					wpIndex = 0
-					wpTexture = report
-					wpLatitude = -3.4989959653287488
-					wpLongitude = -78.095259552933271
-					wpLandlocked = False
-					wpNavigationId = 83e851e2-f358-4059-98a2-f791e3f55a5f
 				}
 			}
 			CONTRACT_FINISHED
@@ -3102,6 +3157,100 @@ GAME
 					maxSpd = 160
 				}
 			}
+			CONTRACT_FINISHED
+			{
+				guid = ab0a805b-420c-4c5d-8b71-638c240b534c
+				type = PartTest
+				prestige = 1
+				seed = -1526702394
+				state = Completed
+				viewed = Read
+				agent = O.M.B.爆破企业
+				agentName = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,8438,23203.4005029202,9281.8002011776,2,4.545455,4,22636.0999999993,9845.93957710125,9211445.9395771,0
+				part = HeatShield0
+				haul = True
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					part = HeatShield0
+					body = Kerbin
+					situation = FLYING
+					uniqueID = 0.99939645128296595
+					haul = True
+					repeatability = BODYANDSITUATION
+				}
+				PARAM
+				{
+					name = ReachDestination
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					dest = 1
+					title = 
+				}
+				PARAM
+				{
+					name = ReachSituation
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					sit = FLYING
+					title = 
+				}
+				PARAM
+				{
+					name = ReachAltitudeEnvelope
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					minAlt = 32000
+					maxAlt = 44000
+				}
+				PARAM
+				{
+					name = ReachSpeedEnvelope
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					minSpd = 1720
+					maxSpd = 2180
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = cd0d1b37-31e9-4cac-a298-054bc306f173
+				type = ExplorationContract
+				prestige = 1
+				seed = 1848838631
+				state = Completed
+				viewed = Read
+				agent = Kerbin世界第一纪录保持协会
+				agentName = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = Floating
+				ignoresWeight = True
+				values = 64800,0,11200,20800,11200,4,8,0,64800.1,9845.93957710125,0,0
+				targetBody = 1
+				bodyRatio = 0
+				PARAM
+				{
+					name = ProgressTrackingParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					targetType = REACHSPACE
+				}
+			}
 		}
 	}
 	SCENARIO
@@ -3123,7 +3272,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.10.1
-		UT = 10194.299577108854
+		UT = 10846.241539999181
 		activeVessel = 0
 		mapViewFiltering = 15359
 		commNetUIModeTracking = Network
@@ -3202,7 +3351,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 11
+				flight = 12
 				0 = Flight,Kerbin
 				0 = Land,Kerbin
 				0 = Recover
@@ -3239,10 +3388,16 @@ GAME
 				10 = ExitVessel,Kerbin
 				10 = BoardVessel,Kerbin
 				10 = Recover
+				11 = Flight,Kerbin
+				11 = Suborbit,Kerbin
+				11 = Land,Kerbin
+				11 = ExitVessel,Kerbin
+				11 = BoardVessel,Kerbin
+				11 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 11
+				flight = 12
 			}
 		}
 		KERBAL
@@ -3799,5 +3954,9 @@ GAME
 				flight = 1
 			}
 		}
+	}
+	MESSAGESYSTEM
+	{
+		flash = True
 	}
 }
