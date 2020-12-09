@@ -11,7 +11,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/hexagonCircles
-	launchID = 23
+	launchID = 24
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
 	modded = False
@@ -197,7 +197,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 961157.27744325879
+		funds = 239623.8774144717
 	}
 	SCENARIO
 	{
@@ -298,7 +298,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 78.6192474
+		sci = 84.8414688
 		Tech
 		{
 			id = start
@@ -439,7 +439,7 @@ GAME
 		Science
 		{
 			id = recovery@KerbinFlew
-			title = 回收飞行后返回的航天器。
+			title = 回收到在Kerbin上空飞行后返航的载具
 			dsc = 1
 			scv = 0
 			sbv = 5
@@ -848,9 +848,9 @@ GAME
 			id = recovery@KerbinSubOrbited
 			title = 回收到从Kerbin的亚轨道返回的载具
 			dsc = 1
-			scv = 0.02777775
+			scv = 0.00462959195
 			sbv = 8
-			sci = 9.33333397
+			sci = 9.5555563
 			asc = True
 			cap = 9.60000038
 		}
@@ -864,7 +864,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 171.474304
+		rep = 182.779022
 	}
 	SCENARIO
 	{
@@ -1104,6 +1104,22 @@ GAME
 		{
 			intact = True
 		}
+		SpaceCenter/MissionControl/Facility/Antenna
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/SmallTanks
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/BigTanks
+		{
+			intact = True
+		}
 	}
 	SCENARIO
 	{
@@ -1126,7 +1142,7 @@ GAME
 		scene = 5, 6, 7, 8
 		SpaceCenter/LaunchPad
 		{
-			lvl = 0
+			lvl = 0.5
 		}
 		SpaceCenter/Runway
 		{
@@ -1134,7 +1150,7 @@ GAME
 		}
 		SpaceCenter/VehicleAssemblyBuilding
 		{
-			lvl = 0
+			lvl = 0.5
 		}
 		SpaceCenter/SpaceplaneHangar
 		{
@@ -1142,7 +1158,7 @@ GAME
 		}
 		SpaceCenter/TrackingStation
 		{
-			lvl = 0
+			lvl = 0.5
 		}
 		SpaceCenter/AstronautComplex
 		{
@@ -1150,7 +1166,7 @@ GAME
 		}
 		SpaceCenter/MissionControl
 		{
-			lvl = 0
+			lvl = 1
 		}
 		SpaceCenter/ResearchAndDevelopment
 		{
@@ -1183,7 +1199,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 12460.522633769342
+		update = 13278.805580553762
 		version = 1.10.1
 		WEIGHTS
 		{
@@ -1223,6 +1239,60 @@ GAME
 		}
 		CONTRACTS
 		{
+			CONTRACT
+			{
+				guid = b2ded339-bc98-4d5c-ba18-a24e3a87e1fb
+				type = TourismContract
+				prestige = 0
+				seed = 743237247
+				state = Offered
+				viewed = Seen
+				agent = 火箭联合公司
+				agentName = Rokea Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 97968.0651114881,41734395.7374939,0,0,0,0,19.60241,10,110022.808438612,0,0,0
+				preposition = 到Kerbin上
+				homeDestinations = True
+				isGeeAdventure = False
+				tourists = Xiufeng Kerman|Laili Kerman
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					allowPartialFailure = True
+					values = 9750,0,0,0,0
+					kerbalName = Xiufeng Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 3250,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Xiufeng Kerman
+					}
+				}
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					allowPartialFailure = True
+					values = 9750,0,0,0,0
+					kerbalName = Laili Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 3250,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Laili Kerman
+					}
+				}
+			}
 			CONTRACT
 			{
 				guid = 84db3775-bbbd-4a9b-bb78-abf4e049b936
@@ -1450,74 +1520,6 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = 63363f4c-974e-4007-b951-c6a9af3a3183
-				type = PartTest
-				prestige = 1
-				seed = 254434696
-				state = Offered
-				viewed = Read
-				agent = 集成积分企业
-				agentName = Integrated Integrals
-				deadlineType = Floating
-				expiryType = Floating
-				values = 21176.4706134796,9021176.48134232,11033.654008118,30342.5491799815,12375.0002682209,4,7.563636,5,32780.8855812238,0,0,0
-				part = radialDecoupler1-2
-				haul = False
-				dest = 1
-				sit = FLYING
-				exp = True
-				PARAM
-				{
-					name = PartTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = radialDecoupler1-2
-					body = Kerbin
-					situation = FLYING
-					uniqueID = 0.38403589110078123
-					haul = False
-					repeatability = BODYANDSITUATION
-					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
-					PARAM
-					{
-						name = ReachDestination
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						dest = 1
-						title = 
-					}
-					PARAM
-					{
-						name = ReachSituation
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						sit = FLYING
-						title = 
-					}
-					PARAM
-					{
-						name = ReachAltitudeEnvelope
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						minAlt = 47000
-						maxAlt = 51000
-					}
-					PARAM
-					{
-						name = ReachSpeedEnvelope
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						minSpd = 890
-						maxSpd = 1600
-					}
-				}
-			}
-			CONTRACT
-			{
 				guid = f459a4b8-e9eb-4cfb-9335-1542c0e14306
 				type = PartTest
 				prestige = 1
@@ -1710,37 +1712,37 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = b2ded339-bc98-4d5c-ba18-a24e3a87e1fb
+				guid = 60655f96-4d00-4f67-9ae3-0db0e0bd9740
 				type = TourismContract
-				prestige = 0
-				seed = 743237247
+				prestige = 1
+				seed = 365203780
 				state = Offered
 				viewed = Unseen
-				agent = 火箭联合公司
-				agentName = Rokea Inc
+				agent = STEADLER工程公司
+				agentName = STEADLER Engineering Corps
 				deadlineType = Floating
 				expiryType = Floating
-				values = 97968.0651114881,41734395.7374939,0,0,0,0,19.60241,10,110022.808438612,0,0,0
+				values = 86400,46008000,0,0,0,0,27.81818,14.4,98969.7045771306,0,0,0
 				preposition = 到Kerbin上
 				homeDestinations = True
 				isGeeAdventure = False
-				tourists = Xiufeng Kerman|Laili Kerman
+				tourists = Guai Kerman|Haofei Kerman
 				PARAM
 				{
 					name = KerbalTourParameter
 					state = Incomplete
 					allowPartialFailure = True
-					values = 9750,0,0,0,0
-					kerbalName = Xiufeng Kerman
+					values = 12188,0,0,0,0
+					kerbalName = Guai Kerman
 					kerbalGender = Male
 					PARAM
 					{
 						name = KerbalDestinationParameter
 						state = Incomplete
-						values = 3250,0,0,0,0
+						values = 4062,0,0,0,0
 						targetBody = 1
 						targetType = Suborbit
-						kerbalName = Xiufeng Kerman
+						kerbalName = Guai Kerman
 					}
 				}
 				PARAM
@@ -1748,85 +1750,18 @@ GAME
 					name = KerbalTourParameter
 					state = Incomplete
 					allowPartialFailure = True
-					values = 9750,0,0,0,0
-					kerbalName = Laili Kerman
+					values = 12188,0,0,0,0
+					kerbalName = Haofei Kerman
 					kerbalGender = Male
 					PARAM
 					{
 						name = KerbalDestinationParameter
 						state = Incomplete
-						values = 3250,0,0,0,0
+						values = 4062,0,0,0,0
 						targetBody = 1
 						targetType = Suborbit
-						kerbalName = Laili Kerman
+						kerbalName = Haofei Kerman
 					}
-				}
-			}
-			CONTRACT
-			{
-				guid = 9ca4c111-0640-4b26-9ea1-470e0dc6b37c
-				type = PartTest
-				prestige = 0
-				seed = 1848734492
-				state = Offered
-				viewed = Unseen
-				agent = 弗拉伊德动力研究实验室
-				agentName = FLOOYD Dynamics Research Labs
-				deadlineType = Floating
-				expiryType = Floating
-				values = 43200,9201600,6750,17718.7491953373,7087.49967813492,2,3.809524,3,55374.5978534938,0,0,0
-				part = HeatShield0
-				haul = True
-				dest = 1
-				sit = FLYING
-				exp = False
-				PARAM
-				{
-					name = PartTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = HeatShield0
-					body = Kerbin
-					situation = FLYING
-					uniqueID = 0.15888920154370806
-					haul = True
-					repeatability = ALWAYS
-				}
-				PARAM
-				{
-					name = ReachDestination
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					dest = 1
-					title = 
-				}
-				PARAM
-				{
-					name = ReachSituation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					sit = FLYING
-					title = 
-				}
-				PARAM
-				{
-					name = ReachAltitudeEnvelope
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					minAlt = 58000
-					maxAlt = 63000
-				}
-				PARAM
-				{
-					name = ReachSpeedEnvelope
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					minSpd = 1040
-					maxSpd = 1380
 				}
 			}
 			CONTRACT_FINISHED
@@ -3687,6 +3622,144 @@ GAME
 					wpNavigationId = c478e54c-5d4b-4df9-a938-33ba18a2f8bc
 				}
 			}
+			CONTRACT_FINISHED
+			{
+				guid = 63363f4c-974e-4007-b951-c6a9af3a3183
+				type = PartTest
+				prestige = 1
+				seed = 254434696
+				state = Completed
+				viewed = Read
+				agent = 集成积分企业
+				agentName = Integrated Integrals
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21176.4706134796,9021176.48134232,11033.654008118,30342.5491799815,12375.0002682209,4,7.563636,5,32780.8855812238,12472.9426337696,9033649.42397609,0
+				part = radialDecoupler1-2
+				haul = False
+				dest = 1
+				sit = FLYING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = radialDecoupler1-2
+					body = Kerbin
+					situation = FLYING
+					uniqueID = 0.38403589110078123
+					haul = False
+					repeatability = BODYANDSITUATION
+					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
+					tested = 3238728666
+					PARAM
+					{
+						name = ReachDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 47000
+						maxAlt = 51000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 890
+						maxSpd = 1600
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 9ca4c111-0640-4b26-9ea1-470e0dc6b37c
+				type = PartTest
+				prestige = 0
+				seed = 1848734492
+				state = Completed
+				viewed = Read
+				agent = 弗拉伊德动力研究实验室
+				agentName = FLOOYD Dynamics Research Labs
+				deadlineType = Floating
+				expiryType = Floating
+				values = 43200,9201600,6750,17718.7491953373,7087.49967813492,2,3.809524,3,55374.5978534938,12472.9426337696,9214072.94263377,0
+				part = HeatShield0
+				haul = True
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					part = HeatShield0
+					body = Kerbin
+					situation = FLYING
+					uniqueID = 0.15888920154370806
+					haul = True
+					repeatability = ALWAYS
+				}
+				PARAM
+				{
+					name = ReachDestination
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					dest = 1
+					title = 
+				}
+				PARAM
+				{
+					name = ReachSituation
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					sit = FLYING
+					title = 
+				}
+				PARAM
+				{
+					name = ReachAltitudeEnvelope
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					minAlt = 58000
+					maxAlt = 63000
+				}
+				PARAM
+				{
+					name = ReachSpeedEnvelope
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					minSpd = 1040
+					maxSpd = 1380
+				}
+			}
 		}
 	}
 	SCENARIO
@@ -3708,7 +3781,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.10.1
-		UT = 12468.66263376952
+		UT = 13288.465580553973
 		activeVessel = 0
 		mapViewFiltering = 15359
 		commNetUIModeTracking = Network
@@ -3787,7 +3860,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 15
+				flight = 16
 				0 = Flight,Kerbin
 				0 = Land,Kerbin
 				0 = Recover
@@ -3846,10 +3919,14 @@ GAME
 				14 = ExitVessel,Kerbin
 				14 = BoardVessel,Kerbin
 				14 = Recover
+				15 = Flight,Kerbin
+				15 = Suborbit,Kerbin
+				15 = Land,Kerbin
+				15 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 15
+				flight = 16
 			}
 		}
 		KERBAL
@@ -4476,9 +4553,95 @@ GAME
 				flight = 0
 			}
 		}
+		KERBAL
+		{
+			name = Guai Kerman
+			gender = Male
+			type = Unowned
+			trait = Tourist
+			brave = 0.964188457
+			dumb = 0.50851053
+			badS = True
+			veteran = False
+			tour = False
+			state = Assigned
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Haofei Kerman
+			gender = Male
+			type = Unowned
+			trait = Tourist
+			brave = 0.065027073
+			dumb = 0.156914815
+			badS = False
+			veteran = False
+			tour = False
+			state = Assigned
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
 	}
 	MESSAGESYSTEM
 	{
 		flash = True
+		MESSAGE
+		{
+			title = 合同完成
+			message = <b>把热防护罩（0.625米）带到Kerbin的上空。</b>~n~n哈！完成啦！这给了我们很多的帮助。谢谢！~n~n<b><color=#8BED8B>完成奖励:</color></b> ~n<color=#B4D455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  17,719   </color>~n<color=#6DCFF6><sprite="CurrencySpriteAsset" name="Science" tint=1> 2   </color>~n<color=#E0D503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 4   </color>~n~n
+			color = 2
+			icon = 3
+			read = False
+		}
+		MESSAGE
+		{
+			title = 合同完成
+			message = <b>在Kerbin的上空测试歧管液压分离器。</b>~n~n测试完成！我们得到了些不错的数据。谢谢！~n~n<b><color=#8BED8B>完成奖励:</color></b> ~n<color=#B4D455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  30,343   </color>~n<color=#6DCFF6><sprite="CurrencySpriteAsset" name="Science" tint=1> 4   </color>~n<color=#E0D503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 8   </color>~n~n
+			color = 2
+			icon = 3
+			read = False
+		}
 	}
 }

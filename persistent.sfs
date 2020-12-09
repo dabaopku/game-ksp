@@ -11,7 +11,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/hexagonCircles
-	launchID = 24
+	launchID = 26
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
 	modded = False
@@ -197,7 +197,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 1061907.9252635674
+		funds = 61580.568545742484
 	}
 	SCENARIO
 	{
@@ -229,8 +229,8 @@ GAME
 			}
 			RecordsSpeed
 			{
-				reached = 10689.290905231233
-				record = 1851.0180605478645
+				reached = 14865.214933834995
+				record = 2310.1471531037691
 			}
 			RecordsDistance
 			{
@@ -253,6 +253,19 @@ GAME
 			Kerbin
 			{
 				reached = 248.72000000005343
+				Orbit
+				{
+					completedManned = 14661.742697505215
+					vessel
+					{
+						name = 长征3号
+						flag = Squad/Flags/hexagonCircles
+					}
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
 				Landing
 				{
 					completedManned = 863.59999999950458
@@ -291,6 +304,19 @@ GAME
 						crews = Luli Kerman
 					}
 				}
+				ReturnFromOrbit
+				{
+					completedManned = 15452.919972899384
+					vessel
+					{
+						name = 长征3号
+						flag = Squad/Flags/hexagonCircles
+					}
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
 			}
 		}
 	}
@@ -298,7 +324,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 88.6192474
+		sci = 124.87851
 		Tech
 		{
 			id = start
@@ -848,11 +874,22 @@ GAME
 			id = recovery@KerbinSubOrbited
 			title = 回收到从Kerbin的亚轨道返回的载具
 			dsc = 1
-			scv = 0.02777775
+			scv = 0.000771582068
 			sbv = 8
-			sci = 9.33333397
+			sci = 9.59259319
 			asc = True
 			cap = 9.60000038
+		}
+		Science
+		{
+			id = recovery@KerbinOrbited
+			title = 回收到从Kerbin轨道返回的载具
+			dsc = 1
+			scv = 0.166666672
+			sbv = 10
+			sci = 10
+			asc = True
+			cap = 12
 		}
 	}
 	SCENARIO
@@ -864,7 +901,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 180.246033
+		rep = 238.907516
 	}
 	SCENARIO
 	{
@@ -1104,6 +1141,22 @@ GAME
 		{
 			intact = True
 		}
+		SpaceCenter/MissionControl/Facility/Antenna
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/SmallTanks
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/BigTanks
+		{
+			intact = True
+		}
 	}
 	SCENARIO
 	{
@@ -1126,7 +1179,7 @@ GAME
 		scene = 5, 6, 7, 8
 		SpaceCenter/LaunchPad
 		{
-			lvl = 0
+			lvl = 0.5
 		}
 		SpaceCenter/Runway
 		{
@@ -1134,7 +1187,7 @@ GAME
 		}
 		SpaceCenter/VehicleAssemblyBuilding
 		{
-			lvl = 0
+			lvl = 0.5
 		}
 		SpaceCenter/SpaceplaneHangar
 		{
@@ -1142,7 +1195,7 @@ GAME
 		}
 		SpaceCenter/TrackingStation
 		{
-			lvl = 0
+			lvl = 0.5
 		}
 		SpaceCenter/AstronautComplex
 		{
@@ -1150,11 +1203,11 @@ GAME
 		}
 		SpaceCenter/MissionControl
 		{
-			lvl = 0
+			lvl = 1
 		}
 		SpaceCenter/ResearchAndDevelopment
 		{
-			lvl = 0
+			lvl = 0.5
 		}
 		SpaceCenter/Administration
 		{
@@ -1183,7 +1236,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 13089.024020491204
+		update = 16355.21997291908
 		version = 1.10.1
 		WEIGHTS
 		{
@@ -1194,7 +1247,7 @@ GAME
 			PartTest = 90
 			GrandTour = 30
 			CollectScience = 30
-			TourismContract = 28
+			TourismContract = 54
 			SurveyContract = 90
 			StationContract = 30
 			SatelliteContract = 30
@@ -1218,11 +1271,67 @@ GAME
 			Moho = 30
 			Minmus = 30
 			Mun = 30
-			Kerbin = 88
+			Kerbin = 90
 			Sun = 30
 		}
 		CONTRACTS
 		{
+			CONTRACT
+			{
+				guid = b2ded339-bc98-4d5c-ba18-a24e3a87e1fb
+				type = TourismContract
+				prestige = 0
+				seed = 743237247
+				state = Active
+				viewed = Read
+				agent = 火箭联合公司
+				agentName = Rokea Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 97968.0651114881,41734395.7374939,0,0,0,0,19.60241,10,110022.808438612,13291.025580554,41747686.7630745,0
+				preposition = 到Kerbin上
+				homeDestinations = True
+				isGeeAdventure = False
+				tourists = Xiufeng Kerman|Laili Kerman
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					disableOnStateChange = False
+					allowPartialFailure = True
+					values = 9750,0,0,0,0
+					kerbalName = Xiufeng Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 3250,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Xiufeng Kerman
+					}
+				}
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					disableOnStateChange = False
+					allowPartialFailure = True
+					values = 9750,0,0,0,0
+					kerbalName = Laili Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 3250,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Laili Kerman
+					}
+				}
+			}
 			CONTRACT
 			{
 				guid = 84db3775-bbbd-4a9b-bb78-abf4e049b936
@@ -1450,69 +1559,27 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = 9ca4c111-0640-4b26-9ea1-470e0dc6b37c
-				type = PartTest
+				guid = 6fe94ca6-b9a6-43f3-b2f5-9faca37c75d8
+				type = ExplorationContract
 				prestige = 0
-				seed = 1848734492
+				seed = -345376797
 				state = Offered
 				viewed = Read
-				agent = 弗拉伊德动力研究实验室
-				agentName = FLOOYD Dynamics Research Labs
-				deadlineType = Floating
+				agent = Kerbin世界第一纪录保持协会
+				agentName = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
 				expiryType = Floating
-				values = 43200,9201600,6750,17718.7491953373,7087.49967813492,2,3.809524,3,55374.5978534938,0,0,0
-				part = HeatShield0
-				haul = True
-				dest = 1
-				sit = FLYING
-				exp = False
+				ignoresWeight = True
+				values = 129600,0,22400,41600,22400,4,7,0,145910.739972918,0,0,0
+				targetBody = 2
+				bodyRatio = 0
 				PARAM
 				{
-					name = PartTest
+					name = ProgressTrackingParameter
 					state = Incomplete
-					values = 0,0,0,0,0
-					part = HeatShield0
-					body = Kerbin
-					situation = FLYING
-					uniqueID = 0.15888920154370806
-					haul = True
-					repeatability = ALWAYS
-				}
-				PARAM
-				{
-					name = ReachDestination
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					dest = 1
-					title = 
-				}
-				PARAM
-				{
-					name = ReachSituation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					sit = FLYING
-					title = 
-				}
-				PARAM
-				{
-					name = ReachAltitudeEnvelope
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					minAlt = 58000
-					maxAlt = 63000
-				}
-				PARAM
-				{
-					name = ReachSpeedEnvelope
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					minSpd = 1040
-					maxSpd = 1380
+					values = 64000,0,4,7,0
+					targetBody = 2
+					targetType = FLYBY
 				}
 			}
 			CONTRACT
@@ -1562,6 +1629,112 @@ GAME
 						values = 0,0,0,0,0
 						sit = ESCAPING
 						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 8a7d34ba-5f6a-4b25-b74f-d54dc91fe7a5
+				type = PartTest
+				prestige = 1
+				seed = 1626751911
+				state = Offered
+				viewed = Read
+				agent = 研发部门
+				agentName = Research & Development Department
+				deadlineType = Floating
+				expiryType = Floating
+				values = 43200,9201600,24750,61875,24750,9,16,12,58017.594933834,0,0,0
+				part = radialDecoupler1-2
+				haul = False
+				dest = 1
+				sit = ESCAPING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = radialDecoupler1-2
+					body = Kerbin
+					situation = ESCAPING
+					uniqueID = 0.22422934240858519
+					haul = False
+					repeatability = BODYANDSITUATION
+					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
+					PARAM
+					{
+						name = ReachDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = ESCAPING
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 60655f96-4d00-4f67-9ae3-0db0e0bd9740
+				type = TourismContract
+				prestige = 1
+				seed = 365203780
+				state = Active
+				viewed = Read
+				agent = STEADLER工程公司
+				agentName = STEADLER Engineering Corps
+				deadlineType = Floating
+				expiryType = Floating
+				values = 86400,46008000,0,0,0,0,27.81818,14.4,98969.7045771306,14380.2580978897,46022380.2580979,0
+				preposition = 到Kerbin上
+				homeDestinations = True
+				isGeeAdventure = False
+				tourists = Guai Kerman|Haofei Kerman
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					disableOnStateChange = False
+					allowPartialFailure = True
+					values = 12188,0,0,0,0
+					kerbalName = Guai Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 4062,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Guai Kerman
+					}
+				}
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					disableOnStateChange = False
+					allowPartialFailure = True
+					values = 12188,0,0,0,0
+					kerbalName = Haofei Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 4062,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Haofei Kerman
 					}
 				}
 			}
@@ -1625,121 +1798,46 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = 827e3eee-4fe3-44b5-b908-ed69edf3eb31
-				type = ExplorationContract
+				guid = f274234f-47fb-4d96-af55-07dcf203d205
+				type = TourismContract
 				prestige = 2
-				seed = 1848838636
+				seed = 1928348377
 				state = Offered
 				viewed = Read
-				agent = Kerbin世界第一纪录保持协会
-				agentName = Kerbin World-Firsts Record-Keeping Society
-				deadlineType = None
-				expiryType = Floating
-				ignoresWeight = True
-				values = 86400,0,16800,31200,16800,6,10,0,86400.1,0,0,0
-				targetBody = 1
-				bodyRatio = 0
-				PARAM
-				{
-					name = ProgressTrackingParameter
-					state = Incomplete
-					values = 48000,0,6,10,0
-					targetBody = 1
-					targetType = ORBIT
-				}
-			}
-			CONTRACT
-			{
-				guid = c978bb50-ed14-42e6-84be-ba5526aab1ba
-				type = PartTest
-				prestige = 1
-				seed = 1370975759
-				state = Offered
-				viewed = Unseen
-				agent = 反应系统有限公司
-				agentName = Reaction Systems Ltd
+				agent = 集成积分企业
+				agentName = Integrated Integrals
 				deadlineType = Floating
 				expiryType = Floating
-				values = 21600,9201600,18000,49500.0010728836,19800.0004291534,6,10.90909,9,34165.5245673644,0,0,0
-				part = microEngine.v2
-				haul = False
-				dest = 1
-				sit = SUB_ORBITAL
-				exp = True
-				PARAM
-				{
-					name = PartTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = microEngine.v2
-					body = Kerbin
-					situation = SUB_ORBITAL
-					uniqueID = 0.85512799297232611
-					haul = False
-					repeatability = BODYANDSITUATION
-					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
-					PARAM
-					{
-						name = ReachDestination
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						dest = 1
-						title = 
-					}
-					PARAM
-					{
-						name = ReachSituation
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						sit = SUB_ORBITAL
-						title = 
-					}
-					PARAM
-					{
-						name = ReachAltitudeEnvelope
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						minAlt = 180000
-						maxAlt = 190000
-					}
-				}
-			}
-			CONTRACT
-			{
-				guid = 68271c88-dff5-470a-9ab3-f3d71e54beaf
-				type = TourismContract
-				prestige = 1
-				seed = 902560464
-				state = Offered
-				viewed = Unseen
-				agent = STEADLER工程公司
-				agentName = STEADLER Engineering Corps
-				deadlineType = Floating
-				expiryType = Floating
-				values = 43200,46008000,0,0,0,0,27.81818,14.4,55936.7119990056,0,0,0
-				preposition = 到Kerbin上
+				values = 104854.373931885,44667963.2949829,0,0,0,0,27.65217,15,119516.13662939,0,0,0
+				preposition = 太阳系
 				homeDestinations = True
 				isGeeAdventure = False
-				tourists = Degang Kerman|Menlie Kerman|Wuxi Kerman
+				tourists = Kanggong Kerman|Niwai Kerman|Dongtong Kerman
 				PARAM
 				{
 					name = KerbalTourParameter
 					state = Incomplete
 					allowPartialFailure = True
-					values = 12188,0,0,0,0
-					kerbalName = Degang Kerman
+					values = 29250,0,0,0,0
+					kerbalName = Kanggong Kerman
 					kerbalGender = Male
 					PARAM
 					{
 						name = KerbalDestinationParameter
 						state = Incomplete
-						values = 4062,0,0,0,0
+						values = 4875,0,0,0,0
 						targetBody = 1
 						targetType = Suborbit
-						kerbalName = Degang Kerman
+						kerbalName = Kanggong Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 4875,0,0,0,0
+						targetBody = 1
+						targetType = Orbit
+						kerbalName = Kanggong Kerman
 					}
 				}
 				PARAM
@@ -1747,17 +1845,26 @@ GAME
 					name = KerbalTourParameter
 					state = Incomplete
 					allowPartialFailure = True
-					values = 12188,0,0,0,0
-					kerbalName = Menlie Kerman
+					values = 29250,0,0,0,0
+					kerbalName = Niwai Kerman
 					kerbalGender = Male
 					PARAM
 					{
 						name = KerbalDestinationParameter
 						state = Incomplete
-						values = 4062,0,0,0,0
+						values = 4875,0,0,0,0
+						targetBody = 1
+						targetType = Orbit
+						kerbalName = Niwai Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 4875,0,0,0,0
 						targetBody = 1
 						targetType = Suborbit
-						kerbalName = Menlie Kerman
+						kerbalName = Niwai Kerman
 					}
 				}
 				PARAM
@@ -1765,85 +1872,27 @@ GAME
 					name = KerbalTourParameter
 					state = Incomplete
 					allowPartialFailure = True
-					values = 12188,0,0,0,0
-					kerbalName = Wuxi Kerman
-					kerbalGender = Female
+					values = 29250,0,0,0,0
+					kerbalName = Dongtong Kerman
+					kerbalGender = Male
 					PARAM
 					{
 						name = KerbalDestinationParameter
 						state = Incomplete
-						values = 4062,0,0,0,0
+						values = 4875,0,0,0,0
+						targetBody = 1
+						targetType = Orbit
+						kerbalName = Dongtong Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 4875,0,0,0,0
 						targetBody = 1
 						targetType = Suborbit
-						kerbalName = Wuxi Kerman
+						kerbalName = Dongtong Kerman
 					}
-				}
-			}
-			CONTRACT
-			{
-				guid = 1d37a39c-31d6-4772-83ca-b84fd1c17301
-				type = PartTest
-				prestige = 0
-				seed = 1850396944
-				state = Offered
-				viewed = Unseen
-				agent = 离子质子电子交响乐
-				agentName = Ionic Symphonic Protonic Electronics
-				deadlineType = Floating
-				expiryType = Floating
-				values = 21600,9201600,6750,16875,6750,2,4,3,34689.0240204912,0,0,0
-				part = solidBooster1-1
-				haul = True
-				dest = 1
-				sit = FLYING
-				exp = False
-				PARAM
-				{
-					name = PartTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = solidBooster1-1
-					body = Kerbin
-					situation = FLYING
-					uniqueID = 0.42738796790474493
-					haul = True
-					repeatability = ALWAYS
-				}
-				PARAM
-				{
-					name = ReachDestination
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					dest = 1
-					title = 
-				}
-				PARAM
-				{
-					name = ReachSituation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					sit = FLYING
-					title = 
-				}
-				PARAM
-				{
-					name = ReachAltitudeEnvelope
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					minAlt = 37000
-					maxAlt = 42000
-				}
-				PARAM
-				{
-					name = ReachSpeedEnvelope
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					minSpd = 60
-					maxSpd = 260
 				}
 			}
 			CONTRACT_FINISHED
@@ -3716,7 +3765,7 @@ GAME
 				agentName = Integrated Integrals
 				deadlineType = Floating
 				expiryType = Floating
-				values = 21176.4706134796,9021176.48134232,11033.654008118,30342.5491799815,12375.0002682209,4,7.563636,5,32780.8855812238,12473.6826337696,9033650.16397609,0
+				values = 21176.4706134796,9021176.48134232,11033.654008118,30342.5491799815,12375.0002682209,4,7.563636,5,32780.8855812238,12472.9426337696,9033649.42397609,0
 				part = radialDecoupler1-2
 				haul = False
 				dest = 1
@@ -3735,7 +3784,7 @@ GAME
 					haul = False
 					repeatability = BODYANDSITUATION
 					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
-					tested = 1805260200
+					tested = 3238728666
 					PARAM
 					{
 						name = ReachDestination
@@ -3776,6 +3825,74 @@ GAME
 			}
 			CONTRACT_FINISHED
 			{
+				guid = 9ca4c111-0640-4b26-9ea1-470e0dc6b37c
+				type = PartTest
+				prestige = 0
+				seed = 1848734492
+				state = Completed
+				viewed = Read
+				agent = 弗拉伊德动力研究实验室
+				agentName = FLOOYD Dynamics Research Labs
+				deadlineType = Floating
+				expiryType = Floating
+				values = 43200,9201600,6750,17718.7491953373,7087.49967813492,2,3.809524,3,55374.5978534938,12472.9426337696,9214072.94263377,0
+				part = HeatShield0
+				haul = True
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					part = HeatShield0
+					body = Kerbin
+					situation = FLYING
+					uniqueID = 0.15888920154370806
+					haul = True
+					repeatability = ALWAYS
+				}
+				PARAM
+				{
+					name = ReachDestination
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					dest = 1
+					title = 
+				}
+				PARAM
+				{
+					name = ReachSituation
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					sit = FLYING
+					title = 
+				}
+				PARAM
+				{
+					name = ReachAltitudeEnvelope
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					minAlt = 58000
+					maxAlt = 63000
+				}
+				PARAM
+				{
+					name = ReachSpeedEnvelope
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					minSpd = 1040
+					maxSpd = 1380
+				}
+			}
+			CONTRACT_FINISHED
+			{
 				guid = f459a4b8-e9eb-4cfb-9335-1542c0e14306
 				type = PartTest
 				prestige = 1
@@ -3786,7 +3903,7 @@ GAME
 				agentName = Integrated Integrals
 				deadlineType = Floating
 				expiryType = Floating
-				values = 21176.4706134796,9021176.48134232,17653.8464129888,48548.0786879704,19800.0004291534,6,11.34545,9,21289.2906134796,12473.6826337696,9033650.16397609,0
+				values = 21176.4706134796,9021176.48134232,17653.8464129888,48548.0786879704,19800.0004291534,6,11.34545,9,21289.2906134796,13291.025580554,9034467.50692287,0
 				part = Decoupler.1
 				haul = False
 				dest = 1
@@ -3805,7 +3922,7 @@ GAME
 					haul = False
 					repeatability = ONCEPERPART
 					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
-					tested = 2790298509
+					tested = 2554085351
 					PARAM
 					{
 						name = ReachDestination
@@ -3835,6 +3952,93 @@ GAME
 					}
 				}
 			}
+			CONTRACT_FINISHED
+			{
+				guid = 827e3eee-4fe3-44b5-b908-ed69edf3eb31
+				type = ExplorationContract
+				prestige = 2
+				seed = 1848838636
+				state = Completed
+				viewed = Read
+				agent = Kerbin世界第一纪录保持协会
+				agentName = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = Floating
+				ignoresWeight = True
+				values = 86400,0,16800,31200,16800,6,10,0,86400.1,13291.025580554,0,0
+				targetBody = 1
+				bodyRatio = 0
+				PARAM
+				{
+					name = ProgressTrackingParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					targetType = ORBIT
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = ad4ad12c-41e4-4cda-be86-aa6bcca70905
+				type = PartTest
+				prestige = 1
+				seed = 1503174137
+				state = Completed
+				viewed = Read
+				agent = 坎灵顿模型火箭和纸制品有限公司
+				agentName = Kerlington Model Rockets and Paper Products Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,22500,56250,22500,8,15,11,35471.3083176142,14380.2580978897,9215980.25809789,0
+				part = microEngine.v2
+				haul = False
+				dest = 1
+				sit = ORBITING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = microEngine.v2
+					body = Kerbin
+					situation = ORBITING
+					uniqueID = 0.9082768405360534
+					haul = False
+					repeatability = BODYANDSITUATION
+					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
+					tested = 2073595839
+					PARAM
+					{
+						name = ReachDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = ORBITING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 70000
+						maxAlt = 80000
+					}
+				}
+			}
 		}
 	}
 	SCENARIO
@@ -3856,739 +4060,11 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.10.1
-		UT = 13091.404020491256
-		activeVessel = -1
+		UT = 16359.899972919182
+		activeVessel = 0
 		mapViewFiltering = 15359
 		commNetUIModeTracking = Network
 		commNetUIModeFlight = Network
-		VESSEL
-		{
-			pid = f6a6ec0bb56242b4882b50ecffea6fbe
-			persistentId = 1022813108
-			name = 长征3号的残骸
-			type = Debris
-			sit = FLYING
-			landed = False
-			skipGroundPositioning = False
-			vesselSpawning = False
-			launchedFrom = LaunchPad
-			landedAt = 
-			displaylandedAt = 
-			splashed = False
-			met = 354.69202148567274
-			lct = 12736.711999005583
-			lastUT = 13091.404020491256
-			distanceTraveled = 58057.277860044458
-			root = 0
-			lat = -0.39378615655434451
-			lon = -79.354098074509082
-			alt = 11150.769490687526
-			hgt = 7521.48389
-			nrm = 0.589711308,-0.522494316,-0.61582464
-			rot = -0.842941821,-0.00659571961,0.148509771,-0.517059386
-			CoM = -0.000606506946,-3.91299176,-0.000389814115
-			stg = 3
-			prst = False
-			ref = 0
-			ctrl = False
-			PQSMin = 2
-			PQSMax = 9
-			GroupOverride = 0
-			OverrideDefault = False,False,False,False
-			OverrideActionControl = 0,0,0,0
-			OverrideAxisControl = 0,0,0,0
-			OverrideGroupNames = ,,,
-			altDispState = DEFAULT
-			cPch = 0
-			cHdg = 0
-			cMod = -1
-			ORBIT
-			{
-				SMA = 309157.76529022295
-				ECC = 0.98514997998926124
-				INC = 25.525961346655922
-				LPE = 0.26826375480184006
-				LAN = 48.523617935916604
-				MNA = -2.8838544095740466
-				EPH = 13091.404020491256
-				REF = 1
-			}
-			PART
-			{
-				name = Decoupler.1
-				cid = 4294540302
-				uid = 2790298509
-				mid = 3853050646
-				persistentId = 2622622514
-				launchID = 23
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1.00000048
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 2
-				resPri = 0
-				dstg = 1
-				sqor = 2
-				sepI = 2
-				sidx = 0
-				attm = 0
-				sameVesselCollision = False
-				srfN = , -1
-				attN = top, -1
-				attN = bottom, 1
-				mass = 0.0399999991
-				shielded = False
-				temp = 482.00200514456191
-				tempExt = 366.05084876600506
-				tempExtUnexp = 366.09064354461833
-				staticPressureAtm = 0.1410849171451895
-				expt = 0.5
-				state = 1
-				attached = False
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/hexagonCircles
-				rTrf = Decoupler.1
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleDecouple
-					isEnabled = True
-					ejectionForcePercent = 100
-					isDecoupled = True
-					stagingEnabled = False
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						DecoupleAction
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleToggleCrossfeed
-					isEnabled = True
-					crossfeedStatus = False
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ToggleAction
-						{
-							actionGroup = None
-						}
-						EnableAction
-						{
-							actionGroup = None
-						}
-						DisableAction
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleTestSubject
-					isEnabled = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModulePartVariants
-					isEnabled = True
-					useVariantMass = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			PART
-			{
-				name = solidBooster1-1
-				cid = 4294648852
-				uid = 4170357227
-				mid = 3853050646
-				persistentId = 1409523456
-				launchID = 23
-				parent = 0
-				position = 0,-3.9700002670288086,0
-				rotation = 0,0,0,1.00000048
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 3
-				resPri = 0
-				dstg = 2
-				sqor = 3
-				sepI = 2
-				sidx = 0
-				attm = 0
-				sameVesselCollision = False
-				srfN = srfAttach, -1
-				attN = bottom, -1
-				attN = top, 0
-				mass = 1.5
-				shielded = False
-				temp = 483.23243902345712
-				tempExt = 382.61215314598934
-				tempExtUnexp = 479.30062928704842
-				staticPressureAtm = 0.14099480633438
-				expt = 0.5
-				state = 1
-				attached = True
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/hexagonCircles
-				rTrf = solidBooster1-1
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleEngines
-					isEnabled = True
-					independentThrottle = False
-					independentThrottlePercentage = 0
-					staged = True
-					flameout = True
-					EngineIgnited = True
-					engineShutdown = False
-					currentThrottle = 0
-					thrustPercentage = 65
-					manuallyOverridden = False
-					includeinDVCalcs = False
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						OnAction
-						{
-							actionGroup = None
-						}
-						ShutdownAction
-						{
-							actionGroup = None
-						}
-						ActivateAction
-						{
-							actionGroup = None
-						}
-						ToggleThrottle
-						{
-							actionGroup = None
-						}
-					}
-					AXISGROUPS
-					{
-						independentThrottlePercentage
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-						}
-						thrustPercentage
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = FXModuleAnimateThrottle
-					isEnabled = True
-					animState = 0
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleTestSubject
-					isEnabled = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleSurfaceFX
-					isEnabled = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				RESOURCE
-				{
-					name = SolidFuel
-					amount = 0
-					maxAmount = 820
-					flowState = True
-					isTweakable = True
-					hideFlow = False
-					isVisible = True
-					flowMode = Both
-				}
-			}
-			PART
-			{
-				name = basicFin
-				cid = 4293144666
-				uid = 134821265
-				mid = 3853050646
-				persistentId = 2173106362
-				launchID = 23
-				parent = 1
-				position = -0.43312186002731323,-5.6326265335083008,0.43312203884124756
-				rotation = -1.60128E-08,0.382683635,-3.86583245E-08,0.9238801
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 3
-				resPri = 0
-				dstg = 2
-				sqor = -1
-				sepI = 2
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				sym = 3
-				sym = 4
-				sym = 5
-				srfN = srfAttach, 1,Surface_Attach_Collider
-				mass = 0.00999999978
-				shielded = False
-				temp = 483.58473603551073
-				tempExt = 431.27337878385526
-				tempExtUnexp = 4
-				staticPressureAtm = 0.14095774174560124
-				expt = 0.100000001
-				state = 1
-				attached = True
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/hexagonCircles
-				rTrf = basicFin
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleLiftingSurface
-					isEnabled = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			PART
-			{
-				name = basicFin
-				cid = 4293070156
-				uid = 372160365
-				mid = 3853050646
-				persistentId = 1111905869
-				launchID = 23
-				parent = 1
-				position = 0.43312203884124756,-5.6326265335083008,0.43312180042266846
-				rotation = -3.86583174E-08,0.923880041,-1.60127982E-08,0.382683635
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 3
-				resPri = 0
-				dstg = 2
-				sqor = -1
-				sepI = 2
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				sym = 2
-				sym = 4
-				sym = 5
-				srfN = srfAttach, 1,Surface_Attach_Collider
-				mass = 0.00999999978
-				shielded = False
-				temp = 482.48567700365595
-				tempExt = 430.77315843604822
-				tempExtUnexp = 4
-				staticPressureAtm = 0.14094741674461336
-				expt = 0.100000001
-				state = 1
-				attached = True
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/hexagonCircles
-				rTrf = basicFin
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleLiftingSurface
-					isEnabled = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			PART
-			{
-				name = basicFin
-				cid = 4293070116
-				uid = 50150268
-				mid = 3853050646
-				persistentId = 417631136
-				launchID = 23
-				parent = 1
-				position = 0.43312183022499084,-5.6326265335083008,-0.43312221765518188
-				rotation = -3.86583174E-08,0.923880041,1.60127964E-08,-0.382683635
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 3
-				resPri = 0
-				dstg = 2
-				sqor = -1
-				sepI = 2
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				sym = 2
-				sym = 3
-				sym = 5
-				srfN = srfAttach, 1,Surface_Attach_Collider
-				mass = 0.00999999978
-				shielded = False
-				temp = 483.79004909509257
-				tempExt = 431.36073375581526
-				tempExtUnexp = 4
-				staticPressureAtm = 0.14095641464884712
-				expt = 0.100000001
-				state = 1
-				attached = True
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/hexagonCircles
-				rTrf = basicFin
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleLiftingSurface
-					isEnabled = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			PART
-			{
-				name = basicFin
-				cid = 4293070076
-				uid = 621335245
-				mid = 3853050646
-				persistentId = 821205568
-				launchID = 23
-				parent = 1
-				position = -0.43312209844589233,-5.6326265335083008,-0.43312186002731323
-				rotation = -1.60127982E-08,0.382683635,3.86583174E-08,-0.923880041
-				mirror = 1,1,1
-				symMethod = Radial
-				istg = 3
-				resPri = 0
-				dstg = 2
-				sqor = -1
-				sepI = 2
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				sym = 2
-				sym = 3
-				sym = 4
-				srfN = srfAttach, 1,Surface_Attach_Collider
-				mass = 0.00999999978
-				shielded = False
-				temp = 483.62901021804998
-				tempExt = 431.28819336642596
-				tempExtUnexp = 4
-				staticPressureAtm = 0.14096675847390241
-				expt = 0.100000001
-				state = 1
-				attached = True
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/hexagonCircles
-				rTrf = basicFin
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleLiftingSurface
-					isEnabled = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = True, 12565.5245673644
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 12497.9826337702
-				Brakes = False, 0
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0
-				yaw = 0
-				roll = 0
-				trimPitch = 0
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				FlightIntegrator
-				{
-				}
-				AxisGroupsModule
-				{
-				}
-			}
-		}
 	}
 	LoaderInfo
 	{
@@ -4606,12 +4082,12 @@ GAME
 			badS = True
 			veteran = True
 			tour = False
-			state = Missing
+			state = Available
 			inactive = False
 			inactiveTimeEnd = 0
 			gExperienced = 0
 			outDueToG = False
-			ToD = 20289.024020491204
+			ToD = 0
 			idx = 0
 			extraXP = 0
 			hasHelmetOn = True
@@ -4663,7 +4139,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 16
+				flight = 18
 				0 = Flight,Kerbin
 				0 = Land,Kerbin
 				0 = Recover
@@ -4724,11 +4200,21 @@ GAME
 				14 = Recover
 				15 = Flight,Kerbin
 				15 = Suborbit,Kerbin
-				15 = Die
+				15 = Land,Kerbin
+				15 = Recover
+				16 = Flight,Kerbin
+				16 = Suborbit,Kerbin
+				16 = Land,Kerbin
+				16 = Recover
+				17 = Flight,Kerbin
+				17 = Suborbit,Kerbin
+				17 = Orbit,Kerbin
+				17 = Land,Kerbin
+				17 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 16
+				flight = 18
 			}
 		}
 		KERBAL
@@ -5287,16 +4773,16 @@ GAME
 		}
 		KERBAL
 		{
-			name = Degang Kerman
+			name = Xiufeng Kerman
 			gender = Male
-			type = Unowned
+			type = Tourist
 			trait = Tourist
-			brave = 0.830349684
-			dumb = 0.895038128
+			brave = 0.850150824
+			dumb = 0.96984762
 			badS = True
 			veteran = False
 			tour = False
-			state = Assigned
+			state = Available
 			inactive = False
 			inactiveTimeEnd = 0
 			gExperienced = 0
@@ -5322,12 +4808,117 @@ GAME
 		}
 		KERBAL
 		{
-			name = Menlie Kerman
+			name = Laili Kerman
+			gender = Male
+			type = Tourist
+			trait = Tourist
+			brave = 0.796747208
+			dumb = 0.339431584
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Guai Kerman
+			gender = Male
+			type = Tourist
+			trait = Tourist
+			brave = 0.964188457
+			dumb = 0.50851053
+			badS = True
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Haofei Kerman
+			gender = Male
+			type = Tourist
+			trait = Tourist
+			brave = 0.065027073
+			dumb = 0.156914815
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Kanggong Kerman
 			gender = Male
 			type = Unowned
 			trait = Tourist
-			brave = 0.236965641
-			dumb = 0.669674873
+			brave = 0.361219496
+			dumb = 0.665293217
 			badS = False
 			veteran = False
 			tour = False
@@ -5357,12 +4948,47 @@ GAME
 		}
 		KERBAL
 		{
-			name = Wuxi Kerman
-			gender = Female
+			name = Niwai Kerman
+			gender = Male
 			type = Unowned
 			trait = Tourist
-			brave = 0.545269608
-			dumb = 0.534154058
+			brave = 0.871037126
+			dumb = 0.83336997
+			badS = False
+			veteran = False
+			tour = False
+			state = Assigned
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Dongtong Kerman
+			gender = Male
+			type = Unowned
+			trait = Tourist
+			brave = 0.0674864948
+			dumb = 0.073796384
 			badS = False
 			veteran = False
 			tour = False
@@ -5394,21 +5020,5 @@ GAME
 	MESSAGESYSTEM
 	{
 		flash = True
-		MESSAGE
-		{
-			title = 合同完成
-			message = <b>在Kerbin的亚轨道测试TD-12分离器。</b>~n~n测试完成！我们得到了些不错的数据。谢谢！~n~n<b><color=#8BED8B>完成奖励:</color></b> ~n<color=#B4D455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  48,548   </color>~n<color=#6DCFF6><sprite="CurrencySpriteAsset" name="Science" tint=1> 6   </color>~n<color=#E0D503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 11   </color>~n~n
-			color = 2
-			icon = 3
-			read = False
-		}
-		MESSAGE
-		{
-			title = 合同完成
-			message = <b>在Kerbin的上空测试歧管液压分离器。</b>~n~n测试完成！我们得到了些不错的数据。谢谢！~n~n<b><color=#8BED8B>完成奖励:</color></b> ~n<color=#B4D455><sprite="CurrencySpriteAsset" name="Funds" tint=1>  30,343   </color>~n<color=#6DCFF6><sprite="CurrencySpriteAsset" name="Science" tint=1> 4   </color>~n<color=#E0D503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 8   </color>~n~n
-			color = 2
-			icon = 3
-			read = False
-		}
 	}
 }
