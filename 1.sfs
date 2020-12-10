@@ -1,7 +1,7 @@
 GAME
 {
 	version = 1.10.1
-	Title = 大宝库2020 (CAREER)
+	Title = 大宝库2020 (生涯模式)
 	Description = No description available.
 	linkURL = 
 	linkCaption = 
@@ -11,10 +11,10 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/hexagonCircles
-	launchID = 26
+	launchID = 30
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
-	modded = False
+	modded = True
 	envInfo =  - Environment Info - Unix 7FFFFFFFFFFFFFFF  Args: KSP  - 
 	versionFull = 1.10.1.2939 (OSXPlayer)
 	versionCreated = 1.10.1.2939 (OSXPlayer)
@@ -197,7 +197,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 61580.568545742484
+		funds = 233107.51468388605
 	}
 	SCENARIO
 	{
@@ -249,6 +249,10 @@ GAME
 				{
 					crews = Jebediah Kerman
 				}
+			}
+			KSCLanding
+			{
+				completed = 17076.088136997118
 			}
 			Kerbin
 			{
@@ -324,7 +328,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 124.87851
+		sci = 48.7857132
 		Tech
 		{
 			id = start
@@ -428,6 +432,19 @@ GAME
 			part = radialLiquidEngine1-2
 			part = liquidEngine3.v2
 			part = liquidEngine3
+		}
+		Tech
+		{
+			id = propulsionSystems
+			state = Available
+			cost = 90
+			part = miniFuelTank
+			part = externalTankCapsule
+			part = microEngine.v2
+			part = microEngine
+			part = liquidEngineMini.v2
+			part = liquidEngineMini
+			part = Mite
 		}
 		Science
 		{
@@ -872,11 +889,11 @@ GAME
 		Science
 		{
 			id = recovery@KerbinSubOrbited
-			title = 回收到从Kerbin的亚轨道返回的载具
+			title = 回收从亚轨道飞行返回的航天器。
 			dsc = 1
-			scv = 0.000771582068
+			scv = 2.14576721E-05
 			sbv = 8
-			sci = 9.59259319
+			sci = 9.59979439
 			asc = True
 			cap = 9.60000038
 		}
@@ -891,6 +908,50 @@ GAME
 			asc = True
 			cap = 12
 		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedHighlands
+			title = 在Kerbin的高原的大气压扫描
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			asc = True
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedHighlands
+			title = 在Kerbin的高原的温度扫描
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			asc = True
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedHighlands
+			title = 在Kerbin的高原的乘员报告
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			asc = True
+			cap = 1.5
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedHighlands
+			title = 在Kerbin的高原的EVA报告
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			asc = True
+			cap = 2.4000001
+		}
 	}
 	SCENARIO
 	{
@@ -901,7 +962,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 238.907516
+		rep = 297.324036
 	}
 	SCENARIO
 	{
@@ -1236,7 +1297,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 16355.21997291908
+		update = 18948.218107738918
 		version = 1.10.1
 		WEIGHTS
 		{
@@ -1247,7 +1308,7 @@ GAME
 			PartTest = 90
 			GrandTour = 30
 			CollectScience = 30
-			TourismContract = 54
+			TourismContract = 78
 			SurveyContract = 90
 			StationContract = 30
 			SatelliteContract = 30
@@ -1278,38 +1339,39 @@ GAME
 		{
 			CONTRACT
 			{
-				guid = b2ded339-bc98-4d5c-ba18-a24e3a87e1fb
+				guid = c424ede7-8174-4861-be16-dfe95b316716
 				type = TourismContract
 				prestige = 0
-				seed = 743237247
+				seed = 823677663
 				state = Active
 				viewed = Read
-				agent = 火箭联合公司
-				agentName = Rokea Inc
+				agent = 支柱公司
+				agentName = StrutCo
 				deadlineType = Floating
 				expiryType = Floating
-				values = 97968.0651114881,41734395.7374939,0,0,0,0,19.60241,10,110022.808438612,13291.025580554,41747686.7630745,0
+				values = 64800,46008000,0,0,0,0,19.04762,10,82658.9991428732,18182.6514670987,46026182.6514671,0
 				preposition = 到Kerbin上
 				homeDestinations = True
 				isGeeAdventure = False
-				tourists = Xiufeng Kerman|Laili Kerman
+				tourists = Funie Kerman|Pengwai Kerman
 				PARAM
 				{
 					name = KerbalTourParameter
-					state = Incomplete
+					state = Complete
 					disableOnStateChange = False
 					allowPartialFailure = True
-					values = 9750,0,0,0,0
-					kerbalName = Xiufeng Kerman
-					kerbalGender = Male
+					values = 0,0,0,0,0
+					kerbalName = Funie Kerman
+					kerbalGender = Female
 					PARAM
 					{
 						name = KerbalDestinationParameter
-						state = Incomplete
-						values = 3250,0,0,0,0
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
 						targetBody = 1
 						targetType = Suborbit
-						kerbalName = Xiufeng Kerman
+						kerbalName = Funie Kerman
 					}
 				}
 				PARAM
@@ -1319,7 +1381,7 @@ GAME
 					disableOnStateChange = False
 					allowPartialFailure = True
 					values = 9750,0,0,0,0
-					kerbalName = Laili Kerman
+					kerbalName = Pengwai Kerman
 					kerbalGender = Male
 					PARAM
 					{
@@ -1327,99 +1389,9 @@ GAME
 						state = Incomplete
 						values = 3250,0,0,0,0
 						targetBody = 1
-						targetType = Suborbit
-						kerbalName = Laili Kerman
+						targetType = Orbit
+						kerbalName = Pengwai Kerman
 					}
-				}
-			}
-			CONTRACT
-			{
-				guid = 84db3775-bbbd-4a9b-bb78-abf4e049b936
-				type = SurveyContract
-				prestige = 0
-				seed = 942875394
-				state = Offered
-				viewed = Read
-				agent = 坎巴拉运动有限公司
-				agentName = Kerbal Motion LLC
-				deadlineType = Floating
-				expiryType = Floating
-				values = 108000,46008000,7500,13250,7500,0,2,2,113345.190562761,0,0,0
-				targetBody = 1
-				centerLatitude = 4.5829821920294549
-				centerLongitude = -78.949186032888477
-				dataName = 大气
-				anomalyName = 异常
-				reportName = 读数
-				locationName = Kerbin^N
-				focusedSurvey = True
-				targetBand = HIGH
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 获取气压读数
-					experiment = barometerScan
-					flightThreshold = 18800
-					band = 3
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = 308387497
-					wpIndex = 0
-					wpTexture = pressure
-					wpLatitude = 4.5829687492658078
-					wpLongitude = -78.949139773936196
-					wpLandlocked = False
-					wpNavigationId = 8021da24-051d-41ec-949d-6c92d2310267
-				}
-			}
-			CONTRACT
-			{
-				guid = c77d5f3f-cb3b-4799-abb1-0d54f0405fa7
-				type = SurveyContract
-				prestige = 0
-				seed = 748667370
-				state = Offered
-				viewed = Read
-				agent = 弗拉伊德动力研究实验室
-				agentName = FLOOYD Dynamics Research Labs
-				deadlineType = Floating
-				expiryType = Floating
-				values = 129600,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,141261.914967745,0,0,0
-				targetBody = 1
-				centerLatitude = 4.2286250875006601
-				centerLongitude = -81.879367259135293
-				dataName = 大气
-				anomalyName = 异常
-				reportName = 读数
-				locationName = Kerbin^N
-				focusedSurvey = True
-				targetBand = HIGH
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 获取气压读数
-					experiment = barometerScan
-					flightThreshold = 17500
-					band = 3
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -262897929
-					wpIndex = 0
-					wpTexture = pressure
-					wpLatitude = 4.2286424984615802
-					wpLongitude = -81.879392203840212
-					wpLandlocked = False
-					wpNavigationId = ad19233c-6d1f-473d-af2f-3726d789df53
 				}
 			}
 			CONTRACT
@@ -1428,13 +1400,13 @@ GAME
 				type = SurveyContract
 				prestige = 0
 				seed = 140399547
-				state = Offered
+				state = Active
 				viewed = Read
 				agent = 火箭联合公司
 				agentName = Rokea Inc
 				deadlineType = Floating
 				expiryType = Floating
-				values = 78374.4520891905,41734395.7374939,8033.99948215485,14903.0683626032,8111.24940633775,0,1.960241,2,79106.3320891901,0,0,0
+				values = 78374.4520891905,41734395.7374939,8033.99948215485,14903.0683626032,8111.24940633775,0,1.960241,2,79106.3320891901,17174.0081369993,41751569.7456309,0
 				targetBody = 1
 				centerLatitude = 6.1319209259734331
 				centerLongitude = -72.435501284383008
@@ -1473,13 +1445,13 @@ GAME
 				type = SurveyContract
 				prestige = 0
 				seed = 1344627426
-				state = Offered
+				state = Active
 				viewed = Read
 				agent = Sean罐头厂
 				agentName = Sean's Cannery
 				deadlineType = Floating
 				expiryType = Floating
-				values = 125825.248718262,44667963.2949829,7724.99978542328,14329.8739511967,7874.99964237213,0,1.904762,2,125938.068718262,0,0,0
+				values = 125825.248718262,44667963.2949829,7724.99978542328,14329.8739511967,7874.99964237213,0,1.904762,2,125938.068718262,17174.0081369993,44685137.3031199,0
 				targetBody = 1
 				centerLatitude = 2.3249211239932035
 				centerLongitude = -65.272755571066298
@@ -1518,13 +1490,13 @@ GAME
 				type = SurveyContract
 				prestige = 0
 				seed = 1418956425
-				state = Offered
+				state = Active
 				viewed = Read
 				agent = 支柱公司
 				agentName = StrutCo
 				deadlineType = Floating
 				expiryType = Floating
-				values = 108000,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,117476.440163036,0,0,0
+				values = 108000,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,117476.440163036,17174.0081369993,46025174.008137,0
 				targetBody = 1
 				centerLatitude = -1.6861737151136615
 				centerLongitude = -74.354383179213983
@@ -1555,6 +1527,93 @@ GAME
 					wpLongitude = -74.354385698357035
 					wpLandlocked = False
 					wpNavigationId = dc32ccd8-7b7e-4fbf-9cb7-c86473752f11
+				}
+			}
+			CONTRACT
+			{
+				guid = 0f776f33-e62a-490c-8e0a-139ed182d102
+				type = SurveyContract
+				prestige = 0
+				seed = 1091827181
+				state = Offered
+				viewed = Read
+				agent = 坎巴拉运动有限公司
+				agentName = Kerbal Motion LLC
+				deadlineType = Floating
+				expiryType = Floating
+				values = 86400,46008000,30000,53000,30000,0,9,9,103737.962687784,0,0,0
+				targetBody = 1
+				centerLatitude = -1.9553188727337141
+				centerLongitude = 0.52753146948643603
+				dataName = 温度
+				anomalyName = 变动
+				reportName = 测量值
+				locationName = 区域 NR4B附近的Kerbin
+				focusedSurvey = False
+				targetBand = GROUND
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 8800,0,3,3,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 18200
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 1299721115
+					wpIndex = 0
+					wpTexture = thermometer
+					wpLatitude = -1.9437231575665095
+					wpLongitude = 0.55990015939037951
+					wpLandlocked = True
+					wpNavigationId = b5ea6fff-a53f-4bec-89f0-a73e39b841f9
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 8800,0,3,3,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 16800
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 1299721115
+					wpIndex = 1
+					wpTexture = thermometer
+					wpLatitude = -1.8818344506973574
+					wpLongitude = 0.4079169099458167
+					wpLandlocked = True
+					wpNavigationId = 4c580c72-45dd-4ded-9dde-263d443dd469
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 8800,0,3,3,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 18500
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 1299721115
+					wpIndex = 2
+					wpTexture = thermometer
+					wpLatitude = -1.9905891418845796
+					wpLongitude = 0.58700711736372957
+					wpLandlocked = True
+					wpNavigationId = d9cd052e-1c18-4d74-9787-b0f229061fe2
 				}
 			}
 			CONTRACT
@@ -1684,62 +1743,6 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = 60655f96-4d00-4f67-9ae3-0db0e0bd9740
-				type = TourismContract
-				prestige = 1
-				seed = 365203780
-				state = Active
-				viewed = Read
-				agent = STEADLER工程公司
-				agentName = STEADLER Engineering Corps
-				deadlineType = Floating
-				expiryType = Floating
-				values = 86400,46008000,0,0,0,0,27.81818,14.4,98969.7045771306,14380.2580978897,46022380.2580979,0
-				preposition = 到Kerbin上
-				homeDestinations = True
-				isGeeAdventure = False
-				tourists = Guai Kerman|Haofei Kerman
-				PARAM
-				{
-					name = KerbalTourParameter
-					state = Incomplete
-					disableOnStateChange = False
-					allowPartialFailure = True
-					values = 12188,0,0,0,0
-					kerbalName = Guai Kerman
-					kerbalGender = Male
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						state = Incomplete
-						values = 4062,0,0,0,0
-						targetBody = 1
-						targetType = Suborbit
-						kerbalName = Guai Kerman
-					}
-				}
-				PARAM
-				{
-					name = KerbalTourParameter
-					state = Incomplete
-					disableOnStateChange = False
-					allowPartialFailure = True
-					values = 12188,0,0,0,0
-					kerbalName = Haofei Kerman
-					kerbalGender = Male
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						state = Incomplete
-						values = 4062,0,0,0,0
-						targetBody = 1
-						targetType = Suborbit
-						kerbalName = Haofei Kerman
-					}
-				}
-			}
-			CONTRACT
-			{
 				guid = d52fd1ee-062f-4c93-8484-180793194a70
 				type = PartTest
 				prestige = 1
@@ -1802,13 +1805,13 @@ GAME
 				type = TourismContract
 				prestige = 2
 				seed = 1928348377
-				state = Offered
+				state = Active
 				viewed = Read
 				agent = 集成积分企业
 				agentName = Integrated Integrals
 				deadlineType = Floating
 				expiryType = Floating
-				values = 104854.373931885,44667963.2949829,0,0,0,0,27.65217,15,119516.13662939,0,0,0
+				values = 104854.373931885,44667963.2949829,0,0,0,0,27.65217,15,119516.13662939,17174.0081369993,44685137.3031199,0
 				preposition = 太阳系
 				homeDestinations = True
 				isGeeAdventure = False
@@ -1817,6 +1820,7 @@ GAME
 				{
 					name = KerbalTourParameter
 					state = Incomplete
+					disableOnStateChange = False
 					allowPartialFailure = True
 					values = 29250,0,0,0,0
 					kerbalName = Kanggong Kerman
@@ -1844,6 +1848,7 @@ GAME
 				{
 					name = KerbalTourParameter
 					state = Incomplete
+					disableOnStateChange = False
 					allowPartialFailure = True
 					values = 29250,0,0,0,0
 					kerbalName = Niwai Kerman
@@ -1871,6 +1876,7 @@ GAME
 				{
 					name = KerbalTourParameter
 					state = Incomplete
+					disableOnStateChange = False
 					allowPartialFailure = True
 					values = 29250,0,0,0,0
 					kerbalName = Dongtong Kerman
@@ -1893,6 +1899,114 @@ GAME
 						targetType = Suborbit
 						kerbalName = Dongtong Kerman
 					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 196aae29-c5b3-45ea-a3d3-e253cc361ab7
+				type = SurveyContract
+				prestige = 1
+				seed = 464340295
+				state = Offered
+				viewed = Unseen
+				agent = 坎巴拉运动有限公司
+				agentName = Kerbal Motion LLC
+				deadlineType = Floating
+				expiryType = Floating
+				values = 86400,46008000,37500,66250,37500,0,11,11,104663.491467101,0,0,0
+				targetBody = 1
+				centerLatitude = -0.37366645427042194
+				centerLongitude = -75.042293177376578
+				dataName = 温度
+				anomalyName = 变动
+				reportName = 测量值
+				locationName = 坐标 VF-FR附近的Kerbin
+				focusedSurvey = False
+				targetBand = GROUND
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 11000,0,4,4,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 18000
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 652600941
+					wpIndex = 0
+					wpTexture = thermometer
+					wpLatitude = -0.35671187752188011
+					wpLongitude = -75.013111860244152
+					wpLandlocked = True
+					wpNavigationId = 2b201a00-a6c3-45c5-a23e-1a9c7f476dee
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 11000,0,4,4,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 16400
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 652600941
+					wpIndex = 1
+					wpTexture = thermometer
+					wpLatitude = -0.036316631029273669
+					wpLongitude = -75.149092355906163
+					wpLandlocked = True
+					wpNavigationId = 06369d9c-6716-4a64-bba0-93866ba7a858
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 11000,0,4,4,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 17100
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 652600941
+					wpIndex = 2
+					wpTexture = thermometer
+					wpLatitude = -0.51589273646638756
+					wpLongitude = -75.195012327124431
+					wpLandlocked = True
+					wpNavigationId = 133923fa-6882-45fe-96a0-8b59ba861187
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 11000,0,4,4,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 19100
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 652600941
+					wpIndex = 3
+					wpTexture = thermometer
+					wpLatitude = -0.52152460522242194
+					wpLongitude = -74.860844088002054
+					wpLandlocked = True
+					wpNavigationId = 8d8cbe66-80e2-44df-8c42-7761596d349c
 				}
 			}
 			CONTRACT_FINISHED
@@ -4039,6 +4153,284 @@ GAME
 					}
 				}
 			}
+			CONTRACT_FINISHED
+			{
+				guid = 60655f96-4d00-4f67-9ae3-0db0e0bd9740
+				type = TourismContract
+				prestige = 1
+				seed = 365203780
+				state = Completed
+				viewed = Read
+				agent = STEADLER工程公司
+				agentName = STEADLER Engineering Corps
+				deadlineType = Floating
+				expiryType = Floating
+				values = 86400,46008000,0,0,0,0,27.81818,14.4,98969.7045771306,14380.2580978897,46022380.2580979,0
+				preposition = 到Kerbin上
+				homeDestinations = True
+				isGeeAdventure = False
+				tourists = Guai Kerman|Haofei Kerman
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Complete
+					disableOnStateChange = False
+					allowPartialFailure = True
+					values = 0,0,0,0,0
+					kerbalName = Guai Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Guai Kerman
+					}
+				}
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Complete
+					disableOnStateChange = False
+					allowPartialFailure = True
+					values = 0,0,0,0,0
+					kerbalName = Haofei Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Haofei Kerman
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = b2ded339-bc98-4d5c-ba18-a24e3a87e1fb
+				type = TourismContract
+				prestige = 0
+				seed = 743237247
+				state = Completed
+				viewed = Read
+				agent = 火箭联合公司
+				agentName = Rokea Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 97968.0651114881,41734395.7374939,0,0,0,0,19.60241,10,110022.808438612,13291.025580554,41747686.7630745,0
+				preposition = 到Kerbin上
+				homeDestinations = True
+				isGeeAdventure = False
+				tourists = Xiufeng Kerman|Laili Kerman
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Complete
+					disableOnStateChange = False
+					allowPartialFailure = True
+					values = 0,0,0,0,0
+					kerbalName = Xiufeng Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Xiufeng Kerman
+					}
+				}
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Complete
+					disableOnStateChange = False
+					allowPartialFailure = True
+					values = 0,0,0,0,0
+					kerbalName = Laili Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Laili Kerman
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 84db3775-bbbd-4a9b-bb78-abf4e049b936
+				type = SurveyContract
+				prestige = 0
+				seed = 942875394
+				state = Completed
+				viewed = Read
+				agent = 坎巴拉运动有限公司
+				agentName = Kerbal Motion LLC
+				deadlineType = Floating
+				expiryType = Floating
+				values = 108000,46008000,7500,13250,7500,0,2,2,113345.190562761,17174.0081369993,46025174.008137,0
+				targetBody = 1
+				centerLatitude = 4.5829821920294549
+				centerLongitude = -78.949186032888477
+				dataName = 大气
+				anomalyName = 异常
+				reportName = 读数
+				locationName = Kerbin^N
+				focusedSurvey = True
+				targetBand = HIGH
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 获取气压读数
+					experiment = barometerScan
+					flightThreshold = 18800
+					band = 3
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = 308387497
+					wpIndex = 0
+					wpTexture = pressure
+					wpLatitude = 4.5829687492658078
+					wpLongitude = -78.949139773936196
+					wpLandlocked = False
+					wpNavigationId = 8021da24-051d-41ec-949d-6c92d2310267
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = c77d5f3f-cb3b-4799-abb1-0d54f0405fa7
+				type = SurveyContract
+				prestige = 0
+				seed = 748667370
+				state = Completed
+				viewed = Read
+				agent = 弗拉伊德动力研究实验室
+				agentName = FLOOYD Dynamics Research Labs
+				deadlineType = Floating
+				expiryType = Floating
+				values = 129600,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,141261.914967745,17174.0081369993,46025174.008137,0
+				targetBody = 1
+				centerLatitude = 4.2286250875006601
+				centerLongitude = -81.879367259135293
+				dataName = 大气
+				anomalyName = 异常
+				reportName = 读数
+				locationName = Kerbin^N
+				focusedSurvey = True
+				targetBand = HIGH
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 获取气压读数
+					experiment = barometerScan
+					flightThreshold = 17500
+					band = 3
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -262897929
+					wpIndex = 0
+					wpTexture = pressure
+					wpLatitude = 4.2286424984615802
+					wpLongitude = -81.879392203840212
+					wpLandlocked = False
+					wpNavigationId = ad19233c-6d1f-473d-af2f-3726d789df53
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 0f5aa377-43dc-4dd6-b5f4-888bcefb4da7
+				type = PartTest
+				prestige = 1
+				seed = 138668653
+				state = Completed
+				viewed = Read
+				agent = 坎巴拉运动有限公司
+				agentName = Kerbal Motion LLC
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,11250,28125,11250,4,8,5,38681.5081369972,17174.0081369993,9218774.008137,0
+				part = fairingSize1
+				haul = False
+				dest = 1
+				sit = FLYING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = fairingSize1
+					body = Kerbin
+					situation = FLYING
+					uniqueID = 0.69915733099875899
+					haul = False
+					repeatability = BODYANDSITUATION
+					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
+					tested = 4143392344
+					PARAM
+					{
+						name = ReachDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 36000
+						maxAlt = 40000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 250
+						maxSpd = 1490
+					}
+				}
+			}
 		}
 	}
 	SCENARIO
@@ -4060,7 +4452,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.10.1
-		UT = 16360.639972919198
+		UT = 18957.878107739129
 		activeVessel = 0
 		mapViewFiltering = 15359
 		commNetUIModeTracking = Network
@@ -4068,6 +4460,9 @@ GAME
 	}
 	LoaderInfo
 	{
+		PreciseManeuver.Unity v2.4.4.0 = True
+		PreciseManeuver v2.4.4.0 / v / v2.4.4 = True
+		PreciseManeuver = True
 	}
 	ROSTER
 	{
@@ -4139,7 +4534,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 18
+				flight = 21
 				0 = Flight,Kerbin
 				0 = Land,Kerbin
 				0 = Recover
@@ -4211,10 +4606,22 @@ GAME
 				17 = Orbit,Kerbin
 				17 = Land,Kerbin
 				17 = Recover
+				18 = Flight,Kerbin
+				18 = Land,Kerbin
+				18 = ExitVessel,Kerbin
+				18 = BoardVessel,Kerbin
+				18 = Recover
+				19 = Flight,Kerbin
+				19 = Land,Kerbin
+				19 = Recover
+				20 = Flight,Kerbin
+				20 = Suborbit,Kerbin
+				20 = Land,Kerbin
+				20 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 18
+				flight = 21
 			}
 		}
 		KERBAL
@@ -4322,7 +4729,7 @@ GAME
 			hero = True
 			CAREER_LOG
 			{
-				flight = 4
+				flight = 5
 				0 = Flight,Kerbin
 				0 = Land,Kerbin
 				0 = Recover
@@ -4335,10 +4742,14 @@ GAME
 				3 = Flight,Kerbin
 				3 = Land,Kerbin
 				3 = Recover
+				4 = Flight,Kerbin
+				4 = Suborbit,Kerbin
+				4 = Land,Kerbin
+				4 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 4
+				flight = 5
 			}
 		}
 		KERBAL
@@ -4773,156 +5184,16 @@ GAME
 		}
 		KERBAL
 		{
-			name = Xiufeng Kerman
-			gender = Male
-			type = Tourist
-			trait = Tourist
-			brave = 0.850150824
-			dumb = 0.96984762
-			badS = True
-			veteran = False
-			tour = False
-			state = Available
-			inactive = False
-			inactiveTimeEnd = 0
-			gExperienced = 0
-			outDueToG = False
-			ToD = 0
-			idx = -1
-			extraXP = 0
-			hasHelmetOn = False
-			hasNeckRingOn = False
-			lightR = 1
-			lightG = 0.5176
-			lightB = 0
-			completedFirstEVA = False
-			hero = False
-			CAREER_LOG
-			{
-				flight = 0
-			}
-			FLIGHT_LOG
-			{
-				flight = 0
-			}
-		}
-		KERBAL
-		{
-			name = Laili Kerman
-			gender = Male
-			type = Tourist
-			trait = Tourist
-			brave = 0.796747208
-			dumb = 0.339431584
-			badS = False
-			veteran = False
-			tour = False
-			state = Available
-			inactive = False
-			inactiveTimeEnd = 0
-			gExperienced = 0
-			outDueToG = False
-			ToD = 0
-			idx = -1
-			extraXP = 0
-			hasHelmetOn = False
-			hasNeckRingOn = False
-			lightR = 1
-			lightG = 0.5176
-			lightB = 0
-			completedFirstEVA = False
-			hero = False
-			CAREER_LOG
-			{
-				flight = 0
-			}
-			FLIGHT_LOG
-			{
-				flight = 0
-			}
-		}
-		KERBAL
-		{
-			name = Guai Kerman
-			gender = Male
-			type = Tourist
-			trait = Tourist
-			brave = 0.964188457
-			dumb = 0.50851053
-			badS = True
-			veteran = False
-			tour = False
-			state = Available
-			inactive = False
-			inactiveTimeEnd = 0
-			gExperienced = 0
-			outDueToG = False
-			ToD = 0
-			idx = -1
-			extraXP = 0
-			hasHelmetOn = False
-			hasNeckRingOn = False
-			lightR = 1
-			lightG = 0.5176
-			lightB = 0
-			completedFirstEVA = False
-			hero = False
-			CAREER_LOG
-			{
-				flight = 0
-			}
-			FLIGHT_LOG
-			{
-				flight = 0
-			}
-		}
-		KERBAL
-		{
-			name = Haofei Kerman
-			gender = Male
-			type = Tourist
-			trait = Tourist
-			brave = 0.065027073
-			dumb = 0.156914815
-			badS = False
-			veteran = False
-			tour = False
-			state = Available
-			inactive = False
-			inactiveTimeEnd = 0
-			gExperienced = 0
-			outDueToG = False
-			ToD = 0
-			idx = -1
-			extraXP = 0
-			hasHelmetOn = False
-			hasNeckRingOn = False
-			lightR = 1
-			lightG = 0.5176
-			lightB = 0
-			completedFirstEVA = False
-			hero = False
-			CAREER_LOG
-			{
-				flight = 0
-			}
-			FLIGHT_LOG
-			{
-				flight = 0
-			}
-		}
-		KERBAL
-		{
 			name = Kanggong Kerman
 			gender = Male
-			type = Unowned
+			type = Tourist
 			trait = Tourist
 			brave = 0.361219496
 			dumb = 0.665293217
 			badS = False
 			veteran = False
 			tour = False
-			state = Assigned
+			state = Available
 			inactive = False
 			inactiveTimeEnd = 0
 			gExperienced = 0
@@ -4950,14 +5221,14 @@ GAME
 		{
 			name = Niwai Kerman
 			gender = Male
-			type = Unowned
+			type = Tourist
 			trait = Tourist
 			brave = 0.871037126
 			dumb = 0.83336997
 			badS = False
 			veteran = False
 			tour = False
-			state = Assigned
+			state = Available
 			inactive = False
 			inactiveTimeEnd = 0
 			gExperienced = 0
@@ -4985,14 +5256,14 @@ GAME
 		{
 			name = Dongtong Kerman
 			gender = Male
-			type = Unowned
+			type = Tourist
 			trait = Tourist
 			brave = 0.0674864948
 			dumb = 0.073796384
 			badS = False
 			veteran = False
 			tour = False
-			state = Assigned
+			state = Available
 			inactive = False
 			inactiveTimeEnd = 0
 			gExperienced = 0
@@ -5014,6 +5285,45 @@ GAME
 			FLIGHT_LOG
 			{
 				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Pengwai Kerman
+			gender = Male
+			type = Tourist
+			trait = Tourist
+			brave = 0.274156511
+			dumb = 0.997851491
+			badS = False
+			veteran = False
+			tour = False
+			state = Available
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = 1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Suborbit,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
 			}
 		}
 	}
