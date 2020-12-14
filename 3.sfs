@@ -197,7 +197,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 460859.67111643677
+		funds = 484859.67111643677
 	}
 	SCENARIO
 	{
@@ -300,6 +300,10 @@ GAME
 						crews = Jebediah Kerman
 					}
 				}
+				Rendezvous
+				{
+					completedManned = 54705.265965315593
+				}
 				Spacewalk
 				{
 					completed = 26638.992484819504
@@ -336,7 +340,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 66.1284943
+		sci = 68.1284943
 		Tech
 		{
 			id = start
@@ -1193,7 +1197,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 556.173523
+		rep = 559.202271
 	}
 	SCENARIO
 	{
@@ -1532,7 +1536,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 54584.363816886791
+		update = 54715.285965313989
 		version = 1.10.1
 		WEIGHTS
 		{
@@ -2244,7 +2248,7 @@ GAME
 					PARAM
 					{
 						name = ReachSituation
-						state = Complete
+						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
 						sit = SUB_ORBITAL
@@ -6489,7 +6493,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.10.1
-		UT = 54592.145633292836
+		UT = 54716.465965313801
 		activeVessel = 14
 		mapViewFiltering = 16380
 		commNetUIModeTracking = Network
@@ -11512,22 +11516,22 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 48847.045862629071
+			met = 5869.4201026847295
 			lct = 48847.045862629071
-			lastUT = -1
-			distanceTraveled = 0
+			lastUT = 54716.465965313801
+			distanceTraveled = 362726.10580544831
 			root = 0
-			lat = -0.0005187423859373926
-			lon = -50.963741756268533
-			alt = 80993.100674272282
-			hgt = -1
+			lat = 0.00058214860539229857
+			lon = 23.223606515161055
+			alt = 74164.109401165042
+			hgt = 74164.1094
 			nrm = 0,1,0
-			rot = -0.498824328,-0.236603811,-0.774037182,0.309934407
-			CoM = 0,0,0
+			rot = -0.677261293,-0.151165351,-0.623920202,0.359429747
+			CoM = 1.38372416E-05,0.00626342464,-2.6752241E-06
 			stg = 0
-			prst = True
+			prst = False
 			ref = 0
-			ctrl = False
+			ctrl = True
 			PQSMin = 0
 			PQSMax = 0
 			GroupOverride = 0
@@ -11536,6 +11540,9 @@ GAME
 			OverrideAxisControl = 0,0,0,0
 			OverrideGroupNames = ,,,
 			altDispState = DEFAULT
+			cPch = 0
+			cHdg = 0
+			cMod = -1
 			ORBIT
 			{
 				SMA = 677320.6875
@@ -11568,14 +11575,14 @@ GAME
 				sidx = 0
 				attm = 0
 				sameVesselCollision = False
-				srfN = None, -1
+				srfN = , -1
 				attN = bottom, -1
 				attN = top, -1
 				mass = 0.800000012
 				shielded = False
-				temp = -1
-				tempExt = 0
-				tempExtUnexp = 0
+				temp = 298.93798907290108
+				tempExt = 298.94544219935847
+				tempExtUnexp = 298.93791387416206
 				staticPressureAtm = 0
 				expt = 0.5
 				state = 0
@@ -11583,9 +11590,261 @@ GAME
 				autostrutMode = Off
 				rigidAttachment = False
 				flag = Squad/Agencies/GoliathNationalProducts
-				rTrf = 
+				rTrf = _default
 				modCost = 0
 				crew = Kaidai Kerman
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					hibernation = False
+					hibernateOnWarp = False
+					activeControlPointName = _default
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						MakeReferenceToggle
+						{
+							actionGroup = None
+						}
+						HibernateToggle
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleReactionWheel
+					isEnabled = True
+					actuatorModeCycle = 0
+					authorityLimiter = 100
+					stateString = 空闲
+					stagingEnabled = True
+					WheelState = Active
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CycleAction
+						{
+							actionGroup = None
+						}
+						Activate
+						{
+							actionGroup = None
+						}
+						Deactivate
+						{
+							actionGroup = None
+						}
+						Toggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleColorChanger
+					isEnabled = True
+					animState = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						ResetAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceContainer
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CollectAllAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleConductionMultiplier
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FlagDecal
+					isEnabled = True
+					flagDisplayed = True
+					isMirrored = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModulePartVariants
+					isEnabled = True
+					useVariantMass = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
@@ -11611,10 +11870,27 @@ GAME
 			}
 			ACTIONGROUPS
 			{
+				Stage = False, 0
+				Gear = False, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 0
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
 			}
 			DISCOVERY
 			{
-				state = 29
+				state = -1
 				lastObservedTime = 48847.045862629071
 				lifetime = 92016000
 				refTime = 92016000
@@ -11625,6 +11901,13 @@ GAME
 			}
 			CTRLSTATE
 			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
 			}
 			VESSELMODULES
 			{
@@ -11636,7 +11919,7 @@ GAME
 				}
 				CommNetVessel
 				{
-					controlState = None
+					controlState = KerbalFull
 					canComm = True
 				}
 			}
@@ -11790,7 +12073,7 @@ GAME
 			persistentId = 313594854
 			name = 03 - 低空轨道 - 载人
 			type = Ship
-			sit = SUB_ORBITAL
+			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
 			vesselSpawning = False
@@ -11798,18 +12081,18 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 3328.3922709648832
+			met = 3452.7126029858482
 			lct = 51263.753362327952
-			lastUT = 54592.145633292836
-			distanceTraveled = 1770759.8538846727
+			lastUT = 54716.465965313801
+			distanceTraveled = 1918761.2984881459
 			root = 0
-			lat = -0.0093268426513721248
-			lon = 1.2718901095975879
-			alt = 118718.6372704414
-			hgt = 118718.641
-			nrm = -0.450650573,-0.819273412,-0.354549229
-			rot = 0.518252134,-0.694095731,-0.486093611,-0.115580432
-			CoM = -4.64916229E-06,-3.28752279,-6.91413879E-06
+			lat = -0.016316715167915833
+			lon = 23.252890154882376
+			alt = 74258.246435233043
+			hgt = 74258.25
+			nrm = 0.260555327,0.912920654,0.314144731
+			rot = -0.243613884,-0.234176502,-0.663406551,0.667611778
+			CoM = -3.63588333E-06,-3.16834998,-9.53674316E-06
 			stg = 1
 			prst = False
 			ref = 2214925933
@@ -11827,13 +12110,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 788149.22832961916
-				ECC = 0.20528598236851631
-				INC = 0.023028156491663038
-				LPE = 279.67728360079462
-				LAN = 79.390948012882973
-				MNA = -0.94186645062448893
-				EPH = 54592.145633292836
+				SMA = 677471.00328202243
+				ECC = 0.0076251458545641658
+				INC = 0.016319480690360405
+				LPE = 322.82792562523622
+				LAN = 36.351241220071756
+				MNA = -0.89291307357654859
+				EPH = 54716.465965313801
 				REF = 1
 			}
 			PART
@@ -11862,8 +12145,8 @@ GAME
 				attN = top, 1
 				mass = 0.800000012
 				shielded = False
-				temp = 282.69202358650512
-				tempExt = 277.80067960259987
+				temp = 282.17859802965313
+				tempExt = 280.1028241000655
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12117,7 +12400,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 42.62352256954469
+					amount = 49.95376049660495
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -12162,8 +12445,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 276.26440192690654
-				tempExt = 275.97496224340233
+				temp = 277.32673424583527
+				tempExt = 278.50145611301622
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12296,8 +12579,8 @@ GAME
 				attN = bottom, 10
 				mass = 1
 				shielded = False
-				temp = 272.95521852740546
-				tempExt = 271.85531227228108
+				temp = 272.99921432716957
+				tempExt = 274.42608222472086
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12467,8 +12750,8 @@ GAME
 				srfN = srfAttach, 2,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 276.8391408018814
-				tempExt = 274.00522769138672
+				temp = 276.57753263000865
+				tempExt = 275.57089196387028
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12602,8 +12885,8 @@ GAME
 				srfN = srfAttach, 2,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 276.8391408018814
-				tempExt = 274.00522769138672
+				temp = 276.57752083765564
+				tempExt = 275.57088043274763
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12737,8 +13020,8 @@ GAME
 				srfN = srfAttach, 2,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 276.8391408018814
-				tempExt = 274.00522769138672
+				temp = 276.57761424067144
+				tempExt = 275.57965905317002
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12872,8 +13155,8 @@ GAME
 				srfN = srfAttach, 2,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 276.8391408018814
-				tempExt = 274.00522769138672
+				temp = 276.58087496139945
+				tempExt = 275.58966027264762
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13005,8 +13288,8 @@ GAME
 				srfN = srfAttach, 2,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 272.85479660040721
-				tempExt = 271.44880067101292
+				temp = 272.95760191630535
+				tempExt = 273.56318709891167
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13138,8 +13421,8 @@ GAME
 				srfN = srfAttach, 2,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 272.85479660040687
-				tempExt = 271.4488006710128
+				temp = 272.95756034296232
+				tempExt = 273.55624073234674
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13270,8 +13553,8 @@ GAME
 				srfN = srfAttach, 2,CylCOL
 				mass = 9.99999975E-05
 				shielded = False
-				temp = 272.8111084817167
-				tempExt = 271.17764784731287
+				temp = 273.19704215219696
+				tempExt = 274.10383044160011
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13966,7 +14249,7 @@ GAME
 							markUT = 51263.773362327949
 							deltaVExpended = NaN
 							dragLosses = NaN
-							gravityLosses = 699.56694488968185
+							gravityLosses = 694.22106402287307
 							steeringLosses = NaN
 							markLAN = 241.87991002330705
 							markLatitude = -0.097206951776837469
@@ -14027,7 +14310,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 4.2623522569542267
+					amount = 4.9953760496604644
 					maxAmount = 5
 					flowState = True
 					isTweakable = True
@@ -14062,8 +14345,8 @@ GAME
 				attN = bottom, 15
 				mass = 0.25
 				shielded = False
-				temp = 275.7257849320934
-				tempExt = 273.959990113412
+				temp = 276.02164825598004
+				tempExt = 277.51930165426603
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14114,7 +14397,7 @@ GAME
 				RESOURCE
 				{
 					name = LiquidFuel
-					amount = 52.296587260922173
+					amount = 24.505344273285377
 					maxAmount = 180
 					flowState = True
 					isTweakable = True
@@ -14125,7 +14408,7 @@ GAME
 				RESOURCE
 				{
 					name = Oxidizer
-					amount = 63.918043578947767
+					amount = 29.950967180245275
 					maxAmount = 220
 					flowState = True
 					isTweakable = True
@@ -14161,8 +14444,8 @@ GAME
 				srfN = srfAttach, 10,COL3
 				mass = 0.00999999978
 				shielded = False
-				temp = 273.91353289016786
-				tempExt = 272.98651534719056
+				temp = 275.71357121391515
+				tempExt = 276.38955447891192
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.100000001
@@ -14237,8 +14520,8 @@ GAME
 				srfN = srfAttach, 10,COL3
 				mass = 0.00999999978
 				shielded = False
-				temp = 273.89156700337122
-				tempExt = 272.91373221586156
+				temp = 275.72735939729722
+				tempExt = 276.39551433266763
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.100000001
@@ -14313,8 +14596,8 @@ GAME
 				srfN = srfAttach, 10,COL3
 				mass = 0.00999999978
 				shielded = False
-				temp = 274.05220888390124
-				tempExt = 273.39160272200911
+				temp = 275.72733173935967
+				tempExt = 276.39477301980224
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.100000001
@@ -14389,8 +14672,8 @@ GAME
 				srfN = srfAttach, 10,COL3
 				mass = 0.00999999978
 				shielded = False
-				temp = 273.89158575697485
-				tempExt = 272.91373919110742
+				temp = 275.9203719660311
+				tempExt = 276.98934868756243
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.100000001
@@ -14464,8 +14747,8 @@ GAME
 				attN = bottom, 16
 				mass = 0.25
 				shielded = False
-				temp = 275.96943981978535
-				tempExt = 274.54634571802404
+				temp = 278.26617992798811
+				tempExt = 281.4407932553006
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14516,7 +14799,7 @@ GAME
 				RESOURCE
 				{
 					name = LiquidFuel
-					amount = 52.296587260922173
+					amount = 24.505344273285377
 					maxAmount = 180
 					flowState = True
 					isTweakable = True
@@ -14527,7 +14810,7 @@ GAME
 				RESOURCE
 				{
 					name = Oxidizer
-					amount = 63.918043578947767
+					amount = 29.950967180245275
 					maxAmount = 220
 					flowState = True
 					isTweakable = True
@@ -14562,8 +14845,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.25
 				shielded = False
-				temp = 275.89725955332096
-				tempExt = 275.02319652162737
+				temp = 296.62004475355934
+				tempExt = 290.82854228953084
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14685,7 +14968,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0
+					animState = 0.137872487
 					stagingEnabled = True
 					EVENTS
 					{
@@ -15828,5 +16111,13 @@ GAME
 	MESSAGESYSTEM
 	{
 		flash = True
+		MESSAGE
+		{
+			title = 世界第一里程碑
+			message = 我们的太空计划最近的成就已经吸引了不少企业前来投资！~n~n我们已经在Kerbin的轨道上完成了一次交会操作。~n<color=#b4d455><sprite="CurrencySpriteAsset" name="Funds" tint=1> 24,000 </color><color=#6dcff6><sprite="CurrencySpriteAsset" name="Science" tint=1> 2 </color><color=#e0d503><sprite="CurrencySpriteAsset" name="Reputation" tint=1> 5 </color>~n
+			color = 3
+			icon = 6
+			read = False
+		}
 	}
 }
