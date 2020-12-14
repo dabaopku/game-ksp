@@ -10,8 +10,8 @@ GAME
 	Seed = 1012858149
 	scene = 5
 	editor = None
-	flag = Squad/Flags/kerbal1
-	launchID = 45
+	flag = Squad/Flags/circles
+	launchID = 53
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
 	modded = True
@@ -197,7 +197,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 619090.77281773067
+		funds = 479957.24494381045
 	}
 	SCENARIO
 	{
@@ -336,7 +336,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 70.2231293
+		sci = 40.6582489
 		Tech
 		{
 			id = start
@@ -497,6 +497,17 @@ GAME
 			part = tailfin
 			part = sweptWing
 		}
+		Tech
+		{
+			id = heavyRocketry
+			state = Available
+			cost = 90
+			part = engineLargeSkipper.v2
+			part = engineLargeSkipper
+			part = liquidEngine2-2.v2
+			part = liquidEngine2-2
+			part = MassiveBooster
+		}
 		Science
 		{
 			id = mysteryGoo@KerbinSrfLandedLaunchPad
@@ -533,7 +544,7 @@ GAME
 		Science
 		{
 			id = recovery@KerbinFlew
-			title = 回收飞行后返回的航天器。
+			title = 回收到在Kerbin上空飞行后返航的载具
 			dsc = 1
 			scv = 0
 			sbv = 5
@@ -755,9 +766,9 @@ GAME
 			id = mysteryGoo@KerbinSrfSplashedWater
 			title = 在Kerbin的水边的神秘黏性物质™观察结果
 			dsc = 1
-			scv = 0.000151028988
+			scv = 1.83398902E-06
 			sbv = 0.400000006
-			sci = 5.19921494
+			sci = 5.19999075
 			asc = True
 			cap = 5.20000029
 		}
@@ -898,9 +909,9 @@ GAME
 			id = mysteryGoo@KerbinInSpaceLow
 			title = 在距离Kerbin较近的太空中的神秘黏性物质™观察结果
 			dsc = 1
-			scv = 0.00283600739
+			scv = 0.000654440664
 			sbv = 1
-			sci = 12.9631319
+			sci = 12.9914923
 			asc = True
 			cap = 13
 		}
@@ -942,9 +953,9 @@ GAME
 			id = recovery@KerbinSubOrbited
 			title = 回收到从Kerbin的亚轨道返回的载具
 			dsc = 1
-			scv = 3.57627846E-06
+			scv = 0
 			sbv = 8
-			sci = 9.59996605
+			sci = 9.60000038
 			asc = True
 			cap = 9.60000038
 		}
@@ -1041,9 +1052,9 @@ GAME
 			id = mobileMaterialsLab@KerbinFlyingLow
 			title = 飞越Kerbin时的材料研究
 			dsc = 1
-			scv = 0.00228975504
+			scv = 0.000500849332
 			sbv = 0.699999988
-			sci = 22.3487091
+			sci = 22.3887806
 			asc = True
 			cap = 22.3999996
 		}
@@ -1063,9 +1074,9 @@ GAME
 			id = mobileMaterialsLab@KerbinSrfLandedShores
 			title = 在Kerbin的海岸的材料研究
 			dsc = 1
-			scv = 0.00228981161
+			scv = 0.000500877679
 			sbv = 0.300000012
-			sci = 9.57801819
+			sci = 9.59519196
 			asc = True
 			cap = 9.60000038
 		}
@@ -1146,10 +1157,34 @@ GAME
 			asc = True
 			cap = 32
 		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfSplashedWater
+			title = 在Kerbin的水边的材料研究
+			dsc = 1
+			scv = 0.00228978693
+			sbv = 0.400000006
+			sci = 12.7706909
+			asc = True
+			cap = 12.8000002
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedGrasslands
+			title = 在Kerbin的草原的材料研究
+			dsc = 1
+			scv = 0.00228981161
+			sbv = 0.300000012
+			sci = 9.57801819
+			asc = True
+			cap = 9.60000038
+		}
 		ExpParts
 		{
-			engineLargeSkipper.v2 = 1
 			sepMotor1 = 1
+			radialDecoupler1-2 = 1
+			radialDecoupler2 = 1
+			HeatShield2 = 1
 		}
 	}
 	SCENARIO
@@ -1161,7 +1196,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 462.76297
+		rep = 517.119812
 	}
 	SCENARIO
 	{
@@ -1439,7 +1474,7 @@ GAME
 		scene = 5, 6, 7, 8
 		SpaceCenter/LaunchPad
 		{
-			lvl = 0.5
+			lvl = 1
 		}
 		SpaceCenter/Runway
 		{
@@ -1459,7 +1494,7 @@ GAME
 		}
 		SpaceCenter/AstronautComplex
 		{
-			lvl = 0.5
+			lvl = 1
 		}
 		SpaceCenter/MissionControl
 		{
@@ -1496,7 +1531,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 35529.345243357937
+		update = 44174.567664764429
 		version = 1.10.1
 		WEIGHTS
 		{
@@ -1536,6 +1571,80 @@ GAME
 		}
 		CONTRACTS
 		{
+			CONTRACT
+			{
+				guid = 1455a472-ab5f-4418-b128-6aff4122e390
+				type = RecoverAsset
+				prestige = 0
+				seed = -1037556761
+				state = Offered
+				viewed = Read
+				agent = 歌利亚国家制造厂
+				agentName = Goliath National Products
+				deadlineType = Floating
+				expiryType = Floating
+				values = 64800,46008000,23400,56132.9974508286,24569.9988842011,0,8.571429,9,99343.6929387959,0,0,0
+				targetBody = 1
+				kerbalName = Kaidai Kerman
+				partName = mk1pod.v2
+				partID = 0
+				recoveryLocation = 1
+				recoveryType = 1
+				PARAM
+				{
+					name = AcquireCrew
+					state = Incomplete
+					values = 5940,0,0,4,0
+					title = 拯救Kaidai Kerman
+					winOn = 0
+				}
+				PARAM
+				{
+					name = RecoverKerbal
+					state = Incomplete
+					values = 0,0,0,0,0
+					title = 在Kerbin回收Kaidai Kerman
+					failOn = All
+					winOn = All
+				}
+			}
+			CONTRACT
+			{
+				guid = dbbc9a14-5215-466c-b4b7-da834f7b5434
+				type = TourismContract
+				prestige = 0
+				seed = -486309113
+				state = Active
+				viewed = Read
+				agent = 坎巴拉动力
+				agentName = Kerbodyne
+				deadlineType = Floating
+				expiryType = Floating
+				values = 64800,46008000,0,0,0,0,20,10,103989.42664936,44179.7276647636,46052179.7276648,0
+				preposition = 到Kerbin上
+				homeDestinations = True
+				isGeeAdventure = False
+				tourists = Fenhai Kerman
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					disableOnStateChange = False
+					allowPartialFailure = True
+					values = 9750,0,0,0,0
+					kerbalName = Fenhai Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 3250,0,0,0,0
+						targetBody = 1
+						targetType = Orbit
+						kerbalName = Fenhai Kerman
+					}
+				}
+			}
 			CONTRACT
 			{
 				guid = 90263ad7-a6e3-4c77-ab39-a2a7bcb11428
@@ -1621,93 +1730,6 @@ GAME
 					wpLongitude = -1.1888253928948469
 					wpLandlocked = False
 					wpNavigationId = de208867-6bfd-4578-bfcc-319fbc9d5bec
-				}
-			}
-			CONTRACT
-			{
-				guid = d410df4b-60cc-447e-89a9-f5f27b891891
-				type = SurveyContract
-				prestige = 0
-				seed = -120893540
-				state = Active
-				viewed = Read
-				agent = 集成积分企业
-				agentName = Integrated Integrals
-				deadlineType = Floating
-				expiryType = Floating
-				values = 85544.5547103882,45552475.3832817,29705.8821078609,55104.4088076219,31499.9985694885,0,8.742858,9,106061.580402694,31121.7077827034,45583597.0910644,0
-				targetBody = 1
-				centerLatitude = 4.8280517425581744
-				centerLongitude = -72.135258455011424
-				dataName = 温度
-				anomalyName = 变动
-				reportName = 测量值
-				locationName = Kerbin^N
-				focusedSurvey = False
-				targetBand = LOW
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 8800,0,3,3,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 18000
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -1019140427
-					wpIndex = 0
-					wpTexture = thermometer
-					wpLatitude = 4.6620660263795326
-					wpLongitude = -72.150446615943352
-					wpLandlocked = False
-					wpNavigationId = c6135e30-ca73-4c6c-816c-9eca1d8bdd5c
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 8800,0,3,3,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 17300
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -1019140427
-					wpIndex = 1
-					wpTexture = thermometer
-					wpLatitude = 5.9662512197016211
-					wpLongitude = -73.784932881347004
-					wpLandlocked = False
-					wpNavigationId = b15e526e-9fd3-42cf-bbbf-5a64bb61f85c
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 8800,0,3,3,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 19600
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -1019140427
-					wpIndex = 2
-					wpTexture = thermometer
-					wpLatitude = 8.6096831142888952
-					wpLongitude = -69.987254057001309
-					wpLandlocked = False
-					wpNavigationId = 18183e1d-7316-4a17-bdb5-778db8c072d3
 				}
 			}
 			CONTRACT
@@ -1824,74 +1846,6 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = 8733746e-03cf-4686-837f-1e23ad5474eb
-				type = PartTest
-				prestige = 1
-				seed = 1282190539
-				state = Active
-				viewed = Read
-				agent = 马科索建筑玩具
-				agentName = Maxo Construction Toys
-				deadlineType = Floating
-				expiryType = Floating
-				values = 21600,9201600,11250,28125,11250,4,8,5,53121.8354975527,32230.236259281,9233830.23625928,0
-				part = miniJetEngine
-				haul = False
-				dest = 1
-				sit = FLYING
-				exp = False
-				PARAM
-				{
-					name = PartTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = miniJetEngine
-					body = Kerbin
-					situation = FLYING
-					uniqueID = 0.48430342715433988
-					haul = False
-					repeatability = BODYANDSITUATION
-					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
-					PARAM
-					{
-						name = ReachDestination
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						dest = 1
-						title = 
-					}
-					PARAM
-					{
-						name = ReachSituation
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						sit = FLYING
-						title = 
-					}
-					PARAM
-					{
-						name = ReachAltitudeEnvelope
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						minAlt = 10000
-						maxAlt = 12000
-					}
-					PARAM
-					{
-						name = ReachSpeedEnvelope
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						minSpd = 70
-						maxSpd = 170
-					}
-				}
-			}
-			CONTRACT
-			{
 				guid = 199cbcdb-bc6f-4a57-95b8-1aad005d55ca
 				type = PartTest
 				prestige = 1
@@ -1907,7 +1861,7 @@ GAME
 				haul = False
 				dest = 1
 				sit = ESCAPING
-				exp = True
+				exp = False
 				PARAM
 				{
 					name = PartTest
@@ -1942,26 +1896,126 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = f19aa744-e004-4c2c-98c7-841a58c26b75
-				type = SurveyContract
+				guid = 426530a2-ebfc-40a8-9e87-2b3129905163
+				type = PartTest
 				prestige = 1
-				seed = -1250545521
+				seed = -1711366831
+				state = Active
+				viewed = Read
+				agent = Jebediah Kerman废品回收和飞船部件公司
+				agentName = Jebediah Kerman's Junkyard and Spacecraft Parts Co
+				deadlineType = Floating
+				expiryType = Floating
+				values = 19285.7141017914,8215714.20736313,21336.2050652504,58674.5652011755,27225.000590086,9,18.17063,11.53846,54870.0347748837,37798.413251024,8253512.62061415,0
+				part = radialDecoupler2
+				haul = False
+				dest = 1
+				sit = ESCAPING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = radialDecoupler2
+					body = Kerbin
+					situation = ESCAPING
+					uniqueID = 0.2441863912363475
+					haul = False
+					repeatability = BODYANDSITUATION
+					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
+					PARAM
+					{
+						name = ReachDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = ESCAPING
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 10c7b625-b4bb-4c75-a928-003e9a8964ca
+				type = PartTest
+				prestige = 1
+				seed = -118305275
 				state = Active
 				viewed = Read
 				agent = 研发部门
 				agentName = Research & Development Department
 				deadlineType = Floating
 				expiryType = Floating
-				values = 129600,46008000,37500,66250,37500,0,11,11,155233.011298294,31121.7077827034,46039121.7077827,0
+				values = 43200,9201600,24750,61875,24750,9,16,12,78497.2466106072,37798.413251024,9239398.41325102,0
+				part = radialDecoupler1-2
+				haul = False
+				dest = 1
+				sit = ESCAPING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = radialDecoupler1-2
+					body = Kerbin
+					situation = ESCAPING
+					uniqueID = 0.088487145066488193
+					haul = False
+					repeatability = BODYANDSITUATION
+					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
+					PARAM
+					{
+						name = ReachDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = ESCAPING
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = c393e8d2-a706-44f1-b92d-478035a689f3
+				type = SurveyContract
+				prestige = 1
+				seed = -8311092
+				state = Active
+				viewed = Read
+				agent = 极限火箭集团
+				agentName = Rockomax Conglomerate
+				deadlineType = Floating
+				expiryType = Floating
+				values = 34754.6251178843,37013675.7505467,40486.113680568,78678.0159578705,43725.0035047532,0,11.51321,11,72083.9004392729,37798.413251024,37051474.1637977,0
 				targetBody = 1
-				centerLatitude = -18.108908215781948
-				centerLongitude = -84.644234084268419
-				dataName = 温度
-				anomalyName = 变动
-				reportName = 测量值
-				locationName = Kerbin^N
+				centerLatitude = -18.884316548347105
+				centerLongitude = 0.1529798499089573
+				dataName = 大气
+				anomalyName = 异常
+				reportName = 读数
+				locationName = 厄蒙的自豪附近的Kerbin
 				focusedSurvey = False
-				targetBand = HIGHMIX
+				targetBand = GROUND
 				contextual = False
 				PARAM
 				{
@@ -1969,83 +2023,150 @@ GAME
 					state = Incomplete
 					values = 11000,0,4,4,0
 					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 16700
-					band = 3
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -438687865
-					wpIndex = 0
-					wpTexture = thermometer
-					wpLatitude = -31.99830965998105
-					wpLongitude = -87.980761735922371
-					wpLandlocked = False
-					wpNavigationId = b62c65e2-4b1f-4412-bdb5-d41f341660ab
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 19600
-					band = 3
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -438687865
-					wpIndex = 1
-					wpTexture = thermometer
-					wpLatitude = -27.986393703883213
-					wpLongitude = -69.053042247207884
-					wpLandlocked = False
-					wpNavigationId = 6e0adc23-4557-4607-9138-eba3b6bec346
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 19100
-					band = 3
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -438687865
-					wpIndex = 2
-					wpTexture = thermometer
-					wpLatitude = -28.462618879274245
-					wpLongitude = -76.918004971688845
-					wpLandlocked = False
-					wpNavigationId = a644e6a2-ace4-4a42-bc85-a6e91958a6b6
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
+					actionDescription = 获取气压读数
+					experiment = barometerScan
 					flightThreshold = 17300
-					band = 2
-					clusterState = MIXED
+					band = 1
+					clusterState = FULL
 					verified = True
 					contextual = False
-					wpSeed = -438687865
+					wpSeed = -35465498
+					wpIndex = 0
+					wpTexture = pressure
+					wpLatitude = -18.825406400811286
+					wpLongitude = -0.01026278468021016
+					wpLandlocked = True
+					wpNavigationId = 14ce0dad-b29d-4791-81f0-e9976e03445d
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 11000,0,4,4,0
+					targetBody = 1
+					actionDescription = 获取气压读数
+					experiment = barometerScan
+					flightThreshold = 17100
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = -35465498
+					wpIndex = 1
+					wpTexture = pressure
+					wpLatitude = -19.003680777234969
+					wpLongitude = -0.021254149597914076
+					wpLandlocked = True
+					wpNavigationId = 3a9862ae-c25d-46c2-9042-420dce3c1619
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 11000,0,4,4,0
+					targetBody = 1
+					actionDescription = 获取气压读数
+					experiment = barometerScan
+					flightThreshold = 18200
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = -35465498
+					wpIndex = 2
+					wpTexture = pressure
+					wpLatitude = -18.951006116928443
+					wpLongitude = 0.17902781549197361
+					wpLandlocked = True
+					wpNavigationId = 58c2c98e-1df5-42b6-88e3-d2efdb2b6f18
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 11000,0,4,4,0
+					targetBody = 1
+					actionDescription = 获取气压读数
+					experiment = barometerScan
+					flightThreshold = 18500
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = -35465498
 					wpIndex = 3
-					wpTexture = thermometer
-					wpLatitude = -16.643324307037719
-					wpLongitude = -88.959792879174373
-					wpLandlocked = False
-					wpNavigationId = 13829da8-46d5-42f5-809e-9cdcae30b519
+					wpTexture = pressure
+					wpLatitude = -18.827643793295046
+					wpLongitude = 0.29997470002981502
+					wpLandlocked = True
+					wpNavigationId = 902200b6-55d3-4634-beb3-c5e0681e0800
+				}
+			}
+			CONTRACT
+			{
+				guid = 6459f7ab-b997-48e3-8b52-2743fbdb2fab
+				type = PartTest
+				prestige = 1
+				seed = -819265681
+				state = Active
+				viewed = Read
+				agent = 坎巴拉运动有限公司
+				agentName = Kerbal Motion LLC
+				deadlineType = Floating
+				expiryType = Floating
+				values = 43200,9201600,8438,21094,8438,2,5,4,86257.0917273489,44179.7276647636,9245779.72766476,0
+				part = HeatShield2
+				haul = True
+				dest = 1
+				sit = FLYING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = HeatShield2
+					body = Kerbin
+					situation = FLYING
+					uniqueID = 0.77983960452482137
+					haul = True
+					repeatability = BODYANDSITUATION
+				}
+				PARAM
+				{
+					name = ReachDestination
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					dest = 1
+					title = 
+				}
+				PARAM
+				{
+					name = ReachSituation
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					sit = FLYING
+					title = 
+				}
+				PARAM
+				{
+					name = ReachAltitudeEnvelope
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					minAlt = 34000
+					maxAlt = 43000
+				}
+				PARAM
+				{
+					name = ReachSpeedEnvelope
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					minSpd = 1720
+					maxSpd = 2170
 				}
 			}
 			CONTRACT
@@ -2284,306 +2405,6 @@ GAME
 					wpLongitude = 176.4670896063617
 					wpLandlocked = False
 					wpNavigationId = 06057573-3bab-49ea-a5b9-b63c42282f38
-				}
-			}
-			CONTRACT
-			{
-				guid = e8ced23b-3ef1-4908-8906-e57adee651d8
-				type = SurveyContract
-				prestige = 0
-				seed = -1077381731
-				state = Offered
-				viewed = Unseen
-				agent = O.M.B.爆破企业
-				agentName = O.M.B. Demolition Enterprises
-				deadlineType = Floating
-				expiryType = Floating
-				values = 21600,46008000,30000,55649.9974727631,31499.9985694885,0,8.571429,9,55229.1074701472,0,0,0
-				targetBody = 1
-				centerLatitude = -1.519349824076704
-				centerLongitude = -63.739796677670732
-				dataName = 观测
-				anomalyName = 不一致
-				reportName = 报告
-				locationName = Kerbin^N
-				focusedSurvey = False
-				targetBand = HIGH
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 8800,0,3,3,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 18700
-					band = 3
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -970378932
-					wpIndex = 0
-					wpTexture = report
-					wpLatitude = -4.0246115514758065
-					wpLongitude = -60.382724964743154
-					wpLandlocked = False
-					wpNavigationId = 97cbf5a8-e6f3-469a-981b-c14e9150c9d5
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 8800,0,3,3,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 18400
-					band = 3
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -970378932
-					wpIndex = 1
-					wpTexture = report
-					wpLatitude = -1.4986436441104671
-					wpLongitude = -61.667436927455718
-					wpLandlocked = False
-					wpNavigationId = 801077dc-4a7b-4412-af98-b468482528e0
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 8800,0,3,3,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 18200
-					band = 3
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -970378932
-					wpIndex = 2
-					wpTexture = report
-					wpLatitude = -0.58033521432035839
-					wpLongitude = -63.452765027549901
-					wpLandlocked = False
-					wpNavigationId = 334e6bd3-997d-4a2e-8590-ddbd5377c89e
-				}
-			}
-			CONTRACT
-			{
-				guid = 1455a472-ab5f-4418-b128-6aff4122e390
-				type = RecoverAsset
-				prestige = 0
-				seed = -1037556761
-				state = Offered
-				viewed = Unseen
-				agent = 歌利亚国家制造厂
-				agentName = Goliath National Products
-				deadlineType = Floating
-				expiryType = Floating
-				values = 64800,46008000,23400,56132.9974508286,24569.9988842011,0,8.571429,9,99343.6929387959,0,0,0
-				targetBody = 1
-				kerbalName = Kaidai Kerman
-				partName = mk1pod.v2
-				partID = 0
-				recoveryLocation = 1
-				recoveryType = 1
-				PARAM
-				{
-					name = AcquireCrew
-					state = Incomplete
-					values = 5940,0,0,4,0
-					title = 拯救Kaidai Kerman
-					winOn = 0
-				}
-				PARAM
-				{
-					name = RecoverKerbal
-					state = Incomplete
-					values = 0,0,0,0,0
-					title = 在Kerbin回收Kaidai Kerman
-					failOn = All
-					winOn = All
-				}
-			}
-			CONTRACT
-			{
-				guid = 1636b2c8-96ea-4fa9-8a49-f46c0a818377
-				type = SurveyContract
-				prestige = 1
-				seed = -1997864968
-				state = Offered
-				viewed = Unseen
-				agent = 探测动力有限公司
-				agentName = Probodobodyne Inc
-				deadlineType = Floating
-				expiryType = Floating
-				values = 108000,46008000,37500,66250,37500,0,12.76,12.76,143472.225243367,0,0,0
-				targetBody = 1
-				centerLatitude = -47.823955562521839
-				centerLongitude = 0.20248611001413613
-				dataName = 温度
-				anomalyName = 变动
-				reportName = 测量值
-				locationName = Kerbin^N
-				focusedSurvey = False
-				targetBand = LOW
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 18400
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = 1863916695
-					wpIndex = 0
-					wpTexture = thermometer
-					wpLatitude = -45.946279807123794
-					wpLongitude = 0.74773091708916106
-					wpLandlocked = False
-					wpNavigationId = 1ff5c66b-e905-4629-8f1a-649ca5570893
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 18700
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = 1863916695
-					wpIndex = 1
-					wpTexture = thermometer
-					wpLatitude = -43.629264848442382
-					wpLongitude = 1.5861725723630509
-					wpLandlocked = False
-					wpNavigationId = c58709af-e5ee-4da9-8928-9d494f83771b
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 18200
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = 1863916695
-					wpIndex = 2
-					wpTexture = thermometer
-					wpLatitude = -46.638498048148016
-					wpLongitude = 1.3204643825142053
-					wpLandlocked = False
-					wpNavigationId = d2c02d8b-667a-4776-85a1-9f6f98b84cc8
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 18400
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = 1863916695
-					wpIndex = 3
-					wpTexture = thermometer
-					wpLatitude = -46.818719250469556
-					wpLongitude = 4.0167413288096876
-					wpLandlocked = False
-					wpNavigationId = cfde1cf5-739e-4a0b-952a-c008b31b796c
-				}
-			}
-			CONTRACT
-			{
-				guid = 1eed065f-a946-4fb5-a313-33bb5360828c
-				type = PartTest
-				prestige = 1
-				seed = -1997639754
-				state = Offered
-				viewed = Unseen
-				agent = 反应系统有限公司
-				agentName = Reaction Systems Ltd
-				deadlineType = Floating
-				expiryType = Floating
-				values = 21600,9201600,11250,30937.5006705523,12375.0002682209,4,7.272727,5,57072.2252433671,0,0,0
-				part = Separator.1
-				haul = False
-				dest = 1
-				sit = FLYING
-				exp = True
-				PARAM
-				{
-					name = PartTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = Separator.1
-					body = Kerbin
-					situation = FLYING
-					uniqueID = 0.36719305131919383
-					haul = False
-					repeatability = BODYANDSITUATION
-					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
-					PARAM
-					{
-						name = ReachDestination
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						dest = 1
-						title = 
-					}
-					PARAM
-					{
-						name = ReachSituation
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						sit = FLYING
-						title = 
-					}
-					PARAM
-					{
-						name = ReachAltitudeEnvelope
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						minAlt = 15000
-						maxAlt = 19000
-					}
-					PARAM
-					{
-						name = ReachSpeedEnvelope
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						minSpd = 440
-						maxSpd = 1560
-					}
 				}
 			}
 			CONTRACT_FINISHED
@@ -2845,6 +2666,76 @@ GAME
 						values = 0,0,0,0,0
 						minSpd = 330
 						maxSpd = 430
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 8733746e-03cf-4686-837f-1e23ad5474eb
+				type = PartTest
+				prestige = 1
+				seed = 1282190539
+				state = Completed
+				viewed = Read
+				agent = 马科索建筑玩具
+				agentName = Maxo Construction Toys
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,11250,28125,11250,4,8,5,53121.8354975527,32230.236259281,9233830.23625928,0
+				part = miniJetEngine
+				haul = False
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = miniJetEngine
+					body = Kerbin
+					situation = FLYING
+					uniqueID = 0.48430342715433988
+					haul = False
+					repeatability = BODYANDSITUATION
+					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
+					tested = 3812999364
+					PARAM
+					{
+						name = ReachDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minAlt = 10000
+						maxAlt = 12000
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						minSpd = 70
+						maxSpd = 170
 					}
 				}
 			}
@@ -4403,98 +4294,6 @@ GAME
 			}
 			CONTRACT_FINISHED
 			{
-				guid = 37e6fdac-98b2-4d15-b62d-ac7c3e96bdb3
-				type = SurveyContract
-				prestige = 0
-				seed = 1091885579
-				state = Completed
-				viewed = Read
-				agent = 支柱公司
-				agentName = StrutCo
-				deadlineType = Floating
-				expiryType = Floating
-				values = 108000,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,116794.950241151,8953.97024115474,46016953.9702412,0
-				targetBody = 1
-				centerLatitude = 0.75214580358426641
-				centerLongitude = -75.723014362347172
-				dataName = 大气
-				anomalyName = 异常
-				reportName = 读数
-				locationName = Kerbin^N
-				focusedSurvey = True
-				targetBand = LOW
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 获取气压读数
-					experiment = barometerScan
-					flightThreshold = 18000
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = 1534828796
-					wpIndex = 0
-					wpTexture = pressure
-					wpLatitude = 0.75213768299475547
-					wpLongitude = -75.723015893167243
-					wpLandlocked = False
-					wpNavigationId = e0406121-f5d2-4f36-a474-7145301764ca
-				}
-			}
-			CONTRACT_FINISHED
-			{
-				guid = c77d5f3f-cb3b-4799-abb1-0d54f0405fa7
-				type = SurveyContract
-				prestige = 0
-				seed = 748667370
-				state = Completed
-				viewed = Read
-				agent = 弗拉伊德动力研究实验室
-				agentName = FLOOYD Dynamics Research Labs
-				deadlineType = Floating
-				expiryType = Floating
-				values = 129600,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,141261.914967745,17174.0081369993,46025174.008137,0
-				targetBody = 1
-				centerLatitude = 4.2286250875006601
-				centerLongitude = -81.879367259135293
-				dataName = 大气
-				anomalyName = 异常
-				reportName = 读数
-				locationName = Kerbin^N
-				focusedSurvey = True
-				targetBand = HIGH
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 获取气压读数
-					experiment = barometerScan
-					flightThreshold = 17500
-					band = 3
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -262897929
-					wpIndex = 0
-					wpTexture = pressure
-					wpLatitude = 4.2286424984615802
-					wpLongitude = -81.879392203840212
-					wpLandlocked = False
-					wpNavigationId = ad19233c-6d1f-473d-af2f-3726d789df53
-				}
-			}
-			CONTRACT_FINISHED
-			{
 				guid = 84db3775-bbbd-4a9b-bb78-abf4e049b936
 				type = SurveyContract
 				prestige = 0
@@ -4537,6 +4336,52 @@ GAME
 					wpLongitude = -78.949139773936196
 					wpLandlocked = False
 					wpNavigationId = 8021da24-051d-41ec-949d-6c92d2310267
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 37e6fdac-98b2-4d15-b62d-ac7c3e96bdb3
+				type = SurveyContract
+				prestige = 0
+				seed = 1091885579
+				state = Completed
+				viewed = Read
+				agent = 支柱公司
+				agentName = StrutCo
+				deadlineType = Floating
+				expiryType = Floating
+				values = 108000,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,116794.950241151,8953.97024115474,46016953.9702412,0
+				targetBody = 1
+				centerLatitude = 0.75214580358426641
+				centerLongitude = -75.723014362347172
+				dataName = 大气
+				anomalyName = 异常
+				reportName = 读数
+				locationName = Kerbin^N
+				focusedSurvey = True
+				targetBand = LOW
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 获取气压读数
+					experiment = barometerScan
+					flightThreshold = 18000
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = 1534828796
+					wpIndex = 0
+					wpTexture = pressure
+					wpLatitude = 0.75213768299475547
+					wpLongitude = -75.723015893167243
+					wpLandlocked = False
+					wpNavigationId = e0406121-f5d2-4f36-a474-7145301764ca
 				}
 			}
 			CONTRACT_FINISHED
@@ -4629,6 +4474,52 @@ GAME
 					wpLongitude = -71.795922968600706
 					wpLandlocked = False
 					wpNavigationId = c478e54c-5d4b-4df9-a938-33ba18a2f8bc
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = c77d5f3f-cb3b-4799-abb1-0d54f0405fa7
+				type = SurveyContract
+				prestige = 0
+				seed = 748667370
+				state = Completed
+				viewed = Read
+				agent = 弗拉伊德动力研究实验室
+				agentName = FLOOYD Dynamics Research Labs
+				deadlineType = Floating
+				expiryType = Floating
+				values = 129600,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,141261.914967745,17174.0081369993,46025174.008137,0
+				targetBody = 1
+				centerLatitude = 4.2286250875006601
+				centerLongitude = -81.879367259135293
+				dataName = 大气
+				anomalyName = 异常
+				reportName = 读数
+				locationName = Kerbin^N
+				focusedSurvey = True
+				targetBand = HIGH
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 获取气压读数
+					experiment = barometerScan
+					flightThreshold = 17500
+					band = 3
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -262897929
+					wpIndex = 0
+					wpTexture = pressure
+					wpLatitude = 4.2286424984615802
+					wpLongitude = -81.879392203840212
+					wpLandlocked = False
+					wpNavigationId = ad19233c-6d1f-473d-af2f-3726d789df53
 				}
 			}
 			CONTRACT_FINISHED
@@ -4767,6 +4658,52 @@ GAME
 					wpLongitude = -72.435567417834704
 					wpLandlocked = False
 					wpNavigationId = c647c205-9368-4c07-a7d6-e47bd53cacea
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 7c949bb4-c6c4-4efa-b751-372bb0ccbff2
+				type = SurveyContract
+				prestige = 0
+				seed = 1686170347
+				state = Completed
+				viewed = Read
+				agent = Sean罐头厂
+				agentName = Sean's Cannery
+				deadlineType = Floating
+				expiryType = Floating
+				values = 104854.373931885,44667963.2949829,7724.99978542328,14329.8739511967,7874.99964237213,0,1.904762,2,112817.838110405,8388.89898382282,44676352.1939667,0
+				targetBody = 1
+				centerLatitude = -1.9359853200683488
+				centerLongitude = -75.34253726178305
+				dataName = 观测
+				anomalyName = 不一致
+				reportName = 报告
+				locationName = Kerbin^N
+				focusedSurvey = True
+				targetBand = LOW
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 18200
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = 620808542
+					wpIndex = 0
+					wpTexture = report
+					wpLatitude = -1.9359914473703286
+					wpLongitude = -75.342519532413363
+					wpLandlocked = False
+					wpNavigationId = 9cdb8fa0-9919-4ca9-8a5d-b3fe07ee5273
 				}
 			}
 			CONTRACT_FINISHED
@@ -4955,98 +4892,6 @@ GAME
 			}
 			CONTRACT_FINISHED
 			{
-				guid = ae904d26-c19f-46b5-95ba-224914bebee8
-				type = SurveyContract
-				prestige = 0
-				seed = 934995408
-				state = Completed
-				viewed = Read
-				agent = 坎灵顿模型火箭和纸制品有限公司
-				agentName = Kerlington Model Rockets and Paper Products Inc
-				deadlineType = Floating
-				expiryType = Floating
-				values = 21600,46008000,7500,13250,7500,0,2,2,30122.5389838257,9322.05067084619,46017322.0506708,0
-				targetBody = 1
-				centerLatitude = -3.4989966701262865
-				centerLongitude = -78.095247981452175
-				dataName = 观测
-				anomalyName = 不一致
-				reportName = 报告
-				locationName = Kerbin^N
-				focusedSurvey = True
-				targetBand = LOW
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 17800
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = 1312460020
-					wpIndex = 0
-					wpTexture = report
-					wpLatitude = -3.4989959653287488
-					wpLongitude = -78.095259552933271
-					wpLandlocked = False
-					wpNavigationId = 83e851e2-f358-4059-98a2-f791e3f55a5f
-				}
-			}
-			CONTRACT_FINISHED
-			{
-				guid = 7c949bb4-c6c4-4efa-b751-372bb0ccbff2
-				type = SurveyContract
-				prestige = 0
-				seed = 1686170347
-				state = Completed
-				viewed = Read
-				agent = Sean罐头厂
-				agentName = Sean's Cannery
-				deadlineType = Floating
-				expiryType = Floating
-				values = 104854.373931885,44667963.2949829,7724.99978542328,14329.8739511967,7874.99964237213,0,1.904762,2,112817.838110405,8388.89898382282,44676352.1939667,0
-				targetBody = 1
-				centerLatitude = -1.9359853200683488
-				centerLongitude = -75.34253726178305
-				dataName = 观测
-				anomalyName = 不一致
-				reportName = 报告
-				locationName = Kerbin^N
-				focusedSurvey = True
-				targetBand = LOW
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 18200
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = 620808542
-					wpIndex = 0
-					wpTexture = report
-					wpLatitude = -1.9359914473703286
-					wpLongitude = -75.342519532413363
-					wpLandlocked = False
-					wpNavigationId = 9cdb8fa0-9919-4ca9-8a5d-b3fe07ee5273
-				}
-			}
-			CONTRACT_FINISHED
-			{
 				guid = 33ade8e9-05ed-4bff-94a0-6832e210960b
 				type = SurveyContract
 				prestige = 0
@@ -5089,6 +4934,52 @@ GAME
 					wpLongitude = -73.390769266833999
 					wpLandlocked = False
 					wpNavigationId = bd440cb1-fdda-42ba-b890-47e837c55843
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = ae904d26-c19f-46b5-95ba-224914bebee8
+				type = SurveyContract
+				prestige = 0
+				seed = 934995408
+				state = Completed
+				viewed = Read
+				agent = 坎灵顿模型火箭和纸制品有限公司
+				agentName = Kerlington Model Rockets and Paper Products Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,46008000,7500,13250,7500,0,2,2,30122.5389838257,9322.05067084619,46017322.0506708,0
+				targetBody = 1
+				centerLatitude = -3.4989966701262865
+				centerLongitude = -78.095247981452175
+				dataName = 观测
+				anomalyName = 不一致
+				reportName = 报告
+				locationName = Kerbin^N
+				focusedSurvey = True
+				targetBand = LOW
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 17800
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = 1312460020
+					wpIndex = 0
+					wpTexture = report
+					wpLatitude = -3.4989959653287488
+					wpLongitude = -78.095259552933271
+					wpLandlocked = False
+					wpNavigationId = 83e851e2-f358-4059-98a2-f791e3f55a5f
 				}
 			}
 			CONTRACT_FINISHED
@@ -5231,6 +5122,52 @@ GAME
 			}
 			CONTRACT_FINISHED
 			{
+				guid = 9c20c55d-b678-4979-9cb0-76a05d33bece
+				type = SurveyContract
+				prestige = 0
+				seed = 1344627426
+				state = Completed
+				viewed = Read
+				agent = Sean罐头厂
+				agentName = Sean's Cannery
+				deadlineType = Floating
+				expiryType = Floating
+				values = 125825.248718262,44667963.2949829,7724.99978542328,14329.8739511967,7874.99964237213,0,1.904762,2,125938.068718262,17174.0081369993,44685137.3031199,0
+				targetBody = 1
+				centerLatitude = 2.3249211239932035
+				centerLongitude = -65.272755571066298
+				dataName = 观测
+				anomalyName = 不一致
+				reportName = 报告
+				locationName = Kerbin^N
+				focusedSurvey = True
+				targetBand = HIGH
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 17100
+					band = 3
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = 1052773207
+					wpIndex = 0
+					wpTexture = report
+					wpLatitude = 2.3248697693662437
+					wpLongitude = -65.272764548920478
+					wpLandlocked = False
+					wpNavigationId = 9656b7b7-ded0-4e33-a3fb-6992a1b68e5d
+				}
+			}
+			CONTRACT_FINISHED
+			{
 				guid = b3e35a20-fba6-4140-8419-42b1c4c8ff10
 				type = SurveyContract
 				prestige = 0
@@ -5277,25 +5214,317 @@ GAME
 			}
 			CONTRACT_FINISHED
 			{
-				guid = 9c20c55d-b678-4979-9cb0-76a05d33bece
+				guid = f19aa744-e004-4c2c-98c7-841a58c26b75
 				type = SurveyContract
-				prestige = 0
-				seed = 1344627426
+				prestige = 1
+				seed = -1250545521
 				state = Completed
 				viewed = Read
-				agent = Sean罐头厂
-				agentName = Sean's Cannery
+				agent = 研发部门
+				agentName = Research & Development Department
 				deadlineType = Floating
 				expiryType = Floating
-				values = 125825.248718262,44667963.2949829,7724.99978542328,14329.8739511967,7874.99964237213,0,1.904762,2,125938.068718262,17174.0081369993,44685137.3031199,0
+				values = 129600,46008000,37500,66250,37500,0,11,11,155233.011298294,31121.7077827034,46039121.7077827,0
 				targetBody = 1
-				centerLatitude = 2.3249211239932035
-				centerLongitude = -65.272755571066298
+				centerLatitude = -18.108908215781948
+				centerLongitude = -84.644234084268419
+				dataName = 温度
+				anomalyName = 变动
+				reportName = 测量值
+				locationName = Kerbin^N
+				focusedSurvey = False
+				targetBand = HIGHMIX
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 16700
+					band = 3
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -438687865
+					wpIndex = 0
+					wpTexture = thermometer
+					wpLatitude = -31.99830965998105
+					wpLongitude = -87.980761735922371
+					wpLandlocked = False
+					wpNavigationId = b62c65e2-4b1f-4412-bdb5-d41f341660ab
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 19600
+					band = 3
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -438687865
+					wpIndex = 1
+					wpTexture = thermometer
+					wpLatitude = -27.986393703883213
+					wpLongitude = -69.053042247207884
+					wpLandlocked = False
+					wpNavigationId = 6e0adc23-4557-4607-9138-eba3b6bec346
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 19100
+					band = 3
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -438687865
+					wpIndex = 2
+					wpTexture = thermometer
+					wpLatitude = -28.462618879274245
+					wpLongitude = -76.918004971688845
+					wpLandlocked = False
+					wpNavigationId = a644e6a2-ace4-4a42-bc85-a6e91958a6b6
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 17300
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -438687865
+					wpIndex = 3
+					wpTexture = thermometer
+					wpLatitude = -16.643324307037719
+					wpLongitude = -88.959792879174373
+					wpLandlocked = False
+					wpNavigationId = 13829da8-46d5-42f5-809e-9cdcae30b519
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = d410df4b-60cc-447e-89a9-f5f27b891891
+				type = SurveyContract
+				prestige = 0
+				seed = -120893540
+				state = Completed
+				viewed = Read
+				agent = 集成积分企业
+				agentName = Integrated Integrals
+				deadlineType = Floating
+				expiryType = Floating
+				values = 85544.5547103882,45552475.3832817,29705.8821078609,55104.4088076219,31499.9985694885,0,8.742858,9,106061.580402694,31121.7077827034,45583597.0910644,0
+				targetBody = 1
+				centerLatitude = 4.8280517425581744
+				centerLongitude = -72.135258455011424
+				dataName = 温度
+				anomalyName = 变动
+				reportName = 测量值
+				locationName = Kerbin^N
+				focusedSurvey = False
+				targetBand = LOW
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 18000
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -1019140427
+					wpIndex = 0
+					wpTexture = thermometer
+					wpLatitude = 4.6620660263795326
+					wpLongitude = -72.150446615943352
+					wpLandlocked = False
+					wpNavigationId = c6135e30-ca73-4c6c-816c-9eca1d8bdd5c
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 17300
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -1019140427
+					wpIndex = 1
+					wpTexture = thermometer
+					wpLatitude = 5.9662512197016211
+					wpLongitude = -73.784932881347004
+					wpLandlocked = False
+					wpNavigationId = b15e526e-9fd3-42cf-bbbf-5a64bb61f85c
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 19600
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -1019140427
+					wpIndex = 2
+					wpTexture = thermometer
+					wpLatitude = 8.6096831142888952
+					wpLongitude = -69.987254057001309
+					wpLandlocked = False
+					wpNavigationId = 18183e1d-7316-4a17-bdb5-778db8c072d3
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 3bfd6e89-410b-4d4c-9377-ea382c2cc38d
+				type = SurveyContract
+				prestige = 0
+				seed = -1060616883
+				state = Completed
+				viewed = Read
+				agent = 火箭联合公司
+				agentName = Rokea Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 117561.678133786,41734395.7374939,32135.9979286194,59612.273450413,32444.997625351,0,8.821083,9,138038.503826091,31121.7077827034,41765517.4452766,0
+				targetBody = 1
+				centerLatitude = -5.1461289964849852
+				centerLongitude = -72.420710267472742
 				dataName = 观测
 				anomalyName = 不一致
 				reportName = 报告
 				locationName = Kerbin^N
-				focusedSurvey = True
+				focusedSurvey = False
+				targetBand = LOW
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 16900
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -302710460
+					wpIndex = 0
+					wpTexture = report
+					wpLatitude = -6.6241296552133369
+					wpLongitude = -75.051799500923593
+					wpLandlocked = False
+					wpNavigationId = ba3ee994-6028-437c-bdf3-a1e2b5e2c66e
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 16400
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -302710460
+					wpIndex = 1
+					wpTexture = report
+					wpLatitude = -6.3962020523931162
+					wpLongitude = -76.795078872655225
+					wpLandlocked = False
+					wpNavigationId = 828422f5-02d3-4a23-abc9-54dc1c495a3c
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 17600
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -302710460
+					wpIndex = 2
+					wpTexture = report
+					wpLatitude = -6.2468482853848419
+					wpLongitude = -72.721371503906894
+					wpLandlocked = False
+					wpNavigationId = dee9eb87-fbda-4e59-aa1b-a0b8fc901e34
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = e8ced23b-3ef1-4908-8906-e57adee651d8
+				type = SurveyContract
+				prestige = 0
+				seed = -1077381731
+				state = Completed
+				viewed = Read
+				agent = O.M.B.爆破企业
+				agentName = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,46008000,30000,55649.9974727631,31499.9985694885,0,8.571429,9,55229.1074701472,37798.413251024,46045798.413251,0
+				targetBody = 1
+				centerLatitude = -1.519349824076704
+				centerLongitude = -63.739796677670732
+				dataName = 观测
+				anomalyName = 不一致
+				reportName = 报告
+				locationName = Kerbin^N
+				focusedSurvey = False
 				targetBand = HIGH
 				contextual = False
 				PARAM
@@ -5307,18 +5536,174 @@ GAME
 					targetBody = 1
 					actionDescription = 写一份乘员报告
 					experiment = crewReport
-					flightThreshold = 17100
+					flightThreshold = 18700
 					band = 3
 					clusterState = MIXED
 					verified = True
 					contextual = False
-					wpSeed = 1052773207
+					wpSeed = -970378932
 					wpIndex = 0
 					wpTexture = report
-					wpLatitude = 2.3248697693662437
-					wpLongitude = -65.272764548920478
+					wpLatitude = -4.0246115514758065
+					wpLongitude = -60.382724964743154
 					wpLandlocked = False
-					wpNavigationId = 9656b7b7-ded0-4e33-a3fb-6992a1b68e5d
+					wpNavigationId = 97cbf5a8-e6f3-469a-981b-c14e9150c9d5
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 18400
+					band = 3
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -970378932
+					wpIndex = 1
+					wpTexture = report
+					wpLatitude = -1.4986436441104671
+					wpLongitude = -61.667436927455718
+					wpLandlocked = False
+					wpNavigationId = 801077dc-4a7b-4412-af98-b468482528e0
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 18200
+					band = 3
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -970378932
+					wpIndex = 2
+					wpTexture = report
+					wpLatitude = -0.58033521432035839
+					wpLongitude = -63.452765027549901
+					wpLandlocked = False
+					wpNavigationId = 334e6bd3-997d-4a2e-8590-ddbd5377c89e
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 196aae29-c5b3-45ea-a3d3-e253cc361ab7
+				type = SurveyContract
+				prestige = 1
+				seed = 464340295
+				state = Completed
+				viewed = Read
+				agent = 坎巴拉运动有限公司
+				agentName = Kerbal Motion LLC
+				deadlineType = Floating
+				expiryType = Floating
+				values = 86400,46008000,37500,66250,37500,0,11,11,104663.491467101,31121.7077827034,46039121.7077827,0
+				targetBody = 1
+				centerLatitude = -0.37366645427042194
+				centerLongitude = -75.042293177376578
+				dataName = 温度
+				anomalyName = 变动
+				reportName = 测量值
+				locationName = 坐标 VF-FR附近的Kerbin
+				focusedSurvey = False
+				targetBand = GROUND
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 18000
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 652600941
+					wpIndex = 0
+					wpTexture = thermometer
+					wpLatitude = -0.35671187752188011
+					wpLongitude = -75.013111860244152
+					wpLandlocked = True
+					wpNavigationId = 2b201a00-a6c3-45c5-a23e-1a9c7f476dee
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 16400
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 652600941
+					wpIndex = 1
+					wpTexture = thermometer
+					wpLatitude = -0.036316631029273669
+					wpLongitude = -75.149092355906163
+					wpLandlocked = True
+					wpNavigationId = 06369d9c-6716-4a64-bba0-93866ba7a858
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 17100
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 652600941
+					wpIndex = 2
+					wpTexture = thermometer
+					wpLatitude = -0.51589273646638756
+					wpLongitude = -75.195012327124431
+					wpLandlocked = True
+					wpNavigationId = 133923fa-6882-45fe-96a0-8b59ba861187
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 测量温度
+					experiment = temperatureScan
+					flightThreshold = 19100
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 652600941
+					wpIndex = 3
+					wpTexture = thermometer
+					wpLatitude = -0.52152460522242194
+					wpLongitude = -74.860844088002054
+					wpLandlocked = True
+					wpNavigationId = 8d8cbe66-80e2-44df-8c42-7761596d349c
 				}
 			}
 			CONTRACT_FINISHED
@@ -5840,208 +6225,6 @@ GAME
 					targetType = REACHSPACE
 				}
 			}
-			CONTRACT_FINISHED
-			{
-				guid = 3bfd6e89-410b-4d4c-9377-ea382c2cc38d
-				type = SurveyContract
-				prestige = 0
-				seed = -1060616883
-				state = Completed
-				viewed = Read
-				agent = 火箭联合公司
-				agentName = Rokea Inc
-				deadlineType = Floating
-				expiryType = Floating
-				values = 117561.678133786,41734395.7374939,32135.9979286194,59612.273450413,32444.997625351,0,8.821083,9,138038.503826091,31121.7077827034,41765517.4452766,0
-				targetBody = 1
-				centerLatitude = -5.1461289964849852
-				centerLongitude = -72.420710267472742
-				dataName = 观测
-				anomalyName = 不一致
-				reportName = 报告
-				locationName = Kerbin^N
-				focusedSurvey = False
-				targetBand = LOW
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 16900
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -302710460
-					wpIndex = 0
-					wpTexture = report
-					wpLatitude = -6.6241296552133369
-					wpLongitude = -75.051799500923593
-					wpLandlocked = False
-					wpNavigationId = ba3ee994-6028-437c-bdf3-a1e2b5e2c66e
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 16400
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -302710460
-					wpIndex = 1
-					wpTexture = report
-					wpLatitude = -6.3962020523931162
-					wpLongitude = -76.795078872655225
-					wpLandlocked = False
-					wpNavigationId = 828422f5-02d3-4a23-abc9-54dc1c495a3c
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 17600
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -302710460
-					wpIndex = 2
-					wpTexture = report
-					wpLatitude = -6.2468482853848419
-					wpLongitude = -72.721371503906894
-					wpLandlocked = False
-					wpNavigationId = dee9eb87-fbda-4e59-aa1b-a0b8fc901e34
-				}
-			}
-			CONTRACT_FINISHED
-			{
-				guid = 196aae29-c5b3-45ea-a3d3-e253cc361ab7
-				type = SurveyContract
-				prestige = 1
-				seed = 464340295
-				state = Completed
-				viewed = Read
-				agent = 坎巴拉运动有限公司
-				agentName = Kerbal Motion LLC
-				deadlineType = Floating
-				expiryType = Floating
-				values = 86400,46008000,37500,66250,37500,0,11,11,104663.491467101,31121.7077827034,46039121.7077827,0
-				targetBody = 1
-				centerLatitude = -0.37366645427042194
-				centerLongitude = -75.042293177376578
-				dataName = 温度
-				anomalyName = 变动
-				reportName = 测量值
-				locationName = 坐标 VF-FR附近的Kerbin
-				focusedSurvey = False
-				targetBand = GROUND
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 18000
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = 652600941
-					wpIndex = 0
-					wpTexture = thermometer
-					wpLatitude = -0.35671187752188011
-					wpLongitude = -75.013111860244152
-					wpLandlocked = True
-					wpNavigationId = 2b201a00-a6c3-45c5-a23e-1a9c7f476dee
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 16400
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = 652600941
-					wpIndex = 1
-					wpTexture = thermometer
-					wpLatitude = -0.036316631029273669
-					wpLongitude = -75.149092355906163
-					wpLandlocked = True
-					wpNavigationId = 06369d9c-6716-4a64-bba0-93866ba7a858
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 17100
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = 652600941
-					wpIndex = 2
-					wpTexture = thermometer
-					wpLatitude = -0.51589273646638756
-					wpLongitude = -75.195012327124431
-					wpLandlocked = True
-					wpNavigationId = 133923fa-6882-45fe-96a0-8b59ba861187
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					targetBody = 1
-					actionDescription = 测量温度
-					experiment = temperatureScan
-					flightThreshold = 19100
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = 652600941
-					wpIndex = 3
-					wpTexture = thermometer
-					wpLatitude = -0.52152460522242194
-					wpLongitude = -74.860844088002054
-					wpLandlocked = True
-					wpNavigationId = 8d8cbe66-80e2-44df-8c42-7761596d349c
-				}
-			}
 		}
 	}
 	SCENARIO
@@ -6063,9 +6246,9 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.10.1
-		UT = 35538.725243356435
+		UT = 44181.207664763366
 		activeVessel = 0
-		mapViewFiltering = 15359
+		mapViewFiltering = 16383
 		commNetUIModeTracking = Network
 		commNetUIModeFlight = Network
 		VESSEL
@@ -8565,1957 +8748,6 @@ GAME
 				}
 			}
 		}
-		VESSEL
-		{
-			pid = eb1d58752660419ea17e5145f36ae4da
-			persistentId = 2464485142
-			name = 未命名飞船的残骸
-			type = Debris
-			sit = LANDED
-			landed = True
-			skipGroundPositioning = False
-			vesselSpawning = True
-			launchedFrom = Runway
-			landedAt = 
-			displaylandedAt = 
-			splashed = False
-			met = 1017.0123045570581
-			lct = 34492.132938804112
-			lastUT = 35509.205243361161
-			distanceTraveled = 75.196784349057836
-			root = 0
-			lat = -0.41166140843622634
-			lon = -75.081296048365871
-			alt = 137.37222782638855
-			hgt = 137.169769
-			nrm = -0.159724057,-0.984758258,0.0688456297
-			rot = -0.68776536,-0.0227995105,-0.298711658,-0.661234081
-			CoM = 0.000173103064,-0.211895376,-0.000174835324
-			stg = 0
-			prst = False
-			ref = 0
-			ctrl = False
-			PQSMin = 2
-			PQSMax = 9
-			GroupOverride = 0
-			OverrideDefault = False,False,False,False
-			OverrideActionControl = 0,0,0,0
-			OverrideAxisControl = 0,0,0,0
-			OverrideGroupNames = ,,,
-			altDispState = DEFAULT
-			cPch = 0
-			cHdg = 0
-			cMod = 0
-			ORBIT
-			{
-				SMA = 300068.79042693216
-				ECC = 0.99999999999999989
-				INC = 90.411658724646173
-				LPE = 90
-				LAN = 158.12808326210165
-				MNA = 3.1415926207170166
-				EPH = 35509.225243361157
-				REF = 1
-			}
-			PART
-			{
-				name = StandardCtrlSrf
-				cid = 4290367602
-				uid = 3148903190
-				mid = 2724558301
-				persistentId = 1749024775
-				launchID = 44
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1
-				mirror = 1,1,1
-				symMethod = Mirror
-				istg = -1
-				resPri = 0
-				dstg = 0
-				sqor = -1
-				sepI = -1
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				srfN = srfAttach, -1,COL 12
-				mass = 0.0500000007
-				shielded = False
-				temp = 294.77927126300926
-				tempExt = 295.47457007185051
-				tempExtUnexp = 295.47454454012779
-				staticPressureAtm = 0.97980897396604361
-				expt = 0.100000001
-				state = 0
-				attached = False
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/kerbal1
-				rTrf = StandardCtrlSrf (未命名飞船的残骸)
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleControlSurface
-					isEnabled = True
-					mirrorDeploy = True
-					usesMirrorDeploy = True
-					ignorePitch = False
-					ignoreYaw = True
-					ignoreRoll = True
-					deploy = False
-					deployInvert = False
-					partDeployInvert = False
-					deployAngle = 20
-					authorityLimiter = 100
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ActionToggle
-						{
-							actionGroup = None
-						}
-						ActionExtend
-						{
-							actionGroup = None
-						}
-						ActionRetract
-						{
-							actionGroup = None
-						}
-						PitchActive
-						{
-							actionGroup = None
-						}
-						PitchInactive
-						{
-							actionGroup = None
-						}
-						TogglePitch
-						{
-							actionGroup = None
-						}
-						YawActive
-						{
-							actionGroup = None
-						}
-						YawInactive
-						{
-							actionGroup = None
-						}
-						ToggleYaw
-						{
-							actionGroup = None
-						}
-						RollActive
-						{
-							actionGroup = None
-						}
-						RollInactive
-						{
-							actionGroup = None
-						}
-						ToggleRoll
-						{
-							actionGroup = None
-						}
-						ActivateAllControls
-						{
-							actionGroup = None
-						}
-						DeactivateAllControls
-						{
-							actionGroup = None
-						}
-					}
-					AXISGROUPS
-					{
-						deployAngle
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-						}
-						authorityLimiter
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = True, 32458.436259286
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 32459.316259286
-				Brakes = False, 34344.4529388278
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0
-				yaw = 0
-				roll = 0
-				trimPitch = 0.0280000027
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				FlightIntegrator
-				{
-				}
-				AxisGroupsModule
-				{
-				}
-			}
-		}
-		VESSEL
-		{
-			pid = 8d63ffc830da489daf15754e978e3042
-			persistentId = 1357886858
-			name = 未命名飞船的残骸
-			type = Debris
-			sit = LANDED
-			landed = True
-			skipGroundPositioning = False
-			vesselSpawning = False
-			launchedFrom = Runway
-			landedAt = 
-			displaylandedAt = 
-			splashed = False
-			met = 881.43230457876052
-			lct = 34537.792938796803
-			lastUT = 35419.225243375564
-			distanceTraveled = 113.54974442452095
-			root = 0
-			lat = -0.47070627598373971
-			lon = -75.164714252886299
-			alt = 182.31629298289772
-			hgt = 0.101741046
-			nrm = -1.78813934E-07,0.189435288,0.981893182
-			rot = -0.00898708124,0.986691236,-0.101335518,0.126849458
-			CoM = 0.000224727904,-0.211930513,-0.000171598047
-			stg = 0
-			prst = False
-			ref = 0
-			ctrl = False
-			PQSMin = 2
-			PQSMax = 9
-			GroupOverride = 0
-			OverrideDefault = False,False,False,False
-			OverrideActionControl = 0,0,0,0
-			OverrideAxisControl = 0,0,0,0
-			OverrideGroupNames = ,,,
-			altDispState = DEFAULT
-			cPch = 0
-			cHdg = 0
-			cMod = 0
-			ORBIT
-			{
-				SMA = 0
-				ECC = 1
-				INC = 90.470726118921405
-				LPE = 90.000000000000014
-				LAN = 158.04466361936272
-				MNA = 0
-				EPH = 35509.225243361157
-				REF = 1
-			}
-			PART
-			{
-				name = StandardCtrlSrf
-				cid = 4290362014
-				uid = 162450199
-				mid = 2724558301
-				persistentId = 1076250314
-				launchID = 44
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1
-				mirror = 1,1,1
-				symMethod = Mirror
-				istg = -1
-				resPri = 0
-				dstg = 0
-				sqor = -1
-				sepI = -1
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				srfN = srfAttach, -1,COL 12
-				mass = 0.0500000007
-				shielded = False
-				temp = 295.68204706854925
-				tempExt = 296.37233687376931
-				tempExtUnexp = 296.37241542077328
-				staticPressureAtm = 0.973275516640837
-				expt = 0.100000001
-				state = 0
-				attached = False
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/kerbal1
-				rTrf = StandardCtrlSrf (未命名飞船的残骸)
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleControlSurface
-					isEnabled = True
-					mirrorDeploy = False
-					usesMirrorDeploy = True
-					ignorePitch = False
-					ignoreYaw = False
-					ignoreRoll = False
-					deploy = False
-					deployInvert = False
-					partDeployInvert = False
-					deployAngle = 20
-					authorityLimiter = 100
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ActionToggle
-						{
-							actionGroup = None
-						}
-						ActionExtend
-						{
-							actionGroup = None
-						}
-						ActionRetract
-						{
-							actionGroup = None
-						}
-						PitchActive
-						{
-							actionGroup = None
-						}
-						PitchInactive
-						{
-							actionGroup = None
-						}
-						TogglePitch
-						{
-							actionGroup = None
-						}
-						YawActive
-						{
-							actionGroup = None
-						}
-						YawInactive
-						{
-							actionGroup = None
-						}
-						ToggleYaw
-						{
-							actionGroup = None
-						}
-						RollActive
-						{
-							actionGroup = None
-						}
-						RollInactive
-						{
-							actionGroup = None
-						}
-						ToggleRoll
-						{
-							actionGroup = None
-						}
-						ActivateAllControls
-						{
-							actionGroup = None
-						}
-						DeactivateAllControls
-						{
-							actionGroup = None
-						}
-					}
-					AXISGROUPS
-					{
-						deployAngle
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-						}
-						authorityLimiter
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = True, 32458.436259286
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 32459.316259286
-				Brakes = False, 34344.4529388278
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0
-				yaw = 0
-				roll = 0
-				trimPitch = 0.0280000027
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				FlightIntegrator
-				{
-				}
-				AxisGroupsModule
-				{
-				}
-			}
-		}
-		VESSEL
-		{
-			pid = 2fd2814947094221a892ea12aa19d535
-			persistentId = 1993620767
-			name = 未命名飞船的残骸
-			type = Debris
-			sit = LANDED
-			landed = True
-			skipGroundPositioning = False
-			vesselSpawning = False
-			launchedFrom = Runway
-			landedAt = 
-			displaylandedAt = 
-			splashed = False
-			met = 881.25230457878934
-			lct = 34537.792938796803
-			lastUT = 35419.045243375593
-			distanceTraveled = 107.41269610365582
-			root = 0
-			lat = -0.47105031312080242
-			lon = -75.164992790722607
-			alt = 182.37331086653285
-			hgt = 0.100750461
-			nrm = 9.20146704E-07,0.172136649,-0.985073328
-			rot = 0.153296068,0.143901899,-0.732133925,-0.647898614
-			CoM = -8.60895962E-05,-0.211945593,-0.000175520778
-			stg = 0
-			prst = False
-			ref = 0
-			ctrl = False
-			PQSMin = 2
-			PQSMax = 9
-			GroupOverride = 0
-			OverrideDefault = False,False,False,False
-			OverrideActionControl = 0,0,0,0
-			OverrideAxisControl = 0,0,0,0
-			OverrideGroupNames = ,,,
-			altDispState = DEFAULT
-			cPch = 0
-			cHdg = 0
-			cMod = 0
-			ORBIT
-			{
-				SMA = 300091.1692485807
-				ECC = 0.99999999999999989
-				INC = 90.471047939774294
-				LPE = 90.000000000000014
-				LAN = 158.04440402860132
-				MNA = 3.1415926207170166
-				EPH = 35509.225243361157
-				REF = 1
-			}
-			PART
-			{
-				name = StandardCtrlSrf
-				cid = 4290361942
-				uid = 3158010645
-				mid = 2724558301
-				persistentId = 2967270676
-				launchID = 44
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1
-				mirror = 1,1,1
-				symMethod = Mirror
-				istg = -1
-				resPri = 0
-				dstg = 0
-				sqor = -1
-				sepI = -1
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				srfN = srfAttach, -1,COL 12
-				mass = 0.0500000007
-				shielded = False
-				temp = 295.68793975767045
-				tempExt = 296.37954080588077
-				tempExtUnexp = 296.37962112877176
-				staticPressureAtm = 0.97326723405116577
-				expt = 0.100000001
-				state = 0
-				attached = False
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/kerbal1
-				rTrf = StandardCtrlSrf (未命名飞船的残骸)
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleControlSurface
-					isEnabled = True
-					mirrorDeploy = False
-					usesMirrorDeploy = True
-					ignorePitch = False
-					ignoreYaw = True
-					ignoreRoll = True
-					deploy = False
-					deployInvert = False
-					partDeployInvert = False
-					deployAngle = 20
-					authorityLimiter = 100
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ActionToggle
-						{
-							actionGroup = None
-						}
-						ActionExtend
-						{
-							actionGroup = None
-						}
-						ActionRetract
-						{
-							actionGroup = None
-						}
-						PitchActive
-						{
-							actionGroup = None
-						}
-						PitchInactive
-						{
-							actionGroup = None
-						}
-						TogglePitch
-						{
-							actionGroup = None
-						}
-						YawActive
-						{
-							actionGroup = None
-						}
-						YawInactive
-						{
-							actionGroup = None
-						}
-						ToggleYaw
-						{
-							actionGroup = None
-						}
-						RollActive
-						{
-							actionGroup = None
-						}
-						RollInactive
-						{
-							actionGroup = None
-						}
-						ToggleRoll
-						{
-							actionGroup = None
-						}
-						ActivateAllControls
-						{
-							actionGroup = None
-						}
-						DeactivateAllControls
-						{
-							actionGroup = None
-						}
-					}
-					AXISGROUPS
-					{
-						deployAngle
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-						}
-						authorityLimiter
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = True, 32458.436259286
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 32459.316259286
-				Brakes = False, 34344.4529388278
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0
-				yaw = 0
-				roll = 0
-				trimPitch = 0.0280000027
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				FlightIntegrator
-				{
-				}
-				AxisGroupsModule
-				{
-				}
-			}
-		}
-		VESSEL
-		{
-			pid = fc96e35192454be6be3d07679d06444e
-			persistentId = 3789908177
-			name = 未命名飞船的残骸
-			type = Debris
-			sit = FLYING
-			landed = True
-			skipGroundPositioning = False
-			vesselSpawning = True
-			launchedFrom = Runway
-			landedAt = 
-			displaylandedAt = 
-			splashed = False
-			met = 10.97999999824242
-			lct = 35498.165243362928
-			lastUT = 35509.205243361161
-			distanceTraveled = 223.60745693755518
-			root = 0
-			lat = -0.49889384379212071
-			lon = -74.872222853124271
-			alt = 249.38840262591839
-			hgt = 0.529730678
-			nrm = -0.292447209,-0.0838243961,0.952600598
-			rot = -0.902951241,-0.289154351,-0.298882872,0.108341686
-			CoM = 0,0,0
-			stg = 0
-			prst = False
-			ref = 0
-			ctrl = False
-			PQSMin = 2
-			PQSMax = 9
-			GroupOverride = 0
-			OverrideDefault = False,False,False,False
-			OverrideActionControl = 0,0,0,0
-			OverrideAxisControl = 0,0,0,0
-			OverrideGroupNames = ,,,
-			altDispState = DEFAULT
-			cPch = 0
-			cHdg = 0
-			cMod = -1
-			ORBIT
-			{
-				SMA = NaN
-				ECC = 1
-				INC = 90.498893843792118
-				LPE = 90
-				LAN = 158.33715414878725
-				MNA = 0
-				EPH = 35509.225243361157
-				REF = 1
-			}
-			PART
-			{
-				name = GearFree
-				cid = 4290362642
-				uid = 2749420701
-				mid = 2724558301
-				persistentId = 1274244552
-				launchID = 44
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1.00000048
-				mirror = 1,1,1
-				symMethod = Mirror
-				istg = -1
-				resPri = 0
-				dstg = 0
-				sqor = -1
-				sepI = -1
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				srfN = srfAttach, -1,CYLCOL
-				mass = 0.0149999997
-				shielded = False
-				temp = 297.73226489113495
-				tempExt = 298.54774861880463
-				tempExtUnexp = 298.54842149302601
-				staticPressureAtm = 0.963591061019615
-				expt = 0.5
-				state = 0
-				attached = False
-				autostrutMode = ForceHeaviest
-				rigidAttachment = False
-				flag = Squad/Flags/kerbal1
-				rTrf = GearFree
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleWheelBase
-					isEnabled = True
-					wheelType = FREE
-					isGrounded = False
-					autoFriction = True
-					frictionMultiplier = 1.99965847
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ActAutoFrictionToggle
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleWheelSuspension
-					isEnabled = True
-					springTweakable = 1
-					damperTweakable = 1
-					autoSpringDamper = True
-					suspensionPos = (8.74992693E-05, -0.380052596, 5.10586324E-05)
-					autoBoost = 0
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleWheelSteering
-					isEnabled = True
-					steeringEnabled = True
-					steeringInvert = False
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						SteeringToggle
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleWheelDamage
-					isEnabled = True
-					isDamaged = False
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = True, 32458.436259286
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 34704.0129387702
-				Brakes = False, 34988.7103215443
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0.0280000027
-				yaw = 0
-				roll = 0
-				trimPitch = 0.0280000027
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				FlightIntegrator
-				{
-				}
-				AxisGroupsModule
-				{
-				}
-			}
-		}
-		VESSEL
-		{
-			pid = 88184d70237c4f0caf4c166fb83df215
-			persistentId = 1230978509
-			name = 未命名飞船的残骸
-			type = Debris
-			sit = LANDED
-			landed = True
-			skipGroundPositioning = False
-			vesselSpawning = True
-			launchedFrom = Runway
-			landedAt = 
-			displaylandedAt = 
-			splashed = False
-			met = 10.579999998306448
-			lct = 35498.565243362864
-			lastUT = 35509.205243361161
-			distanceTraveled = 23.427754626445729
-			root = 0
-			lat = -0.49411269258403201
-			lon = -74.879857809202718
-			alt = 230.49048318353016
-			hgt = 0.129204452
-			nrm = -0.00462528318,0.000228941441,-0.999989271
-			rot = 0.171950117,-0.0567360111,-0.326229006,0.927787066
-			CoM = 1.74992204,-1.00007725,2.88485116E-05
-			stg = 0
-			prst = False
-			ref = 0
-			ctrl = False
-			PQSMin = 2
-			PQSMax = 9
-			GroupOverride = 0
-			OverrideDefault = False,False,False,False
-			OverrideActionControl = 0,0,0,0
-			OverrideAxisControl = 0,0,0,0
-			OverrideGroupNames = ,,,
-			altDispState = DEFAULT
-			cPch = 0
-			cHdg = 0
-			cMod = -1
-			ORBIT
-			{
-				SMA = NaN
-				ECC = 1
-				INC = 90.494286101851799
-				LPE = 90.000000000000014
-				LAN = 158.32958193373122
-				MNA = 0
-				EPH = 35509.225243361157
-				REF = 1
-			}
-			PART
-			{
-				name = sweptWing
-				cid = 4290361680
-				uid = 3630922996
-				mid = 2724558301
-				persistentId = 324256526
-				launchID = 44
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1.00000191
-				mirror = 1,1,1
-				symMethod = Mirror
-				istg = -1
-				resPri = 0
-				dstg = 0
-				sqor = -1
-				sepI = -1
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				srfN = srfAttach, -1,node_collider
-				mass = 0.275000006
-				shielded = False
-				temp = 296.61819342609164
-				tempExt = 297.57622674224655
-				tempExtUnexp = 297.57663733073662
-				staticPressureAtm = 0.96631174113407503
-				expt = 0.100000001
-				state = 0
-				attached = False
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/kerbal1
-				rTrf = sweptWing
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleLiftingSurface
-					isEnabled = True
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = True, 32458.436259286
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 34704.0129387702
-				Brakes = False, 34988.7103215443
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0.0280000027
-				yaw = 0
-				roll = 0
-				trimPitch = 0.0280000027
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				FlightIntegrator
-				{
-				}
-				AxisGroupsModule
-				{
-				}
-			}
-		}
-		VESSEL
-		{
-			pid = 7796be2ef20e4b6e8dd75e2f4d137fcb
-			persistentId = 1719847354
-			name = 未命名飞船的残骸
-			type = Debris
-			sit = LANDED
-			landed = True
-			skipGroundPositioning = False
-			vesselSpawning = True
-			launchedFrom = Runway
-			landedAt = 
-			displaylandedAt = 
-			splashed = False
-			met = 10.55999999830965
-			lct = 35498.585243362861
-			lastUT = 35509.205243361161
-			distanceTraveled = 2.9906057438986542
-			root = 0
-			lat = -0.49513635002394835
-			lon = -74.880408100148031
-			alt = 233.50815690518357
-			hgt = 0.0777127519
-			nrm = 0.000385455787,0.0607096255,-0.998155296
-			rot = -0.0236962028,-0.205443203,0.801269531,0.561425567
-			CoM = 0.750051022,-0.499927014,2.77160461E-06
-			stg = 0
-			prst = False
-			ref = 0
-			ctrl = False
-			PQSMin = 2
-			PQSMax = 9
-			GroupOverride = 0
-			OverrideDefault = False,False,False,False
-			OverrideActionControl = 0,0,0,0
-			OverrideAxisControl = 0,0,0,0
-			OverrideGroupNames = ,,,
-			altDispState = DEFAULT
-			cPch = 0
-			cHdg = 0
-			cMod = -1
-			ORBIT
-			{
-				SMA = NaN
-				ECC = 1
-				INC = 90.495057850900636
-				LPE = 90.000000000000028
-				LAN = 158.32899246201134
-				MNA = 0
-				EPH = 35509.225243361157
-				REF = 1
-			}
-			PART
-			{
-				name = tailfin
-				cid = 4290934102
-				uid = 2755933938
-				mid = 2724558301
-				persistentId = 1315916619
-				launchID = 44
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1.00000393
-				mirror = 1,1,1
-				symMethod = Mirror
-				istg = -1
-				resPri = 0
-				dstg = 0
-				sqor = -1
-				sepI = -1
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				srfN = srfAttach, -1,TailCOL
-				mass = 0.125
-				shielded = False
-				temp = 296.27065877740165
-				tempExt = 297.2890153962399
-				tempExtUnexp = 297.28944205234001
-				staticPressureAtm = 0.96587682988006562
-				expt = 0.100000001
-				state = 0
-				attached = False
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/kerbal1
-				rTrf = tailfin
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleControlSurface
-					isEnabled = True
-					mirrorDeploy = False
-					usesMirrorDeploy = True
-					ignorePitch = True
-					ignoreYaw = False
-					ignoreRoll = False
-					deploy = False
-					deployInvert = False
-					partDeployInvert = False
-					deployAngle = 25
-					authorityLimiter = 100
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ActionToggle
-						{
-							actionGroup = None
-						}
-						ActionExtend
-						{
-							actionGroup = None
-						}
-						ActionRetract
-						{
-							actionGroup = None
-						}
-						PitchActive
-						{
-							actionGroup = None
-						}
-						PitchInactive
-						{
-							actionGroup = None
-						}
-						TogglePitch
-						{
-							actionGroup = None
-						}
-						YawActive
-						{
-							actionGroup = None
-						}
-						YawInactive
-						{
-							actionGroup = None
-						}
-						ToggleYaw
-						{
-							actionGroup = None
-						}
-						RollActive
-						{
-							actionGroup = None
-						}
-						RollInactive
-						{
-							actionGroup = None
-						}
-						ToggleRoll
-						{
-							actionGroup = None
-						}
-						ActivateAllControls
-						{
-							actionGroup = None
-						}
-						DeactivateAllControls
-						{
-							actionGroup = None
-						}
-					}
-					AXISGROUPS
-					{
-						deployAngle
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-						}
-						authorityLimiter
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = True, 32458.436259286
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 34704.0129387702
-				Brakes = False, 34988.7103215443
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0.0280000027
-				yaw = 0
-				roll = 0
-				trimPitch = 0.0280000027
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				FlightIntegrator
-				{
-				}
-				AxisGroupsModule
-				{
-				}
-			}
-		}
-		VESSEL
-		{
-			pid = 78a36c9a941c4fe9bdc4cfd1cc2c41b6
-			persistentId = 780179707
-			name = 未命名飞船的残骸
-			type = Debris
-			sit = LANDED
-			landed = True
-			skipGroundPositioning = False
-			vesselSpawning = True
-			launchedFrom = Runway
-			landedAt = 
-			displaylandedAt = 
-			splashed = False
-			met = 10.55999999830965
-			lct = 35498.585243362861
-			lastUT = 35509.205243361161
-			distanceTraveled = 3.6614544516305196
-			root = 0
-			lat = -0.49500080637042254
-			lon = -74.880312039007876
-			alt = 233.11106120375916
-			hgt = 0.0775443166
-			nrm = 0.000387720764,0.0607125908,-0.998155296
-			rot = -0.0268393215,-0.205618098,0.812390804,0.544997334
-			CoM = 0.749936938,-0.499893039,3.4451321E-05
-			stg = 0
-			prst = False
-			ref = 0
-			ctrl = False
-			PQSMin = 2
-			PQSMax = 9
-			GroupOverride = 0
-			OverrideDefault = False,False,False,False
-			OverrideActionControl = 0,0,0,0
-			OverrideAxisControl = 0,0,0,0
-			OverrideGroupNames = ,,,
-			altDispState = DEFAULT
-			cPch = 0
-			cHdg = 0
-			cMod = -1
-			ORBIT
-			{
-				SMA = 300116.41635256389
-				ECC = 0.99999999999999989
-				INC = 90.494921517994655
-				LPE = 90.000000000000014
-				LAN = 158.3290851843318
-				MNA = 3.1415926207170166
-				EPH = 35509.225243361157
-				REF = 1
-			}
-			PART
-			{
-				name = tailfin
-				cid = 4290361272
-				uid = 197675067
-				mid = 2724558301
-				persistentId = 1340692159
-				launchID = 44
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1.00000393
-				mirror = 1,1,1
-				symMethod = Mirror
-				istg = -1
-				resPri = 0
-				dstg = 0
-				sqor = -1
-				sepI = -1
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				srfN = srfAttach, -1,TailCOL
-				mass = 0.125
-				shielded = False
-				temp = 296.27072498481465
-				tempExt = 297.29184760276877
-				tempExtUnexp = 297.29227616612633
-				staticPressureAtm = 0.96593405504506691
-				expt = 0.100000001
-				state = 0
-				attached = False
-				autostrutMode = Off
-				rigidAttachment = False
-				flag = Squad/Flags/kerbal1
-				rTrf = tailfin
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleControlSurface
-					isEnabled = True
-					mirrorDeploy = True
-					usesMirrorDeploy = True
-					ignorePitch = True
-					ignoreYaw = False
-					ignoreRoll = False
-					deploy = False
-					deployInvert = False
-					partDeployInvert = False
-					deployAngle = 25
-					authorityLimiter = 100
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ActionToggle
-						{
-							actionGroup = None
-						}
-						ActionExtend
-						{
-							actionGroup = None
-						}
-						ActionRetract
-						{
-							actionGroup = None
-						}
-						PitchActive
-						{
-							actionGroup = None
-						}
-						PitchInactive
-						{
-							actionGroup = None
-						}
-						TogglePitch
-						{
-							actionGroup = None
-						}
-						YawActive
-						{
-							actionGroup = None
-						}
-						YawInactive
-						{
-							actionGroup = None
-						}
-						ToggleYaw
-						{
-							actionGroup = None
-						}
-						RollActive
-						{
-							actionGroup = None
-						}
-						RollInactive
-						{
-							actionGroup = None
-						}
-						ToggleRoll
-						{
-							actionGroup = None
-						}
-						ActivateAllControls
-						{
-							actionGroup = None
-						}
-						DeactivateAllControls
-						{
-							actionGroup = None
-						}
-					}
-					AXISGROUPS
-					{
-						deployAngle
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-						}
-						authorityLimiter
-						{
-							axisGroup = None
-							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-							axisInverted = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = True, 32458.436259286
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 34704.0129387702
-				Brakes = False, 34988.7103215443
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0.0280000027
-				yaw = 0
-				roll = 0
-				trimPitch = 0.0280000027
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				FlightIntegrator
-				{
-				}
-				AxisGroupsModule
-				{
-				}
-			}
-		}
-		VESSEL
-		{
-			pid = 5b4654da29a545f397c5e816003e3533
-			persistentId = 985498754
-			name = 未命名飞船的残骸
-			type = Debris
-			sit = FLYING
-			landed = True
-			skipGroundPositioning = False
-			vesselSpawning = True
-			launchedFrom = Runway
-			landedAt = 
-			displaylandedAt = 
-			splashed = False
-			met = 9.5799999984665192
-			lct = 35499.565243362704
-			lastUT = 35509.205243361161
-			distanceTraveled = 49.889825845879848
-			root = 0
-			lat = -0.49279021670499989
-			lon = -74.879720433271274
-			alt = 227.90519966266584
-			hgt = 0.152797535
-			nrm = 0.92692095,0.00936608016,-0.375139475
-			rot = 0.576822519,0.305924952,-0.617872417,0.438086003
-			CoM = 0,0,0
-			stg = 0
-			prst = False
-			ref = 0
-			ctrl = False
-			PQSMin = 2
-			PQSMax = 9
-			GroupOverride = 0
-			OverrideDefault = False,False,False,False
-			OverrideActionControl = 0,0,0,0
-			OverrideAxisControl = 0,0,0,0
-			OverrideGroupNames = ,,,
-			altDispState = DEFAULT
-			cPch = 0
-			cHdg = 0
-			cMod = -1
-			ORBIT
-			{
-				SMA = 300113.95259983139
-				ECC = 0.99999999999999989
-				INC = 90.492790216705004
-				LPE = 90
-				LAN = 158.3296565686403
-				MNA = 3.1415926207170166
-				EPH = 35509.225243361157
-				REF = 1
-			}
-			PART
-			{
-				name = GearFree
-				cid = 4290361428
-				uid = 2717446269
-				mid = 2724558301
-				persistentId = 809142820
-				launchID = 44
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1.00000429
-				mirror = 1,1,1
-				symMethod = Mirror
-				istg = -1
-				resPri = 0
-				dstg = 0
-				sqor = -1
-				sepI = -1
-				sidx = -1
-				attm = 1
-				sameVesselCollision = False
-				srfN = srfAttach, -1,CYLCOL
-				mass = 0.0149999997
-				shielded = False
-				temp = 297.72490745590727
-				tempExt = 298.41616989102812
-				tempExtUnexp = 298.41665063066364
-				staticPressureAtm = 0.96668438237301069
-				expt = 0.5
-				state = 0
-				attached = False
-				autostrutMode = ForceHeaviest
-				rigidAttachment = False
-				flag = Squad/Flags/kerbal1
-				rTrf = GearFree
-				modCost = 0
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-					ToggleSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					SetSameVesselInteraction
-					{
-						actionGroup = None
-					}
-					RemoveSameVesselInteraction
-					{
-						actionGroup = None
-					}
-				}
-				PARTDATA
-				{
-				}
-				MODULE
-				{
-					name = ModuleWheelBase
-					isEnabled = True
-					wheelType = FREE
-					isGrounded = False
-					autoFriction = True
-					frictionMultiplier = 1.99965847
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						ActAutoFrictionToggle
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleWheelSuspension
-					isEnabled = True
-					springTweakable = 1
-					damperTweakable = 1
-					autoSpringDamper = True
-					suspensionPos = (-6.6533421E-06, -0.379934043, -1.78366045E-05)
-					autoBoost = 0
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleWheelSteering
-					isEnabled = True
-					steeringEnabled = True
-					steeringInvert = False
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-						SteeringToggle
-						{
-							actionGroup = None
-						}
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-				MODULE
-				{
-					name = ModuleWheelDamage
-					isEnabled = True
-					isDamaged = False
-					stagingEnabled = True
-					EVENTS
-					{
-					}
-					ACTIONS
-					{
-					}
-					UPGRADESAPPLIED
-					{
-					}
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = True, 32458.436259286
-				Gear = False, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 34704.0129387702
-				Brakes = False, 34988.7103215443
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0.0280000027
-				yaw = 0
-				roll = 0
-				trimPitch = 0.0280000027
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-			VESSELMODULES
-			{
-				FlightIntegrator
-				{
-				}
-				AxisGroupsModule
-				{
-				}
-			}
-		}
 	}
 	LoaderInfo
 	{
@@ -10595,7 +8827,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 31
+				flight = 39
 				0 = Flight,Kerbin
 				0 = Land,Kerbin
 				0 = Recover
@@ -10713,10 +8945,39 @@ GAME
 				30 = Land,Kerbin
 				30 = Flight,Kerbin
 				30 = Recover
+				31 = Land,Kerbin
+				31 = Flight,Kerbin
+				31 = Recover
+				32 = Flight,Kerbin
+				32 = Land,Kerbin
+				32 = Recover
+				33 = Flight,Kerbin
+				33 = Land,Kerbin
+				33 = ExitVessel,Kerbin
+				33 = BoardVessel,Kerbin
+				33 = Recover
+				34 = Flight,Kerbin
+				34 = Land,Kerbin
+				34 = Recover
+				35 = Flight,Kerbin
+				35 = Suborbit,Kerbin
+				35 = Land,Kerbin
+				35 = Recover
+				36 = Flight,Kerbin
+				36 = Suborbit,Kerbin
+				36 = Land,Kerbin
+				36 = Recover
+				37 = Flight,Kerbin
+				37 = Suborbit,Kerbin
+				37 = Land,Kerbin
+				37 = Recover
+				38 = Land,Kerbin
+				38 = Flight,Kerbin
+				38 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 31
+				flight = 39
 			}
 		}
 		KERBAL
@@ -11400,6 +9661,41 @@ GAME
 			veteran = False
 			tour = False
 			state = Assigned
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Fenhai Kerman
+			gender = Male
+			type = Tourist
+			trait = Tourist
+			brave = 0.700021327
+			dumb = 0.386330813
+			badS = True
+			veteran = False
+			tour = False
+			state = Available
 			inactive = False
 			inactiveTimeEnd = 0
 			gExperienced = 0
