@@ -1,12 +1,12 @@
-ship = 01 - 洲际飞机
+ship = 01 - 短程航班
 version = 1.10.1
 description = 
 type = SPH
-size = 8.74360085,4.36679459,12.5218773
+size = 8.7861042,4.06386948,12.2463398
 steamPublishedFileId = 0
-persistentId = 3125950565
+persistentId = 2479742659
 rot = 0,0,0,0
-missionFlag = Squad/Flags/circles
+missionFlag = Squad/Flags/kerbal1
 vesselType = Debris
 OverrideDefault = False,False,False,False
 OverrideActionControl = 0,0,0,0
@@ -14,12 +14,12 @@ OverrideAxisControl = 0,0,0,0
 OverrideGroupNames = ,,,
 PART
 {
-	part = Mark1Cockpit_4293911046
+	part = Mark1Cockpit_4291389860
 	partName = Part
-	persistentId = 3420485253
-	pos = 0,7,0
+	persistentId = 414490781
+	pos = 0,5,0
 	attPos = 0,0,0
-	attPos0 = 0,7,0
+	attPos0 = 0,5,0
 	rot = 0.707106829,0,0,0.707106829
 	attRot = 0,0,0,1
 	attRot0 = 0.707106769,0,0,0.707106769
@@ -38,15 +38,11 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = science.module_4293901014
-	link = sensorThermometer_4293890614
-	link = sensorThermometer_4293890582
-	link = GearFree_4293888480
-	link = sensorBarometer_4293890498
-	link = sensorBarometer_4291734334
-	link = GooExperiment_4293890310
-	link = GooExperiment_4291734288
-	attN = bottom,science.module_4293901014_0|-0.174999997|0_0|-1|0_0|-0.174999997|0_0|-1|0
+	link = science.module_4290369100
+	link = sensorBarometer_4290369224
+	link = sensorThermometer_4294305930
+	link = GearFree_4290789710
+	attN = bottom,science.module_4290369100_0|-0.174999997|0_0|-1|0_0|-0.174999997|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -266,7 +262,7 @@ PART
 	RESOURCE
 	{
 		name = MonoPropellant
-		amount = 0
+		amount = 7.5
 		maxAmount = 7.5
 		flowState = True
 		isTweakable = True
@@ -277,10 +273,10 @@ PART
 }
 PART
 {
-	part = science.module_4293901014
+	part = science.module_4290369100
 	partName = Part
-	persistentId = 1389569696
-	pos = 0,7,-0.787505686
+	persistentId = 1205579157
+	pos = 0,5,-0.787501872
 	attPos = 0,0,0
 	attPos0 = 0,-0.787500083,1.1920929E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -301,11 +297,13 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = science.module_4293900578
-	link = GooExperiment_4293890240
-	link = GooExperiment_4291734444
-	attN = top,Mark1Cockpit_4293911046_0|0.612500012|0_0|0.125|0_0|0.612500012|0_0|0.125|0
-	attN = bottom,science.module_4293900578_0|-0.512499988|0_0|-0.125|0_0|-0.512499988|0_0|-0.125|0
+	link = science.module_4290368620
+	link = structuralWing3_4290367718
+	link = structuralWing3_4290362064
+	link = parachuteRadial_4294306416
+	link = parachuteRadial_4294303850
+	attN = top,Mark1Cockpit_4291389860_0|0.612500012|0_0|0.125|0_0|0.612500012|0_0|0.125|0
+	attN = bottom,science.module_4290368620_0|-0.512499988|0_0|-0.125|0_0|-0.512499988|0_0|-0.125|0
 	EVENTS
 	{
 	}
@@ -394,10 +392,10 @@ PART
 }
 PART
 {
-	part = science.module_4293900578
+	part = science.module_4290368620
 	partName = Part
-	persistentId = 937039697
-	pos = 0,7,-1.91251183
+	persistentId = 3039755144
+	pos = 0,5,-1.9125042
 	attPos = 0,0,0
 	attPos0 = 0,-1.125,1.1920924E-07
 	rot = 0.707106829,0,0,0.707106829
@@ -418,13 +416,250 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = science.module_4293900194
-	link = structuralWing2_4292835524
-	link = structuralWing2_4292835396
-	link = parachuteRadial_4292084308
-	link = parachuteRadial_4291958540
-	attN = top,science.module_4293901014_0|0.612500012|0_0|0.125|0_0|0.612500012|0_0|0.125|0
-	attN = bottom,science.module_4293900194_0|-0.512499988|0_0|-0.125|0_0|-0.512499988|0_0|-0.125|0
+	link = science.module_4290366648
+	link = parachuteRadial_4294304178
+	link = parachuteRadial_4294303762
+	attN = top,science.module_4290369100_0|0.612500012|0_0|0.125|0_0|0.612500012|0_0|0.125|0
+	attN = bottom,science.module_4290366648_0|-0.512499988|0_0|-0.125|0_0|-0.512499988|0_0|-0.125|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		cooldownToGo = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = science.module_4290366648
+	partName = Part
+	persistentId = 352463679
+	pos = 0,5,-3.03751063
+	attPos = 0,0,0
+	attPos0 = 0,-1.12500048,2.38418494E-07
+	rot = 0.707106829,0,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = science.module_4290366086
+	link = sweptWing_4290362372
+	link = sweptWing_4290361680
+	link = miniFuselage_4290362790
+	link = miniFuselage_4290361588
+	link = GooExperiment_4294303584
+	link = GooExperiment_4294303380
+	link = GooExperiment_4294303310
+	link = GooExperiment_4294303256
+	attN = top,science.module_4290368620_0|0.612500012|0_0|0.125|0_0|0.612500012|0_0|0.125|0
+	attN = bottom,science.module_4290366086_0|-0.512499988|0_0|-0.125|0_0|-0.512499988|0_0|-0.125|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		cooldownToGo = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = science.module_4290366086
+	partName = Part
+	persistentId = 1340549199
+	pos = 0,5,-4.16250992
+	attPos = 0,0,0
+	attPos0 = 0,-1.12500072,0
+	rot = 0.707106829,0,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = airplaneTail_4290934372
+	link = mumech.MJ2.AR202_4294304338
+	attN = top,science.module_4290366648_0|0.612500012|0_0|0.125|0_0|0.612500012|0_0|0.125|0
+	attN = bottom,airplaneTail_4290934372_0|-0.512499988|0_0|-0.125|0_0|-0.512499988|0_0|-0.125|0
 	EVENTS
 	{
 	}
@@ -509,12 +744,12 @@ PART
 }
 PART
 {
-	part = science.module_4293900194
+	part = airplaneTail_4290934372
 	partName = Part
-	persistentId = 2984498518
-	pos = 0,7,-3.03753018
+	persistentId = 1164979285
+	pos = 0,5,-4.67501116
 	attPos = 0,0,0
-	attPos0 = 0,-1.12500024,2.38418394E-07
+	attPos0 = 0,-0.512501001,0
 	rot = 0.707106829,0,0,0.707106829
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
@@ -533,241 +768,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = science.module_4293896042
-	link = parachuteRadial_4291881558
-	link = parachuteRadial_4291808130
-	attN = top,science.module_4293900578_0|0.612500012|0_0|0.125|0_0|0.612500012|0_0|0.125|0
-	attN = bottom,science.module_4293896042_0|-0.512499988|0_0|-0.125|0_0|-0.512499988|0_0|-0.125|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployPercent
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = science.module_4293896042
-	partName = Part
-	persistentId = 2613113044
-	pos = 0,7,-4.16252661
-	attPos = 0,0,0
-	attPos0 = 0,-1.12500083,0
-	rot = 0.707106829,0,0,0.707106829
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = airplaneTailB_4293895374
-	link = MK1Fuselage_4293899674
-	link = MK1Fuselage_4293894442
-	link = structuralWing2_4293896912
-	link = structuralWing2_4292913594
-	link = parachuteRadial_4292084564
-	link = parachuteRadial_4291958184
-	attN = top,science.module_4293900194_0|0.612500012|0_0|0.125|0_0|0.612500012|0_0|0.125|0
-	attN = bottom,airplaneTailB_4293895374_0|-0.512499988|0_0|-0.125|0_0|-0.512499988|0_0|-0.125|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployPercent
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = airplaneTailB_4293895374
-	partName = Part
-	persistentId = 1101705162
-	pos = 0,7,-4.67502832
-	attPos = 0,0,0
-	attPos0 = 0,-0.512501299,0
-	rot = 0.707106829,0,0,0.707106829
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = sweptWing_4292907718
-	link = sweptWing_4292907672
-	link = tailfin_4293894130
-	link = mumech.MJ2.AR202_4293512500
-	attN = top,science.module_4293896042_0|0|0_0|1|0_0|0|0_0|1|0
+	link = tailfin_4290934102
+	link = tailfin_4290361272
+	attN = top,science.module_4290366086_0|0|0_0|1|0_0|0|0_0|1|0
 	EVENTS
 	{
 	}
@@ -807,15 +810,15 @@ PART
 }
 PART
 {
-	part = MK1Fuselage_4293899674
+	part = structuralWing3_4290367718
 	partName = Part
-	persistentId = 2478790475
-	pos = -1.0779866,6.37762356,-3.89839983
+	persistentId = 1187912062
+	pos = 0.621474445,5,-0.956125796
 	attPos = 0,0,0
-	attPos0 = -1.0779866,0.264137238,0.622375906
-	rot = 0.612372577,-0.353553414,-0.353553474,0.612372458
+	attPos0 = 0.621474445,-0.16862385,0
+	rot = -2.95027974E-07,0.707106769,0.707106888,-2.95027974E-07
 	attRot = 0,0,0,1
-	attRot0 = 5.96046448E-08,-0.50000006,-5.96046448E-08,0.866025448
+	attRot0 = 0,1,1.19209275E-07,-4.17232542E-07
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -831,13 +834,1155 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = CircularIntake_4293903540
-	link = JetEngine_4293899068
-	link = GearFree_4293888612
-	sym = MK1Fuselage_4293894442
-	srfN = srfAttach,science.module_4293896042,node_collider,0|0|-0.625,0|0|1,0|0|-0.625
-	attN = top,CircularIntake_4293903540_0|0.9375|0_0|1|0_0|0.9375|0_0|1|0
-	attN = bottom,JetEngine_4293899068_0|-0.9375|0_0|-1|0_0|-0.9375|0_0|-1|0
+	link = StandardCtrlSrf_4290367674
+	link = StandardCtrlSrf_4290367638
+	link = StandardCtrlSrf_4290367602
+	sym = structuralWing3_4290362064
+	srfN = srfAttach,science.module_4290369100,node_collider,0|0|0,1|0|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4290367674
+	partName = Part
+	persistentId = 3848133496
+	pos = 1.86593604,5.00000095,-0.959675789
+	attPos = 0,0,0
+	attPos0 = -1.24445736,-0.00354981353,2.32830484E-08
+	rot = -2.31807661E-07,0.70710659,0.707107067,-2.2127108E-07
+	attRot = 0,0,0,1
+	attRot0 = 5.90946883E-08,0,-7.78013831E-09,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = StandardCtrlSrf_4290362014
+	srfN = srfAttach,structuralWing3_4290367718,COL 12,0|0|0,1|0|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		mirrorDeploy = True
+		usesMirrorDeploy = True
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		deployAngle = 20
+		authorityLimiter = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+			PitchActive
+			{
+				actionGroup = None
+			}
+			PitchInactive
+			{
+				actionGroup = None
+			}
+			TogglePitch
+			{
+				actionGroup = None
+			}
+			YawActive
+			{
+				actionGroup = None
+			}
+			YawInactive
+			{
+				actionGroup = None
+			}
+			ToggleYaw
+			{
+				actionGroup = None
+			}
+			RollActive
+			{
+				actionGroup = None
+			}
+			RollInactive
+			{
+				actionGroup = None
+			}
+			ToggleRoll
+			{
+				actionGroup = None
+			}
+			ActivateAllControls
+			{
+				actionGroup = None
+			}
+			DeactivateAllControls
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployAngle
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			authorityLimiter
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4290367638
+	partName = Part
+	persistentId = 3059128845
+	pos = 3.48055291,5.00000286,-1.25801361
+	attPos = 0,0,0
+	attPos0 = -2.85906672,-0.301886141,3.29687964E-07
+	rot = -2.31807661E-07,0.70710659,0.707107067,-2.2127108E-07
+	attRot = 0,0,0,1
+	attRot0 = 5.90946883E-08,0,-7.78013831E-09,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = StandardCtrlSrf_4290361978
+	srfN = srfAttach,structuralWing3_4290367718,COL 12,0|0|0,1|0|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		mirrorDeploy = True
+		usesMirrorDeploy = True
+		ignorePitch = False
+		ignoreYaw = True
+		ignoreRoll = True
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		deployAngle = 20
+		authorityLimiter = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+			PitchActive
+			{
+				actionGroup = None
+			}
+			PitchInactive
+			{
+				actionGroup = None
+			}
+			TogglePitch
+			{
+				actionGroup = None
+			}
+			YawActive
+			{
+				actionGroup = None
+			}
+			YawInactive
+			{
+				actionGroup = None
+			}
+			ToggleYaw
+			{
+				actionGroup = None
+			}
+			RollActive
+			{
+				actionGroup = None
+			}
+			RollInactive
+			{
+				actionGroup = None
+			}
+			ToggleRoll
+			{
+				actionGroup = None
+			}
+			ActivateAllControls
+			{
+				actionGroup = None
+			}
+			DeactivateAllControls
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployAngle
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			authorityLimiter
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4290367602
+	partName = Part
+	persistentId = 1422310169
+	pos = 1.64680696,5.00000095,-1.24929178
+	attPos = 0,0,0
+	attPos0 = -1.02532923,-0.2931647,2.44937667E-07
+	rot = -2.31807661E-07,0.70710659,0.707107067,-2.2127108E-07
+	attRot = 0,0,0,1
+	attRot0 = 5.90946883E-08,0,-7.78013831E-09,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = StandardCtrlSrf_4290361942
+	srfN = srfAttach,structuralWing3_4290367718,COL 12,0|0|0,1|0|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		mirrorDeploy = True
+		usesMirrorDeploy = True
+		ignorePitch = False
+		ignoreYaw = True
+		ignoreRoll = True
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		deployAngle = 20
+		authorityLimiter = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+			PitchActive
+			{
+				actionGroup = None
+			}
+			PitchInactive
+			{
+				actionGroup = None
+			}
+			TogglePitch
+			{
+				actionGroup = None
+			}
+			YawActive
+			{
+				actionGroup = None
+			}
+			YawInactive
+			{
+				actionGroup = None
+			}
+			ToggleYaw
+			{
+				actionGroup = None
+			}
+			RollActive
+			{
+				actionGroup = None
+			}
+			RollInactive
+			{
+				actionGroup = None
+			}
+			ToggleRoll
+			{
+				actionGroup = None
+			}
+			ActivateAllControls
+			{
+				actionGroup = None
+			}
+			DeactivateAllControls
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployAngle
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			authorityLimiter
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = structuralWing3_4290362064
+	partName = Part
+	persistentId = 2606720021
+	pos = -0.621474445,5,-0.956125736
+	attPos = 0,0,0
+	attPos0 = -0.621474445,-0.16862379,0
+	rot = -0.707107067,2.64119308E-07,2.64119251E-07,-0.70710659
+	attRot = 0,0,0,1
+	attRot0 = -3.27825518E-07,3.73521033E-07,-2.8421706E-14,-1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = StandardCtrlSrf_4290362014
+	link = StandardCtrlSrf_4290361978
+	link = StandardCtrlSrf_4290361942
+	sym = structuralWing3_4290367718
+	srfN = srfAttach,science.module_4290369100,node_collider,0|0|0,1|0|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4290362014
+	partName = Part
+	persistentId = 106851957
+	pos = -1.86593533,5.00000095,-0.95967561
+	attPos = 0,0,0
+	attPos0 = -1.24445736,-0.00354981353,2.32830484E-08
+	rot = -0.707107127,1.90362385E-07,2.00898938E-07,-0.707106531
+	attRot = 0,0,0,1
+	attRot0 = 5.90946883E-08,0,-7.78013831E-09,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = StandardCtrlSrf_4290367674
+	srfN = srfAttach,structuralWing3_4290362064,COL 12,0|0|0,1|0|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		mirrorDeploy = False
+		usesMirrorDeploy = True
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		deployAngle = 20
+		authorityLimiter = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+			PitchActive
+			{
+				actionGroup = None
+			}
+			PitchInactive
+			{
+				actionGroup = None
+			}
+			TogglePitch
+			{
+				actionGroup = None
+			}
+			YawActive
+			{
+				actionGroup = None
+			}
+			YawInactive
+			{
+				actionGroup = None
+			}
+			ToggleYaw
+			{
+				actionGroup = None
+			}
+			RollActive
+			{
+				actionGroup = None
+			}
+			RollInactive
+			{
+				actionGroup = None
+			}
+			ToggleRoll
+			{
+				actionGroup = None
+			}
+			ActivateAllControls
+			{
+				actionGroup = None
+			}
+			DeactivateAllControls
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployAngle
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			authorityLimiter
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4290361978
+	partName = Part
+	persistentId = 2549955946
+	pos = -3.48054981,5.00000286,-1.25801337
+	attPos = 0,0,0
+	attPos0 = -2.85906672,-0.301886141,3.29687964E-07
+	rot = -0.707107127,1.90362385E-07,2.00898938E-07,-0.707106531
+	attRot = 0,0,0,1
+	attRot0 = 5.90946883E-08,0,-7.78013831E-09,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = StandardCtrlSrf_4290367638
+	srfN = srfAttach,structuralWing3_4290362064,COL 12,0|0|0,1|0|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		mirrorDeploy = False
+		usesMirrorDeploy = True
+		ignorePitch = False
+		ignoreYaw = True
+		ignoreRoll = True
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		deployAngle = 20
+		authorityLimiter = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+			PitchActive
+			{
+				actionGroup = None
+			}
+			PitchInactive
+			{
+				actionGroup = None
+			}
+			TogglePitch
+			{
+				actionGroup = None
+			}
+			YawActive
+			{
+				actionGroup = None
+			}
+			YawInactive
+			{
+				actionGroup = None
+			}
+			ToggleYaw
+			{
+				actionGroup = None
+			}
+			RollActive
+			{
+				actionGroup = None
+			}
+			RollInactive
+			{
+				actionGroup = None
+			}
+			ToggleRoll
+			{
+				actionGroup = None
+			}
+			ActivateAllControls
+			{
+				actionGroup = None
+			}
+			DeactivateAllControls
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployAngle
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			authorityLimiter
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4290361942
+	partName = Part
+	persistentId = 4268689392
+	pos = -1.64680648,5.00000095,-1.24929166
+	attPos = 0,0,0
+	attPos0 = -1.02532923,-0.2931647,2.44937667E-07
+	rot = -0.707107127,1.90362385E-07,2.00898938E-07,-0.707106531
+	attRot = 0,0,0,1
+	attRot0 = 5.90946883E-08,0,-7.78013831E-09,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = StandardCtrlSrf_4290367602
+	srfN = srfAttach,structuralWing3_4290362064,COL 12,0|0|0,1|0|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		mirrorDeploy = False
+		usesMirrorDeploy = True
+		ignorePitch = False
+		ignoreYaw = True
+		ignoreRoll = True
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		deployAngle = 20
+		authorityLimiter = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+			PitchActive
+			{
+				actionGroup = None
+			}
+			PitchInactive
+			{
+				actionGroup = None
+			}
+			TogglePitch
+			{
+				actionGroup = None
+			}
+			YawActive
+			{
+				actionGroup = None
+			}
+			YawInactive
+			{
+				actionGroup = None
+			}
+			ToggleYaw
+			{
+				actionGroup = None
+			}
+			RollActive
+			{
+				actionGroup = None
+			}
+			RollInactive
+			{
+				actionGroup = None
+			}
+			ToggleRoll
+			{
+				actionGroup = None
+			}
+			ActivateAllControls
+			{
+				actionGroup = None
+			}
+			DeactivateAllControls
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployAngle
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			authorityLimiter
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = sweptWing_4290362372
+	partName = Part
+	persistentId = 158632055
+	pos = 0.539859295,5.31168795,-3.16774464
+	attPos = 0,0,0
+	attPos0 = 0.539859295,-0.130232811,-0.311687827
+	rot = -0.701057494,-0.0922960192,-0.0922959596,-0.701057374
+	attRot = -1.54184376E-09,0.130526081,-1.22307897E-08,-0.991444826
+	attRot0 = -8.94069601E-08,-0.130526245,2.98023188E-08,-0.991444826
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sweptWing_4290361680
+	srfN = srfAttach,science.module_4290366648,node_collider,0|0|0,-1|0|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = sweptWing_4290361680
+	partName = Part
+	persistentId = 3659874112
+	pos = -0.539859295,5.31168795,-3.16774583
+	attPos = 0,0,0
+	attPos0 = -0.539859295,-0.130232811,-0.311687827
+	rot = 0.0922959372,0.701057315,0.701057553,0.0922959521
+	attRot = -1.54184376E-09,0.130526081,-1.22307897E-08,-0.991444826
+	attRot0 = 0,0.965925932,1.49011612E-07,0.258818895
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sweptWing_4290362372
+	srfN = srfAttach,science.module_4290366648,node_collider,0|0|0,-1|0|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = miniFuselage_4290362790
+	partName = Part
+	persistentId = 2629499665
+	pos = 0.911782444,4.75568867,-3.33571863
+	attPos = 0,0,0
+	attPos0 = 0.911782444,-0.298207998,0.244311228
+	rot = 0.0922959745,0.701057374,0.701057494,0.0922959596
+	attRot = 0,0,0,1
+	attRot0 = 7.45057971E-09,0.991444826,8.94069601E-08,0.1305262
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = miniIntake_4290362752
+	link = miniJetEngine_4290362708
+	link = GearFixed_4294206142
+	sym = miniFuselage_4290361588
+	srfN = srfAttach,science.module_4290366648,node_collider,0.312999994|0|0,1|0|0,0.312999994|0|0
+	attN = top,miniIntake_4290362752_0|0.46875|0_0|1|0_0|0.46875|0_0|1|0
+	attN = bottom,miniJetEngine_4290362708_0|-0.46875|0_0|-1|0_0|-0.46875|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -862,8 +2007,8 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 400
-		maxAmount = 400
+		amount = 50
+		maxAmount = 50
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -873,15 +2018,15 @@ PART
 }
 PART
 {
-	part = CircularIntake_4293903540
+	part = miniIntake_4290362752
 	partName = Part
-	persistentId = 1722163726
-	pos = -1.07798648,6.3776226,-2.9608748
+	persistentId = 1502664999
+	pos = 0.911782503,4.75568771,-2.86695576
 	attPos = 0,0,0
-	attPos0 = 1.54726408E-07,0.937500179,2.75990928E-08
-	rot = 0.701057494,0.0922959596,0.0922959596,0.701057494
+	attPos0 = -1.16690266E-07,0.468749464,2.10167997E-07
+	rot = 0.701057494,0.0922959223,0.0922957435,0.701057374
 	attRot = 0,0,0,1
-	attRot0 = -8.94069601E-08,0.60876143,5.96046377E-08,0.793353319
+	attRot0 = -2.98023188E-08,-0.258819044,1.19209275E-07,0.965925813
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -897,8 +2042,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = CircularIntake_4293894400
-	attN = bottom01,MK1Fuselage_4293899674_0|0|0_0|-1|0_0|0|0_0|-1|0
+	sym = miniIntake_4290361544
+	attN = bottom01,miniFuselage_4290362790_0|0|0_0|-1|0_0|0|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -940,26 +2085,11 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = IntakeAir
-		amount = 2
-		maxAmount = 2
+		amount = 0.5
+		maxAmount = 0.5
 		flowState = True
 		isTweakable = False
 		hideFlow = False
@@ -969,15 +2099,15 @@ PART
 }
 PART
 {
-	part = JetEngine_4293899068
+	part = miniJetEngine_4290362708
 	partName = Part
-	persistentId = 3088627277
-	pos = -1.0779866,6.37762308,-5.80878162
+	persistentId = 2535826654
+	pos = 0.911782384,4.75568867,-3.80447435
 	attPos = 0,0,0
-	attPos0 = 6.1892257E-07,-1.91037512,1.94082048E-07
-	rot = 0.701057494,0.0922959596,0.0922959596,0.701057494
+	attPos0 = -2.51873167E-09,-0.468750775,-3.69156994E-09
+	rot = 0.701057494,0.0922959223,0.0922957435,0.701057374
 	attRot = 0,0,0,1
-	attRot0 = -8.94069601E-08,0.60876143,5.96046377E-08,0.793353319
+	attRot0 = -2.98023188E-08,-0.258819044,1.19209275E-07,0.965925813
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -993,8 +2123,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = JetEngine_4293894354
-	attN = top,MK1Fuselage_4293899674_0|0.972874999|0_0|1|0_0|0.972874999|0_0|1|0
+	sym = miniJetEngine_4290361494
+	attN = top,miniFuselage_4290362790_0|0|0_0|1|0_0|0|0_0|1|0
 	EVENTS
 	{
 	}
@@ -1060,73 +2190,12 @@ PART
 				axisGroup = None
 				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 			}
 			thrustPercentage
 			{
 				axisGroup = None
 				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployPercent
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 			}
 		}
 		UPGRADESAPPLIED
@@ -1181,15 +2250,15 @@ PART
 }
 PART
 {
-	part = MK1Fuselage_4293894442
+	part = miniFuselage_4290361588
 	partName = Part
-	persistentId = 2584948695
-	pos = 1.0779866,6.37762356,-3.89840031
+	persistentId = 4206010523
+	pos = -0.911782444,4.75568867,-3.33571863
 	attPos = 0,0,0
-	attPos0 = 1.0779866,0.264137,0.622375667
-	rot = 0.612372458,0.353553385,0.353553504,0.612372339
+	attPos0 = -0.911782444,-0.298207998,0.244311228
+	rot = -0.701057673,-0.0922959745,-0.0922959745,-0.701057196
 	attRot = 0,0,0,1
-	attRot0 = 1.19209275E-07,0.50000006,8.94069601E-08,0.866025329
+	attRot0 = -2.98023195E-07,-0.130526215,0,-0.991444826
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -1205,13 +2274,13 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = CircularIntake_4293894400
-	link = JetEngine_4293894354
-	link = GearFree_4293889404
-	sym = MK1Fuselage_4293899674
-	srfN = srfAttach,science.module_4293896042,node_collider,0|0|-0.625,0|0|1,0|0|-0.625
-	attN = top,CircularIntake_4293894400_0|0.9375|0_0|1|0_0|0.9375|0_0|1|0
-	attN = bottom,JetEngine_4293894354_0|-0.9375|0_0|-1|0_0|-0.9375|0_0|-1|0
+	link = miniIntake_4290361544
+	link = miniJetEngine_4290361494
+	link = GearFixed_4294300886
+	sym = miniFuselage_4290362790
+	srfN = srfAttach,science.module_4290366648,node_collider,0.312999994|0|0,1|0|0,0.312999994|0|0
+	attN = top,miniIntake_4290361544_0|0.46875|0_0|1|0_0|0.46875|0_0|1|0
+	attN = bottom,miniJetEngine_4290361494_0|-0.46875|0_0|-1|0_0|-0.46875|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -1236,8 +2305,8 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 400
-		maxAmount = 400
+		amount = 50
+		maxAmount = 50
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -1247,15 +2316,15 @@ PART
 }
 PART
 {
-	part = CircularIntake_4293894400
+	part = miniIntake_4290361544
 	partName = Part
-	persistentId = 4215760979
-	pos = 1.07798648,6.3776226,-2.9608748
+	persistentId = 4080705100
+	pos = -0.911782503,4.75568771,-2.86695576
 	attPos = 0,0,0
-	attPos0 = 1.54726408E-07,0.937500179,2.75990928E-08
-	rot = 0.701057494,-0.0922959074,-0.0922958329,0.701057494
+	attPos0 = -1.16690266E-07,0.468749464,2.10167997E-07
+	rot = 0.701057613,-0.0922959894,-0.0922958255,0.701057494
 	attRot = 0,0,0,1
-	attRot0 = -8.94069601E-08,0.60876143,5.96046377E-08,0.793353319
+	attRot0 = -2.98023188E-08,-0.258819044,1.19209275E-07,0.965925813
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -1271,8 +2340,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = CircularIntake_4293903540
-	attN = bottom01,MK1Fuselage_4293894442_0|0|0_0|-1|0_0|0|0_0|-1|0
+	sym = miniIntake_4290362752
+	attN = bottom01,miniFuselage_4290361588_0|0|0_0|-1|0_0|0|0_0|-1|0
 	EVENTS
 	{
 	}
@@ -1314,26 +2383,11 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = IntakeAir
-		amount = 2
-		maxAmount = 2
+		amount = 0.5
+		maxAmount = 0.5
 		flowState = True
 		isTweakable = False
 		hideFlow = False
@@ -1343,15 +2397,15 @@ PART
 }
 PART
 {
-	part = JetEngine_4293894354
+	part = miniJetEngine_4290361494
 	partName = Part
-	persistentId = 2942765875
-	pos = 1.07798648,6.37762356,-5.80878115
+	persistentId = 388299377
+	pos = -0.911782384,4.75568867,-3.80447435
 	attPos = 0,0,0
-	attPos0 = 6.1892257E-07,-1.91037512,1.94082048E-07
-	rot = 0.701057494,-0.0922959074,-0.0922958329,0.701057494
+	attPos0 = -2.51873167E-09,-0.468750775,-3.69156994E-09
+	rot = 0.701057613,-0.0922959894,-0.0922958255,0.701057494
 	attRot = 0,0,0,1
-	attRot0 = -8.94069601E-08,0.60876143,5.96046377E-08,0.793353319
+	attRot0 = -2.98023188E-08,-0.258819044,1.19209275E-07,0.965925813
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -1367,8 +2421,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = JetEngine_4293899068
-	attN = top,MK1Fuselage_4293894442_0|0.972874999|0_0|1|0_0|0.972874999|0_0|1|0
+	sym = miniJetEngine_4290362708
+	attN = top,miniFuselage_4290361588_0|0|0_0|1|0_0|0|0_0|1|0
 	EVENTS
 	{
 	}
@@ -1448,55 +2502,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployPercent
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleAlternator
 		isEnabled = True
 		stagingEnabled = True
@@ -1543,15 +2548,15 @@ PART
 }
 PART
 {
-	part = sensorThermometer_4293890614
+	part = tailfin_4290934102
 	partName = Part
-	persistentId = 1459114827
-	pos = 5.1857473E-08,7.59318018,0.567485213
+	persistentId = 2171417612
+	pos = 4.71005208E-08,5.53876734,-5.40167236
 	attPos = 0,0,0
-	attPos0 = 5.1857473E-08,0.567482352,-0.593180299
-	rot = -0.758415222,4.86457949E-08,4.18055564E-08,-0.651771903
+	attPos0 = 4.71005208E-08,-0.726653099,-0.53876394
+	rot = 0.471208304,0.527221739,0.471208245,0.527221918
 	attRot = 0,0,0,1
-	attRot0 = -0.0754082203,6.39587583E-08,-4.83677809E-09,-0.997152805
+	attRot0 = -0.0396075808,0.705996633,-0.0396075808,0.705996692
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -1567,2162 +2572,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = sensorThermometer_4293890582
-	srfN = srfAttach,Mark1Cockpit_4293911046,CockpitCOL2,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnviroSensor
-		isEnabled = True
-		sensorActive = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = sensorThermometer_4293890582
-	partName = Part
-	persistentId = 3946520439
-	pos = -5.1857473E-08,7.59318018,0.567485213
-	attPos = 0,0,0
-	attPos0 = -5.1857473E-08,0.567482352,-0.593180299
-	rot = 0.758415341,4.86457878E-08,4.18055492E-08,0.651771784
-	attRot = 0,0,0,1
-	attRot0 = 0.0754083395,6.39587512E-08,-4.83677809E-09,0.997152805
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = sensorThermometer_4293890614
-	srfN = srfAttach,Mark1Cockpit_4293911046,CockpitCOL2,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnviroSensor
-		isEnabled = True
-		sensorActive = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = GearFree_4293889404
-	partName = Part
-	persistentId = 2542316968
-	pos = 1.23555326,5.78957653,-4.73919153
-	attPos = 0,0,0
-	attPos0 = -0.43047899,-0.840798676,0.43047893
-	rot = 5.96046448E-08,-5.21540642E-08,0.130526543,0.991444945
-	attRot = 0,0,0,1
-	attRot0 = -0.653281629,-0.270597875,-0.270597905,0.653281569
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = ForceHeaviest
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = GearFree_4293888612
-	srfN = srfAttach,MK1Fuselage_4293894442,CylCOL,0|0|0,0|1|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleWheelBase
-		isEnabled = True
-		wheelType = FREE
-		isGrounded = False
-		autoFriction = True
-		frictionMultiplier = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActAutoFrictionToggle
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWheelSuspension
-		isEnabled = True
-		springTweakable = 1
-		damperTweakable = 1
-		autoSpringDamper = True
-		suspensionPos = (-1, -1, -1)
-		autoBoost = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWheelSteering
-		isEnabled = True
-		steeringEnabled = True
-		steeringInvert = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			SteeringToggle
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWheelDamage
-		isEnabled = True
-		isDamaged = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = GearFree_4293888612
-	partName = Part
-	persistentId = 2121871863
-	pos = -1.23555338,5.78956556,-4.73919106
-	attPos = 0,0,0
-	attPos0 = 0.430478632,-0.840798974,0.430478841
-	rot = 8.94069672E-08,9.68575478E-08,-0.130526543,0.991444945
-	attRot = 0,0,0,1
-	attRot0 = -0.653281629,0.270597875,0.270597845,0.653281569
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = ForceHeaviest
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = GearFree_4293889404
-	srfN = srfAttach,MK1Fuselage_4293899674,CylCOL,0|0|0,0|1|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleWheelBase
-		isEnabled = True
-		wheelType = FREE
-		isGrounded = False
-		autoFriction = True
-		frictionMultiplier = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActAutoFrictionToggle
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWheelSuspension
-		isEnabled = True
-		springTweakable = 1
-		damperTweakable = 1
-		autoSpringDamper = True
-		suspensionPos = (-1, -1, -1)
-		autoBoost = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWheelSteering
-		isEnabled = True
-		steeringEnabled = True
-		steeringInvert = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			SteeringToggle
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWheelDamage
-		isEnabled = True
-		isDamaged = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = GearFree_4293888480
-	partName = Part
-	persistentId = 3780713794
-	pos = 0,6.41982555,0.928657115
-	attPos = 0,0,0
-	attPos0 = 0,0.928651571,0.580174387
-	rot = -0.0321370363,2.42563969E-10,-7.54391127E-09,0.999483585
-	attRot = 0,0,0,1
-	attRot0 = -0.729465902,-5.16283194E-09,-5.50586954E-09,0.684017241
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = ForceHeaviest
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	srfN = srfAttach,Mark1Cockpit_4293911046,CockpitCOL,0|0|0,0|1|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleWheelBase
-		isEnabled = True
-		wheelType = FREE
-		isGrounded = False
-		autoFriction = True
-		frictionMultiplier = 1
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActAutoFrictionToggle
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWheelSuspension
-		isEnabled = True
-		springTweakable = 1
-		damperTweakable = 1
-		autoSpringDamper = True
-		suspensionPos = (-1, -1, -1)
-		autoBoost = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWheelSteering
-		isEnabled = True
-		steeringEnabled = True
-		steeringInvert = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			SteeringToggle
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleWheelDamage
-		isEnabled = True
-		isDamaged = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = structuralWing2_4293896912
-	partName = Part
-	persistentId = 3601214660
-	pos = 0.621031404,7,-4.61794186
-	attPos = 0,0,0
-	attPos0 = 0.621031404,-0.45541501,0
-	rot = -2.95027974E-07,0.707106769,0.707106888,-2.95027974E-07
-	attRot = 0,0,0,1
-	attRot0 = 0,1,1.19209275E-07,-4.17232542E-07
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = StandardCtrlSrf_4293892264
-	link = StandardCtrlSrf_4293154624
-	sym = structuralWing2_4292913594
-	srfN = srfAttach,science.module_4293896042,node_collider,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = StandardCtrlSrf_4293892264
-	partName = Part
-	persistentId = 431394138
-	pos = 3.38485336,7.00000334,-5.19905472
-	attPos = 0,0,0
-	attPos0 = -2.76380944,-0.581108153,8.34464458E-07
-	rot = 6.10795041E-08,0.70710665,0.707107008,-6.30062118E-07
-	attRot = 0,0,0,1
-	attRot0 = -1.16016942E-07,-1.49011594E-08,4.88710839E-07,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = StandardCtrlSrf_4292913550
-	srfN = srfAttach,structuralWing2_4293896912,COL 5,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = True
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 20
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-			PitchActive
-			{
-				actionGroup = None
-			}
-			PitchInactive
-			{
-				actionGroup = None
-			}
-			TogglePitch
-			{
-				actionGroup = None
-			}
-			YawActive
-			{
-				actionGroup = None
-			}
-			YawInactive
-			{
-				actionGroup = None
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-			}
-			RollActive
-			{
-				actionGroup = None
-			}
-			RollInactive
-			{
-				actionGroup = None
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = StandardCtrlSrf_4293154624
-	partName = Part
-	persistentId = 2958254550
-	pos = 1.445503,7.00000095,-5.23761702
-	attPos = 0,0,0
-	attPos0 = -0.824469626,-0.619673848,-1.26863142E-09
-	rot = -1.57349163E-07,0.707106531,0.707107127,-4.52377037E-07
-	attRot = 0,0,0,1
-	attRot0 = -2.98023309E-07,1.39089593E-08,2.08616044E-07,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = StandardCtrlSrf_4292913514
-	srfN = srfAttach,structuralWing2_4293896912,COL 5,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = True
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 20
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-			PitchActive
-			{
-				actionGroup = None
-			}
-			PitchInactive
-			{
-				actionGroup = None
-			}
-			TogglePitch
-			{
-				actionGroup = None
-			}
-			YawActive
-			{
-				actionGroup = None
-			}
-			YawInactive
-			{
-				actionGroup = None
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-			}
-			RollActive
-			{
-				actionGroup = None
-			}
-			RollInactive
-			{
-				actionGroup = None
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = structuralWing2_4292913594
-	partName = Part
-	persistentId = 2852315374
-	pos = -0.621031404,7,-4.61794186
-	attPos = 0,0,0
-	attPos0 = -0.621031404,-0.45541501,0
-	rot = -0.707107067,2.64119308E-07,2.64119251E-07,-0.70710659
-	attRot = 0,0,0,1
-	attRot0 = -3.27825518E-07,3.73521033E-07,-2.8421706E-14,-1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = StandardCtrlSrf_4292913550
-	link = StandardCtrlSrf_4292913514
-	sym = structuralWing2_4293896912
-	srfN = srfAttach,science.module_4293896042,node_collider,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = StandardCtrlSrf_4292913550
-	partName = Part
-	persistentId = 817900747
-	pos = -3.38485241,7.00000334,-5.19905424
-	attPos = 0,0,0
-	attPos0 = -2.76380944,-0.581108153,8.34464458E-07
-	rot = -0.707107067,5.99153225E-07,-9.19882268E-08,-0.70710659
-	attRot = 0,0,0,1
-	attRot0 = -1.16016942E-07,-1.49011594E-08,4.88710839E-07,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = StandardCtrlSrf_4293892264
-	srfN = srfAttach,structuralWing2_4292913594,COL 5,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = False
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 20
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-			PitchActive
-			{
-				actionGroup = None
-			}
-			PitchInactive
-			{
-				actionGroup = None
-			}
-			TogglePitch
-			{
-				actionGroup = None
-			}
-			YawActive
-			{
-				actionGroup = None
-			}
-			YawInactive
-			{
-				actionGroup = None
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-			}
-			RollActive
-			{
-				actionGroup = None
-			}
-			RollInactive
-			{
-				actionGroup = None
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = StandardCtrlSrf_4292913514
-	partName = Part
-	persistentId = 1319999925
-	pos = -1.44550252,7.00000095,-5.23761702
-	attPos = 0,0,0
-	attPos0 = -0.824469626,-0.619673848,-1.26863142E-09
-	rot = -0.707107246,4.21468314E-07,1.26440412E-07,-0.707106411
-	attRot = 0,0,0,1
-	attRot0 = -2.98023309E-07,1.39089593E-08,2.08616044E-07,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = StandardCtrlSrf_4293154624
-	srfN = srfAttach,structuralWing2_4292913594,COL 5,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = False
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 20
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-			PitchActive
-			{
-				actionGroup = None
-			}
-			PitchInactive
-			{
-				actionGroup = None
-			}
-			TogglePitch
-			{
-				actionGroup = None
-			}
-			YawActive
-			{
-				actionGroup = None
-			}
-			YawInactive
-			{
-				actionGroup = None
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-			}
-			RollActive
-			{
-				actionGroup = None
-			}
-			RollInactive
-			{
-				actionGroup = None
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = sweptWing_4292907718
-	partName = Part
-	persistentId = 3589402216
-	pos = 0.421428144,7.11292124,-6.16659641
-	attPos = 0,0,0
-	attPos0 = 0.421428144,-1.49155664,-0.112920716
-	rot = 0.692941964,0.140824601,0.0433204025,0.705778539
-	attRot = 0,0,0,1
-	attRot0 = -0.00907683279,0.130210176,-0.0689458773,0.989044726
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = sweptWing_4292907672
-	srfN = srfAttach,airplaneTailB_4293895374,TailCOL 1,0|0|0,-1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = sweptWing_4292907672
-	partName = Part
-	persistentId = 2927012475
-	pos = -0.421428144,7.11292124,-6.16659641
-	attPos = 0,0,0
-	attPos0 = -0.421428144,-1.49155664,-0.112920716
-	rot = 0.0433203429,0.70577848,0.692942023,0.140824541
-	attRot = 0,0,0,1
-	attRot0 = -0.0689458773,0.989044666,-0.00907674339,0.130210087
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = sweptWing_4292907718
-	srfN = srfAttach,airplaneTailB_4293895374,TailCOL 1,0|0|0,-1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = structuralWing2_4292835524
-	partName = Part
-	persistentId = 2602902218
-	pos = 0.621798992,7,-2.03035927
-	attPos = 0,0,0
-	attPos0 = 0.621798992,-0.117847443,0
-	rot = -2.95027974E-07,0.707106769,0.707106888,-2.95027974E-07
-	attRot = 0,0,0,1
-	attRot0 = 0,1,1.19209275E-07,-4.17232542E-07
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = StandardCtrlSrf_4292835480
-	link = StandardCtrlSrf_4292835444
-	sym = structuralWing2_4292835396
-	srfN = srfAttach,science.module_4293900578,node_collider,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = StandardCtrlSrf_4292835480
-	partName = Part
-	persistentId = 745280397
-	pos = 3.38562322,7.00000334,-2.61147237
-	attPos = 0,0,0
-	attPos0 = -2.76380944,-0.581108153,8.34464458E-07
-	rot = 6.10795041E-08,0.70710665,0.707107008,-6.30062118E-07
-	attRot = 0,0,0,1
-	attRot0 = -1.16016942E-07,-1.49011594E-08,4.88710839E-07,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = StandardCtrlSrf_4292835346
-	srfN = srfAttach,structuralWing2_4292835524,COL 5,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = True
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 20
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-			PitchActive
-			{
-				actionGroup = None
-			}
-			PitchInactive
-			{
-				actionGroup = None
-			}
-			TogglePitch
-			{
-				actionGroup = None
-			}
-			YawActive
-			{
-				actionGroup = None
-			}
-			YawInactive
-			{
-				actionGroup = None
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-			}
-			RollActive
-			{
-				actionGroup = None
-			}
-			RollInactive
-			{
-				actionGroup = None
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = StandardCtrlSrf_4292835444
-	partName = Part
-	persistentId = 662422101
-	pos = 1.44627118,7.00000095,-2.65003467
-	attPos = 0,0,0
-	attPos0 = -0.824469626,-0.619673848,-1.26863142E-09
-	rot = -1.57349163E-07,0.707106531,0.707107127,-4.52377037E-07
-	attRot = 0,0,0,1
-	attRot0 = -2.98023309E-07,1.39089593E-08,2.08616044E-07,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = StandardCtrlSrf_4292835310
-	srfN = srfAttach,structuralWing2_4292835524,COL 5,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = True
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 20
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-			PitchActive
-			{
-				actionGroup = None
-			}
-			PitchInactive
-			{
-				actionGroup = None
-			}
-			TogglePitch
-			{
-				actionGroup = None
-			}
-			YawActive
-			{
-				actionGroup = None
-			}
-			YawInactive
-			{
-				actionGroup = None
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-			}
-			RollActive
-			{
-				actionGroup = None
-			}
-			RollInactive
-			{
-				actionGroup = None
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = structuralWing2_4292835396
-	partName = Part
-	persistentId = 2649241876
-	pos = -0.621798992,7,-2.03035927
-	attPos = 0,0,0
-	attPos0 = -0.621798992,-0.117847443,0
-	rot = -0.707107067,2.64119308E-07,2.64119251E-07,-0.70710659
-	attRot = 0,0,0,1
-	attRot0 = -3.27825518E-07,3.73521033E-07,-2.8421706E-14,-1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = StandardCtrlSrf_4292835346
-	link = StandardCtrlSrf_4292835310
-	sym = structuralWing2_4292835524
-	srfN = srfAttach,science.module_4293900578,node_collider,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLiftingSurface
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = StandardCtrlSrf_4292835346
-	partName = Part
-	persistentId = 1461600602
-	pos = -3.38562155,7.00000334,-2.61147213
-	attPos = 0,0,0
-	attPos0 = -2.76380944,-0.581108153,8.34464458E-07
-	rot = -0.707107067,5.99153225E-07,-9.19882268E-08,-0.70710659
-	attRot = 0,0,0,1
-	attRot0 = -1.16016942E-07,-1.49011594E-08,4.88710839E-07,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = StandardCtrlSrf_4292835480
-	srfN = srfAttach,structuralWing2_4292835396,COL 5,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = False
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 20
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-			PitchActive
-			{
-				actionGroup = None
-			}
-			PitchInactive
-			{
-				actionGroup = None
-			}
-			TogglePitch
-			{
-				actionGroup = None
-			}
-			YawActive
-			{
-				actionGroup = None
-			}
-			YawInactive
-			{
-				actionGroup = None
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-			}
-			RollActive
-			{
-				actionGroup = None
-			}
-			RollInactive
-			{
-				actionGroup = None
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = StandardCtrlSrf_4292835310
-	partName = Part
-	persistentId = 1103203618
-	pos = -1.44627094,7.00000095,-2.65003443
-	attPos = 0,0,0
-	attPos0 = -0.824469626,-0.619673848,-1.26863142E-09
-	rot = -0.707107246,4.21468314E-07,1.26440412E-07,-0.707106411
-	attRot = 0,0,0,1
-	attRot0 = -2.98023309E-07,1.39089593E-08,2.08616044E-07,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = StandardCtrlSrf_4292835444
-	srfN = srfAttach,structuralWing2_4292835396,COL 5,0|0|0,1|0|0,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		mirrorDeploy = False
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		deployAngle = 20
-		authorityLimiter = 100
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-			PitchActive
-			{
-				actionGroup = None
-			}
-			PitchInactive
-			{
-				actionGroup = None
-			}
-			TogglePitch
-			{
-				actionGroup = None
-			}
-			YawActive
-			{
-				actionGroup = None
-			}
-			YawInactive
-			{
-				actionGroup = None
-			}
-			ToggleYaw
-			{
-				actionGroup = None
-			}
-			RollActive
-			{
-				actionGroup = None
-			}
-			RollInactive
-			{
-				actionGroup = None
-			}
-			ToggleRoll
-			{
-				actionGroup = None
-			}
-			ActivateAllControls
-			{
-				actionGroup = None
-			}
-			DeactivateAllControls
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployAngle
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-			authorityLimiter
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = tailfin_4293894130
-	partName = Part
-	persistentId = 769247137
-	pos = -5.38275025E-08,7.61571503,-5.98949766
-	attPos = 0,0,0
-	attPos0 = -5.38275025E-08,-1.31446838,-0.615714788
-	rot = 0.499999702,0.500000358,0.499999762,0.500000298
-	attRot = 0,0,0,1
-	attRot0 = -4.17232457E-07,0.707106829,-4.17232457E-07,0.707106769
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	srfN = srfAttach,airplaneTailB_4293895374,TailCOL 1,0|0|0,-1|0|0,0|0|0
+	sym = tailfin_4290361272
+	srfN = srfAttach,airplaneTail_4290934372,TailCOL,0|0|0,-1|0|0,0|0|0
 	EVENTS
 	{
 	}
@@ -3752,12 +2603,12 @@ PART
 		usesMirrorDeploy = True
 		ignorePitch = True
 		ignoreYaw = False
-		ignoreRoll = True
+		ignoreRoll = False
 		deploy = False
 		deployInvert = False
 		partDeployInvert = False
-		deployAngle = 9.75
-		authorityLimiter = 21
+		deployAngle = 25
+		authorityLimiter = 100
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3851,759 +2702,15 @@ PART
 }
 PART
 {
-	part = parachuteRadial_4292084308
+	part = tailfin_4290361272
 	partName = Part
-	persistentId = 2417236515
-	pos = 0.162546977,7.60663414,-1.81982708
+	persistentId = 3153740301
+	pos = -4.71005244E-08,5.53876734,-5.40167236
 	attPos = 0,0,0
-	attPos0 = 0.162546977,0.0926847458,-0.606633902
-	rot = -0.701057434,0.0922959149,0.0922959298,-0.701057553
+	attPos0 = -4.71005244E-08,-0.726653099,-0.53876394
+	rot = 0.471208274,0.527221918,0.471208274,0.527221739
 	attRot = 0,0,0,1
-	attRot0 = 5.96046448E-08,0.13052614,1.49011612E-08,-0.991444945
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 0
-	resPri = 0
-	dstg = 0
-	sidx = 0
-	sqor = 0
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = parachuteRadial_4291958540
-	srfN = srfAttach,science.module_4293900578,node_collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleParachute
-		isEnabled = True
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 1000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			CutAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = parachuteRadial_4291958540
-	partName = Part
-	persistentId = 237489077
-	pos = -0.162546977,7.60663414,-1.81982708
-	attPos = 0,0,0
-	attPos0 = -0.162546977,0.0926847458,-0.606633902
-	rot = 0.701057553,0.0922959074,0.0922959223,0.701057434
-	attRot = 0,0,0,1
-	attRot0 = 5.96046448E-08,0.130526111,1.49011612E-08,0.991444945
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 0
-	resPri = 0
-	dstg = 0
-	sidx = 0
-	sqor = 0
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = parachuteRadial_4292084308
-	srfN = srfAttach,science.module_4293900578,node_collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleParachute
-		isEnabled = True
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 1000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			CutAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = parachuteRadial_4292084564
-	partName = Part
-	persistentId = 2805854595
-	pos = 0.163724616,7.61102867,-3.78361225
-	attPos = 0,0,0
-	attPos0 = 0.163724616,0.378914118,-0.611028433
-	rot = -0.701057434,0.0922959149,0.0922959298,-0.701057553
-	attRot = 0,0,0,1
-	attRot0 = 5.96046448E-08,0.13052614,1.49011612E-08,-0.991444945
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 0
-	resPri = 0
-	dstg = 0
-	sidx = 1
-	sqor = 0
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = parachuteRadial_4291958184
-	srfN = srfAttach,science.module_4293896042,node_collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleParachute
-		isEnabled = True
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 1000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			CutAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = parachuteRadial_4291958184
-	partName = Part
-	persistentId = 2519831811
-	pos = -0.163724616,7.61102867,-3.78361225
-	attPos = 0,0,0
-	attPos0 = -0.163724616,0.378914118,-0.611028433
-	rot = 0.701057553,0.0922959074,0.0922959223,0.701057434
-	attRot = 0,0,0,1
-	attRot0 = 5.96046448E-08,0.130526111,1.49011612E-08,0.991444945
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 0
-	resPri = 0
-	dstg = 0
-	sidx = 1
-	sqor = 0
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = parachuteRadial_4292084564
-	srfN = srfAttach,science.module_4293896042,node_collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleParachute
-		isEnabled = True
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 1000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			CutAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = parachuteRadial_4291881558
-	partName = Part
-	persistentId = 1794726963
-	pos = -0.165013522,7.615839,-2.92242169
-	attPos = 0,0,0
-	attPos0 = -0.165013522,0.115106583,-0.615839005
-	rot = -0.701057434,-0.0922959149,-0.0922959298,-0.701057553
-	attRot = 0,0,0,1
-	attRot0 = 5.96046448E-08,-0.13052614,-1.49011612E-08,-0.991444945
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 0
-	resPri = 0
-	dstg = 0
-	sidx = 2
-	sqor = 0
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = parachuteRadial_4291808130
-	srfN = srfAttach,science.module_4293900194,node_collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleParachute
-		isEnabled = True
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 1000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			CutAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = parachuteRadial_4291808130
-	partName = Part
-	persistentId = 1062419249
-	pos = 0.165013522,7.615839,-2.92242169
-	attPos = 0,0,0
-	attPos0 = 0.165013522,0.115106583,-0.615839005
-	rot = 0.701057553,-0.0922959074,-0.0922959223,0.701057434
-	attRot = 0,0,0,1
-	attRot0 = 5.96046448E-08,-0.130526111,-1.49011612E-08,0.991444945
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 0
-	resPri = 0
-	dstg = 0
-	sidx = 2
-	sqor = 0
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = parachuteRadial_4291881558
-	srfN = srfAttach,science.module_4293900194,node_collider,0|0|0,0|0|-1,0|0|0
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleParachute
-		isEnabled = True
-		persistentState = STOWED
-		animTime = 0
-		minAirPressureToOpen = 0.0399999991
-		deployAltitude = 1000
-		spreadAngle = 7
-		automateSafeDeploy = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			CutAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = GooExperiment_4293890240
-	partName = Part
-	persistentId = 1180751795
-	pos = -0.138844624,7.5181756,-0.797877371
-	attPos = 0,0,0
-	attPos0 = -0.138844624,-0.01037174,-0.518175423
-	rot = -0.701057434,-0.0922959149,-0.0922959298,-0.701057553
-	attRot = 0,0,0,1
-	attRot0 = 5.96046448E-08,-0.13052614,-1.49011612E-08,-0.991444945
+	attRot0 = -0.0396074615,0.705996692,-0.0396076106,0.705996573
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -4619,8 +2726,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = GooExperiment_4291734444
-	srfN = srfAttach,science.module_4293901014,node_collider,0|0|-0.0900000036,0|0|-0.600000024,0|0|-0.0900000036
+	sym = tailfin_4290934102
+	srfN = srfAttach,airplaneTail_4290934372,TailCOL,0|0|0,-1|0|0,0|0|0
 	EVENTS
 	{
 	}
@@ -4644,28 +2751,90 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimateGeneric
+		name = ModuleControlSurface
 		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
+		mirrorDeploy = True
+		usesMirrorDeploy = True
+		ignorePitch = True
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		deployAngle = 25
+		authorityLimiter = 100
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ToggleAction
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+			PitchActive
+			{
+				actionGroup = None
+			}
+			PitchInactive
+			{
+				actionGroup = None
+			}
+			TogglePitch
+			{
+				actionGroup = None
+			}
+			YawActive
+			{
+				actionGroup = None
+			}
+			YawInactive
+			{
+				actionGroup = None
+			}
+			ToggleYaw
+			{
+				actionGroup = None
+			}
+			RollActive
+			{
+				actionGroup = None
+			}
+			RollInactive
+			{
+				actionGroup = None
+			}
+			ToggleRoll
+			{
+				actionGroup = None
+			}
+			ActivateAllControls
+			{
+				actionGroup = None
+			}
+			DeactivateAllControls
 			{
 				actionGroup = None
 			}
 		}
 		AXISGROUPS
 		{
-			deployPercent
+			deployAngle
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+			authorityLimiter
 			{
 				axisGroup = None
 				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
@@ -4676,44 +2845,18 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
 }
 PART
 {
-	part = GooExperiment_4291734444
+	part = sensorBarometer_4290369224
 	partName = Part
-	persistentId = 835908389
-	pos = 0.138844624,7.5181756,-0.797877371
+	persistentId = 1100074917
+	pos = -2.33732074E-08,5.2673583,1.50785732
 	attPos = 0,0,0
-	attPos0 = 0.138844624,-0.01037174,-0.518175423
-	rot = 0.701057553,-0.0922959,-0.0922959149,0.701057434
+	attPos0 = -2.33732074E-08,1.5078547,-0.267358541
+	rot = -0.833940089,-4.73564299E-08,-3.1337855E-08,-0.551855028
 	attRot = 0,0,0,1
-	attRot0 = 5.96046448E-08,-0.130526111,-1.49011612E-08,0.991444945
+	attRot0 = -0.199464232,-5.56452591E-08,1.13268435E-08,-0.979905069
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -4729,118 +2872,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = GooExperiment_4293890240
-	srfN = srfAttach,science.module_4293901014,node_collider,0|0|-0.0900000036,0|0|-0.600000024,0|0|-0.0900000036
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-		ToggleSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		SetSameVesselInteraction
-		{
-			actionGroup = None
-		}
-		RemoveSameVesselInteraction
-		{
-			actionGroup = None
-		}
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		AXISGROUPS
-		{
-			deployPercent
-			{
-				axisGroup = None
-				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
-				axisInverted = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceExperiment
-		isEnabled = True
-		Deployed = False
-		Inoperable = False
-		cooldownToGo = 0
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = sensorBarometer_4293890498
-	partName = Part
-	persistentId = 3118974605
-	pos = -3.88998487E-08,7.4449625,1.08991075
-	attPos = 0,0,0
-	attPos0 = -3.88998487E-08,1.08991051,-0.44496274
-	rot = -0.833940268,-4.37987424E-08,-2.89835587E-08,-0.551854968
-	attRot = 0,0,0,1
-	attRot0 = -0.199464411,-5.14648519E-08,1.04759152E-08,-0.979905128
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	sameVesselCollision = False
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = sensorBarometer_4291734334
-	srfN = srfAttach,Mark1Cockpit_4293911046,CockpitCOL2,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,Mark1Cockpit_4291389860,CockpitCOL2,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -4911,15 +2943,15 @@ PART
 }
 PART
 {
-	part = sensorBarometer_4291734334
+	part = sensorThermometer_4294305930
 	partName = Part
-	persistentId = 3058273421
-	pos = 3.88998522E-08,7.4449625,1.08991086
+	persistentId = 448282527
+	pos = -1.60734679E-08,5.18385887,1.88673007
 	attPos = 0,0,0
-	attPos0 = 3.88998522E-08,1.08991075,-0.444962621
-	rot = 0.833940268,-4.37987211E-08,-2.89835427E-08,0.551854968
+	attPos0 = -1.60734679E-08,1.88672745,-0.183859229
+	rot = -0.77587086,-3.72366031E-08,-3.02785921E-08,-0.63089186
 	attRot = 0,0,0,1
-	attRot0 = 0.19946444,-5.14648306E-08,1.04759126E-08,0.979905128
+	attRot0 = -0.102515593,-4.77404498E-08,4.92005681E-09,-0.994731426
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -4935,8 +2967,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = sensorBarometer_4293890498
-	srfN = srfAttach,Mark1Cockpit_4293911046,CockpitCOL2,0|0|0,0|0|-1,0|0|0
+	srfN = srfAttach,Mark1Cockpit_4291389860,CockpitCOL,0|0|0,0|0|-1,0|0|0
 	EVENTS
 	{
 	}
@@ -5007,15 +3038,511 @@ PART
 }
 PART
 {
-	part = GooExperiment_4293890310
+	part = parachuteRadial_4294306416
 	partName = Part
-	persistentId = 2801263913
-	pos = 0.133145198,7.49690485,-0.117470354
+	persistentId = 220651035
+	pos = 0.16512844,5.61626816,-0.634776235
 	attPos = 0,0,0
-	attPos0 = 0.133145198,-0.117470384,-0.49690488
-	rot = -0.703752041,0.0926502421,0.0919394121,-0.698352695
+	attPos0 = 0.16512844,0.152724862,-0.616268039
+	rot = -0.701057434,0.0922959149,0.0922959298,-0.701057553
 	attRot = 0,0,0,1
-	attRot0 = -0.00381791592,0.130524591,-0.000502631068,-0.991437674
+	attRot0 = 5.96046448E-08,0.13052614,1.49011612E-08,-0.991444945
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = 0
+	sqor = 0
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = parachuteRadial_4294303850
+	srfN = srfAttach,science.module_4290369100,node_collider,0|0|0,0|0|-1,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleParachute
+		isEnabled = True
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.0399999991
+		deployAltitude = 1000
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = parachuteRadial_4294303850
+	partName = Part
+	persistentId = 2672546649
+	pos = -0.16512844,5.61626816,-0.634776235
+	attPos = 0,0,0
+	attPos0 = -0.16512844,0.152724862,-0.616268039
+	rot = 0.701057553,0.0922959074,0.0922959223,0.701057434
+	attRot = 0,0,0,1
+	attRot0 = 5.96046448E-08,0.130526111,1.49011612E-08,0.991444945
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = 0
+	sqor = 0
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = parachuteRadial_4294306416
+	srfN = srfAttach,science.module_4290369100,node_collider,0|0|0,0|0|-1,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleParachute
+		isEnabled = True
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.0399999991
+		deployAltitude = 1000
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = parachuteRadial_4294304178
+	partName = Part
+	persistentId = 349359363
+	pos = 0.16282858,5.60768509,-1.70113945
+	attPos = 0,0,0
+	attPos0 = 0.16282858,0.211364567,-0.60768497
+	rot = -0.701057434,0.0922959149,0.0922959298,-0.701057553
+	attRot = 0,0,0,1
+	attRot0 = 5.96046448E-08,0.13052614,1.49011612E-08,-0.991444945
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = 1
+	sqor = 0
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = parachuteRadial_4294303762
+	srfN = srfAttach,science.module_4290368620,node_collider,0|0|0,0|0|-1,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleParachute
+		isEnabled = True
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.0399999991
+		deployAltitude = 1000
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = parachuteRadial_4294303762
+	partName = Part
+	persistentId = 1709834598
+	pos = -0.16282858,5.60768509,-1.70113945
+	attPos = 0,0,0
+	attPos0 = -0.16282858,0.211364567,-0.60768497
+	rot = 0.701057553,0.0922959074,0.0922959223,0.701057434
+	attRot = 0,0,0,1
+	attRot0 = 5.96046448E-08,0.130526111,1.49011612E-08,0.991444945
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = 1
+	sqor = 0
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = parachuteRadial_4294304178
+	srfN = srfAttach,science.module_4290368620,node_collider,0|0|0,0|0|-1,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleParachute
+		isEnabled = True
+		persistentState = STOWED
+		animTime = 0
+		minAirPressureToOpen = 0.0399999991
+		deployAltitude = 1000
+		spreadAngle = 7
+		automateSafeDeploy = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = GooExperiment_4294303584
+	partName = Part
+	persistentId = 2897333404
+	pos = 0.139344513,5.52004147,-3.26554251
+	attPos = 0,0,0
+	attPos0 = 0.139344513,-0.228031874,-0.520041227
+	rot = -0.701057434,0.0922959149,0.0922959298,-0.701057553
+	attRot = 0,0,0,1
+	attRot0 = 5.96046448E-08,0.13052614,1.49011612E-08,-0.991444945
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -5031,8 +3558,122 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = GooExperiment_4291734288
-	srfN = srfAttach,Mark1Cockpit_4293911046,CockpitCOL2,0|0|-0.0900000036,0|0|-0.600000024,0|0|-0.0900000036
+	sym = GooExperiment_4294303380
+	srfN = srfAttach,science.module_4290366648,node_collider,0|0|-0.0900000036,0|0|-0.600000024,0|0|-0.0900000036
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+				overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		cooldownToGo = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = GooExperiment_4294303380
+	partName = Part
+	persistentId = 1672891406
+	pos = -0.139344513,5.52004147,-3.26554251
+	attPos = 0,0,0
+	attPos0 = -0.139344513,-0.228031874,-0.520041227
+	rot = 0.701057553,0.0922959074,0.0922959223,0.701057434
+	attRot = 0,0,0,1
+	attRot0 = 5.96046448E-08,0.130526111,1.49011612E-08,0.991444945
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = GooExperiment_4294303584
+	srfN = srfAttach,science.module_4290366648,node_collider,0|0|-0.0900000036,0|0|-0.600000024,0|0|-0.0900000036
 	EVENTS
 	{
 	}
@@ -5117,15 +3758,15 @@ PART
 }
 PART
 {
-	part = GooExperiment_4291734288
+	part = GooExperiment_4294303310
 	partName = Part
-	persistentId = 3076250247
-	pos = -0.133145198,7.49690485,-0.117470324
+	persistentId = 1984402369
+	pos = 0.138513163,5.51693869,-2.73896766
 	attPos = 0,0,0
-	attPos0 = -0.133145198,-0.117470384,-0.49690491
-	rot = 0.703752041,0.0926502049,0.0919394046,0.698352695
+	attPos0 = 0.138513163,0.298538804,-0.516938686
+	rot = -0.701057434,0.0922959149,0.0922959298,-0.701057553
 	attRot = 0,0,0,1
-	attRot0 = 0.00381794572,0.130524561,-0.000502616167,0.991437674
+	attRot0 = 5.96046448E-08,0.13052614,1.49011612E-08,-0.991444945
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -5141,8 +3782,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = GooExperiment_4293890310
-	srfN = srfAttach,Mark1Cockpit_4293911046,CockpitCOL2,0|0|-0.0900000036,0|0|-0.600000024,0|0|-0.0900000036
+	sym = GooExperiment_4294303256
+	srfN = srfAttach,science.module_4290366648,node_collider,0|0|-0.0900000036,0|0|-0.600000024,0|0|-0.0900000036
 	EVENTS
 	{
 	}
@@ -5227,15 +3868,15 @@ PART
 }
 PART
 {
-	part = mumech.MJ2.AR202_4293512500
+	part = GooExperiment_4294303256
 	partName = Part
-	persistentId = 2094068450
-	pos = 0.156274021,7.58322287,-5.05454159
+	persistentId = 2333348923
+	pos = -0.138513163,5.51693869,-2.73896766
 	attPos = 0,0,0
-	attPos0 = 0.156274021,-0.379513025,-0.583222628
-	rot = -0.430459291,0.560985684,0.560985088,-0.430459946
+	attPos0 = -0.138513163,0.298538804,-0.516938686
+	rot = 0.701057553,0.0922959074,0.0922959223,0.701057434
 	attRot = 0,0,0,1
-	attRot0 = 4.47034836E-07,0.793353081,-3.87430191E-07,-0.608761787
+	attRot0 = 5.96046448E-08,0.130526111,1.49011612E-08,0.991444945
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -5251,7 +3892,506 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,airplaneTailB_4293895374,TailCOL 1,0|0|0,0.75|0|0,0|0|0
+	sym = GooExperiment_4294303310
+	srfN = srfAttach,science.module_4290366648,node_collider,0|0|-0.0900000036,0|0|-0.600000024,0|0|-0.0900000036
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		AXISGROUPS
+		{
+			deployPercent
+			{
+				axisGroup = None
+				axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+				axisInverted = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		cooldownToGo = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = GearFixed_4294300886
+	partName = Part
+	persistentId = 1887203436
+	pos = -0.379049361,4.35568905,-3.13572359
+	attPos = 0.704805851,-0.0621571541,0.445540607
+	attPos0 = -0.293752491,0.262153953,0.0787106305
+	rot = -0.00481140614,-0.00277786399,-1.58394687E-06,-0.999984741
+	attRot = -2.58195918E-08,4.38000169E-09,0.258818835,0.965925932
+	attRot0 = 0.697151899,-0.0928083211,-0.0917826295,-0.704941094
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = ForceHeaviest
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = GearFixed_4294206142
+	srfN = srfAttach,miniFuselage_4290361588,CYLCOL,0|0|0,1|90|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleWheelBase
+		isEnabled = True
+		wheelType = FREE
+		isGrounded = False
+		autoFriction = True
+		frictionMultiplier = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActAutoFrictionToggle
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWheelSuspension
+		isEnabled = True
+		springTweakable = 1
+		damperTweakable = 1
+		autoSpringDamper = True
+		suspensionPos = (-1, -1, -1)
+		autoBoost = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWheelBrakes
+		isEnabled = True
+		brakeTweakable = 50
+		brakeInput = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			BrakeAction
+			{
+				actionGroup = Brakes
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWheelDamage
+		isEnabled = True
+		isDamaged = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = GearFixed_4294206142
+	partName = Part
+	persistentId = 1897341583
+	pos = 0.379049301,4.35568905,-3.13572288
+	attPos = 0.704805255,-0.0621559173,-0.445540994
+	attPos0 = -0.293752223,0.262153655,-0.0787107721
+	rot = 1.57218892E-06,0.999984562,0.00481134653,0.00277783349
+	attRot = 2.58195918E-08,-4.38000169E-09,-0.258818835,0.965925932
+	attRot0 = 0.697417378,0.090790078,-0.0937968045,0.704676092
+	mir = 1,1,-1
+	symMethod = Mirror
+	autostrutMode = ForceHeaviest
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = GearFixed_4294300886
+	srfN = srfAttach,miniFuselage_4290362790,CYLCOL,0|0|0,1|90|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleWheelBase
+		isEnabled = True
+		wheelType = FREE
+		isGrounded = False
+		autoFriction = True
+		frictionMultiplier = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActAutoFrictionToggle
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWheelSuspension
+		isEnabled = True
+		springTweakable = 1
+		damperTweakable = 1
+		autoSpringDamper = True
+		suspensionPos = (-1, -1, -1)
+		autoBoost = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWheelBrakes
+		isEnabled = True
+		brakeTweakable = 50
+		brakeInput = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			BrakeAction
+			{
+				actionGroup = Brakes
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWheelDamage
+		isEnabled = True
+		isDamaged = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = GearFree_4290789710
+	partName = Part
+	persistentId = 2904619333
+	pos = 0,4.40202284,0.692185879
+	attPos = 0,0,0
+	attPos0 = 0,0.692185879,0.597977161
+	rot = -0.0321367979,2.28261576E-11,-7.0990902E-10,0.999483585
+	attRot = 0,0,0,1
+	attRot0 = -0.729465723,-4.85840923E-10,-5.1812199E-10,0.68401742
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = ForceHeaviest
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	srfN = srfAttach,Mark1Cockpit_4291389860,CockpitCOL,0|0|0,0|1|0,0|0|0
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+		ToggleSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		SetSameVesselInteraction
+		{
+			actionGroup = None
+		}
+		RemoveSameVesselInteraction
+		{
+			actionGroup = None
+		}
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleWheelBase
+		isEnabled = True
+		wheelType = FREE
+		isGrounded = False
+		autoFriction = True
+		frictionMultiplier = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActAutoFrictionToggle
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWheelSuspension
+		isEnabled = True
+		springTweakable = 1
+		damperTweakable = 1
+		autoSpringDamper = True
+		suspensionPos = (-1, -1, -1)
+		autoBoost = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWheelSteering
+		isEnabled = True
+		steeringEnabled = True
+		steeringInvert = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			SteeringToggle
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleWheelDamage
+		isEnabled = True
+		isDamaged = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = mumech.MJ2.AR202_4294304338
+	partName = Part
+	persistentId = 588420486
+	pos = -5.42047935E-08,5.6200304,-3.89096928
+	attPos = 0,0,0
+	attPos0 = -5.42047935E-08,0.271540403,-0.620030165
+	rot = -0.50000006,0.5,0.5,-0.50000006
+	attRot = 0,0,0,1
+	attRot0 = 0,0.707106769,0,-0.707106829
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	sameVesselCollision = False
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	srfN = srfAttach,science.module_4290366086,node_collider,0|0|0,0.75|0|0,0|0|0
 	EVENTS
 	{
 	}
