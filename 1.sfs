@@ -1,6 +1,6 @@
 GAME
 {
-	version = 1.10.1
+	version = 1.11.0
 	Title = 大宝库2020 (生涯模式)
 	Description = No description available.
 	linkURL = 
@@ -11,12 +11,12 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/circles
-	launchID = 79
+	launchID = 80
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
 	modded = True
 	envInfo =  - Environment Info - Unix 7FFFFFFFFFFFFFFF  Args: KSP  - 
-	versionFull = 1.10.1.2939 (OSXPlayer)
+	versionFull = 1.11.0.3045 (OSXPlayer)
 	versionCreated = 1.10.1.2939 (OSXPlayer)
 	CometNames
 	{
@@ -87,6 +87,7 @@ GAME
 			ReentryHeatScale = 1
 			EnableCommNet = True
 			AllowOtherLaunchSites = False
+			persistKerbalInventories = False
 		}
 		CAREER
 		{
@@ -117,6 +118,7 @@ GAME
 			PartUpgradesInCareer = True
 			PartUpgradesInMission = False
 			EnableFullSASInSandbox = False
+			EnableFullSASInMissions = False
 		}
 		CommNetParams
 		{
@@ -197,7 +199,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 400527.02573964326
+		funds = 752552.74797186872
 	}
 	SCENARIO
 	{
@@ -390,7 +392,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 138.559296
+		sci = 206.819778
 		Tech
 		{
 			id = start
@@ -404,6 +406,8 @@ GAME
 			part = GooExperiment
 			part = trussPiece1x
 			part = parachuteSingle
+			part = evaJetpack
+			part = evaChute
 		}
 		Tech
 		{
@@ -475,6 +479,7 @@ GAME
 			part = batteryPack
 			part = probeCoreSphere.v2
 			part = probeCoreSphere
+			part = HighGainAntenna5.v2
 		}
 		Tech
 		{
@@ -530,6 +535,8 @@ GAME
 			part = landerCabinSmall
 			part = advSasModule
 			part = mumech.MJ2.AR202.features1
+			part = RCSblock.01.small
+			part = RCSLinearSmall
 		}
 		Tech
 		{
@@ -550,6 +557,7 @@ GAME
 			part = airplaneTail
 			part = tailfin
 			part = sweptWing
+			part = navLight1
 		}
 		Tech
 		{
@@ -628,7 +636,7 @@ GAME
 		Science
 		{
 			id = recovery@KerbinFlew
-			title = 回收到在Kerbin上空飞行后返航的载具
+			title = 回收飞行后返回的航天器。
 			dsc = 1
 			scv = 0
 			sbv = 5
@@ -1334,9 +1342,9 @@ GAME
 			id = mysteryGoo@KerbinSrfLandedHighlands
 			title = 在Kerbin的高原的神秘黏性物质™观察结果
 			dsc = 1
-			scv = 0.0028360195
+			scv = 0.000151059561
 			sbv = 0.300000012
-			sci = 3.88893962
+			sci = 3.89941096
 			asc = True
 			cap = 3.9000001
 		}
@@ -1472,6 +1480,28 @@ GAME
 			asc = True
 			cap = 16
 		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedGrasslands
+			title = 在Kerbin的草原的地表样本
+			dsc = 1
+			scv = 0.25
+			sbv = 0.300000012
+			sci = 9
+			asc = True
+			cap = 12
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedHighlands
+			title = 在Kerbin的高原的地表样本
+			dsc = 1
+			scv = 0.0625
+			sbv = 0.300000012
+			sci = 11.25
+			asc = True
+			cap = 12
+		}
 	}
 	SCENARIO
 	{
@@ -1482,7 +1512,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 694.112793
+		rep = 714.543884
 	}
 	SCENARIO
 	{
@@ -1821,12 +1851,15 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 127639.19990549545
-		version = 1.10.1
+		update = 135299.1600406963
+		version = 1.11.0
 		WEIGHTS
 		{
 			SentinelContract = 30
 			CometDetectionContract = 30
+			VesselRepairContract = 30
+			RoverConstructionContract = 30
+			OrbitalConstructionContract = 30
 			RecoverAsset = 78
 			PlantFlag = 30
 			PartTest = 90
@@ -2221,114 +2254,6 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = 0bcb77a9-0b27-41f2-8f46-398d51905f2e
-				type = SurveyContract
-				prestige = 1
-				seed = -231636256
-				state = Active
-				viewed = Read
-				agent = Sean罐头厂
-				agentName = Sean's Cannery
-				deadlineType = Floating
-				expiryType = Floating
-				values = 122264.141178131,43403770.1182365,39750.0023245811,77247.5061917306,41250.0008940697,0,10,11,201626.472841133,96293.4232893715,43500063.5415259,0
-				targetBody = 1
-				centerLatitude = -24.322547178276452
-				centerLongitude = 0.45242053850201014
-				dataName = 观测
-				anomalyName = 不一致
-				reportName = 报告
-				locationName = Kerbin^N
-				focusedSurvey = False
-				targetBand = HIGHMIX
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 17100
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -47772168
-					wpIndex = 0
-					wpTexture = report
-					wpLatitude = -25.272683906853448
-					wpLongitude = -5.1114963112407512
-					wpLandlocked = False
-					wpNavigationId = f9689e57-7411-4616-a3dc-5370bac74aaa
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 19300
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -47772168
-					wpIndex = 1
-					wpTexture = report
-					wpLatitude = -30.05016100918305
-					wpLongitude = 4.8410319979334657
-					wpLandlocked = False
-					wpNavigationId = b005533c-c20f-4254-8d09-fccc5d9d590b
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 18500
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -47772168
-					wpIndex = 2
-					wpTexture = report
-					wpLatitude = -22.21619184245759
-					wpLongitude = 3.4046888112628584
-					wpLandlocked = False
-					wpNavigationId = 714fab92-3811-4006-b162-95756292091f
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 写一份乘员报告
-					experiment = crewReport
-					flightThreshold = 17300
-					band = 2
-					clusterState = MIXED
-					verified = True
-					contextual = False
-					wpSeed = -47772168
-					wpIndex = 3
-					wpTexture = report
-					wpLatitude = -20.46447352065481
-					wpLongitude = -1.3449313829206224
-					wpLandlocked = False
-					wpNavigationId = 62e3c519-ac32-4c74-a29c-0958ac107492
-				}
-			}
-			CONTRACT
-			{
 				guid = a041a0a4-54a9-4ddf-a60d-51452c8fe785
 				type = SurveyContract
 				prestige = 1
@@ -2433,222 +2358,6 @@ GAME
 					wpLongitude = 37.850310233713316
 					wpLandlocked = False
 					wpNavigationId = 737377ab-b7e6-4d4b-9780-500f234a7842
-				}
-			}
-			CONTRACT
-			{
-				guid = c393e8d2-a706-44f1-b92d-478035a689f3
-				type = SurveyContract
-				prestige = 1
-				seed = -8311092
-				state = Active
-				viewed = Read
-				agent = 极限火箭集团
-				agentName = Rockomax Conglomerate
-				deadlineType = Floating
-				expiryType = Floating
-				values = 34754.6251178843,37013675.7505467,40486.113680568,78678.0159578705,43725.0035047532,0,11.51321,11,72083.9004392729,37798.413251024,37051474.1637977,0
-				targetBody = 1
-				centerLatitude = -18.884316548347105
-				centerLongitude = 0.1529798499089573
-				dataName = 大气
-				anomalyName = 异常
-				reportName = 读数
-				locationName = 厄蒙的自豪附近的Kerbin
-				focusedSurvey = False
-				targetBand = GROUND
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 获取气压读数
-					experiment = barometerScan
-					flightThreshold = 17300
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = -35465498
-					wpIndex = 0
-					wpTexture = pressure
-					wpLatitude = -18.825406400811286
-					wpLongitude = -0.01026278468021016
-					wpLandlocked = True
-					wpNavigationId = 14ce0dad-b29d-4791-81f0-e9976e03445d
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 获取气压读数
-					experiment = barometerScan
-					flightThreshold = 17100
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = -35465498
-					wpIndex = 1
-					wpTexture = pressure
-					wpLatitude = -19.003680777234969
-					wpLongitude = -0.021254149597914076
-					wpLandlocked = True
-					wpNavigationId = 3a9862ae-c25d-46c2-9042-420dce3c1619
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 获取气压读数
-					experiment = barometerScan
-					flightThreshold = 18200
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = -35465498
-					wpIndex = 2
-					wpTexture = pressure
-					wpLatitude = -18.951006116928443
-					wpLongitude = 0.17902781549197361
-					wpLandlocked = True
-					wpNavigationId = 58c2c98e-1df5-42b6-88e3-d2efdb2b6f18
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 11000,0,4,4,0
-					targetBody = 1
-					actionDescription = 获取气压读数
-					experiment = barometerScan
-					flightThreshold = 18500
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = -35465498
-					wpIndex = 3
-					wpTexture = pressure
-					wpLatitude = -18.827643793295046
-					wpLongitude = 0.29997470002981502
-					wpLandlocked = True
-					wpNavigationId = 902200b6-55d3-4634-beb3-c5e0681e0800
-				}
-			}
-			CONTRACT
-			{
-				guid = 85da798f-aeeb-4b26-b536-77d8ebfa9d98
-				type = SurveyContract
-				prestige = 1
-				seed = 2129180505
-				state = Active
-				viewed = Read
-				agent = 火箭联合公司
-				agentName = Rokea Inc
-				deadlineType = Floating
-				expiryType = Floating
-				values = 89285.7119441033,38035713.288188,42930.0042164327,83427.3100021724,43725.0035047532,0,10.56604,11,170568.824466614,96293.4232893715,38132006.7114774,0
-				targetBody = 1
-				centerLatitude = -6.7775925989279679
-				centerLongitude = 0.88390014641168591
-				dataName = 观测
-				anomalyName = 不一致
-				reportName = 报告
-				locationName = 基利姆的冒险附近的Kerbin
-				focusedSurvey = False
-				targetBand = GROUND
-				contextual = False
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 10000,0,4,4,0
-					targetBody = 1
-					actionDescription = 获取一份地表样本
-					experiment = surfaceSample
-					flightThreshold = 18000
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = 2120016087
-					wpIndex = 0
-					wpTexture = sample
-					wpLatitude = -6.7447104974697369
-					wpLongitude = 0.90100661034530249
-					wpLandlocked = True
-					wpNavigationId = 8e124824-e072-4a13-9cd5-be9017a331fb
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 9000,0,4,4,0
-					targetBody = 1
-					actionDescription = 写一份EVA报告
-					experiment = evaReport
-					flightThreshold = 16600
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = 2120016087
-					wpIndex = 1
-					wpTexture = eva
-					wpLatitude = -7.0799353247925456
-					wpLongitude = 0.8283512413667774
-					wpLandlocked = True
-					wpNavigationId = a8f757e0-82c8-4d32-b97c-6ad6f02bb71a
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 10000,0,4,4,0
-					targetBody = 1
-					actionDescription = 获取一份地表样本
-					experiment = surfaceSample
-					flightThreshold = 16500
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = 2120016087
-					wpIndex = 2
-					wpTexture = sample
-					wpLatitude = -7.1313629806443384
-					wpLongitude = 0.77010166311632255
-					wpLandlocked = True
-					wpNavigationId = fa5bcaec-283f-4d26-8a5e-7ee7214fff12
-				}
-				PARAM
-				{
-					name = SurveyWaypointParameter
-					state = Incomplete
-					values = 9000,0,4,4,0
-					targetBody = 1
-					actionDescription = 写一份EVA报告
-					experiment = evaReport
-					flightThreshold = 17000
-					band = 1
-					clusterState = FULL
-					verified = True
-					contextual = False
-					wpSeed = 2120016087
-					wpIndex = 3
-					wpTexture = eva
-					wpLatitude = -7.0401723369568652
-					wpLongitude = 0.84891606707381195
-					wpLandlocked = True
-					wpNavigationId = 204bf4d5-90da-4795-b781-f9425a31b6ec
 				}
 			}
 			CONTRACT
@@ -3398,6 +3107,366 @@ GAME
 					wpLongitude = -2.1855714728451794
 					wpLandlocked = False
 					wpNavigationId = 38805bd8-70bc-4a9c-b3ca-cf9bce09fd59
+				}
+			}
+			CONTRACT
+			{
+				guid = 6d66a688-c26d-4d52-b735-f1651ff511a4
+				type = TourismContract
+				prestige = 2
+				seed = 690646479
+				state = Offered
+				viewed = Unseen
+				agent = Jebediah Kerman废品回收和飞船部件公司
+				agentName = Jebediah Kerman's Junkyard and Spacecraft Parts Co
+				deadlineType = Floating
+				expiryType = Floating
+				values = 109830.51109314,77979662.8761292,0,0,0,0,36.00985,14.15094,242117.831603868,0,0,0
+				preposition = 太阳系
+				homeDestinations = False
+				isGeeAdventure = False
+				tourists = Falong Kerman|Mengou Kerman|Dongdang Kerman
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					allowPartialFailure = True
+					values = 87750,0,0,0,0
+					kerbalName = Falong Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 9750,0,0,0,0
+						targetBody = 2
+						targetType = Flyby
+						kerbalName = Falong Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 9750,0,0,0,0
+						targetBody = 2
+						targetType = Orbit
+						kerbalName = Falong Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 9750,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Falong Kerman
+					}
+				}
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					allowPartialFailure = True
+					values = 87750,0,0,0,0
+					kerbalName = Mengou Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 9750,0,0,0,0
+						targetBody = 2
+						targetType = Orbit
+						kerbalName = Mengou Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 9750,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Mengou Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 9750,0,0,0,0
+						targetBody = 2
+						targetType = Flyby
+						kerbalName = Mengou Kerman
+					}
+				}
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					allowPartialFailure = True
+					values = 117000,0,0,0,0
+					kerbalName = Dongdang Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 9750,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Dongdang Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 9750,0,0,0,0
+						targetBody = 1
+						targetType = Orbit
+						kerbalName = Dongdang Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 9750,0,0,0,0
+						targetBody = 2
+						targetType = Flyby
+						kerbalName = Dongdang Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 9750,0,0,0,0
+						targetBody = 2
+						targetType = Orbit
+						kerbalName = Dongdang Kerman
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = d3c692dd-89b3-4760-93c6-d48f412d6e1c
+				type = SurveyContract
+				prestige = 1
+				seed = 1711987571
+				state = Offered
+				viewed = Unseen
+				agent = 歌利亚国家制造厂
+				agentName = Goliath National Products
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,46008000,37500,72875.0015795231,41250.0008940697,0,10,11,155088.113869617,0,0,0
+				targetBody = 1
+				centerLatitude = -52.380376622646921
+				centerLongitude = 0.27281909355559364
+				dataName = 观测
+				anomalyName = 不一致
+				reportName = 报告
+				locationName = 飞行员的支线附近的Kerbin
+				focusedSurvey = False
+				targetBand = GROUND
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 10000,0,4,4,0
+					targetBody = 1
+					actionDescription = 获取一份地表样本
+					experiment = surfaceSample
+					flightThreshold = 19600
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 1714764251
+					wpIndex = 0
+					wpTexture = sample
+					wpLatitude = -52.026538550732816
+					wpLongitude = 0.41992809224535166
+					wpLandlocked = True
+					wpNavigationId = 7669b193-9d80-4fe2-adbf-53a66410cca9
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 9000,0,4,4,0
+					targetBody = 1
+					actionDescription = 写一份EVA报告
+					experiment = evaReport
+					flightThreshold = 18400
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 1714764251
+					wpIndex = 1
+					wpTexture = eva
+					wpLatitude = -52.397430964100451
+					wpLongitude = 0.42107753342809023
+					wpLandlocked = True
+					wpNavigationId = 450878a1-52b2-408f-a660-37ef4d2ff2f3
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 9000,0,4,4,0
+					targetBody = 1
+					actionDescription = 写一份EVA报告
+					experiment = evaReport
+					flightThreshold = 16400
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 1714764251
+					wpIndex = 2
+					wpTexture = eva
+					wpLatitude = -52.717820284573406
+					wpLongitude = 0.016963930709072057
+					wpLandlocked = True
+					wpNavigationId = 685491cc-d831-4b18-929e-a8cd29e70078
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 10000,0,4,4,0
+					targetBody = 1
+					actionDescription = 获取一份地表样本
+					experiment = surfaceSample
+					flightThreshold = 17800
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 1714764251
+					wpIndex = 3
+					wpTexture = sample
+					wpLatitude = -52.416208206898204
+					wpLongitude = 0.21057587251648965
+					wpLandlocked = True
+					wpNavigationId = 98a559b1-8c00-4236-a0f0-1fb69d92f206
+				}
+			}
+			CONTRACT
+			{
+				guid = d94ff0ab-af5a-4914-b089-5e700ea323d0
+				type = TourismContract
+				prestige = 1
+				seed = 2098039842
+				state = Offered
+				viewed = Unseen
+				agent = C7航天部门
+				agentName = C7 Aerospace Division
+				deadlineType = Floating
+				expiryType = Floating
+				values = 64800,92016000,0,0,0,0,22.72727,12,199863.34004082,0,0,0
+				preposition = 到Kerbin上
+				homeDestinations = False
+				isGeeAdventure = False
+				tourists = Taifa Kerman|Lunhai Kerman|Neili Kerman
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					allowPartialFailure = True
+					values = 73125,0,0,0,0
+					kerbalName = Taifa Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 8125,0,0,0,0
+						targetBody = 1
+						targetType = Orbit
+						kerbalName = Taifa Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 8125,0,0,0,0
+						targetBody = 2
+						targetType = Orbit
+						kerbalName = Taifa Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 8125,0,0,0,0
+						targetBody = 2
+						targetType = Flyby
+						kerbalName = Taifa Kerman
+					}
+				}
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					allowPartialFailure = True
+					values = 73125,0,0,0,0
+					kerbalName = Lunhai Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 8125,0,0,0,0
+						targetBody = 2
+						targetType = Orbit
+						kerbalName = Lunhai Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 8125,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Lunhai Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 8125,0,0,0,0
+						targetBody = 2
+						targetType = Flyby
+						kerbalName = Lunhai Kerman
+					}
+				}
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Incomplete
+					allowPartialFailure = True
+					values = 48750,0,0,0,0
+					kerbalName = Neili Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 8125,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Neili Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 8125,0,0,0,0
+						targetBody = 2
+						targetType = Orbit
+						kerbalName = Neili Kerman
+					}
 				}
 			}
 			CONTRACT_FINISHED
@@ -8856,6 +8925,342 @@ GAME
 					winOn = All
 				}
 			}
+			CONTRACT_FINISHED
+			{
+				guid = 0bcb77a9-0b27-41f2-8f46-398d51905f2e
+				type = SurveyContract
+				prestige = 1
+				seed = -231636256
+				state = Completed
+				viewed = Read
+				agent = Sean罐头厂
+				agentName = Sean's Cannery
+				deadlineType = Floating
+				expiryType = Floating
+				values = 122264.141178131,43403770.1182365,39750.0023245811,77247.5061917306,41250.0008940697,0,10,11,201626.472841133,96293.4232893715,43500063.5415259,0
+				targetBody = 1
+				centerLatitude = -24.322547178276452
+				centerLongitude = 0.45242053850201014
+				dataName = 观测
+				anomalyName = 不一致
+				reportName = 报告
+				locationName = Kerbin^N
+				focusedSurvey = False
+				targetBand = HIGHMIX
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 17100
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -47772168
+					wpIndex = 0
+					wpTexture = report
+					wpLatitude = -25.272683906853448
+					wpLongitude = -5.1114963112407512
+					wpLandlocked = False
+					wpNavigationId = f9689e57-7411-4616-a3dc-5370bac74aaa
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 19300
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -47772168
+					wpIndex = 1
+					wpTexture = report
+					wpLatitude = -30.05016100918305
+					wpLongitude = 4.8410319979334657
+					wpLandlocked = False
+					wpNavigationId = b005533c-c20f-4254-8d09-fccc5d9d590b
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 18500
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -47772168
+					wpIndex = 2
+					wpTexture = report
+					wpLatitude = -22.21619184245759
+					wpLongitude = 3.4046888112628584
+					wpLandlocked = False
+					wpNavigationId = 714fab92-3811-4006-b162-95756292091f
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份乘员报告
+					experiment = crewReport
+					flightThreshold = 17300
+					band = 2
+					clusterState = MIXED
+					verified = True
+					contextual = False
+					wpSeed = -47772168
+					wpIndex = 3
+					wpTexture = report
+					wpLatitude = -20.46447352065481
+					wpLongitude = -1.3449313829206224
+					wpLandlocked = False
+					wpNavigationId = 62e3c519-ac32-4c74-a29c-0958ac107492
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = c393e8d2-a706-44f1-b92d-478035a689f3
+				type = SurveyContract
+				prestige = 1
+				seed = -8311092
+				state = Completed
+				viewed = Read
+				agent = 极限火箭集团
+				agentName = Rockomax Conglomerate
+				deadlineType = Floating
+				expiryType = Floating
+				values = 34754.6251178843,37013675.7505467,40486.113680568,78678.0159578705,43725.0035047532,0,11.51321,11,72083.9004392729,37798.413251024,37051474.1637977,0
+				targetBody = 1
+				centerLatitude = -18.884316548347105
+				centerLongitude = 0.1529798499089573
+				dataName = 大气
+				anomalyName = 异常
+				reportName = 读数
+				locationName = 厄蒙的自豪附近的Kerbin
+				focusedSurvey = False
+				targetBand = GROUND
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 获取气压读数
+					experiment = barometerScan
+					flightThreshold = 17300
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = -35465498
+					wpIndex = 0
+					wpTexture = pressure
+					wpLatitude = -18.825406400811286
+					wpLongitude = -0.01026278468021016
+					wpLandlocked = True
+					wpNavigationId = 14ce0dad-b29d-4791-81f0-e9976e03445d
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 获取气压读数
+					experiment = barometerScan
+					flightThreshold = 17100
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = -35465498
+					wpIndex = 1
+					wpTexture = pressure
+					wpLatitude = -19.003680777234969
+					wpLongitude = -0.021254149597914076
+					wpLandlocked = True
+					wpNavigationId = 3a9862ae-c25d-46c2-9042-420dce3c1619
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 获取气压读数
+					experiment = barometerScan
+					flightThreshold = 18200
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = -35465498
+					wpIndex = 2
+					wpTexture = pressure
+					wpLatitude = -18.951006116928443
+					wpLongitude = 0.17902781549197361
+					wpLandlocked = True
+					wpNavigationId = 58c2c98e-1df5-42b6-88e3-d2efdb2b6f18
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 获取气压读数
+					experiment = barometerScan
+					flightThreshold = 18500
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = -35465498
+					wpIndex = 3
+					wpTexture = pressure
+					wpLatitude = -18.827643793295046
+					wpLongitude = 0.29997470002981502
+					wpLandlocked = True
+					wpNavigationId = 902200b6-55d3-4634-beb3-c5e0681e0800
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 85da798f-aeeb-4b26-b536-77d8ebfa9d98
+				type = SurveyContract
+				prestige = 1
+				seed = 2129180505
+				state = Completed
+				viewed = Read
+				agent = 火箭联合公司
+				agentName = Rokea Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 89285.7119441033,38035713.288188,42930.0042164327,83427.3100021724,43725.0035047532,0,10.56604,11,170568.824466614,96293.4232893715,38132006.7114774,0
+				targetBody = 1
+				centerLatitude = -6.7775925989279679
+				centerLongitude = 0.88390014641168591
+				dataName = 观测
+				anomalyName = 不一致
+				reportName = 报告
+				locationName = 基利姆的冒险附近的Kerbin
+				focusedSurvey = False
+				targetBand = GROUND
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 获取一份地表样本
+					experiment = surfaceSample
+					flightThreshold = 18000
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 2120016087
+					wpIndex = 0
+					wpTexture = sample
+					wpLatitude = -6.7447104974697369
+					wpLongitude = 0.90100661034530249
+					wpLandlocked = True
+					wpNavigationId = 8e124824-e072-4a13-9cd5-be9017a331fb
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份EVA报告
+					experiment = evaReport
+					flightThreshold = 16600
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 2120016087
+					wpIndex = 1
+					wpTexture = eva
+					wpLatitude = -7.0799353247925456
+					wpLongitude = 0.8283512413667774
+					wpLandlocked = True
+					wpNavigationId = a8f757e0-82c8-4d32-b97c-6ad6f02bb71a
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 获取一份地表样本
+					experiment = surfaceSample
+					flightThreshold = 16500
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 2120016087
+					wpIndex = 2
+					wpTexture = sample
+					wpLatitude = -7.1313629806443384
+					wpLongitude = 0.77010166311632255
+					wpLandlocked = True
+					wpNavigationId = fa5bcaec-283f-4d26-8a5e-7ee7214fff12
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					targetBody = 1
+					actionDescription = 写一份EVA报告
+					experiment = evaReport
+					flightThreshold = 17000
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 2120016087
+					wpIndex = 3
+					wpTexture = eva
+					wpLatitude = -7.0401723369568652
+					wpLongitude = 0.84891606707381195
+					wpLandlocked = True
+					wpNavigationId = 204bf4d5-90da-4795-b781-f9425a31b6ec
+				}
+			}
 		}
 	}
 	SCENARIO
@@ -8874,10 +9279,15 @@ GAME
 		name = DeployedScience
 		scene = 7, 8, 5, 6
 	}
+	SCENARIO
+	{
+		name = KerbalInventoryScenario
+		scene = 7, 8, 5, 21, 6
+	}
 	FLIGHTSTATE
 	{
-		version = 1.10.1
-		UT = 127644.39990549651
+		version = 1.11.0
+		UT = 135302.70004069444
 		activeVessel = 0
 		mapViewFiltering = 15359
 		commNetUIModeTracking = Network
@@ -8967,6 +9377,9 @@ GAME
 				flag = 
 				rTrf = 
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 			}
 			ACTIONGROUPS
 			{
@@ -9080,6 +9493,9 @@ GAME
 				flag = 
 				rTrf = 
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 			}
 			ACTIONGROUPS
 			{
@@ -9193,6 +9609,9 @@ GAME
 				flag = 
 				rTrf = 
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 			}
 			ACTIONGROUPS
 			{
@@ -9306,6 +9725,9 @@ GAME
 				flag = 
 				rTrf = 
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 			}
 			ACTIONGROUPS
 			{
@@ -9419,6 +9841,9 @@ GAME
 				flag = 
 				rTrf = 
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 			}
 			ACTIONGROUPS
 			{
@@ -9532,6 +9957,9 @@ GAME
 				flag = 
 				rTrf = 
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 			}
 			ACTIONGROUPS
 			{
@@ -9645,6 +10073,9 @@ GAME
 				flag = 
 				rTrf = 
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 			}
 			ACTIONGROUPS
 			{
@@ -9779,6 +10210,9 @@ GAME
 				flag = 
 				rTrf = 
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 			}
 			ACTIONGROUPS
 			{
@@ -9892,6 +10326,9 @@ GAME
 				flag = 
 				rTrf = 
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 			}
 			ACTIONGROUPS
 			{
@@ -10005,6 +10442,9 @@ GAME
 				flag = 
 				rTrf = 
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 			}
 			ACTIONGROUPS
 			{
@@ -10123,6 +10563,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Jebediah Kerman
 				EVENTS
 				{
@@ -10470,6 +10913,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteSingle
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -10602,6 +11048,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -11399,6 +11848,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = advSasModule
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -11494,6 +11946,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = science.module
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -11631,6 +12086,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -11766,6 +12224,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -11901,6 +12362,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -12036,6 +12500,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -12171,6 +12638,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -12306,6 +12776,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -12441,6 +12914,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -12576,6 +13052,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -12710,6 +13189,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = fuelTank
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -12808,6 +13290,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = fuelTank
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -12906,6 +13391,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = liquidEngine
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -13099,6 +13587,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = basicFin
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -13175,6 +13666,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = basicFin
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -13251,6 +13745,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = basicFin
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -13327,6 +13824,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = basicFin
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -13403,6 +13903,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -13475,6 +13978,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -13547,6 +14053,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -13619,6 +14128,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -13689,6 +14201,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = sepMotor1
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -13838,6 +14353,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = sepMotor1
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -14050,9 +14568,9 @@ GAME
 				ECC = 1
 				INC = 162.53892021899011
 				LPE = 90
-				LAN = 332.99066254848429
+				LAN = 100.62116894533176
 				MNA = 0
-				EPH = 127629.1199054934
+				EPH = 135269.02004071209
 				REF = 1
 			}
 			PART
@@ -14091,6 +14609,9 @@ GAME
 				flag = Squad/Flags/circles
 				rTrf = flag (南极洲)
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -14286,6 +14807,9 @@ GAME
 				flag = Squad/Agencies/Probodobodyne
 				rTrf = 
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Haimai Kerman
 			}
 			ACTIONGROUPS
@@ -14410,6 +14934,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Gonglai Kerman
 				EVENTS
 				{
@@ -14710,6 +15237,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteSingle
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -14842,6 +15372,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -15634,6 +16167,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = advSasModule
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -15729,6 +16265,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = MK1CrewCabin
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Mogai Kerman
 				crew = Mila Kerman
 				EVENTS
@@ -15901,6 +16440,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -16036,6 +16578,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -16171,6 +16716,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -16306,6 +16854,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -16441,6 +16992,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -16576,6 +17130,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -16711,6 +17268,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -16846,6 +17406,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -16980,6 +17543,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = fuelTank.long
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -17078,6 +17644,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = liquidEngine
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -17271,6 +17840,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -17396,6 +17968,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -17517,6 +18092,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -17638,6 +18216,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -17759,6 +18340,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -17831,6 +18415,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -17903,6 +18490,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -17975,6 +18565,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -18044,6 +18637,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = sensorThermometer
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -18148,6 +18744,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = sensorBarometer
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -18372,6 +18971,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Aduo Kerman
 				EVENTS
 				{
@@ -18672,6 +19274,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteSingle
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -18804,6 +19409,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -19596,6 +20204,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = advSasModule
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -19691,6 +20302,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = MK1CrewCabin
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Tepu Kerman
 				crew = Bingbing Kerman
 				EVENTS
@@ -19863,6 +20477,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -19998,6 +20615,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -20133,6 +20753,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -20268,6 +20891,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -20403,6 +21029,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -20538,6 +21167,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -20673,6 +21305,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -20808,6 +21443,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -20942,6 +21580,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = fuelTank.long
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -21040,6 +21681,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = liquidEngine
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -21233,6 +21877,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -21358,6 +22005,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -21479,6 +22129,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -21600,6 +22253,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -21721,6 +22377,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -21793,6 +22452,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -21865,6 +22527,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -21937,6 +22602,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -22006,6 +22674,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = sensorThermometer
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -22110,6 +22781,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = sensorBarometer
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -22258,18 +22932,18 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 514.23882821193547
+			met = 5793.1950396739121
 			lct = 121884.56486582939
-			lastUT = 122398.80369404133
-			distanceTraveled = 699580.52834563295
+			lastUT = 127677.75990550331
+			distanceTraveled = 710089.64491610613
 			root = 0
-			lat = 1.9212659610148637
-			lon = -11.701516904713454
-			alt = 98985.826968234032
-			hgt = 98985.8281
-			nrm = 0.283878565,-0.66104126,-0.694577098
-			rot = -0.595874906,0.52872771,0.0950843766,-0.596941411
-			CoM = -9.53674316E-07,-8.15058422,-2.98023224E-06
+			lat = 1.7916089528434636
+			lon = 28.239761083785499
+			alt = 5414891.2323568147
+			hgt = 5414891
+			nrm = 0.595045567,-0.0582087487,-0.801581383
+			rot = -0.595662236,0.527449667,0.0964043513,-0.598071694
+			CoM = 2.38418579E-06,-8.17752647,-1.07288361E-06
 			stg = 2
 			prst = False
 			ref = 2041850073
@@ -22287,13 +22961,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 5941161.9152348116
-				ECC = 0.88749825539671978
-				INC = 4.2388899489847613
-				LPE = 2.0501747613027455
-				LAN = 296.15876657848116
-				MNA = 0.012311381518913422
-				EPH = 122398.80369404133
+				SMA = 5941161.9199983999
+				ECC = 0.88749825216435263
+				INC = 4.2388896395022666
+				LPE = 2.0501749529190483
+				LAN = 296.15876639107148
+				MNA = 0.69736842005743604
+				EPH = 127677.75990550331
 				REF = 1
 			}
 			PART
@@ -22306,7 +22980,7 @@ GAME
 				launchID = 76
 				parent = 0
 				position = 0,0,0
-				rotation = 0,0,0,1.00000024
+				rotation = 0,0,0,1
 				mirror = 1,1,1
 				symMethod = Radial
 				istg = -1
@@ -22320,10 +22994,10 @@ GAME
 				srfN = , -1
 				attN = bottom, 3
 				attN = top, 1
-				mass = 0.800000012
+				mass = 0.751000047
 				shielded = False
-				temp = 298.7966231803079
-				tempExt = 298.71224732455056
+				temp = 207.6103319470601
+				tempExt = 207.33220862576221
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22334,6 +23008,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Xielang Kerman
 				EVENTS
 				{
@@ -22554,6 +23231,24 @@ GAME
 				}
 				MODULE
 				{
+					name = ModuleInventoryPart
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					STOREDPARTS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
 					name = ModuleTripLogger
 					isEnabled = True
 					stagingEnabled = True
@@ -22577,7 +23272,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 49.910854168672415
+					amount = 49.902645377644632
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -22622,8 +23317,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 298.77156069609094
-				tempExt = 298.32343117344658
+				temp = 207.60431688509721
+				tempExt = 207.31518093033193
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22634,6 +23329,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteSingle
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -22729,6 +23427,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -22754,8 +23469,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 9.99999975E-05
 				shielded = False
-				temp = 298.79053323282932
-				tempExt = 298.68857816967125
+				temp = 207.58209028215046
+				tempExt = 207.46535182261664
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22766,6 +23481,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -23448,16 +24166,16 @@ GAME
 						MechJebModuleFlightRecorder
 						{
 							markUT = 121884.5848658294
-							deltaVExpended = 4777.0388403076331
-							dragLosses = 44.230701013489494
+							deltaVExpended = NaN
+							dragLosses = NaN
 							gravityLosses = 734.7237094793187
-							steeringLosses = 629.44520394309473
+							steeringLosses = NaN
 							markLAN = 341.64499754450583
 							markLatitude = -0.097212610804232186
 							markLongitude = -74.557734417216096
 							markAltitude = 80.98181947964477
 							markBodyIndex = 1
-							maxDragGees = 0.11166762965942981
+							maxDragGees = NaN
 							unlockParts = 
 							unlockTechs = 
 						}
@@ -23511,7 +24229,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 4.991085416868593
+					amount = 4.9902645377662127
 					maxAmount = 5
 					flowState = True
 					isTweakable = True
@@ -23546,8 +24264,8 @@ GAME
 				attN = bottom, 4
 				mass = 0.100000001
 				shielded = False
-				temp = 298.79754905271278
-				tempExt = 298.92657893690489
+				temp = 207.59893777708547
+				tempExt = 207.4100997023921
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23558,6 +24276,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = advSasModule
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -23614,6 +24335,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -23641,8 +24379,8 @@ GAME
 				attN = bottom, 13
 				mass = 1
 				shielded = False
-				temp = 298.76325550299271
-				tempExt = 299.12257177047701
+				temp = 207.60564877058832
+				tempExt = 207.40390618711945
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23653,6 +24391,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = MK1CrewCabin
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Liuer Kerman
 				crew = Zhengli Kerman
 				EVENTS
@@ -23765,6 +24506,24 @@ GAME
 				}
 				MODULE
 				{
+					name = ModuleInventoryPart
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					STOREDPARTS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
 					name = ModuleTripLogger
 					isEnabled = True
 					stagingEnabled = True
@@ -23813,8 +24572,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 298.65788837986446
-				tempExt = 298.48701500606086
+				temp = 207.60320931968826
+				tempExt = 207.3634926296557
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23825,6 +24584,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -23909,6 +24671,23 @@ GAME
 				{
 					name = ModuleDragModifier
 					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -23948,8 +24727,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 298.65788876284597
-				tempExt = 298.48701514413028
+				temp = 207.60320931968826
+				tempExt = 207.3634926296557
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23960,6 +24739,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -24044,6 +24826,23 @@ GAME
 				{
 					name = ModuleDragModifier
 					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -24083,8 +24882,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 298.6590731527296
-				tempExt = 298.48744213041476
+				temp = 207.60320931968826
+				tempExt = 207.3634926296557
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24095,6 +24894,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -24179,6 +24981,23 @@ GAME
 				{
 					name = ModuleDragModifier
 					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -24218,8 +25037,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 298.65788842388002
-				tempExt = 298.48701502192898
+				temp = 207.60320931968826
+				tempExt = 207.3634926296557
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24230,6 +25049,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -24325,6 +25147,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -24353,8 +25192,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 298.57505490827333
-				tempExt = 298.49884079463044
+				temp = 207.60925900193521
+				tempExt = 207.36764155893741
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24365,6 +25204,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
 				EVENTS
 				{
 				}
@@ -24449,6 +25291,23 @@ GAME
 				{
 					name = ModuleDragModifier
 					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -24488,8 +25347,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 298.57533689185158
-				tempExt = 298.49893172839563
+				temp = 207.60925900193521
+				tempExt = 207.36764155893741
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24500,6 +25359,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
 				EVENTS
 				{
 				}
@@ -24584,6 +25446,23 @@ GAME
 				{
 					name = ModuleDragModifier
 					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -24623,8 +25502,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 298.57510117190304
-				tempExt = 298.49885571367668
+				temp = 207.60925900193521
+				tempExt = 207.36764155893741
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24635,6 +25514,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
 				EVENTS
 				{
 				}
@@ -24719,6 +25601,23 @@ GAME
 				{
 					name = ModuleDragModifier
 					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -24758,8 +25657,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 298.57505440870887
-				tempExt = 298.49884063353142
+				temp = 207.60925900193521
+				tempExt = 207.36764155893741
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24770,6 +25669,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
 				EVENTS
 				{
 				}
@@ -24865,6 +25767,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -24892,8 +25811,8 @@ GAME
 				attN = bottom, 14
 				mass = 0.5
 				shielded = False
-				temp = 299.29784465954367
-				tempExt = 300.5028489081393
+				temp = 207.61147289761334
+				tempExt = 207.43921486689814
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24904,6 +25823,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = fuelTank.long
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 基本
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -24990,8 +25912,8 @@ GAME
 				attN = bottom, 15
 				mass = 1.25
 				shielded = False
-				temp = 306.79764385400131
-				tempExt = 305.61052705980347
+				temp = 207.60410031123726
+				tempExt = 207.43296587276816
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25002,6 +25924,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = liquidEngine
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -25066,6 +25991,7 @@ GAME
 						{
 							axisGroup = None
 							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
 							axisInverted = None
 							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
@@ -25076,6 +26002,7 @@ GAME
 						{
 							axisGroup = None
 							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
 							axisInverted = None
 							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
@@ -25182,8 +26109,8 @@ GAME
 				attN = bottom, 16
 				mass = 0.0399999991
 				shielded = False
-				temp = 323.94842407821579
-				tempExt = 320.6341220668362
+				temp = 207.60302903952632
+				tempExt = 207.44561423226816
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25194,6 +26121,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = Decoupler.1
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 基本
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -25295,6 +26225,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -25322,8 +26269,8 @@ GAME
 				attN = bottom, 17
 				mass = 0.100000001
 				shielded = False
-				temp = 332.90085330182404
-				tempExt = 334.22930355873973
+				temp = 207.58703205225919
+				tempExt = 207.46603813948803
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25334,6 +26281,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = largeAdapter
 				modCost = 0
+				modMass = 0
+				moduleVariantName = BlackAndWhite
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -25360,6 +26310,23 @@ GAME
 					name = ModulePartVariants
 					isEnabled = True
 					useVariantMass = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -25398,8 +26365,8 @@ GAME
 				attN = bottom, 18
 				mass = 1
 				shielded = False
-				temp = 336.03834030757207
-				tempExt = 337.29956360034055
+				temp = 207.60518173221277
+				tempExt = 207.51604700384678
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25410,6 +26377,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = Rockomax16.BW
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 基本
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -25496,8 +26466,8 @@ GAME
 				attN = bottom, 19
 				mass = 2
 				shielded = False
-				temp = 340.4213556245632
-				tempExt = 340.86639692099533
+				temp = 207.61297344915877
+				tempExt = 207.61272499228701
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25508,6 +26478,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = Rockomax32.BW
 				modCost = 0
+				modMass = 0
+				moduleVariantName = BlackAndWhite
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -25594,8 +26567,8 @@ GAME
 				attN = bottom, -1
 				mass = 3
 				shielded = False
-				temp = 354.55167250680387
-				tempExt = 350.03797566279275
+				temp = 207.63178219865401
+				tempExt = 208.05462030631926
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25606,6 +26579,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = engineLargeSkipper.v2
 				modCost = 0
+				modMass = 0
+				moduleVariantName = Shroud
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -25670,6 +26646,7 @@ GAME
 						{
 							axisGroup = None
 							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
 							axisInverted = None
 							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
@@ -25680,6 +26657,7 @@ GAME
 						{
 							axisGroup = None
 							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
 							axisInverted = None
 							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
@@ -25763,7 +26741,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.101874821
+					animState = 0.0701160654
 					stagingEnabled = True
 					EVENTS
 					{
@@ -25864,8 +26842,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 298.6462623928449
-				tempExt = 298.69586101965166
+				temp = 207.60369043929816
+				tempExt = 207.42370626192528
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25876,6 +26854,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -25924,6 +26905,7 @@ GAME
 						{
 							axisGroup = None
 							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
 							axisInverted = None
 							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
 							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
@@ -25961,6 +26943,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -25989,8 +26988,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 298.64626188771757
-				tempExt = 298.69586084518193
+				temp = 207.60369043929816
+				tempExt = 207.42370626192528
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26001,6 +27000,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -26049,6 +27051,7 @@ GAME
 						{
 							axisGroup = None
 							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
 							axisInverted = None
 						}
 					}
@@ -26077,6 +27080,23 @@ GAME
 						{
 							actionGroup = None
 						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -26110,8 +27130,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 298.64626198061615
-				tempExt = 298.6958608772689
+				temp = 207.60481352203286
+				tempExt = 207.44916356552986
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26122,6 +27142,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -26170,6 +27193,7 @@ GAME
 						{
 							axisGroup = None
 							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
 							axisInverted = None
 						}
 					}
@@ -26198,6 +27222,23 @@ GAME
 						{
 							actionGroup = None
 						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -26231,8 +27272,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 298.64992447142566
-				tempExt = 298.7367960862972
+				temp = 207.60369043929816
+				tempExt = 207.42370626192528
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26243,6 +27284,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -26291,6 +27335,7 @@ GAME
 						{
 							axisGroup = None
 							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
 							axisInverted = None
 						}
 					}
@@ -26324,6 +27369,23 @@ GAME
 					{
 					}
 				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 			}
 			PART
 			{
@@ -26352,8 +27414,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 298.74696391863279
-				tempExt = 298.75769577322137
+				temp = 207.58932400617846
+				tempExt = 207.4113686163893
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26364,6 +27426,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -26385,10 +27450,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.82170833734483
+					amount = 99.805290755289263
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -26424,8 +27506,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 298.74239344119258
-				tempExt = 298.73524374985169
+				temp = 207.59403109513775
+				tempExt = 207.4616434813808
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26436,6 +27518,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -26457,10 +27542,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.82170833734483
+					amount = 99.805290755289263
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -26496,8 +27598,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 298.74261552004361
-				tempExt = 298.74113724608816
+				temp = 207.58932400617846
+				tempExt = 207.4113686163893
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26508,6 +27610,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -26529,10 +27634,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.82170833734483
+					amount = 99.805290755289263
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -26568,8 +27690,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 298.74239344119258
-				tempExt = 298.73524374985169
+				temp = 207.58932400617846
+				tempExt = 207.4113686163893
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26580,6 +27702,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -26601,10 +27726,27 @@ GAME
 				PARTDATA
 				{
 				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.82170833734483
+					amount = 99.805290755289263
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -26637,8 +27779,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 298.78672871203446
-				tempExt = 298.58615093749268
+				temp = 207.60557897964128
+				tempExt = 207.41116216690642
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26649,6 +27791,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = sensorThermometer
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 3
 				EVENTS
 				{
 				}
@@ -26711,6 +27856,23 @@ GAME
 						{
 							actionGroup = None
 						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -26741,8 +27903,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 298.77405783709202
-				tempExt = 298.49642531005469
+				temp = 207.5932006064242
+				tempExt = 207.40810463608139
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26753,6 +27915,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = sensorBarometer
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -26815,6 +27980,23 @@ GAME
 						{
 							actionGroup = None
 						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
 					}
 					UPGRADESAPPLIED
 					{
@@ -26977,6 +28159,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Lunlang Kerman
 				EVENTS
 				{
@@ -27277,6 +28462,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteSingle
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -27409,6 +28597,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -28201,6 +29392,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = advSasModule
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -28296,6 +29490,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = MK1CrewCabin
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Nade Kerman
 				crew = Raofan Kerman
 				EVENTS
@@ -28468,6 +29665,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -28603,6 +29803,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -28738,6 +29941,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -28873,6 +30079,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -29008,6 +30217,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -29143,6 +30355,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -29278,6 +30493,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -29413,6 +30631,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -29547,6 +30768,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = fuelTank.long
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -29645,6 +30869,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = liquidEngine
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -29837,6 +31064,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = Decoupler.1
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -29977,6 +31207,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = largeAdapter
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -30053,6 +31286,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = Rockomax16.BW
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -30151,6 +31387,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = Rockomax32.BW
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -30249,6 +31488,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = engineLargeSkipper.v2
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -30519,6 +31761,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -30644,6 +31889,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -30765,6 +32013,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -30886,6 +32137,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = GooExperiment
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -31007,6 +32261,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -31079,6 +32336,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -31151,6 +32411,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -31223,6 +32486,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -31292,6 +32558,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = sensorThermometer
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -31396,6 +32665,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = sensorBarometer
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -31620,6 +32892,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Valentina Kerman
 				EVENTS
 				{
@@ -31920,6 +33195,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteSingle
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -32052,6 +33330,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = _default
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -32844,6 +34125,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = advSasModule
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -32939,6 +34223,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = MK1CrewCabin
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				crew = Dading Kerman
 				EVENTS
 				{
@@ -33110,6 +34397,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -33245,6 +34535,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -33380,6 +34673,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -33515,6 +34811,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = parachuteRadial
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -33650,6 +34949,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -33785,6 +35087,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -33920,6 +35225,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -34055,6 +35363,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = radialDrogue
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -34189,6 +35500,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = fuelTank.long
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -34287,6 +35601,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = liquidEngine
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -34479,6 +35796,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = Decoupler.1
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -34619,6 +35939,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = largeAdapter
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -34695,6 +36018,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = Rockomax32.BW
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -34793,6 +36119,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = Rockomax32.BW
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -34891,6 +36220,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = engineLargeSkipper.v2
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -35161,6 +36493,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -35233,6 +36568,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -35305,6 +36643,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -35377,6 +36718,9 @@ GAME
 				flag = Squad/Flags/hexagonCircles
 				rTrf = batteryPack
 				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
 				EVENTS
 				{
 				}
@@ -35508,6 +36852,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -35762,10 +37107,11 @@ GAME
 			gExperienced = 0
 			outDueToG = False
 			ToD = 0
-			idx = 1
+			idx = -1
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -35811,9 +37157,211 @@ GAME
 				{
 				}
 			}
+			INVENTORY
+			{
+				name = ModuleInventoryPart
+				isEnabled = True
+				stagingEnabled = True
+				inventory = evaChute,evaJetpack
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				STOREDPARTS
+				{
+					STOREDPART
+					{
+						slotIndex = 1
+						partName = evaJetpack
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaJetpack
+							cid = 4294902190
+							uid = 0
+							mid = 0
+							persistentId = 2202230392
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 2
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.0199999996
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaJetpack
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+							RESOURCE
+							{
+								name = EVA Propellant
+								amount = 5
+								maxAmount = 5
+								flowState = True
+								isTweakable = False
+								hideFlow = False
+								isVisible = True
+								flowMode = Both
+							}
+						}
+					}
+					STOREDPART
+					{
+						slotIndex = 0
+						partName = evaChute
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaChute
+							cid = 4294902128
+							uid = 0
+							mid = 0
+							persistentId = 3193004212
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 0
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.00400000019
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 6
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaChute
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+						}
+					}
+				}
+				UPGRADESAPPLIED
+				{
+				}
+			}
 			CAREER_LOG
 			{
-				flight = 4
+				flight = 5
 				0 = Flight,Kerbin
 				0 = Land,Kerbin
 				0 = Recover
@@ -35831,10 +37379,15 @@ GAME
 				2 = PlantFlag,Kerbin
 				2 = Recover
 				3 = Recover
+				4 = Land,Kerbin
+				4 = Flight,Kerbin
+				4 = ExitVessel,Kerbin
+				4 = BoardVessel,Kerbin
+				4 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 4
+				flight = 5
 			}
 		}
 		KERBAL
@@ -35858,6 +37411,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -35907,6 +37461,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36029,6 +37584,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36064,6 +37620,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36105,6 +37662,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36140,6 +37698,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36175,6 +37734,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36210,6 +37770,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36245,6 +37806,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36280,6 +37842,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36315,6 +37878,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36407,6 +37971,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36442,6 +38007,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36536,6 +38102,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36581,6 +38148,196 @@ GAME
 				{
 				}
 			}
+			INVENTORY
+			{
+				inventory = evaChute,evaJetpack
+				STOREDPARTS
+				{
+					STOREDPART
+					{
+						slotIndex = 0
+						partName = evaChute
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaChute
+							cid = 4294902128
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 0
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.00400000019
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaChute
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+						}
+					}
+					STOREDPART
+					{
+						slotIndex = 1
+						partName = evaJetpack
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaJetpack
+							cid = 4294902190
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 2
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.0199999996
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaJetpack
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+							RESOURCE
+							{
+								name = EVA Propellant
+								amount = 5
+								maxAmount = 5
+								flowState = True
+								isTweakable = False
+								hideFlow = False
+								isVisible = True
+								flowMode = Both
+							}
+						}
+					}
+				}
+			}
 			CAREER_LOG
 			{
 				flight = 2
@@ -36623,6 +38380,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36712,6 +38470,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36794,6 +38553,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36832,6 +38592,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36870,6 +38631,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36905,6 +38667,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36943,6 +38706,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -36981,6 +38745,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -37019,6 +38784,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -37057,6 +38823,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -37095,6 +38862,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -37133,6 +38901,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -37171,6 +38940,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -37209,6 +38979,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -37247,6 +39018,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -37285,6 +39057,7 @@ GAME
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
+			hasVisorDown = False
 			lightR = 1
 			lightG = 0.5176
 			lightB = 0
@@ -37300,6 +39073,1362 @@ GAME
 				0 = Flight,Kerbin
 				0 = Suborbit,Kerbin
 				0 = Orbit,Kerbin
+			}
+		}
+		KERBAL
+		{
+			name = Falong Kerman
+			gender = Male
+			type = Unowned
+			trait = Tourist
+			brave = 0.253946126
+			dumb = 0.805678844
+			badS = True
+			veteran = False
+			tour = False
+			state = Assigned
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			hasVisorDown = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			INVENTORY
+			{
+				inventory = evaChute,evaJetpack
+				STOREDPARTS
+				{
+					STOREDPART
+					{
+						slotIndex = 0
+						partName = evaChute
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaChute
+							cid = 4294902128
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 0
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.00400000019
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaChute
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+						}
+					}
+					STOREDPART
+					{
+						slotIndex = 1
+						partName = evaJetpack
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaJetpack
+							cid = 4294902190
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 2
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.0199999996
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaJetpack
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+							RESOURCE
+							{
+								name = EVA Propellant
+								amount = 5
+								maxAmount = 5
+								flowState = True
+								isTweakable = False
+								hideFlow = False
+								isVisible = True
+								flowMode = Both
+							}
+						}
+					}
+				}
+			}
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Mengou Kerman
+			gender = Male
+			type = Unowned
+			trait = Tourist
+			brave = 0.270434052
+			dumb = 0.860550821
+			badS = False
+			veteran = False
+			tour = False
+			state = Assigned
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			hasVisorDown = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			INVENTORY
+			{
+				inventory = evaChute,evaJetpack
+				STOREDPARTS
+				{
+					STOREDPART
+					{
+						slotIndex = 0
+						partName = evaChute
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaChute
+							cid = 4294902128
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 0
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.00400000019
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaChute
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+						}
+					}
+					STOREDPART
+					{
+						slotIndex = 1
+						partName = evaJetpack
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaJetpack
+							cid = 4294902190
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 2
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.0199999996
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaJetpack
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+							RESOURCE
+							{
+								name = EVA Propellant
+								amount = 5
+								maxAmount = 5
+								flowState = True
+								isTweakable = False
+								hideFlow = False
+								isVisible = True
+								flowMode = Both
+							}
+						}
+					}
+				}
+			}
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Dongdang Kerman
+			gender = Male
+			type = Unowned
+			trait = Tourist
+			brave = 0.659501314
+			dumb = 0.305827111
+			badS = False
+			veteran = False
+			tour = False
+			state = Assigned
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			hasVisorDown = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			INVENTORY
+			{
+				inventory = evaChute,evaJetpack
+				STOREDPARTS
+				{
+					STOREDPART
+					{
+						slotIndex = 0
+						partName = evaChute
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaChute
+							cid = 4294902128
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 0
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.00400000019
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaChute
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+						}
+					}
+					STOREDPART
+					{
+						slotIndex = 1
+						partName = evaJetpack
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaJetpack
+							cid = 4294902190
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 2
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.0199999996
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaJetpack
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+							RESOURCE
+							{
+								name = EVA Propellant
+								amount = 5
+								maxAmount = 5
+								flowState = True
+								isTweakable = False
+								hideFlow = False
+								isVisible = True
+								flowMode = Both
+							}
+						}
+					}
+				}
+			}
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Taifa Kerman
+			gender = Male
+			type = Unowned
+			trait = Tourist
+			brave = 0.970400453
+			dumb = 0.144762948
+			badS = False
+			veteran = False
+			tour = False
+			state = Assigned
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			hasVisorDown = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			INVENTORY
+			{
+				inventory = evaChute,evaJetpack
+				STOREDPARTS
+				{
+					STOREDPART
+					{
+						slotIndex = 0
+						partName = evaChute
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaChute
+							cid = 4294902128
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 0
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.00400000019
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaChute
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+						}
+					}
+					STOREDPART
+					{
+						slotIndex = 1
+						partName = evaJetpack
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaJetpack
+							cid = 4294902190
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 2
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.0199999996
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaJetpack
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+							RESOURCE
+							{
+								name = EVA Propellant
+								amount = 5
+								maxAmount = 5
+								flowState = True
+								isTweakable = False
+								hideFlow = False
+								isVisible = True
+								flowMode = Both
+							}
+						}
+					}
+				}
+			}
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Lunhai Kerman
+			gender = Male
+			type = Unowned
+			trait = Tourist
+			brave = 0.304953158
+			dumb = 0.463349819
+			badS = False
+			veteran = False
+			tour = False
+			state = Assigned
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			hasVisorDown = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			INVENTORY
+			{
+				inventory = evaChute,evaJetpack
+				STOREDPARTS
+				{
+					STOREDPART
+					{
+						slotIndex = 0
+						partName = evaChute
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaChute
+							cid = 4294902128
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 0
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.00400000019
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaChute
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+						}
+					}
+					STOREDPART
+					{
+						slotIndex = 1
+						partName = evaJetpack
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaJetpack
+							cid = 4294902190
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 2
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.0199999996
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaJetpack
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+							RESOURCE
+							{
+								name = EVA Propellant
+								amount = 5
+								maxAmount = 5
+								flowState = True
+								isTweakable = False
+								hideFlow = False
+								isVisible = True
+								flowMode = Both
+							}
+						}
+					}
+				}
+			}
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Neili Kerman
+			gender = Male
+			type = Unowned
+			trait = Tourist
+			brave = 0.537587166
+			dumb = 0.155057713
+			badS = False
+			veteran = False
+			tour = False
+			state = Assigned
+			inactive = False
+			inactiveTimeEnd = 0
+			gExperienced = 0
+			outDueToG = False
+			ToD = 0
+			idx = -1
+			extraXP = 0
+			hasHelmetOn = False
+			hasNeckRingOn = False
+			hasVisorDown = False
+			lightR = 1
+			lightG = 0.5176
+			lightB = 0
+			completedFirstEVA = False
+			hero = False
+			INVENTORY
+			{
+				inventory = evaChute,evaJetpack
+				STOREDPARTS
+				{
+					STOREDPART
+					{
+						slotIndex = 0
+						partName = evaChute
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaChute
+							cid = 4294902128
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 0
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.00400000019
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaChute
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+						}
+					}
+					STOREDPART
+					{
+						slotIndex = 1
+						partName = evaJetpack
+						quantity = 1
+						stackCapacity = 1
+						variantName = 
+						PART
+						{
+							name = evaJetpack
+							cid = 4294902190
+							uid = 0
+							mid = 0
+							persistentId = 0
+							launchID = 0
+							parent = 0
+							position = 0,0,0
+							rotation = 0,0,0,0
+							mirror = 1,1,1
+							symMethod = Radial
+							istg = 0
+							resPri = 2
+							dstg = 0
+							sqor = -1
+							sepI = 0
+							sidx = -1
+							attm = 0
+							sameVesselCollision = False
+							srfN = None, -1
+							mass = 0.0199999996
+							shielded = False
+							temp = -1
+							tempExt = 0
+							tempExtUnexp = 0
+							staticPressureAtm = 0
+							expt = 0.5
+							state = 0
+							attached = True
+							autostrutMode = Off
+							rigidAttachment = False
+							flag = 
+							rTrf = evaJetpack
+							modCost = 0
+							modMass = 0
+							moduleVariantName = 
+							moduleCargoStackableQuantity = 1
+							EVENTS
+							{
+							}
+							ACTIONS
+							{
+								ToggleSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								SetSameVesselInteraction
+								{
+									actionGroup = None
+								}
+								RemoveSameVesselInteraction
+								{
+									actionGroup = None
+								}
+							}
+							PARTDATA
+							{
+							}
+							MODULE
+							{
+								name = ModuleCargoPart
+								isEnabled = True
+								beingAttached = False
+								beingSettled = False
+								stagingEnabled = True
+								EVENTS
+								{
+								}
+								ACTIONS
+								{
+								}
+								UPGRADESAPPLIED
+								{
+								}
+							}
+							RESOURCE
+							{
+								name = EVA Propellant
+								amount = 5
+								maxAmount = 5
+								flowState = True
+								isTweakable = False
+								hideFlow = False
+								isVisible = True
+								flowMode = Both
+							}
+						}
+					}
+				}
+			}
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
 			}
 		}
 	}
