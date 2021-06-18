@@ -1,6 +1,6 @@
 GAME
 {
-	version = 1.11.0
+	version = 1.11.2
 	Title = 大宝库2020 (生涯模式)
 	Description = No description available.
 	linkURL = 
@@ -11,12 +11,12 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/circles
-	launchID = 98
+	launchID = 100
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
 	modded = True
 	envInfo =  - Environment Info - Unix 7FFFFFFFFFFFFFFF  Args: KSP  - 
-	versionFull = 1.11.0.3045 (OSXPlayer)
+	versionFull = 1.11.2.3077 (OSXPlayer)
 	versionCreated = 1.10.1.2939 (OSXPlayer)
 	CometNames
 	{
@@ -199,7 +199,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 1744923.8505559582
+		funds = 1743613.2260451932
 	}
 	SCENARIO
 	{
@@ -408,7 +408,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 243.691391
+		sci = 74.2901917
 		Tech
 		{
 			id = start
@@ -632,6 +632,32 @@ GAME
 			part = fairingSize1
 			part = rocketNoseCone.v2
 			part = pointyNoseConeA
+		}
+		Tech
+		{
+			id = spaceExploration
+			state = Available
+			cost = 90
+			part = roverWheel2
+			part = ladder1
+			part = groundLight2
+			part = groundLight1
+			part = crewCabin
+			part = ConformalStorageUnit
+			part = evaRepairKit
+			part = smallCargoContainer
+		}
+		Tech
+		{
+			id = advExploration
+			state = Available
+			cost = 160
+			part = telescopicLadderBay
+			part = telescopicLadder
+			part = Large.Crewed.Lab
+			part = CargoStorageUnit
+			part = evaCylinder
+			part = cargoContainer
 		}
 		Science
 		{
@@ -1087,7 +1113,7 @@ GAME
 		Science
 		{
 			id = recovery@KerbinOrbited
-			title = 回收从Kerbin轨道返回的航天器。
+			title = 回收到从Kerbin轨道返回的载具
 			dsc = 1
 			scv = 0
 			sbv = 10
@@ -1168,7 +1194,7 @@ GAME
 			dsc = 1
 			scv = 0.00228981161
 			sbv = 0.300000012
-			sci = 9.57801819
+			sci = 9.60000038
 			asc = True
 			cap = 9.60000038
 		}
@@ -1201,7 +1227,7 @@ GAME
 			dsc = 1
 			scv = 0.000500877679
 			sbv = 0.300000012
-			sci = 9.59519196
+			sci = 9.60000038
 			asc = True
 			cap = 9.60000038
 		}
@@ -1300,7 +1326,7 @@ GAME
 			dsc = 1
 			scv = 0.000500877679
 			sbv = 0.300000012
-			sci = 9.59519196
+			sci = 9.60000038
 			asc = True
 			cap = 9.60000038
 		}
@@ -1432,7 +1458,7 @@ GAME
 			dsc = 1
 			scv = 0.00228981161
 			sbv = 0.300000012
-			sci = 9.57801819
+			sci = 9.60000038
 			asc = True
 			cap = 9.60000038
 		}
@@ -1498,7 +1524,7 @@ GAME
 			dsc = 1
 			scv = 0.00390625
 			sbv = 0.300000012
-			sci = 11.953125
+			sci = 12
 			asc = True
 			cap = 12
 		}
@@ -1575,7 +1601,7 @@ GAME
 			dsc = 1
 			scv = 0.000500877679
 			sbv = 0.300000012
-			sci = 9.59519196
+			sci = 9.60000038
 			asc = True
 			cap = 9.60000038
 		}
@@ -1619,7 +1645,7 @@ GAME
 			dsc = 1
 			scv = 6.10351563E-05
 			sbv = 0.300000012
-			sci = 11.9992676
+			sci = 12
 			asc = True
 			cap = 12
 		}
@@ -1674,7 +1700,7 @@ GAME
 			dsc = 1
 			scv = 2.98023224E-07
 			sbv = 0.300000012
-			sci = 9.59999752
+			sci = 9.60000038
 			asc = True
 			cap = 9.60000038
 		}
@@ -1685,7 +1711,161 @@ GAME
 			dsc = 1
 			scv = 6.10351563E-05
 			sbv = 0.300000012
-			sci = 11.9992676
+			sci = 12
+			asc = True
+			cap = 12
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedVAB
+			title = 在VAB的乘员报告
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			asc = True
+			cap = 1.5
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedVAB
+			title = 在VAB的温度扫描
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			asc = True
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedVAB
+			title = 在VAB的大气压扫描
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			asc = True
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedVAB
+			title = 在VAB的神秘黏性物质™观察结果
+			dsc = 1
+			scv = 0.000151059561
+			sbv = 0.300000012
+			sci = 3.89941096
+			asc = True
+			cap = 3.9000001
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedVAB
+			title = 在VAB的材料研究
+			dsc = 1
+			scv = 0.000500877679
+			sbv = 0.300000012
+			sci = 9.60000038
+			asc = True
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedVAB
+			title = 在VAB的EVA报告
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			asc = True
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedVAB
+			title = 在VAB的地表样本
+			dsc = 1
+			scv = 0.000244140625
+			sbv = 0.300000012
+			sci = 11.9970703
+			asc = True
+			cap = 12
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedVABMainBuilding
+			title = 在VAB主建筑的乘员报告
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 1.5
+			asc = True
+			cap = 1.5
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedVABMainBuilding
+			title = 在VAB主建筑的温度扫描
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			asc = True
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = barometerScan@KerbinSrfLandedVABMainBuilding
+			title = 在VAB主建筑的大气压扫描
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 3.60000014
+			asc = True
+			cap = 3.60000014
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedVABMainBuilding
+			title = 在VAB主建筑的神秘黏性物质™观察结果
+			dsc = 1
+			scv = 0.000151059561
+			sbv = 0.300000012
+			sci = 3.89941096
+			asc = True
+			cap = 3.9000001
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedVABMainBuilding
+			title = 在VAB主建筑的材料研究
+			dsc = 1
+			scv = 0.000500877679
+			sbv = 0.300000012
+			sci = 9.59519196
+			asc = True
+			cap = 9.60000038
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedVABMainBuilding
+			title = 在VAB主建筑的EVA报告
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			asc = True
+			cap = 2.4000001
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedVABMainBuilding
+			title = 在VAB主建筑的地表样本
+			dsc = 1
+			scv = 0.015625
+			sbv = 0.300000012
+			sci = 11.8125
 			asc = True
 			cap = 12
 		}
@@ -2038,8 +2218,8 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 171975.95721021865
-		version = 1.11.0
+		update = 173983.89484592961
+		version = 1.11.2
 		WEIGHTS
 		{
 			SentinelContract = 30
@@ -9710,8 +9890,8 @@ GAME
 	}
 	FLIGHTSTATE
 	{
-		version = 1.11.0
-		UT = 171979.47721021681
+		version = 1.11.2
+		UT = 173989.11484592687
 		activeVessel = 0
 		mapViewFiltering = 15359
 		commNetUIModeTracking = None
@@ -9725,6 +9905,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -9841,6 +10022,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -9957,6 +10139,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -10073,6 +10256,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -10189,6 +10373,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -10305,6 +10490,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -10421,6 +10607,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -10558,6 +10745,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -10674,6 +10862,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -10790,6 +10979,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -10901,28 +11091,29 @@ GAME
 		{
 			pid = 6952415884df4e0d9aef95513ffc6812
 			persistentId = 313594854
-			name = 飞掠Mun
+			name = 返航02
 			type = Ship
 			sit = SUB_ORBITAL
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = False
 			launchedFrom = LaunchPad
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 90104.088958863271
+			met = 94345.583183013092
 			lct = 79444.351663018126
-			lastUT = 169548.4406218814
-			distanceTraveled = 2464875.3947815564
+			lastUT = 173789.95484603121
+			distanceTraveled = 2939841.9463252029
 			root = 0
-			lat = 0.43428724679491598
-			lon = 12.838144659356631
-			alt = 1930506.6017361344
-			hgt = 1930506.63
-			nrm = 0.718646646,-0.0961610079,-0.688694477
-			rot = -0.67453742,-0.305416793,0.224601462,0.633461952
-			CoM = 6.73532486E-06,-3.18147278,-6.63101673E-06
+			lat = -0.41290065848565116
+			lon = -128.93557438217027
+			alt = 582281.53359969938
+			hgt = 582281.563
+			nrm = 0.593887746,-0.528498948,-0.606618524
+			rot = -0.158157706,-0.597813845,-0.691046178,-0.374245763
+			CoM = 6.49690628E-06,-3.18146777,-6.91413879E-06
 			stg = 1
 			prst = False
 			ref = 586022863
@@ -10940,13 +11131,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 1594356.85586555
-				ECC = 0.59194039597705983
-				INC = 0.73094648041503096
-				LPE = 220.14341989802068
-				LAN = 18.827310737379321
-				MNA = 2.9394401117891209
-				EPH = 169548.4406218814
+				SMA = 1449298.3451961826
+				ECC = 0.55120414111849869
+				INC = 0.73032062782064289
+				LPE = 220.14759741691148
+				LAN = 18.787669947086783
+				MNA = 0.71048951903203961
+				EPH = 173789.93484603122
 				REF = 1
 			}
 			PART
@@ -10975,8 +11166,8 @@ GAME
 				attN = top, 1
 				mass = 0.800000072
 				shielded = False
-				temp = 243.20678640999034
-				tempExt = 243.64198987522707
+				temp = 166.51302456731855
+				tempExt = 170.31991442461899
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -11289,7 +11480,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 48.920750603476613
+					amount = 48.233761536559818
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -11340,8 +11531,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 243.19754822431867
-				tempExt = 243.18880762611957
+				temp = 156.12148377133852
+				tempExt = 164.01904335923496
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -11456,6 +11647,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -11492,8 +11684,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 9.99999975E-05
 				shielded = False
-				temp = 243.2467985853373
-				tempExt = 243.35794032171609
+				temp = 170.6650097052169
+				tempExt = 172.84228752981986
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12257,7 +12449,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 4.892075060352302
+					amount = 4.8233761536630286
 					maxAmount = 5
 					flowState = True
 					isTweakable = True
@@ -12292,8 +12484,8 @@ GAME
 				attN = bottom, 4
 				mass = 0.100000001
 				shielded = False
-				temp = 243.19571556583796
-				tempExt = 243.18495882659903
+				temp = 173.31945110251993
+				tempExt = 175.87713446859115
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12369,6 +12561,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -12407,8 +12600,8 @@ GAME
 				attN = bottom, 13
 				mass = 0.200000003
 				shielded = False
-				temp = 243.17157254722338
-				tempExt = 242.92167854071798
+				temp = 179.25238121731147
+				tempExt = 182.5153833919172
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12525,6 +12718,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -12564,8 +12758,8 @@ GAME
 				srfN = srfAttach, 4,node_collider
 				mass = 0.100000001
 				shielded = False
-				temp = 243.16747302660079
-				tempExt = 242.79470385145669
+				temp = 177.96416765383194
+				tempExt = 180.75415387171819
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12680,6 +12874,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -12719,8 +12914,8 @@ GAME
 				srfN = srfAttach, 4,node_collider
 				mass = 0.100000001
 				shielded = False
-				temp = 243.16791481760981
-				tempExt = 242.81005417444496
+				temp = 177.96408622032655
+				tempExt = 180.7541226245358
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12835,6 +13030,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -12874,8 +13070,8 @@ GAME
 				srfN = srfAttach, 4,node_collider
 				mass = 0.100000001
 				shielded = False
-				temp = 243.1674995453082
-				tempExt = 242.79471401400031
+				temp = 177.96407413094295
+				tempExt = 180.7541179856691
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12990,6 +13186,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -13029,8 +13226,8 @@ GAME
 				srfN = srfAttach, 4,node_collider
 				mass = 0.100000001
 				shielded = False
-				temp = 243.16747943801843
-				tempExt = 242.79470630588619
+				temp = 177.96420056411813
+				tempExt = 180.754166499858
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13145,6 +13342,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -13175,7 +13373,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 10
@@ -13184,8 +13382,8 @@ GAME
 				srfN = srfAttach, 4,node_collider
 				mass = 0.075000003
 				shielded = False
-				temp = 243.18607470999262
-				tempExt = 242.81236257239618
+				temp = 173.81853198029924
+				tempExt = 179.57761801256422
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13300,6 +13498,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -13330,7 +13529,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 9
@@ -13339,8 +13538,8 @@ GAME
 				srfN = srfAttach, 4,node_collider
 				mass = 0.075000003
 				shielded = False
-				temp = 243.18607539631913
-				tempExt = 242.81236279579221
+				temp = 173.81840045147408
+				tempExt = 179.57757471202183
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13455,6 +13654,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -13485,7 +13685,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 9
@@ -13494,8 +13694,8 @@ GAME
 				srfN = srfAttach, 4,node_collider
 				mass = 0.075000003
 				shielded = False
-				temp = 243.18608042004485
-				tempExt = 242.81236443060524
+				temp = 173.818349991237
+				tempExt = 179.57755810003079
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13610,6 +13810,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -13640,7 +13841,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 9
@@ -13649,8 +13850,8 @@ GAME
 				srfN = srfAttach, 4,node_collider
 				mass = 0.075000003
 				shielded = False
-				temp = 243.18607421215071
-				tempExt = 242.81236241057277
+				temp = 173.81831769092167
+				tempExt = 179.57754746645921
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13765,6 +13966,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -13803,8 +14005,8 @@ GAME
 				attN = bottom, 14
 				mass = 0.25
 				shielded = False
-				temp = 243.19095971381631
-				tempExt = 243.10131497796579
+				temp = 189.6500942084119
+				tempExt = 190.96224325131877
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13904,8 +14106,8 @@ GAME
 				attN = bottom, 15
 				mass = 0.25
 				shielded = False
-				temp = 243.23458328924082
-				tempExt = 243.17674055110271
+				temp = 200.90866648050968
+				tempExt = 201.77900869963003
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14005,8 +14207,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.25
 				shielded = False
-				temp = 243.56050824711926
-				tempExt = 243.41917603018197
+				temp = 220.95256652901037
+				tempExt = 216.05330477407728
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14133,7 +14335,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.00174530642
+					animState = 0
 					stagingEnabled = True
 					EVENTS
 					{
@@ -14203,8 +14405,8 @@ GAME
 				srfN = srfAttach, 14,COL3
 				mass = 0.00999999978
 				shielded = False
-				temp = 243.10110325746294
-				tempExt = 242.87477137246842
+				temp = 212.4827855173375
+				tempExt = 209.18855215448167
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.100000001
@@ -14260,6 +14462,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -14299,8 +14502,8 @@ GAME
 				srfN = srfAttach, 14,COL3
 				mass = 0.00999999978
 				shielded = False
-				temp = 243.1011739550552
-				tempExt = 242.87479783929453
+				temp = 212.55539543268603
+				tempExt = 209.30981395713542
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.100000001
@@ -14356,6 +14559,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -14395,8 +14599,8 @@ GAME
 				srfN = srfAttach, 14,COL3
 				mass = 0.00999999978
 				shielded = False
-				temp = 243.10116429209137
-				tempExt = 242.87479422188667
+				temp = 212.5279964754375
+				tempExt = 209.26412275796955
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.100000001
@@ -14452,6 +14656,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -14491,8 +14696,8 @@ GAME
 				srfN = srfAttach, 14,COL3
 				mass = 0.00999999978
 				shielded = False
-				temp = 243.10105490184986
-				tempExt = 242.8747532698801
+				temp = 212.48649687373086
+				tempExt = 209.18973326374882
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.100000001
@@ -14548,6 +14753,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -14587,8 +14793,8 @@ GAME
 				srfN = srfAttach, 13,COL3
 				mass = 0.00499999989
 				shielded = False
-				temp = 243.17378698919768
-				tempExt = 243.01380410363231
+				temp = 195.10550829735004
+				tempExt = 194.97494227362284
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14629,6 +14835,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -14643,7 +14850,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 97.841501206953225
+					amount = 96.467523073119636
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -14679,8 +14886,8 @@ GAME
 				srfN = srfAttach, 13,COL3
 				mass = 0.00499999989
 				shielded = False
-				temp = 243.17378577142634
-				tempExt = 243.01380352796269
+				temp = 195.10157438544206
+				tempExt = 194.97101273318756
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14721,6 +14928,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -14735,7 +14943,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 97.841501206953225
+					amount = 96.467523073119636
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -14771,8 +14979,8 @@ GAME
 				srfN = srfAttach, 13,COL3
 				mass = 0.00499999989
 				shielded = False
-				temp = 243.17378639887573
-				tempExt = 243.01380382455773
+				temp = 195.10390574415297
+				tempExt = 194.9733413086025
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14813,6 +15021,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -14827,7 +15036,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 97.841501206953225
+					amount = 96.467523073119636
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -14863,8 +15072,8 @@ GAME
 				srfN = srfAttach, 13,COL3
 				mass = 0.00499999989
 				shielded = False
-				temp = 243.17378951053416
-				tempExt = 243.01380529555058
+				temp = 195.10404491952974
+				tempExt = 194.97348048044114
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14905,6 +15114,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -14919,7 +15129,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 97.841501206953225
+					amount = 96.467523073119636
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -14953,8 +15163,8 @@ GAME
 				srfN = srfAttach, 13,COL3
 				mass = 0.0125000002
 				shielded = False
-				temp = 243.16578792383993
-				tempExt = 243.00201337628832
+				temp = 188.72184893359469
+				tempExt = 190.03329809187585
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -15076,6 +15286,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -15124,8 +15335,8 @@ GAME
 				srfN = srfAttach, 13,COL3
 				mass = 0.0125000002
 				shielded = False
-				temp = 243.16558908170066
-				tempExt = 243.00193473237908
+				temp = 188.83367510869266
+				tempExt = 190.07757529988729
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -15239,6 +15450,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -15294,15 +15506,15 @@ GAME
 			{
 				MANEUVER
 				{
-					UT = 173097.02707081102
+					UT = 178986.59310375396
 					dV = 0,0,0
 				}
 			}
 			CTRLSTATE
 			{
-				pitch = -0.00027435724
-				yaw = -0.000346115412
-				roll = 3.01681638E-07
+				pitch = -3.7310358E-06
+				yaw = 1.00660673E-05
+				roll = 2.5037858E-08
 				trimPitch = 0
 				trimYaw = 0
 				trimRoll = 0
@@ -15332,6 +15544,7 @@ GAME
 			sit = LANDED
 			landed = True
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = False
 			launchedFrom = 
 			landedAt = 
@@ -15366,13 +15579,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = NaN
+				SMA = 0
 				ECC = 1
-				INC = 162.53892021899011
+				INC = 90.096909327296004
 				LPE = 90
-				LAN = 353.66652253513502
+				LAN = 311.93628341857271
 				MNA = 0
-				EPH = 171965.61721022407
+				EPH = 173983.87484592962
 				REF = 1
 			}
 			PART
@@ -15526,28 +15739,29 @@ GAME
 		{
 			pid = 4f4fd9beadf34c4b9c8e8763794f9f60
 			persistentId = 313594854
-			name = Mun - 01
+			name = 返航01
 			type = Ship
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = False
 			launchedFrom = LaunchPad
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 35165.585805587732
+			met = 53557.340393076156
 			lct = 120193.55445297551
-			lastUT = 155359.14025856325
-			distanceTraveled = 1399007.4096554636
+			lastUT = 173750.89484605167
+			distanceTraveled = 1471658.5248700373
 			root = 0
-			lat = 0.72281772629711316
-			lon = -25.59089107240813
-			alt = 13827765.406369509
-			hgt = 13827765
-			nrm = -0.542739511,-0.282088101,0.791113257
-			rot = 0.53852278,-0.695068657,0.468589008,-0.085423559
-			CoM = 2.4586916E-07,-3.57284522,-7.15255737E-06
+			lat = 0.94161144024819743
+			lon = 38.862695085504185
+			alt = 11923940.728431957
+			hgt = 11923941
+			nrm = -0.0475930981,-0.996036232,0.0751448274
+			rot = 0.554712117,-0.69768399,0.449297667,-0.0605238415
+			CoM = 4.76837158E-07,-3.57284474,-6.43730164E-06
 			stg = 1
 			prst = False
 			ref = 473149553
@@ -15561,17 +15775,17 @@ GAME
 			OverrideGroupNames = ,,,
 			altDispState = ASL
 			cPch = 0.2
-			cHdg = 0.3
+			cHdg = 1.153175
 			cMod = 0
 			ORBIT
 			{
-				SMA = 7583732.9608490514
-				ECC = 0.91004761028780479
-				INC = 1.3606303416134848
-				LPE = 213.70015414975856
-				LAN = 107.72079391373825
-				MNA = 2.8951369019550208
-				EPH = 155359.14025856325
+				SMA = 7583732.9652483361
+				ECC = 0.91004761024141811
+				INC = 1.3606303431957369
+				LPE = 213.70015414918808
+				LAN = 107.72079391015569
+				MNA = -1.7331003419399842
+				EPH = 173750.89484605167
 				REF = 1
 			}
 			PART
@@ -15600,8 +15814,8 @@ GAME
 				attN = top, 1
 				mass = 0.751000047
 				shielded = False
-				temp = 200.99302040833103
-				tempExt = 201.86836841969469
+				temp = 206.66524957716788
+				tempExt = 207.23797218981605
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -15881,7 +16095,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 49.986475165119955
+					amount = 49.852552091149946
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -15926,8 +16140,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 201.00405067549769
-				tempExt = 202.08861200745673
+				temp = 206.67574290434939
+				tempExt = 207.50846276204652
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16042,6 +16256,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -16078,8 +16293,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 9.99999975E-05
 				shielded = False
-				temp = 201.13590878800167
-				tempExt = 201.48550640243189
+				temp = 206.88735509362158
+				tempExt = 207.05501917784366
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16843,7 +17058,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 4.9986475165126505
+					amount = 4.985255209122144
 					maxAmount = 5
 					flowState = True
 					isTweakable = True
@@ -16878,8 +17093,8 @@ GAME
 				attN = bottom, 4
 				mass = 0.100000001
 				shielded = False
-				temp = 201.14115668502654
-				tempExt = 202.16792114172995
+				temp = 206.56347284230287
+				tempExt = 206.60528304505766
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16955,6 +17170,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -16993,8 +17209,8 @@ GAME
 				attN = bottom, 13
 				mass = 1
 				shielded = False
-				temp = 201.2841495838436
-				tempExt = 203.01457648954587
+				temp = 206.46319448184866
+				tempExt = 206.37440636101542
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17191,8 +17407,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 201.11089701775182
-				tempExt = 202.26120960385973
+				temp = 206.45449823429283
+				tempExt = 206.29458455484271
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17307,6 +17523,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -17346,8 +17563,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 201.11089701644545
-				tempExt = 202.26120960338659
+				temp = 206.45449823429283
+				tempExt = 206.29458455484271
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17462,6 +17679,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -17501,8 +17719,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 201.11089701644545
-				tempExt = 202.26120960338659
+				temp = 206.45449823429283
+				tempExt = 206.29458455484271
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17617,6 +17835,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -17656,8 +17875,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 201.11089702013032
-				tempExt = 202.26120960472122
+				temp = 206.45449823429283
+				tempExt = 206.29458455484271
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17772,6 +17991,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -17811,8 +18031,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 200.97433699637193
-				tempExt = 202.26526077006977
+				temp = 206.45934387964505
+				tempExt = 206.30087595897578
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17927,6 +18147,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -17966,8 +18187,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 200.97433699637193
-				tempExt = 202.26526077006977
+				temp = 206.45934387964505
+				tempExt = 206.30087595897578
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18082,6 +18303,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -18121,8 +18343,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 200.97433699637193
-				tempExt = 202.26526077006977
+				temp = 206.45934387964505
+				tempExt = 206.30087595897578
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18237,6 +18459,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -18276,8 +18499,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 200.97437877037055
-				tempExt = 202.26527429711655
+				temp = 206.45934387964505
+				tempExt = 206.30087595897578
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18392,6 +18615,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -18430,8 +18654,8 @@ GAME
 				attN = bottom, 14
 				mass = 0.5
 				shielded = False
-				temp = 202.60083690952615
-				tempExt = 205.60003249491848
+				temp = 206.49327917386887
+				tempExt = 206.51137952213466
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18531,8 +18755,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.25
 				shielded = False
-				temp = 224.93057089392039
-				tempExt = 217.45745851306907
+				temp = 206.50212343952467
+				tempExt = 206.50848950522112
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18659,7 +18883,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.157273918
+					animState = 0.000354504591
 					stagingEnabled = True
 					EVENTS
 					{
@@ -18729,8 +18953,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 201.10780425207582
-				tempExt = 202.32355905492435
+				temp = 206.45371301312872
+				tempExt = 206.34110773919184
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18836,6 +19060,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -18875,8 +19100,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 201.11376976994586
-				tempExt = 202.38087935816668
+				temp = 206.45371301312872
+				tempExt = 206.34110773919184
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18978,6 +19203,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -19017,8 +19243,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 201.10780425224306
-				tempExt = 202.32355905498235
+				temp = 206.45371301312872
+				tempExt = 206.34110773919184
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19120,6 +19346,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -19159,8 +19386,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 201.1078042522519
-				tempExt = 202.32355905498534
+				temp = 206.45371301312872
+				tempExt = 206.34110773919184
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19262,6 +19489,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -19301,8 +19529,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.75694596127047
-				tempExt = 202.54204418183704
+				temp = 206.45119341206927
+				tempExt = 206.3409953311178
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19343,6 +19571,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -19357,7 +19586,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.972950330239911
+					amount = 99.705104182299891
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -19393,8 +19622,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.75690712668575
-				tempExt = 202.54198504312515
+				temp = 206.45119256669636
+				tempExt = 206.34098694412086
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19435,6 +19664,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -19449,7 +19679,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.972950330239911
+					amount = 99.705104182299891
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -19485,8 +19715,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.75690712668575
-				tempExt = 202.54198504312515
+				temp = 206.45119256669636
+				tempExt = 206.34098694412086
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19527,6 +19757,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -19541,7 +19772,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.972950330239911
+					amount = 99.705104182299891
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -19577,8 +19808,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.75690712668575
-				tempExt = 202.54198504312515
+				temp = 206.45119256669636
+				tempExt = 206.34098694412086
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19619,6 +19850,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -19633,7 +19865,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.972950330239911
+					amount = 99.705104182299891
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -19666,8 +19898,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.00464670358718
-				tempExt = 201.64933191813097
+				temp = 206.70433724470863
+				tempExt = 207.08920760800555
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19754,6 +19986,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -19790,8 +20023,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 201.04684016944731
-				tempExt = 201.54866159023666
+				temp = 206.75892929493901
+				tempExt = 207.02655848000182
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19878,6 +20111,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -19955,28 +20189,29 @@ GAME
 		{
 			pid = 2ad085e0b98c4855a09af60ad46e7923
 			persistentId = 313594854
-			name = Mun - 02
+			name = 返航03
 			type = Ship
-			sit = ESCAPING
+			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = False
 			launchedFrom = LaunchPad
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 28017.76057390908
+			met = 52908.098498368156
 			lct = 120928.41634763866
-			lastUT = 148946.17692154774
-			distanceTraveled = 1408749.3664591275
+			lastUT = 173836.53484600681
+			distanceTraveled = 1424986.6060649867
 			root = 0
-			lat = -6.0004469925039681
-			lon = 68.879044368949181
-			alt = 758768.40993203851
-			hgt = 758768.438
-			nrm = -0.994086862,0.0656633005,-0.0864852071
-			rot = -0.372814,0.595322907,0.597060323,0.387452543
-			CoM = 2.08616257E-07,-3.70581031,-7.4878335E-06
+			lat = 1.5122362837744356
+			lon = 28.625372899029667
+			alt = 9410804.1580866333
+			hgt = 9410804
+			nrm = -0.532398462,-0.844770432,0.0539928675
+			rot = -0.475032389,0.519388914,0.511294127,0.493110448
+			CoM = 1.1920929E-07,-3.70581007,-4.529953E-06
 			stg = 1
 			prst = False
 			ref = 1290949492
@@ -19990,17 +20225,17 @@ GAME
 			OverrideGroupNames = ,,,
 			altDispState = ASL
 			cPch = 0.2
-			cHdg = 0.3
+			cHdg = -0.6812028
 			cMod = 0
 			ORBIT
 			{
-				SMA = 6475821.9853092814
-				ECC = 0.8938493103923939
-				INC = 5.3795183769841568
-				LPE = 183.07138864284161
-				LAN = 126.41928994934705
-				MNA = 2.512570476637789
-				EPH = 154100.02057050512
+				SMA = 6475821.9883703198
+				ECC = 0.89384931048829319
+				INC = 5.3795183785339633
+				LPE = 183.07138863197858
+				LAN = 126.41928993902548
+				MNA = -1.5199365789976946
+				EPH = 173836.51484600682
 				REF = 1
 			}
 			PART
@@ -20029,8 +20264,8 @@ GAME
 				attN = top, 1
 				mass = 0.751000047
 				shielded = False
-				temp = 253.96060082295841
-				tempExt = 254.23594798979423
+				temp = 252.28062195964597
+				tempExt = 252.35431520750572
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -20291,9 +20526,6 @@ GAME
 					ACTIONS
 					{
 					}
-					UPGRADESAPPLIED
-					{
-					}
 					Log
 					{
 						flight = 0
@@ -20305,11 +20537,14 @@ GAME
 						0 = Escape,Mun
 						0 = Flyby,Kerbin
 					}
+					UPGRADESAPPLIED
+					{
+					}
 				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 49.95614876159091
+					amount = 49.832615955546068
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -20354,8 +20589,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 252.2901770929231
-				tempExt = 253.07952331752051
+				temp = 252.25060897540857
+				tempExt = 252.02005090589788
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -20470,6 +20705,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -20506,8 +20742,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 9.99999975E-05
 				shielded = False
-				temp = 253.80132339514668
-				tempExt = 253.89287555365118
+				temp = 252.22801983920417
+				tempExt = 252.18105723944194
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21252,9 +21488,6 @@ GAME
 					ACTIONS
 					{
 					}
-					UPGRADESAPPLIED
-					{
-					}
 					Log
 					{
 						flight = 0
@@ -21266,11 +21499,14 @@ GAME
 						0 = Escape,Mun
 						0 = Flyby,Kerbin
 					}
+					UPGRADESAPPLIED
+					{
+					}
 				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 4.9956148761612331
+					amount = 4.9832615955579316
 					maxAmount = 5
 					flowState = True
 					isTweakable = True
@@ -21305,8 +21541,8 @@ GAME
 				attN = bottom, 4
 				mass = 0.100000001
 				shielded = False
-				temp = 254.43355110268624
-				tempExt = 254.63004391262132
+				temp = 252.22196243414066
+				tempExt = 252.01496348757888
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21382,6 +21618,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -21420,8 +21657,8 @@ GAME
 				attN = bottom, 13
 				mass = 1
 				shielded = False
-				temp = 254.85257751470473
-				tempExt = 255.25827494288765
+				temp = 252.25962026004669
+				tempExt = 252.14563948112928
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21574,9 +21811,6 @@ GAME
 					ACTIONS
 					{
 					}
-					UPGRADESAPPLIED
-					{
-					}
 					Log
 					{
 						flight = 0
@@ -21587,6 +21821,9 @@ GAME
 						0 = Orbit,Mun
 						0 = Escape,Mun
 						0 = Flyby,Kerbin
+					}
+					UPGRADESAPPLIED
+					{
 					}
 				}
 			}
@@ -21617,8 +21854,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 254.723855153996
-				tempExt = 254.82359070364819
+				temp = 252.24838075238048
+				tempExt = 251.94286724660944
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21733,6 +21970,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -21772,8 +22010,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 254.72384117513283
-				tempExt = 254.82338348795869
+				temp = 252.24837774661464
+				tempExt = 251.94281302354625
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21888,6 +22126,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -21927,8 +22166,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 254.72385517817131
-				tempExt = 254.82359168957143
+				temp = 252.24837774661464
+				tempExt = 251.94281302354625
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22043,6 +22282,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -22082,8 +22322,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 254.72393946399822
-				tempExt = 254.82341901180197
+				temp = 252.24838592161976
+				tempExt = 251.94295992633857
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22198,6 +22438,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -22228,7 +22469,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 10
@@ -22237,8 +22478,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 254.44288625771048
-				tempExt = 254.76034772635342
+				temp = 252.26273486655953
+				tempExt = 251.95934972558177
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22353,6 +22594,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -22383,7 +22625,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 9
@@ -22392,8 +22634,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 254.44288616213203
-				tempExt = 254.76034769546143
+				temp = 252.26273486655953
+				tempExt = 251.95934972558177
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22508,6 +22750,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -22538,7 +22781,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 9
@@ -22547,8 +22790,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 254.44288614921237
-				tempExt = 254.7603476912856
+				temp = 252.26274178453582
+				tempExt = 251.95949212284131
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22663,6 +22906,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -22693,7 +22937,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 9
@@ -22702,8 +22946,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 254.44288614921237
-				tempExt = 254.7603476912856
+				temp = 252.26273486655953
+				tempExt = 251.95934972558177
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22818,6 +23062,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -22856,8 +23101,8 @@ GAME
 				attN = bottom, 14
 				mass = 0.5
 				shielded = False
-				temp = 256.05612952865243
-				tempExt = 256.52720243076197
+				temp = 252.27956379845745
+				tempExt = 252.32048890088043
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22957,8 +23202,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.25
 				shielded = False
-				temp = 262.63302073223196
-				tempExt = 260.15364582643531
+				temp = 252.28195819507289
+				tempExt = 252.30147985428539
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23085,7 +23330,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.00560555747
+					animState = 0.00174886361
 					stagingEnabled = True
 					EVENTS
 					{
@@ -23155,8 +23400,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 254.70501480883337
-				tempExt = 254.93514212582332
+				temp = 252.27687385216086
+				tempExt = 252.28737353915588
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23262,6 +23507,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -23301,8 +23547,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 254.70486042319067
-				tempExt = 254.93353641766225
+				temp = 252.25001399772029
+				tempExt = 252.04806021414871
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23404,6 +23650,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -23443,8 +23690,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 254.70484221418724
-				tempExt = 254.93329498200688
+				temp = 252.2499953078615
+				tempExt = 252.04805304081566
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23546,6 +23793,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -23585,8 +23833,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 254.70486165107141
-				tempExt = 254.93342043125898
+				temp = 252.25000347643766
+				tempExt = 252.04805586630815
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23688,6 +23936,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -23727,8 +23976,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 254.84226488568865
-				tempExt = 254.98424972847613
+				temp = 252.23951122411719
+				tempExt = 252.04667372986373
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23769,6 +24018,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -23783,7 +24033,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.91229752318182
+					amount = 99.665231911092135
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -23819,8 +24069,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 254.84226488568865
-				tempExt = 254.98424972847613
+				temp = 252.23951122411719
+				tempExt = 252.04667372986373
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23861,6 +24111,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -23875,7 +24126,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.91229752318182
+					amount = 99.665231911092135
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -23911,8 +24162,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 254.84226488568865
-				tempExt = 254.98424972847613
+				temp = 252.23951122411719
+				tempExt = 252.04667372986373
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23953,6 +24204,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -23967,7 +24219,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.91229752318182
+					amount = 99.665231911092135
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -24003,8 +24255,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 254.84226497001828
-				tempExt = 254.98424976831112
+				temp = 252.23951445293699
+				tempExt = 252.04670577655739
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24045,6 +24297,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -24059,7 +24312,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.91229752318182
+					amount = 99.665231911092135
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -24092,8 +24345,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 253.71485448858314
-				tempExt = 254.03456126366538
+				temp = 252.2761870338087
+				tempExt = 252.25483306914023
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24180,6 +24433,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -24216,8 +24470,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 253.75167859009218
-				tempExt = 253.94266092417445
+				temp = 252.25803013817139
+				tempExt = 252.19522438927217
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24304,6 +24558,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -24354,9 +24609,9 @@ GAME
 			}
 			CTRLSTATE
 			{
-				pitch = 3.58569887E-05
-				yaw = 4.18064792E-06
-				roll = -3.06617132E-08
+				pitch = 3.56106029E-05
+				yaw = 3.47071705E-06
+				roll = -1.02412734E-07
 				trimPitch = 0
 				trimYaw = 0
 				trimRoll = 0
@@ -24381,28 +24636,29 @@ GAME
 		{
 			pid = 9acdff25110441448523d9e9ed5e9810
 			persistentId = 313594854
-			name = Mun - 03
+			name = 返航04
 			type = Ship
 			sit = SUB_ORBITAL
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = False
 			launchedFrom = LaunchPad
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 33592.955508644693
+			met = 51986.989980159065
 			lct = 121884.56486582939
-			lastUT = 155477.52037447409
-			distanceTraveled = 919831.1844271149
+			lastUT = 173871.55484598846
+			distanceTraveled = 930441.42973641842
 			root = 0
-			lat = 0.68403507960687182
-			lon = -28.11565189377265
-			alt = 13829401.257463437
-			hgt = 13829401
-			nrm = 0.704180598,0.342180252,-0.622127473
-			rot = -0.49537009,-0.0425030105,0.490484685,-0.715700328
-			CoM = 1.11758709E-07,-3.60110998,-5.48362732E-06
+			lat = 0.95825078390779594
+			lon = 35.937385131529005
+			alt = 12151387.728517329
+			hgt = 12151388
+			nrm = 0.388350397,-0.830893159,-0.39849788
+			rot = -0.646354616,0.655807137,-0.287858486,-0.263211459
+			CoM = 1.78813934E-06,-3.60110998,-6.43730164E-06
 			stg = 1
 			prst = False
 			ref = 2041850073
@@ -24415,18 +24671,18 @@ GAME
 			OverrideAxisControl = 0,0,0,0
 			OverrideGroupNames = ,,,
 			altDispState = ASL
-			cPch = 0
-			cHdg = 0
+			cPch = 0.2
+			cHdg = 0.3
 			cMod = 0
 			ORBIT
 			{
-				SMA = 7591643.4494645288
-				ECC = 0.9128757798130942
-				INC = 1.614425016109972
-				LPE = 207.07544565193811
-				LAN = 114.19520344065552
-				MNA = 2.8294228196009952
-				EPH = 155477.52037447409
+				SMA = 7591643.4444136601
+				ECC = 0.91287577993663893
+				INC = 1.614425014793943
+				LPE = 207.07544572535477
+				LAN = 114.1952033816533
+				MNA = -1.8011956035126206
+				EPH = 173871.55484598846
 				REF = 1
 			}
 			PART
@@ -24455,8 +24711,8 @@ GAME
 				attN = top, 1
 				mass = 0.751000047
 				shielded = False
-				temp = 220.47994751433518
-				tempExt = 220.69980519635104
+				temp = 233.31566349131904
+				tempExt = 233.79027081723908
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24736,7 +24992,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 49.449367296724368
+					amount = 48.945780146699327
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -24781,8 +25037,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 220.3662788957339
-				tempExt = 220.39079693072162
+				temp = 233.3027908657001
+				tempExt = 233.35900334210686
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24897,6 +25153,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -24933,8 +25190,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 9.99999975E-05
 				shielded = False
-				temp = 220.50920913400341
-				tempExt = 220.54533600451481
+				temp = 233.36082394320448
+				tempExt = 233.50291977309604
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25698,7 +25955,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 4.9449367296736533
+					amount = 4.8945780146720939
 					maxAmount = 5
 					flowState = True
 					isTweakable = True
@@ -25733,8 +25990,8 @@ GAME
 				attN = bottom, 4
 				mass = 0.100000001
 				shielded = False
-				temp = 220.80045002391003
-				tempExt = 221.42482663059812
+				temp = 233.3180666630106
+				tempExt = 233.45887563519875
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25810,6 +26067,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -25848,8 +26106,8 @@ GAME
 				attN = bottom, 13
 				mass = 1
 				shielded = False
-				temp = 221.09842111164255
-				tempExt = 222.53444229711957
+				temp = 233.30638161251511
+				tempExt = 233.37682063027455
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26046,8 +26304,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 220.90379930144695
-				tempExt = 221.82976291556525
+				temp = 233.29857994885455
+				tempExt = 233.17569990786447
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26162,6 +26420,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -26201,8 +26460,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 220.9037992976632
-				tempExt = 221.82976291419578
+				temp = 233.29858889950123
+				tempExt = 233.17581127209274
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26317,6 +26576,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -26356,8 +26616,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 220.90379929749852
-				tempExt = 221.8297629141361
+				temp = 233.29858607427059
+				tempExt = 233.17576339663836
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26472,6 +26732,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -26511,8 +26772,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 220.90379930003326
-				tempExt = 221.82976291505355
+				temp = 233.29858249387289
+				tempExt = 233.1757008285723
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26627,6 +26888,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -26666,8 +26928,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 220.63775806447237
-				tempExt = 221.78918219724648
+				temp = 233.30223865893396
+				tempExt = 233.1888236837928
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26782,6 +27044,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -26821,8 +27084,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 220.63775806736245
-				tempExt = 221.78918219818183
+				temp = 233.30224119036765
+				tempExt = 233.18894852879691
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -26937,6 +27200,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -26976,8 +27240,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 220.63775806358896
-				tempExt = 221.78918219696075
+				temp = 233.30223865893396
+				tempExt = 233.1888236837928
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -27092,6 +27356,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -27131,8 +27396,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 220.63775806984168
-				tempExt = 221.78918219898426
+				temp = 233.30223865893396
+				tempExt = 233.1888236837928
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -27247,6 +27512,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -27285,8 +27551,8 @@ GAME
 				attN = bottom, 14
 				mass = 0.5
 				shielded = False
-				temp = 222.6265141720865
-				tempExt = 224.95255102269755
+				temp = 233.31431020495012
+				tempExt = 233.58610748251348
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -27386,8 +27652,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.25
 				shielded = False
-				temp = 240.85303827398386
-				tempExt = 235.00759036350462
+				temp = 233.32648991560856
+				tempExt = 233.54861497072571
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -27515,7 +27781,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.0884319171
+					animState = 0.0368374176
 					stagingEnabled = True
 					EVENTS
 					{
@@ -27585,8 +27851,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 220.89160831896305
-				tempExt = 221.90605039146067
+				temp = 233.30128847067985
+				tempExt = 233.25496103179412
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -27692,6 +27958,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -27731,8 +27998,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 220.89163372260055
-				tempExt = 221.90605918469944
+				temp = 233.30126614547402
+				tempExt = 233.2549533060112
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -27834,6 +28101,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -27873,8 +28141,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 220.8916281976627
-				tempExt = 221.90606475362782
+				temp = 233.30129564127185
+				tempExt = 233.254963513224
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -27976,6 +28244,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -28015,8 +28284,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 220.89427177799382
-				tempExt = 221.9434630125873
+				temp = 233.30126441273134
+				tempExt = 233.25495270638433
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -28118,6 +28387,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -28157,8 +28427,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 221.62114093754948
-				tempExt = 222.15191914130017
+				temp = 233.30119809356358
+				tempExt = 233.25742448637828
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -28199,6 +28469,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -28213,7 +28484,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 98.898734593448737
+					amount = 97.891560293398655
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -28249,8 +28520,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 221.63010907609888
-				tempExt = 222.17117101639744
+				temp = 233.30119806869905
+				tempExt = 233.25742447462386
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -28291,6 +28562,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -28305,7 +28577,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 98.898734593448737
+					amount = 97.891560293398655
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -28341,8 +28613,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 221.64823818844252
-				tempExt = 222.19881120389076
+				temp = 233.30120010360281
+				tempExt = 233.25744452576438
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -28383,6 +28655,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -28397,7 +28670,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 98.898734593448737
+					amount = 97.891560293398655
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -28433,8 +28706,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 221.62103962671529
-				tempExt = 222.15188592740603
+				temp = 233.30119809039942
+				tempExt = 233.25742448488248
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -28475,6 +28748,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -28489,7 +28763,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 98.898734593448737
+					amount = 97.891560293398655
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -28522,8 +28796,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 220.41210370533244
-				tempExt = 220.58616506995207
+				temp = 233.3282953362461
+				tempExt = 233.63134202914034
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -28610,6 +28884,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -28646,8 +28921,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 220.43813318211335
-				tempExt = 220.53703243903695
+				temp = 233.34149730849401
+				tempExt = 233.55093395282069
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -28734,6 +29009,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -28784,9 +29060,9 @@ GAME
 			}
 			CTRLSTATE
 			{
-				pitch = -3.77490978E-05
-				yaw = 1.657332E-05
-				roll = 8.44093861E-08
+				pitch = 2.67112355E-05
+				yaw = -1.02546046E-05
+				roll = 2.92022492E-07
 				trimPitch = 0
 				trimYaw = 0
 				trimRoll = 0
@@ -28811,28 +29087,29 @@ GAME
 		{
 			pid = 8b047560eeed410c83ec26a1630f0e56
 			persistentId = 313594854
-			name = Mun - 04
+			name = 返航05
 			type = Ship
 			sit = SUB_ORBITAL
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = False
 			launchedFrom = LaunchPad
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 46330.776927621991
+			met = 50671.511151719824
 			lct = 123288.1036942225
-			lastUT = 169618.8806218445
-			distanceTraveled = 757809.49234591448
+			lastUT = 173959.63484594232
+			distanceTraveled = 765972.03218228871
 			root = 0
-			lat = -0.10316645951465635
-			lon = 92.604329152824022
-			alt = 14036104.177659823
-			hgt = 14036104
-			nrm = 0.528659701,-0.0306871459,0.848278999
-			rot = -0.189116135,-0.198571071,-0.682444274,0.677550375
-			CoM = 4.91738319E-07,-3.69456863,-6.19888306E-06
+			lat = -0.09608663002029888
+			lon = 22.53646987382616
+			alt = 13913292.198265618
+			hgt = 13913292
+			nrm = 0.501947999,0.390409946,0.771769702
+			rot = -0.443336457,0.0705240592,-0.552384257,0.702389359
+			CoM = -5.51342964E-07,-3.69456935,-6.10947609E-06
 			stg = 1
 			prst = False
 			ref = 3563595044
@@ -28850,13 +29127,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 7643582.3151240908
-				ECC = 0.91491109519553337
-				INC = 0.19339901771985188
-				LPE = 147.9298707880202
-				LAN = 168.45834633217157
-				MNA = 3.1149615364430652
-				EPH = 169618.8806218445
+				SMA = 7643582.3120853473
+				ECC = 0.91491109540473825
+				INC = 0.19339903707527809
+				LPE = 147.92987447226915
+				LAN = 168.45834265898509
+				MNA = -2.7822093500264842
+				EPH = 173959.61484594233
 				REF = 1
 			}
 			PART
@@ -28885,8 +29162,8 @@ GAME
 				attN = top, 1
 				mass = 0.751000047
 				shielded = False
-				temp = 219.66115026976664
-				tempExt = 220.16618712658322
+				temp = 263.28678874879728
+				tempExt = 263.46253650296097
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -29165,7 +29442,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 49.326428513545352
+					amount = 49.053969798718605
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -29210,8 +29487,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 219.64973914630559
-				tempExt = 219.76467928840185
+				temp = 263.24058112073641
+				tempExt = 263.00530592463787
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -29326,6 +29603,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -29362,8 +29640,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 9.99999975E-05
 				shielded = False
-				temp = 219.6879530693642
-				tempExt = 219.86104520684759
+				temp = 263.25154130485276
+				tempExt = 263.23249065695796
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -30126,7 +30404,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 4.9326428513564711
+					amount = 4.9053969798754338
 					maxAmount = 5
 					flowState = True
 					isTweakable = True
@@ -30161,8 +30439,8 @@ GAME
 				attN = bottom, 4
 				mass = 0.100000001
 				shielded = False
-				temp = 219.65877066189617
-				tempExt = 219.73220866075616
+				temp = 263.24617138643924
+				tempExt = 263.17163942120658
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -30238,6 +30516,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -30276,8 +30555,8 @@ GAME
 				attN = bottom, 13
 				mass = 1
 				shielded = False
-				temp = 219.64907104585615
-				tempExt = 219.60198214821438
+				temp = 263.24802741691258
+				tempExt = 263.1038791071752
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -30473,8 +30752,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 219.64216908490872
-				tempExt = 219.47898203061723
+				temp = 263.23340293175221
+				tempExt = 262.86606423779438
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -30589,6 +30868,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -30628,8 +30908,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 219.64216908490872
-				tempExt = 219.47898203061723
+				temp = 263.23340293175221
+				tempExt = 262.86606423779438
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -30744,6 +31024,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -30783,8 +31064,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 219.64216908490872
-				tempExt = 219.47898203061723
+				temp = 263.23340293175221
+				tempExt = 262.86606423779438
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -30899,6 +31180,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -30938,8 +31220,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 219.64216908712913
-				tempExt = 219.478982031421
+				temp = 263.23340293175221
+				tempExt = 262.86606423779438
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -31054,6 +31336,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -31084,7 +31367,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 10
@@ -31093,8 +31376,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 219.64803377980206
-				tempExt = 219.48813868877312
+				temp = 263.25360919978596
+				tempExt = 262.88653214682375
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -31209,6 +31492,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -31239,7 +31523,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 9
@@ -31248,8 +31532,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 219.64803377980206
-				tempExt = 219.48813868877312
+				temp = 263.25360919978596
+				tempExt = 262.88653214682375
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -31364,6 +31648,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -31394,7 +31679,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 9
@@ -31403,8 +31688,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 219.64803377980206
-				tempExt = 219.48813868877312
+				temp = 263.25360919978596
+				tempExt = 262.88653214682375
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -31519,6 +31804,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -31549,7 +31835,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 9
@@ -31558,8 +31844,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 219.64803377980206
-				tempExt = 219.48813868877312
+				temp = 263.25360919978596
+				tempExt = 262.88653214682375
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -31674,6 +31960,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -31712,8 +31999,8 @@ GAME
 				attN = bottom, 14
 				mass = 0.5
 				shielded = False
-				temp = 219.66529942489726
-				tempExt = 219.76382407941392
+				temp = 263.27987873194269
+				tempExt = 263.32115479869731
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -31813,8 +32100,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.25
 				shielded = False
-				temp = 219.9320554110958
-				tempExt = 219.87880142252467
+				temp = 263.28116147869764
+				tempExt = 263.28257788767849
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -31942,7 +32229,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.0174831487
+					animState = 0.00378806563
 					stagingEnabled = True
 					EVENTS
 					{
@@ -32012,8 +32299,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 219.64383266458455
-				tempExt = 219.54006749183316
+				temp = 263.23489255623934
+				tempExt = 262.99052790618367
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -32119,6 +32406,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -32158,8 +32446,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 219.64359724868038
-				tempExt = 219.53998600089281
+				temp = 263.23489857314354
+				tempExt = 262.99052998679173
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -32261,6 +32549,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -32300,8 +32589,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 219.64347655878697
-				tempExt = 219.53994422314491
+				temp = 263.23489255799115
+				tempExt = 262.99052790678923
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -32403,6 +32692,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -32442,8 +32732,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 219.64413517665318
-				tempExt = 219.54017220859197
+				temp = 263.23489255623934
+				tempExt = 262.99052790618367
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -32545,6 +32835,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -32584,8 +32875,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 219.63864517121883
-				tempExt = 219.53966260616727
+				temp = 263.22342268883438
+				tempExt = 262.98915868703386
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -32626,6 +32917,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -32640,7 +32932,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 98.652857027090704
+					amount = 98.107939597437209
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -32676,8 +32968,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 219.63864517019141
-				tempExt = 219.5396626056814
+				temp = 263.22342329549645
+				tempExt = 262.98916470582486
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -32718,6 +33010,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -32732,7 +33025,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 98.652857027090704
+					amount = 98.107939597437209
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -32768,8 +33061,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 219.63864517018987
-				tempExt = 219.53966260568063
+				temp = 263.22342268883438
+				tempExt = 262.98915868703386
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -32810,6 +33103,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -32824,7 +33118,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 98.652857027090704
+					amount = 98.107939597437209
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -32860,8 +33154,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 219.63864532077804
-				tempExt = 219.53966267689782
+				temp = 263.22342268883438
+				tempExt = 262.98915868703386
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -32902,6 +33196,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -32916,7 +33211,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 98.652857027090704
+					amount = 98.107939597437209
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -32949,8 +33244,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 219.67101358357471
-				tempExt = 220.01318056520896
+				temp = 263.28688157290065
+				tempExt = 263.32711172029695
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -33037,6 +33332,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -33073,8 +33369,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 219.6817449970998
-				tempExt = 219.93528134058201
+				temp = 263.27178219265068
+				tempExt = 263.24913806442441
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -33161,6 +33457,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -33211,9 +33508,9 @@ GAME
 			}
 			CTRLSTATE
 			{
-				pitch = -0.000126867584
-				yaw = 7.96365566E-05
-				roll = 8.42277288E-08
+				pitch = 1.21304492E-05
+				yaw = -4.66810616E-06
+				roll = -5.62076963E-08
 				trimPitch = 0
 				trimYaw = 0
 				trimRoll = 0
@@ -33243,6 +33540,7 @@ GAME
 			sit = ESCAPING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = False
 			launchedFrom = LaunchPad
 			landedAt = 
@@ -36847,6 +37145,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -36987,28 +37286,29 @@ GAME
 		{
 			pid = d60ff92e2667496993ffb75714f4b99e
 			persistentId = 313594854
-			name = Mun - 05
+			name = 返航06
 			type = Ship
 			sit = ESCAPING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = False
 			launchedFrom = LaunchPad
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 19621.513837634149
+			met = 28131.029935092229
 			lct = 145852.84491083739
-			lastUT = 165474.35874847154
-			distanceTraveled = 1000838.5899360966
+			lastUT = 173983.87484592962
+			distanceTraveled = 1004282.9668858845
 			root = 0
-			lat = 3.6606345063493309
-			lon = 124.27458132281653
-			alt = 188194.43664015376
-			hgt = 188194.438
-			nrm = -0.994428873,0.0918380618,-0.0517396927
-			rot = 0.647553921,-0.384619474,-0.331788659,-0.56803
-			CoM = 1.78813934E-06,-3.74643087,-5.7220459E-06
+			lat = -5.2127090060874863
+			lon = -127.45531010905289
+			alt = 1916955.921505915
+			hgt = 1916955.88
+			nrm = -0.538743854,0.840073586,-0.0634947419
+			rot = 0.734809875,-0.0513952523,-0.00179008197,-0.676320791
+			CoM = 2.14576721E-06,-3.74642992,-5.7220459E-06
 			stg = 1
 			prst = False
 			ref = 1625100508
@@ -37021,18 +37321,18 @@ GAME
 			OverrideAxisControl = 0,0,0,0
 			OverrideGroupNames = ,,,
 			altDispState = ASL
-			cPch = 0
-			cHdg = 0
+			cPch = 0.2
+			cHdg = 0.3
 			cMod = 0
 			ORBIT
 			{
-				SMA = 2469427.112644223
-				ECC = 0.84424793107750307
-				INC = 5.2258468446561857
-				LPE = 123.98035035368305
-				LAN = 287.27593435315839
-				MNA = 0.00915172399532721
-				EPH = 165474.35874847154
+				SMA = 2469427.0963453725
+				ECC = 0.84424792947136285
+				INC = 5.2258468461445338
+				LPE = 123.98035023811211
+				LAN = 287.27593453874476
+				MNA = 0.56881793156965921
+				EPH = 173983.87484592962
 				REF = 2
 			}
 			PART
@@ -37061,8 +37361,8 @@ GAME
 				attN = top, 1
 				mass = 0.751000047
 				shielded = False
-				temp = 247.91248567063977
-				tempExt = 247.68808489243941
+				temp = 39.850211995646006
+				tempExt = 39.849528371615591
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -37340,7 +37640,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 49.891832963497144
+					amount = 49.676095599369638
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -37385,8 +37685,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 246.75378760463036
-				tempExt = 246.99954852267177
+				temp = 39.850211995507841
+				tempExt = 39.849215734174919
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -37501,6 +37801,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -37537,8 +37838,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 9.99999975E-05
 				shielded = False
-				temp = 247.63395235687196
-				tempExt = 247.5216273820954
+				temp = 39.850211995516815
+				tempExt = 39.849769174975719
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -38300,7 +38601,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 4.9891832963509373
+					amount = 4.9676095599388308
 					maxAmount = 5
 					flowState = True
 					isTweakable = True
@@ -38335,8 +38636,8 @@ GAME
 				attN = bottom, 4
 				mass = 0.100000001
 				shielded = False
-				temp = 248.11872352084569
-				tempExt = 248.20519189467348
+				temp = 39.850211997930224
+				tempExt = 39.849871923402766
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -38412,6 +38713,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -38450,8 +38752,8 @@ GAME
 				attN = bottom, 13
 				mass = 1
 				shielded = False
-				temp = 248.31338421469218
-				tempExt = 248.90716501981879
+				temp = 39.850212002500044
+				tempExt = 39.850230336205243
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -38646,8 +38948,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 248.18991236840134
-				tempExt = 248.43514042445551
+				temp = 39.850211996920883
+				tempExt = 39.849996439642815
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -38762,6 +39064,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -38801,8 +39104,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 248.1898776294978
-				tempExt = 248.43512786543957
+				temp = 39.850211996920883
+				tempExt = 39.84999643964678
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -38917,6 +39220,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -38956,8 +39260,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 248.19018637718952
-				tempExt = 248.43523948574963
+				temp = 39.850211996920883
+				tempExt = 39.849996439676033
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -39072,6 +39376,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -39111,8 +39416,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 248.18991456387195
-				tempExt = 248.435141218175
+				temp = 39.850211996920883
+				tempExt = 39.849996439700945
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -39227,6 +39532,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -39266,8 +39572,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 248.00586694716202
-				tempExt = 248.40570642477547
+				temp = 39.850211996033551
+				tempExt = 39.850017033131635
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -39382,6 +39688,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -39421,8 +39728,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 248.00714906070755
-				tempExt = 248.40612092989352
+				temp = 39.850211996033551
+				tempExt = 39.850017033131635
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -39537,6 +39844,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -39576,8 +39884,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 248.00623671999182
-				tempExt = 248.40582597170015
+				temp = 39.850211996033551
+				tempExt = 39.850017033143999
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -39692,6 +40000,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -39731,8 +40040,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 248.0057742353608
-				tempExt = 248.40567645120831
+				temp = 39.850211996033551
+				tempExt = 39.850017033131635
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -39847,6 +40156,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -39885,8 +40195,8 @@ GAME
 				attN = bottom, 14
 				mass = 0.5
 				shielded = False
-				temp = 249.20693315800375
-				tempExt = 250.24936054663198
+				temp = 39.850212093199751
+				tempExt = 39.850647689216849
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -39986,8 +40296,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.25
 				shielded = False
-				temp = 257.79839926318925
-				tempExt = 255.13670279783702
+				temp = 39.850224281363268
+				tempExt = 39.851218265193161
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -40115,7 +40425,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.0160969477
+					animState = 0.00878001098
 					stagingEnabled = True
 					EVENTS
 					{
@@ -40185,8 +40495,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 248.17536642177333
-				tempExt = 248.54992824762553
+				temp = 39.850211996663404
+				tempExt = 39.850098841648609
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -40292,6 +40602,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -40331,8 +40642,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 248.17724441853954
-				tempExt = 248.57063421470218
+				temp = 39.850211996663404
+				tempExt = 39.850098841640751
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -40434,6 +40745,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -40473,8 +40785,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 248.17518038945627
-				tempExt = 248.54681630694051
+				temp = 39.850211996663404
+				tempExt = 39.850098841642406
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -40576,6 +40888,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -40615,8 +40928,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.0500000007
 				shielded = False
-				temp = 248.17485258192454
-				tempExt = 248.53748386257865
+				temp = 39.850211996663404
+				tempExt = 39.850098841651857
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -40718,6 +41031,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -40757,8 +41071,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 248.40064615673305
-				tempExt = 248.61790065402209
+				temp = 39.850211999509654
+				tempExt = 39.85012770457687
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -40799,6 +41113,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -40813,7 +41128,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.783665926994288
+					amount = 99.352191198739277
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -40849,8 +41164,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 248.40019544256788
-				tempExt = 248.61775297556304
+				temp = 39.850211999509654
+				tempExt = 39.850102907373845
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -40891,6 +41206,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -40905,7 +41221,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.783665926994288
+					amount = 99.352191198739277
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -40941,8 +41257,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 248.40692173379745
-				tempExt = 248.61995687412076
+				temp = 39.850211999509654
+				tempExt = 39.850102907492499
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -40983,6 +41299,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -40997,7 +41314,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.783665926994288
+					amount = 99.352191198739277
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -41033,8 +41350,8 @@ GAME
 				srfN = srfAttach, 4,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 248.39971849874178
-				tempExt = 248.61759670284096
+				temp = 39.850211999509654
+				tempExt = 39.850102907555161
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -41075,6 +41392,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -41089,7 +41407,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 99.783665926994288
+					amount = 99.352191198739277
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -41122,8 +41440,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 247.81165530305159
-				tempExt = 247.63295007505616
+				temp = 39.850211995517022
+				tempExt = 39.849474528504288
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -41210,6 +41528,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -41246,8 +41565,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 0.00499999989
 				shielded = False
-				temp = 247.74837493371302
-				tempExt = 247.58504983262571
+				temp = 39.850211995517121
+				tempExt = 39.849422619667351
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -41334,6 +41653,7 @@ GAME
 					isEnabled = True
 					beingAttached = False
 					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
 					stagingEnabled = True
 					EVENTS
 					{
@@ -41384,9 +41704,9 @@ GAME
 			}
 			CTRLSTATE
 			{
-				pitch = 2.26692155E-05
-				yaw = 4.76926516E-06
-				roll = 5.05485559E-07
+				pitch = -1.01386822E-05
+				yaw = 0.000239734611
+				roll = -7.47009494E-08
 				trimPitch = 0
 				trimYaw = 0
 				trimRoll = 0
@@ -41416,6 +41736,7 @@ GAME
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
 			vesselSpawning = True
 			launchedFrom = 
 			landedAt = 
@@ -42043,7 +42364,7 @@ GAME
 			gExperienced = 0
 			outDueToG = False
 			ToD = 0
-			idx = 0
+			idx = -1
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
@@ -42117,10 +42438,10 @@ GAME
 						PART
 						{
 							name = evaChute
-							cid = 4294902968
+							cid = 4294901932
 							uid = 0
 							mid = 0
-							persistentId = 1850523370
+							persistentId = 2495489743
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -42180,6 +42501,7 @@ GAME
 								isEnabled = True
 								beingAttached = False
 								beingSettled = False
+								reinitResourcesOnStoreInVessel = False
 								stagingEnabled = True
 								EVENTS
 								{
@@ -42203,10 +42525,10 @@ GAME
 						PART
 						{
 							name = evaJetpack
-							cid = 4294903030
+							cid = 4294901994
 							uid = 0
 							mid = 0
-							persistentId = 1948053386
+							persistentId = 3638630576
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -42266,6 +42588,7 @@ GAME
 								isEnabled = True
 								beingAttached = False
 								beingSettled = False
+								reinitResourcesOnStoreInVessel = True
 								stagingEnabled = True
 								EVENTS
 								{
@@ -42297,7 +42620,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 19
+				flight = 21
 				0 = Flight,Kerbin
 				0 = Land,Kerbin
 				0 = Recover
@@ -42375,10 +42698,20 @@ GAME
 				18 = ExitVessel,Kerbin
 				18 = BoardVessel,Kerbin
 				18 = Recover
+				19 = Land,Kerbin
+				19 = ExitVessel,Kerbin
+				19 = BoardVessel,Kerbin
+				19 = Flight,Kerbin
+				19 = Recover
+				20 = Land,Kerbin
+				20 = ExitVessel,Kerbin
+				20 = BoardVessel,Kerbin
+				20 = Flight,Kerbin
+				20 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 19
+				flight = 21
 			}
 		}
 		KERBAL
@@ -43462,7 +43795,7 @@ GAME
 			gExperienced = 0
 			outDueToG = False
 			ToD = 95917.340604244964
-			idx = 0
+			idx = -1
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
@@ -43536,10 +43869,10 @@ GAME
 						PART
 						{
 							name = evaChute
-							cid = 4294902968
+							cid = 4294901932
 							uid = 0
 							mid = 0
-							persistentId = 812385420
+							persistentId = 2314577405
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -43599,6 +43932,7 @@ GAME
 								isEnabled = True
 								beingAttached = False
 								beingSettled = False
+								reinitResourcesOnStoreInVessel = False
 								stagingEnabled = True
 								EVENTS
 								{
@@ -43622,10 +43956,10 @@ GAME
 						PART
 						{
 							name = evaJetpack
-							cid = 4294903030
+							cid = 4294901994
 							uid = 0
 							mid = 0
-							persistentId = 2710729964
+							persistentId = 324561472
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -43685,6 +44019,7 @@ GAME
 								isEnabled = True
 								beingAttached = False
 								beingSettled = False
+								reinitResourcesOnStoreInVessel = True
 								stagingEnabled = True
 								EVENTS
 								{
@@ -43716,7 +44051,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 7
+				flight = 9
 				0 = Flight,Kerbin
 				0 = Suborbit,Kerbin
 				0 = Orbit,Kerbin
@@ -43745,10 +44080,19 @@ GAME
 				6 = ExitVessel,Kerbin
 				6 = BoardVessel,Kerbin
 				6 = Recover
+				7 = Land,Kerbin
+				7 = ExitVessel,Kerbin
+				7 = BoardVessel,Kerbin
+				7 = Flight,Kerbin
+				7 = Recover
+				8 = Land,Kerbin
+				8 = ExitVessel,Kerbin
+				8 = Flight,Kerbin
+				8 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 7
+				flight = 9
 			}
 		}
 		KERBAL
@@ -43804,7 +44148,7 @@ GAME
 			gExperienced = 0
 			outDueToG = False
 			ToD = 164146.55813354184
-			idx = 0
+			idx = -1
 			extraXP = 0
 			hasHelmetOn = True
 			hasNeckRingOn = True
@@ -43878,10 +44222,10 @@ GAME
 						PART
 						{
 							name = evaChute
-							cid = 4294902968
+							cid = 4294901932
 							uid = 0
 							mid = 0
-							persistentId = 1262407122
+							persistentId = 563258926
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -43941,6 +44285,7 @@ GAME
 								isEnabled = True
 								beingAttached = False
 								beingSettled = False
+								reinitResourcesOnStoreInVessel = False
 								stagingEnabled = True
 								EVENTS
 								{
@@ -43964,10 +44309,10 @@ GAME
 						PART
 						{
 							name = evaJetpack
-							cid = 4294903030
+							cid = 4294901994
 							uid = 0
 							mid = 0
-							persistentId = 3061522859
+							persistentId = 1028664578
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -44027,6 +44372,7 @@ GAME
 								isEnabled = True
 								beingAttached = False
 								beingSettled = False
+								reinitResourcesOnStoreInVessel = True
 								stagingEnabled = True
 								EVENTS
 								{
@@ -44058,7 +44404,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 7
+				flight = 9
 				0 = Flight,Kerbin
 				0 = Land,Kerbin
 				0 = ExitVessel,Kerbin
@@ -44088,10 +44434,18 @@ GAME
 				6 = ExitVessel,Kerbin
 				6 = BoardVessel,Kerbin
 				6 = Recover
+				7 = Land,Kerbin
+				7 = ExitVessel,Kerbin
+				7 = BoardVessel,Kerbin
+				7 = Recover
+				8 = Land,Kerbin
+				8 = ExitVessel,Kerbin
+				8 = Flight,Kerbin
+				8 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 7
+				flight = 9
 			}
 		}
 		KERBAL
@@ -44176,7 +44530,7 @@ GAME
 						PART
 						{
 							name = evaChute
-							cid = 4294902968
+							cid = 4294901932
 							uid = 0
 							mid = 0
 							persistentId = 0
@@ -44239,6 +44593,7 @@ GAME
 								isEnabled = True
 								beingAttached = False
 								beingSettled = False
+								reinitResourcesOnStoreInVessel = False
 								stagingEnabled = True
 								EVENTS
 								{
@@ -44262,7 +44617,7 @@ GAME
 						PART
 						{
 							name = evaJetpack
-							cid = 4294903030
+							cid = 4294901994
 							uid = 0
 							mid = 0
 							persistentId = 0
@@ -44325,6 +44680,7 @@ GAME
 								isEnabled = True
 								beingAttached = False
 								beingSettled = False
+								reinitResourcesOnStoreInVessel = True
 								stagingEnabled = True
 								EVENTS
 								{
@@ -44472,10 +44828,10 @@ GAME
 						PART
 						{
 							name = evaChute
-							cid = 4294902968
+							cid = 4294901932
 							uid = 0
 							mid = 0
-							persistentId = 624414120
+							persistentId = 1548129637
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -44535,6 +44891,7 @@ GAME
 								isEnabled = True
 								beingAttached = False
 								beingSettled = False
+								reinitResourcesOnStoreInVessel = False
 								stagingEnabled = True
 								EVENTS
 								{
@@ -44558,10 +44915,10 @@ GAME
 						PART
 						{
 							name = evaJetpack
-							cid = 4294903030
+							cid = 4294901994
 							uid = 0
 							mid = 0
-							persistentId = 47587111
+							persistentId = 3138272365
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -44621,6 +44978,7 @@ GAME
 								isEnabled = True
 								beingAttached = False
 								beingSettled = False
+								reinitResourcesOnStoreInVessel = True
 								stagingEnabled = True
 								EVENTS
 								{
@@ -44652,7 +45010,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 7
+				flight = 9
 				0 = ExitVessel,Kerbin
 				0 = Orbit,Kerbin
 				0 = BoardVessel,Kerbin
@@ -44676,10 +45034,16 @@ GAME
 				5 = BoardVessel,Kerbin
 				5 = Recover
 				6 = Recover
+				7 = Land,Kerbin
+				7 = ExitVessel,Kerbin
+				7 = BoardVessel,Kerbin
+				7 = Recover
+				8 = Land,Kerbin
+				8 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 7
+				flight = 9
 			}
 		}
 		KERBAL
@@ -44792,6 +45156,9 @@ GAME
 			lightB = 0
 			completedFirstEVA = False
 			hero = False
+			INVENTORY
+			{
+			}
 			CAREER_LOG
 			{
 				flight = 0
@@ -44836,6 +45203,9 @@ GAME
 			lightB = 0
 			completedFirstEVA = False
 			hero = False
+			INVENTORY
+			{
+			}
 			CAREER_LOG
 			{
 				flight = 0
@@ -45162,6 +45532,9 @@ GAME
 			lightB = 0
 			completedFirstEVA = False
 			hero = False
+			INVENTORY
+			{
+			}
 			CAREER_LOG
 			{
 				flight = 0
@@ -45206,6 +45579,9 @@ GAME
 			lightB = 0
 			completedFirstEVA = False
 			hero = False
+			INVENTORY
+			{
+			}
 			CAREER_LOG
 			{
 				flight = 0
@@ -45335,6 +45711,9 @@ GAME
 			lightB = 0
 			completedFirstEVA = False
 			hero = False
+			INVENTORY
+			{
+			}
 			CAREER_LOG
 			{
 				flight = 0
@@ -45553,6 +45932,9 @@ GAME
 			lightB = 0
 			completedFirstEVA = False
 			hero = False
+			INVENTORY
+			{
+			}
 			CAREER_LOG
 			{
 				flight = 0
