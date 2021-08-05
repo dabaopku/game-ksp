@@ -8,10 +8,10 @@ GAME
 	Mode = CAREER
 	Status = 1
 	Seed = 1012858149
-	scene = 5
+	scene = 7
 	editor = None
 	flag = Squad/Flags/circles
-	launchID = 174
+	launchID = 176
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
 	modded = True
@@ -199,7 +199,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 6432454.4591640923
+		funds = 6508862.4046326131
 	}
 	SCENARIO
 	{
@@ -485,7 +485,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 57.4306107
+		sci = 65.0566559
 		Tech
 		{
 			id = start
@@ -1347,7 +1347,7 @@ GAME
 		Science
 		{
 			id = recovery@KerbinOrbited
-			title = 回收从Kerbin轨道返回的航天器。
+			title = 回收到从Kerbin轨道返回的载具
 			dsc = 1
 			scv = 0
 			sbv = 10
@@ -4786,7 +4786,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 899.503906
+		rep = 899.896484
 	}
 	SCENARIO
 	{
@@ -5135,13 +5135,13 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 447392.38620823546
+		update = 447579.6862084099
 		version = 1.12.2
 		WEIGHTS
 		{
 			SentinelContract = 30
 			CometDetectionContract = 30
-			VesselRepairContract = 42
+			VesselRepairContract = 54
 			RoverConstructionContract = 42
 			OrbitalConstructionContract = 54
 			RecoverAsset = 90
@@ -5239,6 +5239,51 @@ GAME
 					failOn = All
 					winOn = All
 					kerbal = Pande Kerman
+				}
+			}
+			CONTRACT
+			{
+				guid = f1ea5296-fadb-4d73-aa8e-abd1253fa2ef
+				type = VesselRepairContract
+				prestige = 0
+				seed = 1707942897
+				state = Active
+				viewed = Read
+				agent = 火箭联合公司
+				agentName = Rokea Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 117561.678133786,16693758.2949976,23566.3984809876,44990.3950569155,32444.997625351,0,1.960241,1,565036.184342098,447491.386208328,17141249.6812059,0
+				bodyName = Kerbin
+				roverCraftDef = /Users/dabao/Library/Application Support/Steam/steamapps/common/Kerbal Space Program/KSP.app/Contents/../../GameData/Squad/Contracts/PreBuiltCraft/RepairContract/Repair Contract Sat 7.craft
+				vesselName = 受损KerbinCM-R卫星215SR
+				craftStartLat = 0
+				craftStartLon = 0
+				orbitEccentricity = 0.05000000074505806
+				orbitAltitudeFactor = 0.33000001311302185
+				orbitInclinationFactor = 0.25
+				repairVslId = 131492718
+				repairPartName = longAntenna
+				PARAM
+				{
+					name = CrewTraitParameter
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					targetTrait = Engineer
+					targetCount = 1
+					vesselDescription = 可用的航天器
+				}
+				PARAM
+				{
+					name = RepairPartParameter
+					state = Incomplete
+					values = 0,0,0,0,0
+					bodyName = Kerbin
+					partName = longAntenna
+					partPersistentId = 986232824
+					vesselPersistentId = 131492718
+					vesselName = 受损KerbinCM-R卫星215SR
 				}
 			}
 			CONTRACT
@@ -6174,46 +6219,6 @@ GAME
 					targetType = FLYBYRETURN
 				}
 			}
-			CONTRACT
-			{
-				guid = 0e3f41d6-e0c7-4027-bfec-497e9d5dc6b0
-				type = OrbitalConstructionContract
-				prestige = 0
-				seed = 341463961
-				state = Offered
-				viewed = Unseen
-				agent = 探测动力有限公司
-				agentName = Probodobodyne Inc
-				deadlineType = Floating
-				expiryType = Floating
-				values = 129600,18403200,32000,100000,32000,0,2.16,1.08,576982.366208226,0,0,0
-				bodyName = Kerbin
-				constructionCraftDef = /Users/dabao/Library/Application Support/Steam/steamapps/common/Kerbal Space Program/KSP.app/Contents/../../GameData/Squad/Contracts/PreBuiltCraft/OrbitalConstructionContract/Unfinished Contract Sat 10.craft
-				constructionPartName = radialRCSTank
-				orbitEccentricity = 0.05000000074505806
-				orbitAltitudeFactor = 0.33000001311302185
-				orbitInclinationFactor = 0.25
-				vesselName = 老化KerbinSecS卫星ZNGKM
-				PARAM
-				{
-					name = CrewTraitParameter
-					state = Incomplete
-					values = 0,0,0,0,0
-					targetTrait = Engineer
-					targetCount = 1
-					vesselDescription = 可用的航天器
-				}
-				PARAM
-				{
-					name = ConstructionParameter
-					state = Incomplete
-					values = 0,0,0,0,0
-					bodyName = Kerbin
-					partName = radialRCSTank
-					vesselName = 老化KerbinSecS卫星ZNGKM
-					vesselPersistentId = 0
-				}
-			}
 			CONTRACT_FINISHED
 			{
 				guid = 056d9c26-0d72-407a-9de1-2d9b2f6854f9
@@ -6264,132 +6269,6 @@ GAME
 					values = 0,0,0,0,0
 					targetBody = 1
 					targetType = FIRSTLAUNCH
-				}
-			}
-			CONTRACT_FINISHED
-			{
-				guid = 4ce9cf75-4368-45ce-aafa-dcff98fb4bca
-				type = TourismContract
-				prestige = 0
-				seed = -811405775
-				state = Completed
-				viewed = Read
-				agent = 坎巴拉动力
-				agentName = Kerbodyne
-				deadlineType = Floating
-				expiryType = Floating
-				values = 108000,92016000,0,0,0,0,20,10,331501.950969893,223644.450969818,92239644.4509698,0
-				preposition = 到Mun附近
-				homeDestinations = False
-				isGeeAdventure = False
-				tourists = Ailun Kerman
-				PARAM
-				{
-					name = KerbalTourParameter
-					state = Complete
-					disableOnStateChange = False
-					allowPartialFailure = True
-					values = 0,0,0,0,0
-					kerbalName = Ailun Kerman
-					kerbalGender = Male
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						enabled = False
-						state = Complete
-						values = 0,0,0,0,0
-						targetBody = 2
-						targetType = Flyby
-						kerbalName = Ailun Kerman
-					}
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						enabled = False
-						state = Complete
-						values = 0,0,0,0,0
-						targetBody = 2
-						targetType = Orbit
-						kerbalName = Ailun Kerman
-					}
-				}
-			}
-			CONTRACT_FINISHED
-			{
-				guid = 43cd25ed-14c9-4465-a4b4-e17fa47c1fa8
-				type = TourismContract
-				prestige = 1
-				seed = 436849002
-				state = Completed
-				viewed = Read
-				agent = 火箭联合公司
-				agentName = Rokea Inc
-				deadlineType = Floating
-				expiryType = Floating
-				values = 35714.2847776413,76071426.576376,0,0,0,0,24.01372,12,258061.181409654,222355.276632009,76293781.853008,0
-				preposition = 到Kerbin上
-				homeDestinations = False
-				isGeeAdventure = False
-				tourists = Liesai Kerman|Jini Kerman
-				PARAM
-				{
-					name = KerbalTourParameter
-					state = Complete
-					disableOnStateChange = False
-					allowPartialFailure = True
-					values = 0,0,0,0,0
-					kerbalName = Liesai Kerman
-					kerbalGender = Female
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						enabled = False
-						state = Complete
-						values = 0,0,0,0,0
-						targetBody = 2
-						targetType = Flyby
-						kerbalName = Liesai Kerman
-					}
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						enabled = False
-						state = Complete
-						values = 0,0,0,0,0
-						targetBody = 2
-						targetType = Orbit
-						kerbalName = Liesai Kerman
-					}
-				}
-				PARAM
-				{
-					name = KerbalTourParameter
-					state = Complete
-					disableOnStateChange = False
-					allowPartialFailure = True
-					values = 0,0,0,0,0
-					kerbalName = Jini Kerman
-					kerbalGender = Female
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						enabled = False
-						state = Complete
-						values = 0,0,0,0,0
-						targetBody = 1
-						targetType = Orbit
-						kerbalName = Jini Kerman
-					}
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						enabled = False
-						state = Complete
-						values = 0,0,0,0,0
-						targetBody = 2
-						targetType = Flyby
-						kerbalName = Jini Kerman
-					}
 				}
 			}
 			CONTRACT_FINISHED
@@ -6566,228 +6445,53 @@ GAME
 			}
 			CONTRACT_FINISHED
 			{
-				guid = e146627b-f7c8-4435-b6ac-84f09095c967
-				type = RecoverAsset
-				prestige = 2
-				seed = 2073810498
-				state = Completed
-				viewed = Read
-				agent = Sean罐头厂
-				agentName = Sean's Cannery
-				deadlineType = Floating
-				expiryType = Floating
-				values = 118899.080371857,84418347.0640183,76518.0023431778,201036.331988354,80729.9983263016,0,12.17391,14,341255.117003865,222361.376632006,84640708.4406503,433447.719876078
-				targetBody = 2
-				kerbalName = Landa Kerman
-				partName = cupola
-				partID = 1479562632
-				recoveryLocation = 2
-				recoveryType = 1
-				PARAM
-				{
-					name = AcquireCrew
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					title = 拯救Landa Kerman
-					winOn = 0
-				}
-				PARAM
-				{
-					name = RecoverKerbal
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					title = 在Kerbin回收Landa Kerman
-					failOn = All
-					winOn = All
-				}
-			}
-			CONTRACT_FINISHED
-			{
-				guid = 976eb84a-2777-4a8f-90cc-6a480e4a94de
-				type = StationContract
-				prestige = 2
-				seed = 183316070
-				state = Completed
-				viewed = Read
-				agent = 坎灵顿模型火箭和纸制品有限公司
-				agentName = Kerlington Model Rockets and Paper Products Inc
-				deadlineType = Floating
-				expiryType = Floating
-				values = 129600,128822400,133584,346482,133584,28,39,20,563047.719876078,433470.079876099,129255870.079876,433822.319876427
-				targetBody = 2
-				capacity = 14
-				contextual = False
-				PARAM
-				{
-					name = VesselSystemsParameter
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					typeString = 空间站
-					mannedStatus = 2
-					requireNew = True
-					checkModuleTypes = Antenna|Generator|Dock
-					checkModuleDescriptions = 拥有一根天线|拥有一个对接口|能够发电
-					launchID = 171
-				}
-				PARAM
-				{
-					name = CrewCapacityParameter
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					targetCapacity = 14
-				}
-				PARAM
-				{
-					name = PartRequestParameter
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					article = a
-					partDescription = 移动处理实验室MPL-LG-2
-					vesselDescription = 空间站
-					partNames = Large_Crewed_Lab
-					moduleNames = ModuleScienceLab
-				}
-				PARAM
-				{
-					name = PartRequestParameter
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					article = a
-					partDescription = 观景穹顶舱
-					vesselDescription = 空间站
-					partNames = cupola
-				}
-				PARAM
-				{
-					name = ResourcePossessionParameter
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					goalResource = 1500
-					resourceName = MonoPropellant
-					resourceTitle = 单组元推进剂
-					vesselName = 空间站
-				}
-				PARAM
-				{
-					name = StabilityParameter
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					holdSeconds = 10
-				}
-				PARAM
-				{
-					name = LocationAndSituationParameter
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					targetBody = 2
-					targetSituation = ORBITING
-					noun = 空间站
-					finalObjective = False
-				}
-			}
-			CONTRACT_FINISHED
-			{
-				guid = 56691655-efc5-4844-b3fc-4b9fdd596b68
-				type = RecoverAsset
+				guid = 46753bf9-0114-4ed8-8c8f-e2a18850c40b
+				type = PartTest
 				prestige = 0
-				seed = 183316063
+				seed = 2090423735
 				state = Completed
 				viewed = Read
-				agent = 泽通电子
-				agentName = Zaltonic Electronics
+				agent = 弗拉伊德动力研究实验室
+				agentName = FLOOYD Dynamics Research Labs
 				deadlineType = Floating
 				expiryType = Floating
-				values = 21600,46008000,23633.9997768402,56694.3268900109,24815.6986387253,0,8.082441,8.571429,455047.719876078,433470.079876099,46441470.0798761,442937.476445599
-				targetBody = 1
-				kerbalName = Zhoubai Kerman
-				partName = landerCabinSmall
-				partID = 1194560748
-				recoveryLocation = 1
-				recoveryType = 1
+				values = 43200,9201600,1800,4724.99978542328,1889.99991416931,1,0.952381,1,490612.506208254,447413.726208255,9649013.72620825,0
+				part = radialLiquidEngine1-2
+				haul = False
+				dest = 1
+				sit = PRELAUNCH
+				exp = False
 				PARAM
 				{
-					name = AcquireCrew
+					name = PartTest
 					enabled = False
 					state = Complete
 					values = 0,0,0,0,0
-					title = 拯救Zhoubai Kerman
-					winOn = 0
-				}
-				PARAM
-				{
-					name = RecoverKerbal
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					title = 在Kerbin回收Zhoubai Kerman
-					failOn = All
-					winOn = All
-				}
-			}
-			CONTRACT_FINISHED
-			{
-				guid = e3c49ea6-c48d-4836-9201-e1a889d52ac3
-				type = TourismContract
-				prestige = 0
-				seed = 10242483
-				state = Completed
-				viewed = Read
-				agent = 极限火箭集团
-				agentName = Rockomax Conglomerate
-				deadlineType = Floating
-				expiryType = Floating
-				values = 38631.7921490736,41142858.6387633,0,0,0,0,20.48267,10,481569.268594672,442949.136445609,41585807.775209,0
-				preposition = 到Kerbin上
-				homeDestinations = True
-				isGeeAdventure = False
-				tourists = Mindai Kerman|Pingkang Kerman
-				PARAM
-				{
-					name = KerbalTourParameter
-					state = Complete
-					disableOnStateChange = False
-					allowPartialFailure = True
-					values = 0,0,0,0,0
-					kerbalName = Mindai Kerman
-					kerbalGender = Female
+					part = radialLiquidEngine1-2
+					body = Kerbin
+					situation = PRELAUNCH
+					uniqueID = 0.36003492323683361
+					haul = False
+					repeatability = ALWAYS
+					notes = 如需进行测试，确认所有测试条件就绪后，在分级队列中启动该部件。
+					tested = 4146726024
 					PARAM
 					{
-						name = KerbalDestinationParameter
-						enabled = False
+						name = ReachDestination
 						state = Complete
+						disableOnStateChange = False
 						values = 0,0,0,0,0
-						targetBody = 1
-						targetType = Orbit
-						kerbalName = Mindai Kerman
+						dest = 1
+						title = 
 					}
-				}
-				PARAM
-				{
-					name = KerbalTourParameter
-					state = Complete
-					disableOnStateChange = False
-					allowPartialFailure = True
-					values = 0,0,0,0,0
-					kerbalName = Pingkang Kerman
-					kerbalGender = Male
 					PARAM
 					{
-						name = KerbalDestinationParameter
-						enabled = False
+						name = ReachSituation
 						state = Complete
+						disableOnStateChange = False
 						values = 0,0,0,0,0
-						targetBody = 1
-						targetType = Suborbit
-						kerbalName = Pingkang Kerman
+						sit = PRELAUNCH
+						title = 
 					}
 				}
 			}
@@ -6830,8 +6534,8 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.12.2
-		UT = 447398.58620824123
-		activeVessel = 0
+		UT = 447584.92620841478
+		activeVessel = 31
 		mapViewFiltering = 11263
 		commNetUIModeTracking = None
 		commNetUIModeFlight = Path
@@ -7862,11 +7566,11 @@ GAME
 			{
 				SMA = NaN
 				ECC = 1
-				INC = 162.53892021899011
-				LPE = 90.000000000000014
-				LAN = 274.70934371836552
+				INC = 162.53892021899014
+				LPE = 90
+				LAN = 277.17879242047331
 				MNA = 0
-				EPH = 447381.80620822561
+				EPH = 447529.62620836328
 				REF = 1
 			}
 			PART
@@ -20710,18 +20414,18 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 175782.96844768
+			met = 177357.92795029609
 			lct = 270044.63825794886
-			lastUT = 445827.60670562886
-			distanceTraveled = 5323685.0833131056
+			lastUT = 447402.56620824494
+			distanceTraveled = 5323843.4001945024
 			root = 0
-			lat = -0.74193075487123483
-			lon = 60.528212585887871
-			alt = 72934.7116962031
-			hgt = 72934.7109
+			lat = 0.53190434372706508
+			lon = -173.4829264073729
+			alt = 730659.30445741396
+			hgt = 730659.313
 			nrm = -0.898628712,7.74627551E-07,0.43871069
-			rot = 0.00548896845,0.728045225,0.00415686378,0.685494661
-			CoM = 0.00330934301,-4.15617037,-0.00330293179
+			rot = 0.0054890532,0.728059173,0.00415675156,0.68547976
+			CoM = 0.00413834304,-4.15166759,-0.00429432094
 			stg = 1
 			prst = False
 			ref = 1054751469
@@ -20734,8 +20438,8 @@ GAME
 			OverrideAxisControl = 0,0,0,0
 			OverrideGroupNames = ,,,
 			altDispState = ASL
-			cPch = 0.4900969
-			cHdg = -0.2435584
+			cPch = 0.2
+			cHdg = 0.3
 			cMod = 0
 			ORBIT
 			{
@@ -20774,8 +20478,8 @@ GAME
 				attN = top, 1
 				mass = 0.751000047
 				shielded = False
-				temp = 374.17129217946496
-				tempExt = 423.12847717307352
+				temp = 113.4038355261637
+				tempExt = 113.4038219451691
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21088,7 +20792,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 26.57230936437773
+					amount = 26.572232339432613
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -21139,8 +20843,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 355.68110188862175
-				tempExt = 396.22044296146834
+				temp = 113.40383539324687
+				tempExt = 113.40234226863372
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21294,8 +20998,8 @@ GAME
 				attN = bottom, 3
 				mass = 0.100000001
 				shielded = False
-				temp = 388.75632739200159
-				tempExt = 404.68006197464706
+				temp = 113.40383566230268
+				tempExt = 113.40489778434026
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21410,8 +21114,8 @@ GAME
 				attN = bottom, 16
 				mass = 1
 				shielded = False
-				temp = 399.509032512045
-				tempExt = 403.28428176515513
+				temp = 113.40383552616386
+				tempExt = 113.40366592918936
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21625,8 +21329,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 400.19312608471012
-				tempExt = 402.25285574022956
+				temp = 113.40383552616386
+				tempExt = 113.40334675727151
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21781,8 +21485,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 400.19411327712942
-				tempExt = 402.25318490364617
+				temp = 113.40383552616386
+				tempExt = 113.40334675727151
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21937,8 +21641,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 400.19312237894309
-				tempExt = 402.25285450460143
+				temp = 113.40383552616386
+				tempExt = 113.40425680069846
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22093,8 +21797,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.100000001
 				shielded = False
-				temp = 400.19313546063557
-				tempExt = 402.25285886648095
+				temp = 113.40383552616386
+				tempExt = 113.40334675727151
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22249,8 +21953,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 401.50786202254864
-				tempExt = 404.07546110863922
+				temp = 113.40383552616386
+				tempExt = 113.40355552278689
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22306,7 +22010,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 53.144618728755461
+					amount = 53.144464678865226
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -22342,8 +22046,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 401.5078620223548
-				tempExt = 404.07546110797017
+				temp = 113.40383552616386
+				tempExt = 113.40355552278689
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22399,7 +22103,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 53.144618728755461
+					amount = 53.144464678865226
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -22435,8 +22139,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 401.50786202235759
-				tempExt = 404.07546110797961
+				temp = 113.40383552616386
+				tempExt = 113.40402573781871
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22492,7 +22196,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 53.144618728755461
+					amount = 53.144464678865226
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -22528,8 +22232,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.00499999989
 				shielded = False
-				temp = 401.5078620223556
-				tempExt = 404.07546110797233
+				temp = 113.40383552616386
+				tempExt = 113.40355552278689
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22585,7 +22289,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 53.144618728755461
+					amount = 53.144464678865226
 					maxAmount = 100
 					flowState = True
 					isTweakable = True
@@ -22621,8 +22325,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 379.38835939723208
-				tempExt = 395.67775313366661
+				temp = 113.40383552616386
+				tempExt = 113.40334709892616
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22777,8 +22481,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 379.38828701438581
-				tempExt = 395.6777299814562
+				temp = 113.40383552616386
+				tempExt = 113.40334709892616
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -22933,8 +22637,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 379.38828948985901
-				tempExt = 395.67773077325569
+				temp = 113.40383552616386
+				tempExt = 113.40334709892616
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23089,8 +22793,8 @@ GAME
 				srfN = srfAttach, 3,CylCOL
 				mass = 0.075000003
 				shielded = False
-				temp = 379.38828552391567
-				tempExt = 395.67772950471823
+				temp = 113.40383552616386
+				tempExt = 113.40334709892616
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23244,8 +22948,8 @@ GAME
 				attN = bottom, 21
 				mass = 0.200000003
 				shielded = False
-				temp = 409.48250327873029
-				tempExt = 410.26706570869095
+				temp = 113.40383552616386
+				tempExt = 113.40379474638969
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23402,8 +23106,8 @@ GAME
 				srfN = srfAttach, 16,node_collider
 				mass = 0.0500000007
 				shielded = False
-				temp = 418.89005041663182
-				tempExt = 415.59996783257031
+				temp = 113.40383552616386
+				tempExt = 113.40355682760482
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23560,8 +23264,8 @@ GAME
 				srfN = srfAttach, 16,node_collider
 				mass = 0.0500000007
 				shielded = False
-				temp = 418.90511942648664
-				tempExt = 415.57929992379331
+				temp = 113.40383552616386
+				tempExt = 113.40355682750119
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23714,8 +23418,8 @@ GAME
 				srfN = srfAttach, 16,node_collider
 				mass = 0.0500000007
 				shielded = False
-				temp = 418.90131504395515
-				tempExt = 415.57806385002493
+				temp = 113.40383552616386
+				tempExt = 113.40355682760482
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -23868,8 +23572,8 @@ GAME
 				srfN = srfAttach, 16,node_collider
 				mass = 0.0500000007
 				shielded = False
-				temp = 418.89327994912247
-				tempExt = 415.57545677960911
+				temp = 113.40383552616386
+				tempExt = 113.40392301536608
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24021,8 +23725,8 @@ GAME
 				attN = bottom, 22
 				mass = 0.5
 				shielded = False
-				temp = 398.64891599004756
-				tempExt = 413.41798200858949
+				temp = 113.40383552616386
+				tempExt = 113.40403957117728
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24122,8 +23826,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.25
 				shielded = False
-				temp = 464.73492372254873
-				tempExt = 443.96249159975031
+				temp = 113.40383552616386
+				tempExt = 113.40407499669585
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24337,8 +24041,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0500000007
 				shielded = False
-				temp = 392.63273749966464
-				tempExt = 400.56094656689072
+				temp = 113.40383552616386
+				tempExt = 113.40355552364147
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -24484,8 +24188,8 @@ GAME
 				srfN = srfAttach, 0,collider
 				mass = 9.99999975E-05
 				shielded = False
-				temp = 534.79492958574644
-				tempExt = 533.3675595611187
+				temp = 113.40383552616386
+				tempExt = 113.40336760345031
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25251,7 +24955,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 2.6572309364497135
+					amount = 2.6572232339552038
 					maxAmount = 5
 					flowState = True
 					isTweakable = True
@@ -25284,8 +24988,8 @@ GAME
 				srfN = srfAttach, 0,COL
 				mass = 0.00499999989
 				shielded = False
-				temp = 389.71774443734176
-				tempExt = 420.44716073066428
+				temp = 113.40383552616386
+				tempExt = 113.40367876873779
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25420,8 +25124,8 @@ GAME
 				srfN = srfAttach, 0,COL
 				mass = 0.00499999989
 				shielded = False
-				temp = 428.14686176284204
-				tempExt = 433.31639508353959
+				temp = 113.40383552616386
+				tempExt = 113.40351601606088
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -25640,13 +25344,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = NaN
-				ECC = 1
+				SMA = 101448.84766837706
+				ECC = 0.99999999999999967
 				INC = 85.571007807610272
-				LPE = 90
-				LAN = 264.78872772277236
-				MNA = 0
-				EPH = 447381.80620822561
+				LPE = 89.999999999999986
+				LAN = 265.17161392452522
+				MNA = 3.1415926346106868
+				EPH = 447529.62620836328
 				REF = 2
 			}
 			PART
@@ -71772,11 +71476,11 @@ GAME
 			{
 				SMA = NaN
 				ECC = 1
-				INC = 127.98378434371244
+				INC = 127.98378434371222
 				LPE = 90
-				LAN = 218.71428248964187
+				LAN = 219.0971686913951
 				MNA = 0
-				EPH = 447381.80620822561
+				EPH = 447529.62620836328
 				REF = 2
 			}
 			PART
@@ -97397,6 +97101,2409 @@ GAME
 				}
 			}
 		}
+		VESSEL
+		{
+			pid = cb80cc2917e84289a8615583aa22aab6
+			persistentId = 131492718
+			name = 受损KerbinCM-R卫星215SR
+			type = Probe
+			sit = ORBITING
+			landed = False
+			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
+			vesselSpawning = False
+			launchedFrom = 
+			landedAt = 
+			displaylandedAt = 
+			splashed = False
+			met = 93.540000087115914
+			lct = 447491.38620832766
+			lastUT = 447584.92620841478
+			distanceTraveled = 41783.604476714325
+			root = 0
+			lat = -11.03333531107447
+			lon = -146.11731947654317
+			alt = 4795028.7385979379
+			hgt = 4795028.5
+			nrm = 0.250479281,-0.188772812,0.949539363
+			rot = 0.00313128438,0.935944736,-0.00385912717,-0.352111936
+			CoM = 2.02067895E-07,0.0515987426,-3.69356712E-07
+			stg = 0
+			prst = False
+			ref = 2915514017
+			ctrl = True
+			PQSMin = 2
+			PQSMax = 9
+			GroupOverride = 0
+			OverrideDefault = False,False,False,False
+			OverrideActionControl = 0,0,0,0
+			OverrideAxisControl = 0,0,0,0
+			OverrideGroupNames = ,,,
+			altDispState = ASL
+			cPch = -0.171532
+			cHdg = 1.568004
+			cMod = 0
+			ORBIT
+			{
+				SMA = 5986837.3335722983
+				ECC = 0.18113196464218362
+				INC = 16.608284010538618
+				LPE = 251.83295570400318
+				LAN = 261.96126940992946
+				MNA = 0.84174004294052973
+				EPH = 447584.92620841478
+				REF = 1
+			}
+			PART
+			{
+				name = roverBody.v2
+				cid = 4294547270
+				uid = 2915514017
+				mid = 900506790
+				persistentId = 1805004719
+				launchID = 175
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = , -1
+				attN = right, -1
+				attN = left, -1
+				attN = back, -1
+				attN = front, -1
+				attN = bottom, 13
+				attN = top, -1
+				mass = 0.150000006
+				shielded = False
+				temp = 190.25489646297007
+				tempExt = 190.34827787768199
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = _default
+				modCost = 0
+				modMass = 0
+				moduleVariantName = White
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					hibernation = False
+					hibernateOnWarp = False
+					activeControlPointName = _default
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						MakeReferenceToggle
+						{
+							actionGroup = None
+						}
+						HibernateToggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSAS
+					isEnabled = True
+					standaloneToggle = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleKerbNetAccess
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OpenKerbNetAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FlagDecal
+					isEnabled = True
+					flagDisplayed = True
+					isMirrored = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModulePartVariants
+					isEnabled = True
+					useVariantMass = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 120
+					maxAmount = 120
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = LgRadialSolarPanel
+				cid = 4294546572
+				uid = 1437397695
+				mid = 900506790
+				persistentId = 1439537847
+				launchID = 175
+				parent = 0
+				position = 0,-0.033427238464355469,-0.068795874714851379
+				rotation = 1.00901045E-13,1,-3.47757066E-07,2.9014808E-07
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 2
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.0399999991
+				shielded = False
+				temp = 190.10544416616901
+				tempExt = 190.10218832359396
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = LgRadialSolarPanel
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 447529.62620836328
+					currentRotation = (0, 0, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = LgRadialSolarPanel
+				cid = 4294532304
+				uid = 4047860880
+				mid = 900506790
+				persistentId = 3201865884
+				launchID = 175
+				parent = 0
+				position = 6.0143263702627792E-09,-0.033427238464355469,0.068795874714851379
+				rotation = -3.47757066E-07,2.46436684E-07,-8.57001034E-14,-1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 1
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.0399999991
+				shielded = False
+				temp = 190.10544416616901
+				tempExt = 190.10218832359396
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = LgRadialSolarPanel
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 447529.62620836328
+					currentRotation = (0, 0, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4294545186
+				uid = 4169979081
+				mid = 900506790
+				persistentId = 867528041
+				launchID = 175
+				parent = 0
+				position = -0.50420868396759033,0.47802543640136719,3.0053183053269095E-08
+				rotation = -4.29640963E-08,-0.707107067,-4.29641283E-08,0.70710659
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 4
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.00499999989
+				shielded = False
+				temp = 190.20956675524593
+				tempExt = 190.25779936782314
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = solarPanels5
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 447529.62620836328
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4294544902
+				uid = 1795991188
+				mid = 900506790
+				persistentId = 2164434874
+				launchID = 175
+				parent = 0
+				position = 0.50420868396759033,0.47802543640136719,-7.4132508132151997E-08
+				rotation = -4.29641247E-08,0.70710665,4.29640998E-08,0.707107008
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 3
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.00499999989
+				shielded = False
+				temp = 190.20956675524593
+				tempExt = 190.25779936782314
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = solarPanels5
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 447529.62620836328
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4294544712
+				uid = 2615217013
+				mid = 900506790
+				persistentId = 4043895140
+				launchID = 175
+				parent = 0
+				position = -0.5042005181312561,0.0036821365356445313,3.0052696331495099E-08
+				rotation = -4.29640963E-08,-0.707107067,-4.29641283E-08,0.70710659
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 6
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.00499999989
+				shielded = False
+				temp = 190.20956675524593
+				tempExt = 190.25779936782314
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = solarPanels5
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 447529.62620836328
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4294544676
+				uid = 1337914857
+				mid = 900506790
+				persistentId = 472031489
+				launchID = 175
+				parent = 0
+				position = 0.5042005181312561,0.0036821365356445313,-7.4131307314928563E-08
+				rotation = -4.29641247E-08,0.70710665,4.29640998E-08,0.707107008
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 5
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.00499999989
+				shielded = False
+				temp = 190.20956675524593
+				tempExt = 190.25779936782314
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = solarPanels5
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 447529.62620836328
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4294544486
+				uid = 81660957
+				mid = 900506790
+				persistentId = 3173295895
+				launchID = 175
+				parent = 0
+				position = -0.50380235910415649,-0.47248554229736328,3.0028964204120712E-08
+				rotation = -4.29640963E-08,-0.707107067,-4.29641283E-08,0.70710659
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 8
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.00499999989
+				shielded = False
+				temp = 190.20956675524593
+				tempExt = 190.25779936782314
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = solarPanels5
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 447529.62620836328
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = solarPanels5
+				cid = 4294544450
+				uid = 1193501761
+				mid = 900506790
+				persistentId = 1915822192
+				launchID = 175
+				parent = 0
+				position = 0.50380235910415649,-0.47248554229736328,-7.4072765698929288E-08
+				rotation = -4.29641247E-08,0.70710665,4.29640998E-08,0.707107008
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 7
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.00499999989
+				shielded = False
+				temp = 190.20956675524593
+				tempExt = 190.25779936782314
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = solarPanels5
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableSolarPanel
+					isEnabled = True
+					efficiencyMult = 1
+					launchUT = 447529.62620836328
+					currentRotation = (0, -6.057208E-07, 0, 1)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ExtendAction
+						{
+							actionGroup = None
+							active = False
+						}
+						RetractAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = longAntenna
+				cid = 4294543984
+				uid = 568127295
+				mid = 900506790
+				persistentId = 986232824
+				launchID = 175
+				parent = 0
+				position = -0.44598090648651123,0.54832744598388672,-0.20145392417907715
+				rotation = 2.05165762E-07,0.70710659,-0.707107067,2.0516562E-07
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 0,collider.collider
+				attN = bottom, -1
+				mass = 0.00499999989
+				shielded = False
+				temp = 190.23093423824503
+				tempExt = 190.49492172676236
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = longAntenna
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableAntenna
+					isEnabled = True
+					currentRotation = (-0.707106829, 0, 0, 0.707106829)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = BROKEN
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+						}
+						ExtendAction
+						{
+							actionGroup = None
+						}
+						RetractAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = False
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = longAntenna
+				cid = 4294543502
+				uid = 869771190
+				mid = 900506790
+				persistentId = 815915985
+				launchID = 175
+				parent = 0
+				position = 0.50301051139831543,0.541656494140625,-0.18143582344055176
+				rotation = 0.500000179,0.499999851,-0.49999994,0.500000119
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 0,collider.collider
+				attN = bottom, -1
+				mass = 0.00499999989
+				shielded = False
+				temp = 190.24039465787709
+				tempExt = 190.47235925182258
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = longAntenna
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableAntenna
+					isEnabled = True
+					currentRotation = (-0.707106829, 0, 0, 0.707106829)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+						}
+						ExtendAction
+						{
+							actionGroup = None
+						}
+						RetractAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = longAntenna
+				cid = 4294543190
+				uid = 2368629018
+				mid = 900506790
+				persistentId = 1676144993
+				launchID = 175
+				parent = 0
+				position = 0.44500496983528137,0.53496360778808594,0.20145285129547119
+				rotation = 0.70710659,-2.06854665E-07,2.06854523E-07,0.707107067
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 0,collider.collider
+				attN = bottom, -1
+				mass = 0.00499999989
+				shielded = False
+				temp = 190.19504984556991
+				tempExt = 190.25563353310795
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = longAntenna
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableAntenna
+					isEnabled = True
+					currentRotation = (-0.707106829, 0, 0, 0.707106829)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+						}
+						ExtendAction
+						{
+							actionGroup = None
+						}
+						RetractAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = longAntenna
+				cid = 4294542868
+				uid = 54394607
+				mid = 900506790
+				persistentId = 4082563664
+				launchID = 175
+				parent = 0
+				position = -0.50301027297973633,0.52087783813476563,0.1642298698425293
+				rotation = 0.499999821,-0.500000179,0.500000119,0.499999881
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 0,collider.collider
+				attN = bottom, -1
+				mass = 0.00499999989
+				shielded = False
+				temp = 190.27316959299066
+				tempExt = 190.58987291578762
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = longAntenna
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 4
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployableAntenna
+					isEnabled = True
+					currentRotation = (-0.707106829, 0, 0, 0.707106829)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 0
+					deployState = EXTENDED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+						}
+						ExtendAction
+						{
+							actionGroup = None
+						}
+						RetractAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = SurveyScanner
+				cid = 4294541906
+				uid = 4186382142
+				mid = 900506790
+				persistentId = 4072766872
+				launchID = 175
+				parent = 0
+				position = 0,-0.74628543853759766,0
+				rotation = 0.707106829,0,-0.707106829,0
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = srfAttach, -1
+				attN = bottom, 0
+				mass = 0.200000003
+				shielded = False
+				temp = 190.32230001265131
+				tempExt = 190.71586778787827
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = SurveyScanner
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleOrbitalSurveyor
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleOrbitalScanner
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimationGroup
+					isEnabled = True
+					isDeployed = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployModuleAction
+						{
+							actionGroup = None
+						}
+						RetractModuleAction
+						{
+							actionGroup = None
+						}
+						ToggleModuleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = radialRCSTank
+				cid = 4294536432
+				uid = 3197657577
+				mid = 900506790
+				persistentId = 2124481445
+				launchID = 175
+				parent = 0
+				position = 0.30515024065971375,0.95573139190673828,-9.9828824318137777E-08
+				rotation = 0,0.70710659,-0.707106948,-4.18948716E-08
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 15
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.0199999996
+				shielded = False
+				temp = 190.11860083874114
+				tempExt = 190.14161557838059
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = radialRCSTank
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = MonoPropellant
+					amount = 20
+					maxAmount = 20
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = radialRCSTank
+				cid = 4294536400
+				uid = 3614169691
+				mid = 900506790
+				persistentId = 2615268631
+				launchID = 175
+				parent = 0
+				position = -0.30515024065971375,0.95573139190673828,1.2650590974772058E-07
+				rotation = -0.707106948,-7.28034806E-08,3.09086268E-08,-0.70710659
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 14
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.0199999996
+				shielded = False
+				temp = 190.13312099854005
+				tempExt = 190.31108671521386
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = radialRCSTank
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = MonoPropellant
+					amount = 20
+					maxAmount = 20
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = RCSBlock.v2
+				cid = 4294536100
+				uid = 1121427523
+				mid = 900506790
+				persistentId = 2603597578
+				launchID = 175
+				parent = 0
+				position = 0.57441133260726929,0.95038700103759766,0
+				rotation = 1.02704789E-07,1,2.5121481E-14,2.52881108E-07
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 17
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.0399999991
+				shielded = False
+				temp = 190.14683484492977
+				tempExt = 190.30448169322062
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = RCSBlock.v2
+				modCost = 0
+				modMass = 0
+				moduleVariantName = Angled
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModulePartVariants
+					isEnabled = True
+					useVariantMass = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleRCSFX
+					isEnabled = True
+					rcsEnabled = True
+					thrustPercentage = 100
+					currentShowToggles = False
+					enableYaw = True
+					enablePitch = True
+					enableRoll = True
+					enableX = True
+					enableY = True
+					enableZ = True
+					useThrottle = False
+					fullThrust = False
+					stagingEnabled = False
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FXModuleAnimateRCS
+					isEnabled = True
+					stagingEnabled = True
+					animStates = 0,0,0,0,0,0,0,0,0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = RCSBlock.v2
+				cid = 4294530924
+				uid = 4157907766
+				mid = 900506790
+				persistentId = 540395469
+				launchID = 175
+				parent = 0
+				position = -0.57441133260726929,0.95038700103759766,5.0216634406297089E-08
+				rotation = 2.06321115E-14,2.09169713E-07,-1.02704789E-07,-1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 16
+				srfN = srfAttach, 0,collider.collider
+				mass = 0.0399999991
+				shielded = False
+				temp = 190.17874282089997
+				tempExt = 190.54733198521487
+				tempExtUnexp = 190.11757802554666
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/DinkelsteinKermansConstructionEmporium
+				rTrf = RCSBlock.v2
+				modCost = 0
+				modMass = 0
+				moduleVariantName = Angled
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModulePartVariants
+					isEnabled = True
+					useVariantMass = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleRCSFX
+					isEnabled = True
+					rcsEnabled = True
+					thrustPercentage = 100
+					currentShowToggles = False
+					enableYaw = True
+					enablePitch = True
+					enableRoll = True
+					enableX = True
+					enableY = True
+					enableZ = True
+					useThrottle = False
+					fullThrust = False
+					stagingEnabled = False
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FXModuleAnimateRCS
+					isEnabled = True
+					stagingEnabled = True
+					animStates = 0,0,0,0,0,0,0,0,0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 0
+				Gear = False, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 0
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				AxisGroupsModule
+				{
+				}
+				SuspensionLoadBalancer
+				{
+				}
+				CommNetVessel
+				{
+					controlState = ProbeFull
+					canComm = True
+				}
+			}
+		}
 	}
 	LoaderInfo
 	{
@@ -100172,7 +102279,7 @@ GAME
 						PART
 						{
 							name = evaChute
-							cid = 4294895074
+							cid = 4294895984
 							uid = 0
 							mid = 0
 							persistentId = 0
@@ -100259,7 +102366,7 @@ GAME
 						PART
 						{
 							name = evaJetpack
-							cid = 4294895136
+							cid = 4294896046
 							uid = 0
 							mid = 0
 							persistentId = 0
@@ -100351,7 +102458,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 8
+				flight = 9
 				0 = ExitVessel,Kerbin
 				0 = Orbit,Kerbin
 				0 = BoardVessel,Kerbin
@@ -100392,10 +102499,11 @@ GAME
 				7 = Orbit,Kerbin
 				7 = Land,Kerbin
 				7 = Recover
+				8 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 8
+				flight = 9
 			}
 		}
 		KERBAL
