@@ -11,7 +11,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/circles
-	launchID = 181
+	launchID = 183
 	defaultVABLaunchSite = LaunchPad
 	defaultSPHLaunchSite = Runway
 	modded = True
@@ -199,7 +199,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 7230243.9927773112
+		funds = 7186132.9927773112
 	}
 	SCENARIO
 	{
@@ -532,7 +532,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 64.6548309
+		sci = 67.1044159
 		Tech
 		{
 			id = start
@@ -2001,7 +2001,7 @@ GAME
 			id = mobileMaterialsLab@KerbinSrfLandedRunway
 			title = 在跑道的材料研究
 			dsc = 1
-			scv = 2.98023224E-07
+			scv = 0
 			sbv = 0.300000012
 			sci = 9.60000038
 			asc = True
@@ -2012,7 +2012,7 @@ GAME
 			id = surfaceSample@KerbinSrfLandedRunway
 			title = 在跑道的地表样本
 			dsc = 1
-			scv = 6.10351563E-05
+			scv = 0
 			sbv = 0.300000012
 			sci = 12
 			asc = True
@@ -4795,9 +4795,9 @@ GAME
 			id = seismicScan@KerbinSrfLandedRunway
 			title = 在跑道的地震扫描
 			dsc = 2.5
-			scv = 0.00826445408
+			scv = 0.000751307467
 			sbv = 0.300000012
-			sci = 6.54545498
+			sci = 6.59504175
 			asc = True
 			cap = 6.60000038
 		}
@@ -4910,6 +4910,17 @@ GAME
 			sci = 20
 			asc = True
 			cap = 20
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfLandedRunway
+			title = 在跑道的EVA报告
+			dsc = 1
+			scv = 0
+			sbv = 0.300000012
+			sci = 2.4000001
+			asc = True
+			cap = 2.4000001
 		}
 	}
 	SCENARIO
@@ -5280,7 +5291,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 491242.68689832941
+		update = 491900.06689894164
 		version = 1.12.5
 		WEIGHTS
 		{
@@ -7032,6 +7043,22 @@ GAME
 		warpChangeIndicatorDuration = 3
 		ALARMS
 		{
+			ALARM
+			{
+				type = AlarmTypeRaw
+				id = 1626484106
+				title = 手动定时闹钟
+				description = 
+				ut = 493118.84689873562
+				eventOffset = 0
+				triggered = False
+				actioned = False
+				vesselId = 0
+				actionWarp = KillWarp
+				actionMessage = Yes
+				actionSound = False
+				actionDelete = False
+			}
 		}
 		SETTINGS
 		{
@@ -7044,8 +7071,8 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.12.5
-		UT = 491249.96689833619
-		activeVessel = 0
+		UT = 491900.50689894205
+		activeVessel = 34
 		mapViewFiltering = 11135
 		commNetUIModeTracking = None
 		commNetUIModeFlight = Path
@@ -8074,13 +8101,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 300021.3675329485
-				ECC = 0.99999999999999989
-				INC = 90.096909908166722
+				SMA = NaN
+				ECC = 1
+				INC = 162.53892021899011
 				LPE = 90
-				LAN = 211.15725978501723
-				MNA = 3.1415926864625696
-				EPH = 491192.66689828283
+				LAN = 298.42036674992289
+				MNA = 0
+				EPH = 491899.98689894157
 				REF = 1
 			}
 			PART
@@ -13215,13 +13242,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 5706269.3096866766
+				SMA = 101448.84766837703
 				ECC = 0.99999999999999989
-				INC = 90.005095278153377
+				INC = 85.571007807610272
 				LPE = 90
-				LAN = 19.101078986485959
-				MNA = 3.1415926207170166
-				EPH = 491192.66689828283
+				LAN = 20.100573871679899
+				MNA = 3.1415926864625696
+				EPH = 491899.98689894157
 				REF = 2
 			}
 			PART
@@ -33530,14 +33557,14 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = -910253.22064479219
-				ECC = 1.2286932228373435
-				INC = 11.348296369062142
-				LPE = 220.5444243406792
-				LAN = 181.95029868613415
-				MNA = 0.039154844040990372
-				EPH = 485840.39387923159
-				REF = 2
+				SMA = 6028365.8256170042
+				ECC = 0.90189696866700386
+				INC = 1.1185680371217774
+				LPE = 156.86152660742678
+				LAN = 297.67923776576345
+				MNA = 3.8109494970671323
+				EPH = 491489.75097679079
+				REF = 1
 			}
 			PART
 			{
@@ -34549,6 +34576,9 @@ GAME
 					ACTIONS
 					{
 					}
+					UPGRADESAPPLIED
+					{
+					}
 					Log
 					{
 						flight = 0
@@ -34558,9 +34588,7 @@ GAME
 						0 = Flyby,Mun
 						0 = Orbit,Mun
 						0 = Escape,Mun
-					}
-					UPGRADESAPPLIED
-					{
+						0 = Flyby,Kerbin
 					}
 				}
 				RESOURCE
@@ -37556,6 +37584,9 @@ GAME
 					ACTIONS
 					{
 					}
+					UPGRADESAPPLIED
+					{
+					}
 					Log
 					{
 						flight = 0
@@ -37565,9 +37596,7 @@ GAME
 						0 = Flyby,Mun
 						0 = Orbit,Mun
 						0 = Escape,Mun
-					}
-					UPGRADESAPPLIED
-					{
+						0 = Flyby,Kerbin
 					}
 				}
 				RESOURCE
@@ -106602,6 +106631,7917 @@ GAME
 				}
 			}
 		}
+		VESSEL
+		{
+			pid = 78629f3a7b754a10843267cd42a04a69
+			persistentId = 3125950565
+			name = 01 - 科学研究
+			type = Plane
+			sit = PRELAUNCH
+			landed = True
+			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
+			vesselSpawning = True
+			launchedFrom = Runway
+			landedAt = Runway
+			displaylandedAt = #autoLOC_6002131
+			splashed = False
+			met = 0
+			lct = 491900.50689894205
+			lastUT = 491900.50689894205
+			distanceTraveled = 0
+			root = 0
+			lat = -0.048600062300820694
+			lon = -74.724468649345141
+			alt = 71.070473340689205
+			hgt = 1.87907231
+			nrm = -0.00082789734,-0.00217145681,-0.999997437
+			rot = 0.0944794416,-0.0950038359,-0.703250289,0.698202729
+			CoM = 0.000982299447,-9.16443443,0.273103714
+			stg = 1
+			prst = False
+			ref = 3598367988
+			ctrl = True
+			PQSMin = 2
+			PQSMax = 9
+			GroupOverride = 0
+			OverrideDefault = False,False,False,False
+			OverrideActionControl = 0,0,0,0
+			OverrideAxisControl = 0,0,0,0
+			OverrideGroupNames = ,,,
+			altDispState = ASL
+			cPch = 0.2
+			cHdg = 0.3
+			cMod = 0
+			ORBIT
+			{
+				SMA = 300817.75224796979
+				ECC = 0.99479855445784271
+				INC = 0.048594029364511217
+				LPE = 90
+				LAN = 42.857305426314156
+				MNA = 3.1415926535897976
+				EPH = 491900.50689894205
+				REF = 1
+			}
+			PART
+			{
+				name = Mark1Cockpit
+				cid = 4293911046
+				uid = 3598367988
+				mid = 2152644961
+				persistentId = 2457523536
+				launchID = 182
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = , -1
+				attN = bottom, 1
+				mass = 1.25
+				shielded = False
+				temp = 305.94951282327105
+				tempExt = 305.97907027577753
+				tempExtUnexp = 305.97746022856637
+				staticPressureAtm = 0.98951232895096997
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = _default
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				crew = Qiaodun Kerman
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					hibernation = False
+					hibernateOnWarp = False
+					activeControlPointName = _default
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						MakeReferenceToggle
+						{
+							actionGroup = None
+						}
+						HibernateToggle
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleReactionWheel
+					isEnabled = True
+					actuatorModeCycle = 0
+					authorityLimiter = 100
+					stateString = 空闲
+					stagingEnabled = True
+					WheelState = Active
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CycleAction
+						{
+							actionGroup = None
+						}
+						Activate
+						{
+							actionGroup = None
+						}
+						Deactivate
+						{
+							actionGroup = None
+						}
+						Toggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = Custom01
+						}
+						ResetAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceContainer
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CollectAllAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FlagDecal
+					isEnabled = True
+					flagDisplayed = True
+					isMirrored = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleColorChanger
+					isEnabled = True
+					animState = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = Light
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleInventoryPart
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					STOREDPARTS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = MechJebCore
+					isEnabled = True
+					running = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnOrbitProgradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRetrogradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitNormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitAntinormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialInAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialOutAction
+						{
+							actionGroup = None
+						}
+						OnKillRotationAction
+						{
+							actionGroup = None
+						}
+						OnDeactivateSmartASSAction
+						{
+							actionGroup = None
+						}
+						OnLandsomewhereAction
+						{
+							actionGroup = None
+						}
+						OnLandTargetAction
+						{
+							actionGroup = None
+						}
+						OnPanicAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronOffAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronKeepVertAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronZeroSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronPlusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronMinusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronToggleHSAction
+						{
+							actionGroup = None
+						}
+						OnAscentAPToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					MechJebLocalSettings
+					{
+						MechJebModuleMenu
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleAirplaneAutopilot
+						{
+							HeadingHoldEnabled = False
+							AltitudeHoldEnabled = False
+							VertSpeedHoldEnabled = False
+							RollHoldEnabled = False
+							SpeedHoldEnabled = False
+							AltitudeTarget = 0
+							HeadingTarget = 90
+							RollTarget = 0
+							SpeedTarget = 0
+							VertSpeedTarget = 0
+							BankAngle = 30
+							unlockParts = 
+							unlockTechs = 
+							AccKp
+							{
+								ValConfig = 0.5
+								TextConfig = 0.5
+							}
+							AccKi
+							{
+								ValConfig = 0.5
+								TextConfig = 0.5
+							}
+							AccKd
+							{
+								ValConfig = 0.0050000000000000001
+								TextConfig = 0.005
+							}
+							PitKp
+							{
+								ValConfig = 2
+								TextConfig = 2
+							}
+							PitKi
+							{
+								ValConfig = 1
+								TextConfig = 1
+							}
+							PitKd
+							{
+								ValConfig = 0.0050000000000000001
+								TextConfig = 0.005
+							}
+							RolKp
+							{
+								ValConfig = 0.5
+								TextConfig = 0.5
+							}
+							RolKi
+							{
+								ValConfig = 0.02
+								TextConfig = 0.02
+							}
+							RolKd
+							{
+								ValConfig = 0.5
+								TextConfig = 0.5
+							}
+							YawKp
+							{
+								ValConfig = 1
+								TextConfig = 1
+							}
+							YawKi
+							{
+								ValConfig = 0.25
+								TextConfig = 0.25
+							}
+							YawKd
+							{
+								ValConfig = 0.02
+								TextConfig = 0.02
+							}
+							YawLimit
+							{
+								ValConfig = 10
+								TextConfig = 10
+							}
+							RollLimit
+							{
+								ValConfig = 45
+								TextConfig = 45
+							}
+							PitchDownLimit
+							{
+								ValConfig = 15
+								TextConfig = 15
+							}
+							PitchUpLimit
+							{
+								ValConfig = 25
+								TextConfig = 25
+							}
+						}
+						MechJebModuleAirplaneGuidance
+						{
+							showpid = False
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleAscentClassicAutopilot
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleAscentClassicPathMenu
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleAscentMenu
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleAscentPVGAutopilot
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleAscentPVGSettingsMenu
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleAscentSettings
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleAscentSettingsMenu
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleAttitudeAdjustment
+						{
+							unlockParts = 
+							unlockTechs = advFlightControl
+						}
+						MechJebModuleCustomWindowEditor
+						{
+							unlockParts = 
+							unlockTechs = flightControl
+						}
+						MechJebModuleDebugArrows
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleDockingAutopilot
+						{
+							forceRol = False
+							overrideSafeDistance = False
+							overrideTargetSize = False
+							unlockParts = 
+							unlockTechs = 
+							rol
+							{
+								ValConfig = 0
+								TextConfig = 0
+							}
+						}
+						MechJebModuleDockingGuidance
+						{
+							unlockParts = 
+							unlockTechs = advUnmanned
+						}
+						MechJebModuleInfoItems
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleLandingAutopilot
+						{
+							DeployGears = True
+							DeployChutes = True
+							RCSAdjustment = True
+							unlockParts = 
+							unlockTechs = 
+							TouchdownSpeed
+							{
+								ValConfig = 0.5
+								TextConfig = 0.5
+							}
+							LimitGearsStage
+							{
+								ValConfig = 0
+								TextConfig = 0
+							}
+							LimitChutesStage
+							{
+								ValConfig = 0
+								TextConfig = 0
+							}
+						}
+						MechJebModuleLandingGuidance
+						{
+							_landingSiteIdx = 0
+							unlockParts = 
+							unlockTechs = unmannedTech
+						}
+						MechJebModuleLandingPredictions
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleManeuverPlanner
+						{
+							unlockParts = 
+							unlockTechs = advFlightControl
+						}
+						MechJebModuleStageStats
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleNodeEditor
+						{
+							unlockParts = 
+							unlockTechs = advFlightControl
+						}
+						MechJebModuleNodeExecutor
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleGuidanceController
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleRCSBalancerWindow
+						{
+							unlockParts = 
+							unlockTechs = advFlightControl
+						}
+						MechJebModuleRendezvousAutopilot
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleRendezvousAutopilotWindow
+						{
+							unlockParts = 
+							unlockTechs = advUnmanned
+						}
+						MechJebModuleRendezvousGuidance
+						{
+							unlockParts = 
+							unlockTechs = advUnmanned
+						}
+						MechJebModuleRoverController
+						{
+							ControlHeading = False
+							ControlSpeed = False
+							BrakeOnEject = False
+							BrakeOnEnergyDepletion = False
+							WarpToDaylight = False
+							StabilityControl = False
+							LimitAcceleration = False
+							unlockParts = 
+							unlockTechs = 
+							heading
+							{
+								ValConfig = 0
+								TextConfig = 0
+							}
+							speed
+							{
+								ValConfig = 10
+								TextConfig = 10
+							}
+						}
+						MechJebModuleRoverWindow
+						{
+							unlockParts = 
+							unlockTechs = fieldScience
+						}
+						MechJebModuleSettings
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleSmartASS
+						{
+							mode = ORBITAL
+							target = OFF
+							advReference = INERTIAL
+							advDirection = FORWARD
+							forceRol = False
+							forcePitch = True
+							forceYaw = True
+							unlockParts = 
+							unlockTechs = flightControl
+							srfHdg
+							{
+								ValConfig = 90
+								TextConfig = 90
+							}
+							srfPit
+							{
+								ValConfig = 90
+								TextConfig = 90
+							}
+							srfRol
+							{
+								ValConfig = 0
+								TextConfig = 0
+							}
+							srfVelYaw
+							{
+								ValConfig = 0
+								TextConfig = 0
+							}
+							srfVelPit
+							{
+								ValConfig = 0
+								TextConfig = 0
+							}
+							srfVelRol
+							{
+								ValConfig = 0
+								TextConfig = 0
+							}
+							rol
+							{
+								ValConfig = 0
+								TextConfig = 0
+							}
+						}
+						MechJebModuleSmartRcs
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleSpaceplaneAutopilot
+						{
+							bBreakAsSoonAsLanded = False
+							unlockParts = 
+							unlockTechs = 
+							glideslope
+							{
+								ValConfig = 2.5
+								TextConfig = 2.5
+							}
+							approachSpeed
+							{
+								ValConfig = 80
+								TextConfig = 80
+							}
+							touchdownSpeed
+							{
+								ValConfig = 60
+								TextConfig = 60
+							}
+							maximumSafeBankAngle
+							{
+								ValConfig = 25
+								TextConfig = 25
+							}
+						}
+						MechJebModuleSpaceplaneGuidance
+						{
+							runwayIndex = 0
+							unlockParts = 
+							unlockTechs = unmannedTech
+						}
+						MechJebModuleSpinupController
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleSuicideTimer
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleTargetController
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleThrustWindow
+						{
+							autostageSavedState = False
+							unlockParts = 
+							unlockTechs = advFlightControl
+						}
+						MechJebModuleTranslatron
+						{
+							unlockParts = 
+							unlockTechs = advFlightControl
+							trans_spd
+							{
+								ValConfig = 0
+								TextConfig = 0
+							}
+						}
+						MechJebModuleWarpHelper
+						{
+							unlockParts = 
+							unlockTechs = advFlightControl
+							phaseAngle
+							{
+								ValConfig = 0
+								TextConfig = 0
+							}
+						}
+						MechJebModuleWaypointWindow
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleWaypointHelpWindow
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						ModExtensionDemo
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModulePVGGlueBall
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
+						MechJebModuleWarpController
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleDeployableAntennaController
+						{
+							prev_shouldDeploy = False
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleSolarPanelController
+						{
+							prev_shouldDeploy = False
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleThrustController
+						{
+							LimitThrottle = False
+							LimiterMinThrottle = True
+							ElectricThrottle = False
+							unlockParts = 
+							unlockTechs = 
+							MaxThrottle
+							{
+								ValConfig = 1
+								TextConfig = 100
+							}
+							MinThrottle
+							{
+								ValConfig = 0.050000000000000003
+								TextConfig = 5
+							}
+							ElectricThrottleLo
+							{
+								ValConfig = 0.050000000000000003
+								TextConfig = 5
+							}
+							ElectricThrottleHi
+							{
+								ValConfig = 0.14999999999999999
+								TextConfig = 15
+							}
+						}
+						MechJebModuleRCSController
+						{
+							unlockParts = 
+							unlockTechs = 
+							Tf
+							{
+								ValConfig = 1
+								TextConfig = 1
+							}
+							Kp
+							{
+								ValConfig = 0.125
+								TextConfig = 0.125
+							}
+							Ki
+							{
+								ValConfig = 0.070000000000000007
+								TextConfig = 0.07
+							}
+							Kd
+							{
+								ValConfig = 0.53000000000000003
+								TextConfig = 0.53
+							}
+						}
+						MechJebModuleRCSBalancer
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleAttitudeController
+						{
+							unlockParts = 
+							unlockTechs = 
+							MJAttitudeController
+							{
+							}
+							KosAttitudeController
+							{
+							}
+							HybridController
+							{
+							}
+							BetterController
+							{
+							}
+							LQRController
+							{
+							}
+						}
+						MechJebModuleStagingController
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleFlightRecorder
+						{
+							MarkUT = 491900.50689894205
+							DeltaVExpended = 0
+							DragLosses = 0
+							GravityLosses = 0
+							SteeringLosses = 0
+							MarkLAN = 42.855801905930164
+							MarkLatitude = -0.048594029931739828
+							MarkLongitude = -74.725344591491989
+							MarkAltitude = 70.81733950751368
+							MarkBodyIndex = 1
+							MaxDragGees = 0
+							unlockParts = 
+							unlockTechs = 
+						}
+						MechJebModuleFlightRecorderGraph
+						{
+							unlockParts = 
+							unlockTechs = 
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 49.99912903227748
+					maxAmount = 50
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = MonoPropellant
+					amount = 0
+					maxAmount = 7.5
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = science.module
+				cid = 4293901014
+				uid = 1972940644
+				mid = 2152644961
+				persistentId = 338506329
+				launchID = 182
+				parent = 0
+				position = 0,-0.78751176595687866,1.1920928955078125E-07
+				rotation = 0,0,0,1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = srfAttach, -1
+				attN = top, 0
+				attN = bottom, 2
+				mass = 0.200000003
+				shielded = False
+				temp = 305.94947382461925
+				tempExt = 305.94535980283962
+				tempExtUnexp = 305.9450447495152
+				staticPressureAtm = 0.98951202776589098
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = science.module
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					aniState = LOCKED
+					animSwitch = True
+					animTime = 0
+					animSpeed = 1
+					deployPercent = 100
+					animationIsDisabled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployPercent
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = Custom01
+						}
+						ResetAction
+						{
+							actionGroup = Custom02
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = science.module
+				cid = 4293900578
+				uid = 1785239265
+				mid = 2152644961
+				persistentId = 675713443
+				launchID = 182
+				parent = 1
+				position = 0,-1.9125239849090576,2.384185791015625E-07
+				rotation = 0,0,0,1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = srfAttach, -1
+				attN = top, 1
+				attN = bottom, 3
+				mass = 0.200000003
+				shielded = False
+				temp = 305.94949685581514
+				tempExt = 305.95033314151527
+				tempExtUnexp = 305.9502645867239
+				staticPressureAtm = 0.98951165128454222
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = science.module
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					aniState = LOCKED
+					animSwitch = True
+					animTime = 0
+					animSpeed = 1
+					deployPercent = 100
+					animationIsDisabled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployPercent
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = Custom01
+						}
+						ResetAction
+						{
+							actionGroup = Custom02
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = science.module
+				cid = 4293900194
+				uid = 660055242
+				mid = 2152644961
+				persistentId = 815372885
+				launchID = 182
+				parent = 2
+				position = 0,-3.0375597476959229,4.76837158203125E-07
+				rotation = 0,0,0,1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = srfAttach, -1
+				attN = top, 2
+				attN = bottom, 4
+				mass = 0.200000003
+				shielded = False
+				temp = 305.94949682102583
+				tempExt = 305.94950565999773
+				tempExtUnexp = 305.94950199291566
+				staticPressureAtm = 0.98951135009946334
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = science.module
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					aniState = LOCKED
+					animSwitch = True
+					animTime = 0
+					animSpeed = 1
+					deployPercent = 100
+					animationIsDisabled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployPercent
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = Custom01
+						}
+						ResetAction
+						{
+							actionGroup = Custom02
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = science.module
+				cid = 4285372288
+				uid = 2911882683
+				mid = 2152644961
+				persistentId = 4184641566
+				launchID = 182
+				parent = 3
+				position = 0,-4.1625609397888184,4.76837158203125E-07
+				rotation = 0,0,0,1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = srfAttach, -1
+				attN = top, 3
+				attN = bottom, 6
+				mass = 0.200000003
+				shielded = False
+				temp = 305.94949686444812
+				tempExt = 305.9501811889084
+				tempExtUnexp = 305.95012377412104
+				staticPressureAtm = 0.98951097361811458
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = science.module
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					aniState = LOCKED
+					animSwitch = True
+					animTime = 0
+					animSpeed = 1
+					deployPercent = 100
+					animationIsDisabled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployPercent
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = Custom01
+						}
+						ResetAction
+						{
+							actionGroup = Custom02
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = ScienceBox
+				cid = 4290721696
+				uid = 1141598448
+				mid = 2152644961
+				persistentId = 2089844953
+				launchID = 182
+				parent = 4
+				position = 2.4389102293298492E-08,-4.0594186782836914,-0.86987733840942383
+				rotation = 0,-5.96046519E-08,-5.02429663E-15,-1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 4,node_collider
+				attN = top, -1
+				attN = bottom, -1
+				mass = 0.0500000007
+				shielded = False
+				temp = 305.94949870960022
+				tempExt = 305.96024062879093
+				tempExtUnexp = 305.95957502534264
+				staticPressureAtm = 0.98938319584836842
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = ScienceBox
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleConductionMultiplier
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceContainer
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CollectAllAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = Large.Crewed.Lab
+				cid = 4290448108
+				uid = 2731189787
+				mid = 2152644961
+				persistentId = 863935729
+				launchID = 182
+				parent = 4
+				position = 0,-6.500063419342041,9.5367431640625E-07
+				rotation = 0,0,0,1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = , -1
+				attN = top, 4
+				attN = bottom, 7
+				mass = 3.41000009
+				shielded = False
+				temp = 305.94950119463857
+				tempExt = 305.95581151195626
+				tempExtUnexp = 305.95547064780942
+				staticPressureAtm = 0.98951022065541727
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = Large.Crewed.Lab
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleScienceContainer
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CollectAllAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceLab
+					isEnabled = True
+					dataStored = 0
+					storedScience = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					EXPERIMENT_DATA
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceConverter
+					isEnabled = True
+					EfficiencyBonus = 1
+					IsActivated = False
+					stagingEnabled = True
+					lastUpdateTime = 0
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StopResourceConverterAction
+						{
+							actionGroup = None
+						}
+						StartResourceConverterAction
+						{
+							actionGroup = None
+						}
+						ToggleResourceConverterAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleKerbNetAccess
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OpenKerbNetAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleExperienceManagement
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FlagDecal
+					isEnabled = True
+					flagDisplayed = True
+					isMirrored = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleColorChanger
+					isEnabled = True
+					animState = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = Light
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleInventoryPart
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					STOREDPARTS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = Mark2Cockpit
+				cid = 4287179772
+				uid = 2997498498
+				mid = 2152644961
+				persistentId = 1141909602
+				launchID = 182
+				parent = 6
+				position = 0,-9.2685642242431641,9.5367431640625E-07
+				rotation = 0,0,0,1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = , -1
+				attN = top, 6
+				attN = bottom, 8
+				mass = 0.906000018
+				shielded = False
+				temp = 305.94949683065306
+				tempExt = 305.94973992335565
+				tempExtUnexp = 305.94971035632574
+				staticPressureAtm = 0.98950931710018042
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = _default
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					hibernation = False
+					hibernateOnWarp = False
+					activeControlPointName = _default
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						MakeReferenceToggle
+						{
+							actionGroup = None
+						}
+						HibernateToggle
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleReactionWheel
+					isEnabled = True
+					actuatorModeCycle = 0
+					authorityLimiter = 100
+					stateString = 空闲
+					stagingEnabled = True
+					WheelState = Active
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CycleAction
+						{
+							actionGroup = None
+						}
+						Activate
+						{
+							actionGroup = None
+						}
+						Deactivate
+						{
+							actionGroup = None
+						}
+						Toggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						ResetAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceContainer
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CollectAllAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FlagDecal
+					isEnabled = True
+					flagDisplayed = True
+					isMirrored = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleColorChanger
+					isEnabled = True
+					animState = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = Light
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleInventoryPart
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					STOREDPARTS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = MechJebCore
+					isEnabled = True
+					running = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnOrbitProgradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRetrogradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitNormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitAntinormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialInAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialOutAction
+						{
+							actionGroup = None
+						}
+						OnKillRotationAction
+						{
+							actionGroup = None
+						}
+						OnDeactivateSmartASSAction
+						{
+							actionGroup = None
+						}
+						OnLandsomewhereAction
+						{
+							actionGroup = None
+						}
+						OnLandTargetAction
+						{
+							actionGroup = None
+						}
+						OnPanicAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronOffAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronKeepVertAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronZeroSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronPlusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronMinusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronToggleHSAction
+						{
+							actionGroup = None
+						}
+						OnAscentAPToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 49.99912903227748
+					maxAmount = 50
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = MonoPropellant
+					amount = 7.5
+					maxAmount = 7.5
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = Mark2Cockpit
+				cid = 4287179510
+				uid = 37600169
+				mid = 2152644961
+				persistentId = 4080942796
+				launchID = 182
+				parent = 7
+				position = 0,-11.143569946289063,1.9073486328125E-06
+				rotation = 0,0,0,1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = , -1
+				attN = top, 7
+				attN = bottom, 9
+				mass = 0.906000018
+				shielded = False
+				temp = 305.94949856460437
+				tempExt = 305.9529732379782
+				tempExtUnexp = 305.95277133639883
+				staticPressureAtm = 0.98950871473002244
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = _default
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					hibernation = False
+					hibernateOnWarp = False
+					activeControlPointName = _default
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						MakeReferenceToggle
+						{
+							actionGroup = None
+						}
+						HibernateToggle
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleReactionWheel
+					isEnabled = True
+					actuatorModeCycle = 0
+					authorityLimiter = 100
+					stateString = 空闲
+					stagingEnabled = True
+					WheelState = Active
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CycleAction
+						{
+							actionGroup = None
+						}
+						Activate
+						{
+							actionGroup = None
+						}
+						Deactivate
+						{
+							actionGroup = None
+						}
+						Toggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = Custom01
+						}
+						ResetAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceContainer
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CollectAllAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = FlagDecal
+					isEnabled = True
+					flagDisplayed = True
+					isMirrored = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleColorChanger
+					isEnabled = True
+					animState = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = Light
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleInventoryPart
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					STOREDPARTS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = MechJebCore
+					isEnabled = True
+					running = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnOrbitProgradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRetrogradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitNormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitAntinormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialInAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialOutAction
+						{
+							actionGroup = None
+						}
+						OnKillRotationAction
+						{
+							actionGroup = None
+						}
+						OnDeactivateSmartASSAction
+						{
+							actionGroup = None
+						}
+						OnLandsomewhereAction
+						{
+							actionGroup = None
+						}
+						OnLandTargetAction
+						{
+							actionGroup = None
+						}
+						OnPanicAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronOffAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronKeepVertAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronZeroSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronPlusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronMinusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronToggleHSAction
+						{
+							actionGroup = None
+						}
+						OnAscentAPToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 49.99912903227748
+					maxAmount = 50
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = MonoPropellant
+					amount = 7.5
+					maxAmount = 7.5
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = science.module
+				cid = 4293896042
+				uid = 3681700536
+				mid = 2152644961
+				persistentId = 562003757
+				launchID = 182
+				parent = 8
+				position = 0,-12.693580627441406,1.9073486328125E-06
+				rotation = 0,0,0,1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = srfAttach, -1
+				attN = top, 8
+				attN = bottom, 10
+				mass = 0.200000003
+				shielded = False
+				temp = 305.94949585385689
+				tempExt = 305.94809349077411
+				tempExtUnexp = 305.94816048070396
+				staticPressureAtm = 0.98950818765613435
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = science.module
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					aniState = LOCKED
+					animSwitch = True
+					animTime = 0
+					animSpeed = 1
+					deployPercent = 100
+					animationIsDisabled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployPercent
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = Custom01
+						}
+						ResetAction
+						{
+							actionGroup = Custom02
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = airplaneTailB
+				cid = 4293895374
+				uid = 3029463869
+				mid = 2152644961
+				persistentId = 4207927325
+				launchID = 182
+				parent = 9
+				position = 0,-13.206083297729492,1.9073486328125E-06
+				rotation = 0,0,0,1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = srfAttach, -1
+				attN = top, 9
+				mass = 0.200000003
+				shielded = False
+				temp = 305.94949380523622
+				tempExt = 305.94540489558966
+				tempExtUnexp = 305.94559273566909
+				staticPressureAtm = 0.9895080370635948
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = airplaneTailB
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = sweptWing
+				cid = 4292907718
+				uid = 1441285730
+				mid = 2152644961
+				persistentId = 1526050154
+				launchID = 182
+				parent = 10
+				position = 0.4214281439781189,-14.697681427001953,-0.11291980743408203
+				rotation = -0.00907683093,0.130210206,-0.0689458922,0.989044964
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 12
+				srfN = srfAttach, 10,TailCOL 1
+				mass = 0.275000006
+				shielded = False
+				temp = 305.94949717936043
+				tempExt = 305.95126590001604
+				tempExtUnexp = 305.95113594260346
+				staticPressureAtm = 0.98949102010663392
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = sweptWing
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = sweptWing
+				cid = 4292907672
+				uid = 1907557326
+				mid = 2152644961
+				persistentId = 415590642
+				launchID = 182
+				parent = 10
+				position = -0.4214281439781189,-14.697681427001953,-0.11291980743408203
+				rotation = -0.0689458922,0.989044964,-0.00907674711,0.130210117
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 11
+				srfN = srfAttach, 10,TailCOL 1
+				mass = 0.275000006
+				shielded = False
+				temp = 305.94949729812174
+				tempExt = 305.95142029045098
+				tempExtUnexp = 305.95127989453641
+				staticPressureAtm = 0.98949094481036415
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = sweptWing
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = tailfin
+				cid = 4293894130
+				uid = 2186560391
+				mid = 2152644961
+				persistentId = 1989523391
+				launchID = 182
+				parent = 10
+				position = -5.3827502455305876E-08,-14.520563125610352,-0.61571598052978516
+				rotation = -4.2146857E-07,0.707106948,-4.2146857E-07,0.707106888
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 10,TailCOL 1
+				mass = 0.125
+				shielded = False
+				temp = 305.94949656649538
+				tempExt = 305.94828603645755
+				tempExtUnexp = 305.94832094129106
+				staticPressureAtm = 0.98941715446602052
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = tailfin
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleControlSurface
+					isEnabled = True
+					mirrorDeploy = False
+					usesMirrorDeploy = True
+					ignorePitch = True
+					ignoreYaw = False
+					ignoreRoll = True
+					deploy = False
+					deployInvert = False
+					partDeployInvert = False
+					deployAngle = 9.75
+					authorityLimiter = 21
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActionToggle
+						{
+							actionGroup = None
+						}
+						ActionExtend
+						{
+							actionGroup = None
+						}
+						ActionRetract
+						{
+							actionGroup = None
+						}
+						PitchActive
+						{
+							actionGroup = None
+						}
+						PitchInactive
+						{
+							actionGroup = None
+						}
+						TogglePitch
+						{
+							actionGroup = None
+						}
+						YawActive
+						{
+							actionGroup = None
+						}
+						YawInactive
+						{
+							actionGroup = None
+						}
+						ToggleYaw
+						{
+							actionGroup = None
+						}
+						RollActive
+						{
+							actionGroup = None
+						}
+						RollInactive
+						{
+							actionGroup = None
+						}
+						ToggleRoll
+						{
+							actionGroup = None
+						}
+						ActivateAllControls
+						{
+							actionGroup = None
+						}
+						DeactivateAllControls
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployAngle
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+						authorityLimiter
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = mumech.MJ2.AR202
+				cid = 4293512500
+				uid = 2235573285
+				mid = 2152644961
+				persistentId = 1376410594
+				launchID = 182
+				parent = 10
+				position = -5.3766079588513094E-08,-13.472566604614258,-0.61501312255859375
+				rotation = 4.2146857E-07,0.707106888,-4.2146857E-07,-0.707106948
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 10,TailCOL 1
+				mass = 9.99999975E-05
+				shielded = False
+				temp = 305.94949679312577
+				tempExt = 305.9493445438892
+				tempExtUnexp = 305.94935139389048
+				staticPressureAtm = 0.98941760624363895
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = _default
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					hibernation = False
+					hibernateOnWarp = False
+					activeControlPointName = _default
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						MakeReferenceToggle
+						{
+							actionGroup = None
+						}
+						HibernateToggle
+						{
+							actionGroup = None
+							active = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = MechJebCore
+					isEnabled = True
+					running = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnOrbitProgradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRetrogradeAction
+						{
+							actionGroup = None
+						}
+						OnOrbitNormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitAntinormalAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialInAction
+						{
+							actionGroup = None
+						}
+						OnOrbitRadialOutAction
+						{
+							actionGroup = None
+						}
+						OnKillRotationAction
+						{
+							actionGroup = None
+						}
+						OnDeactivateSmartASSAction
+						{
+							actionGroup = None
+						}
+						OnLandsomewhereAction
+						{
+							actionGroup = None
+						}
+						OnLandTargetAction
+						{
+							actionGroup = None
+						}
+						OnPanicAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronOffAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronKeepVertAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronZeroSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronPlusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronMinusOneSpeedAction
+						{
+							actionGroup = None
+						}
+						OnTranslatronToggleHSAction
+						{
+							actionGroup = None
+						}
+						OnAscentAPToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = MechJebAR202
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 4.9999129032277576
+					maxAmount = 5
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = MK1Fuselage
+				cid = 4293899674
+				uid = 1375762547
+				mid = 2152644961
+				persistentId = 2385880811
+				launchID = 182
+				parent = 9
+				position = -1.0779865980148315,-12.429462432861328,0.62238025665283203
+				rotation = 8.42937098E-08,-0.500000179,-4.21468549E-08,0.866025686
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 18
+				srfN = srfAttach, 9,node_collider
+				attN = top, 16
+				attN = bottom, 17
+				mass = 0.25
+				shielded = False
+				temp = 305.94949681918922
+				tempExt = 305.94928407399868
+				tempExtUnexp = 305.9493110888215
+				staticPressureAtm = 0.98959959732759684
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = MK1Fuselage
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 400
+					maxAmount = 400
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = CircularIntake
+				cid = 4293903540
+				uid = 3107684159
+				mid = 2152644961
+				persistentId = 4171481721
+				launchID = 182
+				parent = 15
+				position = -1.077986478805542,-11.491910934448242,0.62238121032714844
+				rotation = 0,0.130526215,0,0.991445184
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				sym = 19
+				srfN = , -1
+				attN = bottom01, 15
+				mass = 0.0399999991
+				shielded = False
+				temp = 305.94949682056313
+				tempExt = 305.94857234085458
+				tempExtUnexp = 305.94861554501693
+				staticPressureAtm = 0.98959989851267571
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = CircularIntake
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleResourceIntake
+					isEnabled = True
+					intakeEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = IntakeAir
+					amount = 2
+					maxAmount = 2
+					flowState = True
+					isTweakable = False
+					hideFlow = False
+					isVisible = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = JetEngine
+				cid = 4293899068
+				uid = 3767803005
+				mid = 2152644961
+				persistentId = 2782991
+				launchID = 182
+				parent = 15
+				position = -1.0779865980148315,-14.339855194091797,0.62238025665283203
+				rotation = 0,0.130526215,0,0.991445184
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = -1
+				sidx = 0
+				attm = 0
+				sameVesselCollision = False
+				sym = 20
+				srfN = , -1
+				attN = top, 15
+				mass = 1.5
+				shielded = False
+				temp = 305.94948973456576
+				tempExt = 305.93406536341314
+				tempExtUnexp = 305.93466202988998
+				staticPressureAtm = 0.98959899495743886
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = JetEngine
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleEnginesFX
+					isEnabled = True
+					independentThrottle = False
+					independentThrottlePercentage = 0
+					staged = False
+					flameout = False
+					EngineIgnited = False
+					engineShutdown = False
+					currentThrottle = 0
+					thrustPercentage = 100
+					manuallyOverridden = False
+					includeinDVCalcs = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnAction
+						{
+							actionGroup = None
+						}
+						ShutdownAction
+						{
+							actionGroup = None
+						}
+						ActivateAction
+						{
+							actionGroup = None
+						}
+						ToggleThrottle
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						independentThrottlePercentage
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+						thrustPercentage
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					aniState = LOCKED
+					animSwitch = True
+					animTime = 0
+					animSpeed = 1
+					deployPercent = 100
+					animationIsDisabled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployPercent
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAlternator
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSurfaceFX
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = MK1Fuselage
+				cid = 4293894442
+				uid = 4256610996
+				mid = 2152644961
+				persistentId = 357671243
+				launchID = 182
+				parent = 9
+				position = 1.0779865980148315,-12.429462432861328,0.62238025665283203
+				rotation = 8.42937098E-08,0.500000179,8.42937098E-08,0.866025507
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 15
+				srfN = srfAttach, 9,node_collider
+				attN = top, 19
+				attN = bottom, 20
+				mass = 0.25
+				shielded = False
+				temp = 305.94949681921321
+				tempExt = 305.94947397990376
+				tempExtUnexp = 305.94949230646716
+				staticPressureAtm = 0.98959989851267571
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = MK1Fuselage
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 400
+					maxAmount = 400
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = CircularIntake
+				cid = 4293894400
+				uid = 2867909825
+				mid = 2152644961
+				persistentId = 2914789886
+				launchID = 182
+				parent = 18
+				position = 1.077986478805542,-11.491910934448242,0.62238121032714844
+				rotation = 0,-0.130526096,5.26835713E-08,0.991445184
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				sym = 16
+				srfN = , -1
+				attN = bottom01, 18
+				mass = 0.0399999991
+				shielded = False
+				temp = 305.94949682056318
+				tempExt = 305.94857283745415
+				tempExtUnexp = 305.94861578247782
+				staticPressureAtm = 0.9896001996977547
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = CircularIntake
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleResourceIntake
+					isEnabled = True
+					intakeEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = IntakeAir
+					amount = 2
+					maxAmount = 2
+					flowState = True
+					isTweakable = False
+					hideFlow = False
+					isVisible = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = JetEngine
+				cid = 4293894354
+				uid = 2940293706
+				mid = 2152644961
+				persistentId = 1725544024
+				launchID = 182
+				parent = 18
+				position = 1.077986478805542,-14.339855194091797,0.62238025665283203
+				rotation = 0,-0.130526096,5.26835713E-08,0.991445184
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = -1
+				sidx = 0
+				attm = 0
+				sameVesselCollision = False
+				sym = 17
+				srfN = , -1
+				attN = top, 18
+				mass = 1.5
+				shielded = False
+				temp = 305.94948985836169
+				tempExt = 305.9343400303996
+				tempExtUnexp = 305.9349254233129
+				staticPressureAtm = 0.98959929614251785
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = JetEngine
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleEnginesFX
+					isEnabled = True
+					independentThrottle = False
+					independentThrottlePercentage = 0
+					staged = False
+					flameout = False
+					EngineIgnited = False
+					engineShutdown = False
+					currentThrottle = 0
+					thrustPercentage = 100
+					manuallyOverridden = False
+					includeinDVCalcs = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnAction
+						{
+							actionGroup = None
+						}
+						ShutdownAction
+						{
+							actionGroup = None
+						}
+						ActivateAction
+						{
+							actionGroup = None
+						}
+						ToggleThrottle
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						independentThrottlePercentage
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+						thrustPercentage
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					aniState = LOCKED
+					animSwitch = True
+					animTime = 0
+					animSpeed = 1
+					deployPercent = 100
+					animationIsDisabled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployPercent
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAlternator
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSurfaceFX
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = structuralWing2
+				cid = 4293896912
+				uid = 332423609
+				mid = 2152644961
+				persistentId = 1298489230
+				launchID = 182
+				parent = 9
+				position = 0.62103140354156494,-13.148998260498047,1.9073486328125E-06
+				rotation = 0,1.00000024,8.42937098E-08,-4.17232656E-07
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 24
+				srfN = srfAttach, 9,node_collider
+				mass = 0.100000001
+				shielded = False
+				temp = 305.94950087416771
+				tempExt = 305.95417696614902
+				tempExtUnexp = 305.95387730816157
+				staticPressureAtm = 0.98950818765613435
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = structuralWing2
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = StandardCtrlSrf
+				cid = 4293892264
+				uid = 1431181781
+				mid = 2152644961
+				persistentId = 1699361218
+				launchID = 182
+				parent = 21
+				position = 3.3848533630371094,-13.730113983154297,-1.9073486328125E-06
+				rotation = 4.88711009E-07,1.00000024,2.52881136E-07,-4.02331551E-07
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 25
+				srfN = srfAttach, 21,COL 5
+				mass = 0.0500000007
+				shielded = False
+				temp = 305.94949563149896
+				tempExt = 305.94623416242888
+				tempExtUnexp = 305.9463844056196
+				staticPressureAtm = 0.98950826295240402
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = StandardCtrlSrf
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleControlSurface
+					isEnabled = True
+					mirrorDeploy = True
+					usesMirrorDeploy = True
+					ignorePitch = False
+					ignoreYaw = False
+					ignoreRoll = False
+					deploy = False
+					deployInvert = False
+					partDeployInvert = False
+					deployAngle = 20
+					authorityLimiter = 100
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActionToggle
+						{
+							actionGroup = None
+						}
+						ActionExtend
+						{
+							actionGroup = None
+						}
+						ActionRetract
+						{
+							actionGroup = None
+						}
+						PitchActive
+						{
+							actionGroup = None
+						}
+						PitchInactive
+						{
+							actionGroup = None
+						}
+						TogglePitch
+						{
+							actionGroup = None
+						}
+						YawActive
+						{
+							actionGroup = None
+						}
+						YawInactive
+						{
+							actionGroup = None
+						}
+						ToggleYaw
+						{
+							actionGroup = None
+						}
+						RollActive
+						{
+							actionGroup = None
+						}
+						RollInactive
+						{
+							actionGroup = None
+						}
+						ToggleRoll
+						{
+							actionGroup = None
+						}
+						ActivateAllControls
+						{
+							actionGroup = None
+						}
+						DeactivateAllControls
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployAngle
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+						authorityLimiter
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = StandardCtrlSrf
+				cid = 4293154624
+				uid = 2920640933
+				mid = 2152644961
+				persistentId = 188886998
+				launchID = 182
+				parent = 21
+				position = 1.4455029964447021,-13.7686767578125,0
+				rotation = 2.08616257E-07,1.00000024,4.2146857E-07,-4.31141615E-07
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 26
+				srfN = srfAttach, 21,COL 5
+				mass = 0.0500000007
+				shielded = False
+				temp = 305.94949559531238
+				tempExt = 305.94613454032191
+				tempExtUnexp = 305.94628944040574
+				staticPressureAtm = 0.9895080370635948
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = StandardCtrlSrf
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleControlSurface
+					isEnabled = True
+					mirrorDeploy = True
+					usesMirrorDeploy = True
+					ignorePitch = False
+					ignoreYaw = False
+					ignoreRoll = False
+					deploy = False
+					deployInvert = False
+					partDeployInvert = False
+					deployAngle = 20
+					authorityLimiter = 100
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActionToggle
+						{
+							actionGroup = None
+						}
+						ActionExtend
+						{
+							actionGroup = None
+						}
+						ActionRetract
+						{
+							actionGroup = None
+						}
+						PitchActive
+						{
+							actionGroup = None
+						}
+						PitchInactive
+						{
+							actionGroup = None
+						}
+						TogglePitch
+						{
+							actionGroup = None
+						}
+						YawActive
+						{
+							actionGroup = None
+						}
+						YawInactive
+						{
+							actionGroup = None
+						}
+						ToggleYaw
+						{
+							actionGroup = None
+						}
+						RollActive
+						{
+							actionGroup = None
+						}
+						RollInactive
+						{
+							actionGroup = None
+						}
+						ToggleRoll
+						{
+							actionGroup = None
+						}
+						ActivateAllControls
+						{
+							actionGroup = None
+						}
+						DeactivateAllControls
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployAngle
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+						authorityLimiter
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = structuralWing2
+				cid = 4292913594
+				uid = 826758489
+				mid = 2152644961
+				persistentId = 2122376753
+				launchID = 182
+				parent = 9
+				position = -0.62103140354156494,-13.148998260498047,1.9073486328125E-06
+				rotation = -3.37174839E-07,3.73521146E-07,-4.0194373E-14,-1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 21
+				srfN = srfAttach, 9,node_collider
+				mass = 0.100000001
+				shielded = False
+				temp = 305.9495018760415
+				tempExt = 305.95517416429664
+				tempExtUnexp = 305.9548177199232
+				staticPressureAtm = 0.9895080370635948
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = structuralWing2
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = StandardCtrlSrf
+				cid = 4292913550
+				uid = 239990762
+				mid = 2152644961
+				persistentId = 1778264294
+				launchID = 182
+				parent = 24
+				position = -3.384852409362793,-13.730113983154297,-1.9073486328125E-06
+				rotation = -3.37174839E-07,3.586199E-07,-4.88710896E-07,-1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 22
+				srfN = srfAttach, 24,COL 5
+				mass = 0.0500000007
+				shielded = False
+				temp = 305.94949562173605
+				tempExt = 305.94620937824646
+				tempExtUnexp = 305.94636030970742
+				staticPressureAtm = 0.9895075099897066
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = StandardCtrlSrf
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleControlSurface
+					isEnabled = True
+					mirrorDeploy = False
+					usesMirrorDeploy = True
+					ignorePitch = False
+					ignoreYaw = False
+					ignoreRoll = False
+					deploy = False
+					deployInvert = False
+					partDeployInvert = False
+					deployAngle = 20
+					authorityLimiter = 100
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActionToggle
+						{
+							actionGroup = None
+						}
+						ActionExtend
+						{
+							actionGroup = None
+						}
+						ActionRetract
+						{
+							actionGroup = None
+						}
+						PitchActive
+						{
+							actionGroup = None
+						}
+						PitchInactive
+						{
+							actionGroup = None
+						}
+						TogglePitch
+						{
+							actionGroup = None
+						}
+						YawActive
+						{
+							actionGroup = None
+						}
+						YawInactive
+						{
+							actionGroup = None
+						}
+						ToggleYaw
+						{
+							actionGroup = None
+						}
+						RollActive
+						{
+							actionGroup = None
+						}
+						RollInactive
+						{
+							actionGroup = None
+						}
+						ToggleRoll
+						{
+							actionGroup = None
+						}
+						ActivateAllControls
+						{
+							actionGroup = None
+						}
+						DeactivateAllControls
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployAngle
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+						authorityLimiter
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = StandardCtrlSrf
+				cid = 4292913514
+				uid = 2014778031
+				mid = 2152644961
+				persistentId = 1614700712
+				launchID = 182
+				parent = 24
+				position = -1.4455025196075439,-13.7686767578125,0
+				rotation = -5.90056004E-07,3.87430049E-07,-2.08616271E-07,-1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 23
+				srfN = srfAttach, 24,COL 5
+				mass = 0.0500000007
+				shielded = False
+				temp = 305.94949559786585
+				tempExt = 305.94614366259862
+				tempExtUnexp = 305.94629766603737
+				staticPressureAtm = 0.98950773587851582
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = StandardCtrlSrf
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleControlSurface
+					isEnabled = True
+					mirrorDeploy = False
+					usesMirrorDeploy = True
+					ignorePitch = False
+					ignoreYaw = False
+					ignoreRoll = False
+					deploy = False
+					deployInvert = False
+					partDeployInvert = False
+					deployAngle = 20
+					authorityLimiter = 100
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActionToggle
+						{
+							actionGroup = None
+						}
+						ActionExtend
+						{
+							actionGroup = None
+						}
+						ActionRetract
+						{
+							actionGroup = None
+						}
+						PitchActive
+						{
+							actionGroup = None
+						}
+						PitchInactive
+						{
+							actionGroup = None
+						}
+						TogglePitch
+						{
+							actionGroup = None
+						}
+						YawActive
+						{
+							actionGroup = None
+						}
+						YawInactive
+						{
+							actionGroup = None
+						}
+						ToggleYaw
+						{
+							actionGroup = None
+						}
+						RollActive
+						{
+							actionGroup = None
+						}
+						RollInactive
+						{
+							actionGroup = None
+						}
+						ToggleRoll
+						{
+							actionGroup = None
+						}
+						ActivateAllControls
+						{
+							actionGroup = None
+						}
+						DeactivateAllControls
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployAngle
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+						authorityLimiter
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = GearFixed
+				cid = 4294049428
+				uid = 2182411281
+				mid = 2152644961
+				persistentId = 1526320300
+				launchID = 182
+				parent = 9
+				position = -0.60000002384185791,-12.693584442138672,0.76907920837402344
+				rotation = -0.70709604,0.00392840337,-0.00392797124,0.707096159
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 28
+				srfN = srfAttach, 9,node_collider
+				mass = 0.0219999999
+				shielded = False
+				temp = 305.94949208756748
+				tempExt = 305.943740240956
+				tempExtUnexp = 305.94399635386435
+				staticPressureAtm = 0.98962113206074198
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = ForceHeaviest
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = GearFixed
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleWheelBase
+					isEnabled = True
+					wheelType = FREE
+					isGrounded = False
+					autoFriction = True
+					frictionMultiplier = 2.00054669
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActAutoFrictionToggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleWheelSuspension
+					isEnabled = True
+					springTweakable = 1
+					damperTweakable = 1
+					autoSpringDamper = True
+					suspensionPos = (-1, -1, -1)
+					suspensionDefaultPos = (-1, -1, -1)
+					autoBoost = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleWheelBrakes
+					isEnabled = True
+					brakeTweakable = 100
+					brakeInput = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						BrakeAction
+						{
+							actionGroup = Brakes
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleWheelDamage
+					isEnabled = True
+					isDamaged = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = GearFixed
+				cid = 4293472030
+				uid = 3906965623
+				mid = 2152644961
+				persistentId = 2837496184
+				launchID = 182
+				parent = 9
+				position = 0.60000002384185791,-12.693584442138672,0.76907920837402344
+				rotation = -0.00392794097,0.707096219,-0.707095981,0.0039283731
+				mirror = 1,1,-1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 27
+				srfN = srfAttach, 9,node_collider
+				mass = 0.0219999999
+				shielded = False
+				temp = 305.94949208759533
+				tempExt = 305.94374027461765
+				tempExtUnexp = 305.94399638605455
+				staticPressureAtm = 0.98962128265328142
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = ForceHeaviest
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = GearFixed
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleWheelBase
+					isEnabled = True
+					wheelType = FREE
+					isGrounded = False
+					autoFriction = True
+					frictionMultiplier = 2.00054669
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActAutoFrictionToggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleWheelSuspension
+					isEnabled = True
+					springTweakable = 1
+					damperTweakable = 1
+					autoSpringDamper = True
+					suspensionPos = (-1, -1, -1)
+					suspensionDefaultPos = (-1, -1, -1)
+					autoBoost = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleWheelBrakes
+					isEnabled = True
+					brakeTweakable = 100
+					brakeInput = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						BrakeAction
+						{
+							actionGroup = Brakes
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleWheelDamage
+					isEnabled = True
+					isDamaged = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = structuralWing2
+				cid = 4292835524
+				uid = 3226401017
+				mid = 2152644961
+				persistentId = 3849095813
+				launchID = 182
+				parent = 2
+				position = 0.62179899215698242,-2.0303714275360107,2.384185791015625E-07
+				rotation = 0,1.00000024,8.42937098E-08,-4.17232656E-07
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 32
+				srfN = srfAttach, 2,node_collider
+				mass = 0.100000001
+				shielded = False
+				temp = 305.94950299224632
+				tempExt = 305.95634462808243
+				tempExtUnexp = 305.95592948058277
+				staticPressureAtm = 0.98951172658081199
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = structuralWing2
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = StandardCtrlSrf
+				cid = 4292835480
+				uid = 2412635410
+				mid = 2152644961
+				persistentId = 3497875705
+				launchID = 182
+				parent = 29
+				position = 3.3856232166290283,-2.6114845275878906,-3.0994415283203125E-06
+				rotation = 4.88711009E-07,1.00000024,2.52881136E-07,-4.02331551E-07
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 33
+				srfN = srfAttach, 29,COL 5
+				mass = 0.0500000007
+				shielded = False
+				temp = 305.9494956160932
+				tempExt = 305.94619651386716
+				tempExtUnexp = 305.94634750582202
+				staticPressureAtm = 0.98951187717335143
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = StandardCtrlSrf
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleControlSurface
+					isEnabled = True
+					mirrorDeploy = True
+					usesMirrorDeploy = True
+					ignorePitch = False
+					ignoreYaw = False
+					ignoreRoll = False
+					deploy = False
+					deployInvert = False
+					partDeployInvert = False
+					deployAngle = 20
+					authorityLimiter = 100
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActionToggle
+						{
+							actionGroup = None
+						}
+						ActionExtend
+						{
+							actionGroup = None
+						}
+						ActionRetract
+						{
+							actionGroup = None
+						}
+						PitchActive
+						{
+							actionGroup = None
+						}
+						PitchInactive
+						{
+							actionGroup = None
+						}
+						TogglePitch
+						{
+							actionGroup = None
+						}
+						YawActive
+						{
+							actionGroup = None
+						}
+						YawInactive
+						{
+							actionGroup = None
+						}
+						ToggleYaw
+						{
+							actionGroup = None
+						}
+						RollActive
+						{
+							actionGroup = None
+						}
+						RollInactive
+						{
+							actionGroup = None
+						}
+						ToggleRoll
+						{
+							actionGroup = None
+						}
+						ActivateAllControls
+						{
+							actionGroup = None
+						}
+						DeactivateAllControls
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployAngle
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+						authorityLimiter
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = StandardCtrlSrf
+				cid = 4292835444
+				uid = 2286315297
+				mid = 2152644961
+				persistentId = 1391233928
+				launchID = 182
+				parent = 29
+				position = 1.4462711811065674,-2.6500468254089355,-7.152557373046875E-07
+				rotation = 2.08616257E-07,1.00000024,4.2146857E-07,-4.31141615E-07
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 34
+				srfN = srfAttach, 29,COL 5
+				mass = 0.0500000007
+				shielded = False
+				temp = 305.94949565871985
+				tempExt = 305.94632242650232
+				tempExtUnexp = 305.94646581882057
+				staticPressureAtm = 0.98951165128454222
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = StandardCtrlSrf
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleControlSurface
+					isEnabled = True
+					mirrorDeploy = True
+					usesMirrorDeploy = True
+					ignorePitch = False
+					ignoreYaw = False
+					ignoreRoll = False
+					deploy = False
+					deployInvert = False
+					partDeployInvert = False
+					deployAngle = 20
+					authorityLimiter = 100
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActionToggle
+						{
+							actionGroup = None
+						}
+						ActionExtend
+						{
+							actionGroup = None
+						}
+						ActionRetract
+						{
+							actionGroup = None
+						}
+						PitchActive
+						{
+							actionGroup = None
+						}
+						PitchInactive
+						{
+							actionGroup = None
+						}
+						TogglePitch
+						{
+							actionGroup = None
+						}
+						YawActive
+						{
+							actionGroup = None
+						}
+						YawInactive
+						{
+							actionGroup = None
+						}
+						ToggleYaw
+						{
+							actionGroup = None
+						}
+						RollActive
+						{
+							actionGroup = None
+						}
+						RollInactive
+						{
+							actionGroup = None
+						}
+						ToggleRoll
+						{
+							actionGroup = None
+						}
+						ActivateAllControls
+						{
+							actionGroup = None
+						}
+						DeactivateAllControls
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployAngle
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+						authorityLimiter
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = structuralWing2
+				cid = 4292835396
+				uid = 2785622488
+				mid = 2152644961
+				persistentId = 76388015
+				launchID = 182
+				parent = 2
+				position = -0.62179899215698242,-2.0303714275360107,2.384185791015625E-07
+				rotation = -3.37174839E-07,3.73521146E-07,-4.0194373E-14,-1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 29
+				srfN = srfAttach, 2,node_collider
+				mass = 0.100000001
+				shielded = False
+				temp = 305.94950310399446
+				tempExt = 305.95646588243363
+				tempExtUnexp = 305.95604376567059
+				staticPressureAtm = 0.98951157598827255
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = structuralWing2
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleLiftingSurface
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = StandardCtrlSrf
+				cid = 4292835346
+				uid = 3273963327
+				mid = 2152644961
+				persistentId = 4180423334
+				launchID = 182
+				parent = 32
+				position = -3.3856215476989746,-2.6114842891693115,-3.0994415283203125E-06
+				rotation = -3.37174839E-07,3.586199E-07,-4.88710896E-07,-1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 30
+				srfN = srfAttach, 32,COL 5
+				mass = 0.0500000007
+				shielded = False
+				temp = 305.94949587567936
+				tempExt = 305.94683767534821
+				tempExtUnexp = 305.94695250667019
+				staticPressureAtm = 0.98951104891438435
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = StandardCtrlSrf
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleControlSurface
+					isEnabled = True
+					mirrorDeploy = False
+					usesMirrorDeploy = True
+					ignorePitch = False
+					ignoreYaw = False
+					ignoreRoll = False
+					deploy = False
+					deployInvert = False
+					partDeployInvert = False
+					deployAngle = 20
+					authorityLimiter = 100
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActionToggle
+						{
+							actionGroup = None
+						}
+						ActionExtend
+						{
+							actionGroup = None
+						}
+						ActionRetract
+						{
+							actionGroup = None
+						}
+						PitchActive
+						{
+							actionGroup = None
+						}
+						PitchInactive
+						{
+							actionGroup = None
+						}
+						TogglePitch
+						{
+							actionGroup = None
+						}
+						YawActive
+						{
+							actionGroup = None
+						}
+						YawInactive
+						{
+							actionGroup = None
+						}
+						ToggleYaw
+						{
+							actionGroup = None
+						}
+						RollActive
+						{
+							actionGroup = None
+						}
+						RollInactive
+						{
+							actionGroup = None
+						}
+						ToggleRoll
+						{
+							actionGroup = None
+						}
+						ActivateAllControls
+						{
+							actionGroup = None
+						}
+						DeactivateAllControls
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployAngle
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+						authorityLimiter
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = StandardCtrlSrf
+				cid = 4292835310
+				uid = 2217208244
+				mid = 2152644961
+				persistentId = 1786072207
+				launchID = 182
+				parent = 32
+				position = -1.4462709426879883,-2.6500465869903564,-7.152557373046875E-07
+				rotation = -5.90056004E-07,3.87430049E-07,-2.08616271E-07,-1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				sym = 31
+				srfN = srfAttach, 32,COL 5
+				mass = 0.0500000007
+				shielded = False
+				temp = 305.94949560123172
+				tempExt = 305.94615587135434
+				tempExtUnexp = 305.94630870636729
+				staticPressureAtm = 0.98951127480319356
+				expt = 0.100000001
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = StandardCtrlSrf
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleControlSurface
+					isEnabled = True
+					mirrorDeploy = False
+					usesMirrorDeploy = True
+					ignorePitch = False
+					ignoreYaw = False
+					ignoreRoll = False
+					deploy = False
+					deployInvert = False
+					partDeployInvert = False
+					deployAngle = 20
+					authorityLimiter = 100
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActionToggle
+						{
+							actionGroup = None
+						}
+						ActionExtend
+						{
+							actionGroup = None
+						}
+						ActionRetract
+						{
+							actionGroup = None
+						}
+						PitchActive
+						{
+							actionGroup = None
+						}
+						PitchInactive
+						{
+							actionGroup = None
+						}
+						TogglePitch
+						{
+							actionGroup = None
+						}
+						YawActive
+						{
+							actionGroup = None
+						}
+						YawInactive
+						{
+							actionGroup = None
+						}
+						ToggleYaw
+						{
+							actionGroup = None
+						}
+						RollActive
+						{
+							actionGroup = None
+						}
+						RollInactive
+						{
+							actionGroup = None
+						}
+						ToggleRoll
+						{
+							actionGroup = None
+						}
+						ActivateAllControls
+						{
+							actionGroup = None
+						}
+						DeactivateAllControls
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployAngle
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+						authorityLimiter
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = GooExperiment
+				cid = 4285371328
+				uid = 618903860
+				mid = 2152644961
+				persistentId = 4249873498
+				launchID = 182
+				parent = 1
+				position = -1.1568225488645112E-08,-0.70725166797637939,-0.53321933746337891
+				rotation = 0,-2.38418565E-07,-2.00971865E-14,-1.00000024
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 1,node_collider
+				mass = 0.0500000007
+				shielded = False
+				temp = 305.94949650695668
+				tempExt = 305.94828859805358
+				tempExtUnexp = 305.94833889082594
+				staticPressureAtm = 0.98943371964536297
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = GooExperiment
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					aniState = LOCKED
+					animSwitch = True
+					animTime = 0
+					animSpeed = 1
+					deployPercent = 100
+					animationIsDisabled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						deployPercent
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = Custom01
+						}
+						ResetAction
+						{
+							actionGroup = Custom02
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = miniFuselage
+				cid = 4293642824
+				uid = 925958467
+				mid = 2152644961
+				persistentId = 989031260
+				launchID = 182
+				parent = 0
+				position = 5.5968762069369404E-08,0.0017396807670593262,0.92057716846466064
+				rotation = -0.00537878182,0.707086504,-0.00537878182,0.707086504
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 0,CockpitCOL
+				attN = top, 38
+				attN = bottom, 37
+				mass = 0.0250000004
+				shielded = False
+				temp = 305.94948662280791
+				tempExt = 305.91963304985308
+				tempExtUnexp = 305.9201697907875
+				staticPressureAtm = 0.98964756105142015
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = miniFuselage
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 50
+					maxAmount = 50
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = miniFuselage
+				cid = 4293550296
+				uid = 3936872698
+				mid = 2152644961
+				persistentId = 3626836119
+				launchID = 182
+				parent = 36
+				position = 5.5968762069369404E-08,-0.93565511703491211,0.93483948707580566
+				rotation = -0.00760674896,0,0,0.999971449
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = srfAttach, -1
+				attN = top, 36
+				attN = bottom, -1
+				mass = 0.0250000004
+				shielded = False
+				temp = 305.94949283965917
+				tempExt = 305.9334664983449
+				tempExtUnexp = 305.93418128885384
+				staticPressureAtm = 0.98964936816189397
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = miniFuselage
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 50
+					maxAmount = 50
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = miniFuselage
+				cid = 4293549988
+				uid = 2301292764
+				mid = 2152644961
+				persistentId = 24760329
+				launchID = 182
+				parent = 36
+				position = 5.5968762069369404E-08,0.93913435935974121,0.90631532669067383
+				rotation = -0.00760674896,0,0,0.999971449
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = srfAttach, -1
+				attN = top, 40
+				attN = bottom, 36
+				mass = 0.0250000004
+				shielded = False
+				temp = 305.94949311897119
+				tempExt = 305.93314188234098
+				tempExtUnexp = 305.93382587789375
+				staticPressureAtm = 0.98964575394094645
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = miniFuselage
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 50
+					maxAmount = 50
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = GearFree
+				cid = 4293888480
+				uid = 1026570719
+				mid = 2152644961
+				persistentId = 1911141970
+				launchID = 182
+				parent = 38
+				position = 5.5968762069369404E-08,0.82033085823059082,1.2190427780151367
+				rotation = -0.712465227,0,0,0.701707721
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 38,CYLCOL
+				mass = 0.0149999997
+				shielded = False
+				temp = 305.94949142426066
+				tempExt = 305.944050050665
+				tempExtUnexp = 305.94430289168878
+				staticPressureAtm = 0.98969168466548696
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = ForceHeaviest
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = GearFree
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleWheelBase
+					isEnabled = True
+					wheelType = FREE
+					isGrounded = False
+					autoFriction = True
+					frictionMultiplier = 2.00054669
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ActAutoFrictionToggle
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleWheelSuspension
+					isEnabled = True
+					springTweakable = 1
+					damperTweakable = 1
+					autoSpringDamper = True
+					suspensionPos = (-1, -1, -1)
+					suspensionDefaultPos = (0, -0.414000005, 0)
+					autoBoost = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleWheelSteering
+					isEnabled = True
+					autoSteeringAdjust = True
+					steeringEnabled = True
+					steeringInvert = False
+					angleTweakable = 30
+					responseTweakable = 2
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						SteeringToggle
+						{
+							actionGroup = None
+						}
+					}
+					AXISGROUPS
+					{
+						angleTweakable
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+						responseTweakable
+						{
+							axisGroup = None
+							axisIncremental = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							axisSpeedMultiplier = 0
+							axisInverted = None
+							overrideIncremental0 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental1 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental2 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+							overrideIncremental3 = Pitch, Yaw, Roll, TranslateX, TranslateY, TranslateZ, WheelSteer, WheelThrottle, Custom01, Custom02, Custom03, Custom04
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleWheelDamage
+					isEnabled = True
+					isDamaged = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = standardNoseCone
+				cid = 4293546438
+				uid = 692726116
+				mid = 2152644961
+				persistentId = 2992518672
+				launchID = 182
+				parent = 38
+				position = 5.5968758516655726E-08,1.6578073501586914,0.89538085460662842
+				rotation = -0.00760674896,0,0,0.999971449
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 0
+				sameVesselCollision = False
+				srfN = srfAttach, -1
+				attN = bottom01, 38
+				mass = 0.00999999978
+				shielded = False
+				temp = 305.94949073384186
+				tempExt = 305.94509703751805
+				tempExtUnexp = 305.94531473109771
+				staticPressureAtm = 0.98964439860809117
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = standardNoseCone
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = sensorThermometer
+				cid = 4285370002
+				uid = 2061058873
+				mid = 2152644961
+				persistentId = 847585715
+				launchID = 182
+				parent = 0
+				position = 5.2748259093959859E-08,0.48191654682159424,-0.60336983203887939
+				rotation = -0.0754082277,5.79194221E-08,-4.38007142E-09,-0.997153044
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 0,CockpitCOL2
+				mass = 0.00499999989
+				shielded = False
+				temp = 305.94949784398034
+				tempExt = 305.95216694331594
+				tempExtUnexp = 305.95188899603312
+				staticPressureAtm = 0.98942378053775748
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = sensorThermometer
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 3
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleEnviroSensor
+					isEnabled = True
+					sensorActive = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = Custom01
+						}
+						ResetAction
+						{
+							actionGroup = Custom02
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = sensorBarometer
+				cid = 4285369804
+				uid = 3611565852
+				mid = 2152644961
+				persistentId = 3608350494
+				launchID = 182
+				parent = 0
+				position = 3.8337649499453619E-08,1.1056263446807861,-0.43853151798248291
+				rotation = -0.199464306,5.31961533E-08,-1.08283187E-08,-0.979905307
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 0,CockpitCOL2
+				mass = 0.00499999989
+				shielded = False
+				temp = 305.94949844003423
+				tempExt = 305.95165861557331
+				tempExtUnexp = 305.95140479927721
+				staticPressureAtm = 0.98944817652915273
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = sensorBarometer
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleEnviroSensor
+					isEnabled = True
+					sensorActive = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = Custom01
+						}
+						ResetAction
+						{
+							actionGroup = Custom02
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = sensorAccelerometer
+				cid = 4290721378
+				uid = 2649485045
+				mid = 2152644961
+				persistentId = 750510199
+				launchID = 182
+				parent = 0
+				position = -0.15460260212421417,0.32766076922416687,-0.57698547840118408
+				rotation = -0.00983151235,-0.130519748,0.00129432988,-0.991396368
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 0,CockpitCOL2
+				mass = 0.00499999989
+				shielded = False
+				temp = 305.94949826848193
+				tempExt = 305.9516708598664
+				tempExtUnexp = 305.95141673053843
+				staticPressureAtm = 0.98942762064751411
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = sensorAccelerometer
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleEnviroSensor
+					isEnabled = True
+					sensorActive = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						ResetAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = Magnetometer
+				cid = 4290720224
+				uid = 798018196
+				mid = 2152644961
+				persistentId = 2715336954
+				launchID = 182
+				parent = 0
+				position = 0.28978300094604492,0.43972682952880859,-0.50191891193389893
+				rotation = 0.169130176,0.731161475,-0.631202102,0.195914194
+				mirror = 1,1,1
+				symMethod = Mirror
+				istg = -1
+				resPri = 0
+				dstg = 0
+				sqor = -1
+				sepI = -1
+				sidx = -1
+				attm = 1
+				sameVesselCollision = False
+				srfN = srfAttach, 0,CockpitCOL2
+				attN = bottom, -1
+				mass = 0.0500000007
+				shielded = False
+				temp = 305.94949713225441
+				tempExt = 305.95148900499123
+				tempExtUnexp = 305.95123965537391
+				staticPressureAtm = 0.98943868919916567
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/circles
+				rTrf = Magnetometer
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+					ToggleSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					SetSameVesselInteraction
+					{
+						actionGroup = None
+					}
+					RemoveSameVesselInteraction
+					{
+						actionGroup = None
+					}
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleDeployablePart
+					isEnabled = True
+					currentRotation = (0, 0, 0, 0)
+					storedAnimationTime = 0
+					storedAnimationSpeed = 1
+					deployState = RETRACTED
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ExtendPanelsAction
+						{
+							actionGroup = None
+						}
+						ExtendAction
+						{
+							actionGroup = None
+						}
+						RetractAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+							active = False
+						}
+						ResetAction
+						{
+							actionGroup = None
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleCargoPart
+					isEnabled = True
+					beingAttached = False
+					beingSettled = False
+					reinitResourcesOnStoreInVessel = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 0
+				Gear = False, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 0
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				AxisGroupsModule
+				{
+				}
+				SuspensionLoadBalancer
+				{
+				}
+				CommNetVessel
+				{
+					controlState = KerbalFull
+					canComm = True
+				}
+			}
+		}
 	}
 	LoaderInfo
 	{
@@ -107612,6 +115552,7 @@ GAME
 				47 = ExitVessel,Mun
 				47 = BoardVessel,Mun
 				47 = Escape,Mun
+				47 = Flyby,Kerbin
 			}
 		}
 		KERBAL
@@ -110303,7 +118244,7 @@ GAME
 			}
 			CAREER_LOG
 			{
-				flight = 2
+				flight = 3
 				0 = ExitVessel,Kerbin
 				0 = Orbit,Kerbin
 				0 = BoardVessel,Kerbin
@@ -110320,10 +118261,13 @@ GAME
 				1 = Flyby,Kerbin
 				1 = Land,Kerbin
 				1 = Recover
+				2 = ExitVessel,Kerbin
+				2 = BoardVessel,Kerbin
+				2 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 2
+				flight = 3
 			}
 		}
 		KERBAL
@@ -111189,6 +119133,7 @@ GAME
 				5 = Orbit,Mun
 				5 = BoardVessel,Mun
 				5 = Escape,Mun
+				5 = Flyby,Kerbin
 			}
 		}
 		KERBAL
@@ -115843,7 +123788,7 @@ GAME
 			badS = False
 			veteran = False
 			tour = False
-			state = Available
+			state = Assigned
 			inactive = False
 			inactiveTimeEnd = 0
 			gExperienced = 0
@@ -115902,16 +123847,7 @@ GAME
 			}
 			INVENTORY
 			{
-				name = ModuleInventoryPart
-				isEnabled = True
-				stagingEnabled = True
 				inventory = evaChute,evaJetpack
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-				}
 				STOREDPARTS
 				{
 					STOREDPART
@@ -115924,10 +123860,10 @@ GAME
 						PART
 						{
 							name = evaChute
-							cid = 4294896820
+							cid = 4294897384
 							uid = 0
 							mid = 0
-							persistentId = 2525185272
+							persistentId = 0
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -116011,10 +123947,10 @@ GAME
 						PART
 						{
 							name = evaJetpack
-							cid = 4294896882
+							cid = 4294897446
 							uid = 0
 							mid = 0
-							persistentId = 1784973568
+							persistentId = 0
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -116099,9 +124035,6 @@ GAME
 							}
 						}
 					}
-				}
-				UPGRADESAPPLIED
-				{
 				}
 			}
 			CAREER_LOG
@@ -117328,6 +125261,7 @@ GAME
 				0 = Orbit,Mun
 				0 = BoardVessel,Mun
 				0 = Escape,Mun
+				0 = Flyby,Kerbin
 			}
 		}
 		KERBAL
