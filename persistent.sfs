@@ -199,7 +199,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 7483182.292087052
+		funds = 7515230.8874711618
 	}
 	SCENARIO
 	{
@@ -536,7 +536,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 282.820679
+		sci = 285.599915
 		Tech
 		{
 			id = start
@@ -5650,7 +5650,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 513039.93694561452
+		update = 513103.45694567368
 		version = 1.12.5
 		WEIGHTS
 		{
@@ -5688,11 +5688,50 @@ GAME
 			Moho = 30
 			Minmus = 64
 			Mun = 90
-			Kerbin = 82
+			Kerbin = 90
 			Sun = 30
 		}
 		CONTRACTS
 		{
+			CONTRACT
+			{
+				guid = eddb90d0-fe9a-4a03-a94d-4b33f2e0bd8b
+				type = RecoverAsset
+				prestige = 0
+				seed = -1813835947
+				state = Active
+				viewed = Read
+				agent = 集成积分企业
+				agentName = Integrated Integrals
+				deadlineType = Floating
+				expiryType = Floating
+				values = 106930.693387985,45552475.3832817,23170.5880441315,55582.673487839,24569.9988842011,0,8.742858,9,618978.141889363,513054.416945628,46065529.8002273,0
+				targetBody = 1
+				kerbalName = Maolin Kerman
+				partName = mk1-3pod
+				partID = 2311407645
+				recoveryLocation = 1
+				recoveryType = 1
+				PARAM
+				{
+					name = AcquireCrew
+					state = Incomplete
+					values = 5940,0,0,4,0
+					title = 拯救Maolin Kerman
+					winOn = 0
+					kerbal = Maolin Kerman
+				}
+				PARAM
+				{
+					name = RecoverKerbal
+					state = Incomplete
+					values = 0,0,0,0,0
+					title = 在Kerbin回收Maolin Kerman
+					failOn = All
+					winOn = All
+					kerbal = Maolin Kerman
+				}
+			}
 			CONTRACT
 			{
 				guid = 4c54b449-7d7d-4673-a750-3fe2ac7276bf
@@ -5885,6 +5924,64 @@ GAME
 					targetSituation = ORBITING
 					noun = 空间站
 					finalObjective = False
+				}
+			}
+			CONTRACT
+			{
+				guid = fe7fcc90-6d68-4932-9c5c-cbbe7222d90c
+				type = RecoverAsset
+				prestige = 1
+				seed = -298045252
+				state = Active
+				viewed = Read
+				agent = 火箭联合公司
+				agentName = Rokea Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 35714.2847776413,38035713.288188,40926.6040196658,102851.70633098,41684.503341198,0,13.44768,14,548687.461723194,513054.416945628,38548767.7051336,0
+				targetBody = 1
+				kerbalName = Kaka Kerman
+				partName = mk1pod.v2
+				partID = 151430311
+				recoveryLocation = 2
+				recoveryType = 3
+				PARAM
+				{
+					name = AcquireCrew
+					state = Incomplete
+					values = 9075,0,0,6,0
+					title = 拯救Kaka Kerman
+					winOn = 0
+					kerbal = Kaka Kerman
+				}
+				PARAM
+				{
+					name = AcquirePart
+					state = Incomplete
+					values = 9075,0,0,6,0
+					title = 获得Kaka的机体
+					winOn = 0
+					part = 151430311
+				}
+				PARAM
+				{
+					name = RecoverKerbal
+					state = Incomplete
+					values = 0,0,0,0,0
+					title = 在Kerbin回收Kaka Kerman
+					failOn = All
+					winOn = All
+					kerbal = Kaka Kerman
+				}
+				PARAM
+				{
+					name = RecoverPart
+					state = Incomplete
+					values = 0,0,0,0,0
+					title = 在Kerbin回收Kaka的机体
+					failOn = AnyCandidate
+					winOn = AllCandidates
+					part = 151430311
 				}
 			}
 			CONTRACT
@@ -6672,95 +6769,29 @@ GAME
 					targetType = FLYBYRETURN
 				}
 			}
-			CONTRACT
+			CONTRACT_FINISHED
 			{
-				guid = eddb90d0-fe9a-4a03-a94d-4b33f2e0bd8b
-				type = RecoverAsset
+				guid = 08686b0c-43bd-4944-94a1-5c8a6b49f78a
+				type = CollectScience
 				prestige = 0
-				seed = -1813835947
-				state = Offered
-				viewed = Unseen
-				agent = 集成积分企业
-				agentName = Integrated Integrals
+				seed = 962241218
+				state = Completed
+				viewed = Read
+				agent = 实验工程集团
+				agentName = Experimental Engineering Group
 				deadlineType = Floating
 				expiryType = Floating
-				values = 106930.693387985,45552475.3832817,23170.5880441315,55582.673487839,24569.9988842011,0,8.742858,9,618978.141889363,0,0,0
-				targetBody = 1
-				kerbalName = Maolin Kerman
-				partName = mk1-3pod
-				partID = 0
-				recoveryLocation = 1
-				recoveryType = 1
+				values = 128316.832065582,91104950.7665634,20906.9998025894,53661.2970563889,21734.9990129471,3,6.666667,3,458703.321010918,330401.92894535,91435352.6955087,0
+				body = 2
+				location = Surface
 				PARAM
 				{
-					name = AcquireCrew
-					state = Incomplete
-					values = 5940,0,0,4,0
-					title = 拯救Maolin Kerman
-					winOn = 0
-				}
-				PARAM
-				{
-					name = RecoverKerbal
-					state = Incomplete
+					name = CollectScience
+					enabled = False
+					state = Complete
 					values = 0,0,0,0,0
-					title = 在Kerbin回收Maolin Kerman
-					failOn = All
-					winOn = All
-				}
-			}
-			CONTRACT
-			{
-				guid = fe7fcc90-6d68-4932-9c5c-cbbe7222d90c
-				type = RecoverAsset
-				prestige = 1
-				seed = -298045252
-				state = Offered
-				viewed = Unseen
-				agent = 火箭联合公司
-				agentName = Rokea Inc
-				deadlineType = Floating
-				expiryType = Floating
-				values = 35714.2847776413,38035713.288188,40926.6040196658,102851.70633098,41684.503341198,0,13.44768,14,548687.461723194,0,0,0
-				targetBody = 1
-				kerbalName = Kaka Kerman
-				partName = mk1pod.v2
-				partID = 0
-				recoveryLocation = 2
-				recoveryType = 3
-				PARAM
-				{
-					name = AcquireCrew
-					state = Incomplete
-					values = 9075,0,0,6,0
-					title = 拯救Kaka Kerman
-					winOn = 0
-				}
-				PARAM
-				{
-					name = AcquirePart
-					state = Incomplete
-					values = 9075,0,0,6,0
-					title = 获得Kaka的机体
-					winOn = 0
-				}
-				PARAM
-				{
-					name = RecoverKerbal
-					state = Incomplete
-					values = 0,0,0,0,0
-					title = 在Kerbin回收Kaka Kerman
-					failOn = All
-					winOn = All
-				}
-				PARAM
-				{
-					name = RecoverPart
-					state = Incomplete
-					values = 0,0,0,0,0
-					title = 在Kerbin回收Kaka的机体
-					failOn = AnyCandidate
-					winOn = AllCandidates
+					body = 2
+					location = Surface
 				}
 			}
 			CONTRACT_FINISHED
@@ -6902,6 +6933,84 @@ GAME
 						targetBody = 2
 						targetType = Flyby
 						kerbalName = Bawei Kerman
+					}
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 2ca0193c-4488-4d56-a22e-145f18b4384f
+				type = TourismContract
+				prestige = 1
+				seed = 68118745
+				state = Completed
+				viewed = Read
+				agent = O.M.B.爆破企业
+				agentName = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,92016000,0,0,0,0,22.72727,12,292257.627555356,270942.247555621,92286942.2475556,0
+				preposition = 到Kerbin上
+				homeDestinations = False
+				isGeeAdventure = False
+				tourists = Manbi Kerman|Shendai Kerman
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Complete
+					disableOnStateChange = False
+					allowPartialFailure = True
+					values = 0,0,0,0,0
+					kerbalName = Manbi Kerman
+					kerbalGender = Male
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Manbi Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
+						targetBody = 2
+						targetType = Flyby
+						kerbalName = Manbi Kerman
+					}
+				}
+				PARAM
+				{
+					name = KerbalTourParameter
+					state = Complete
+					disableOnStateChange = False
+					allowPartialFailure = True
+					values = 0,0,0,0,0
+					kerbalName = Shendai Kerman
+					kerbalGender = Female
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
+						targetBody = 1
+						targetType = Orbit
+						kerbalName = Shendai Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Shendai Kerman
 					}
 				}
 			}
@@ -7359,31 +7468,6 @@ GAME
 			}
 			CONTRACT_FINISHED
 			{
-				guid = 08686b0c-43bd-4944-94a1-5c8a6b49f78a
-				type = CollectScience
-				prestige = 0
-				seed = 962241218
-				state = Completed
-				viewed = Read
-				agent = 实验工程集团
-				agentName = Experimental Engineering Group
-				deadlineType = Floating
-				expiryType = Floating
-				values = 128316.832065582,91104950.7665634,20906.9998025894,53661.2970563889,21734.9990129471,3,6.666667,3,458703.321010918,330401.92894535,91435352.6955087,0
-				body = 2
-				location = Surface
-				PARAM
-				{
-					name = CollectScience
-					enabled = False
-					state = Complete
-					values = 0,0,0,0,0
-					body = 2
-					location = Surface
-				}
-			}
-			CONTRACT_FINISHED
-			{
 				guid = 2d95e8c6-11d8-491c-8c04-3bfd0021ecc2
 				type = RecoverAsset
 				prestige = 0
@@ -7458,84 +7542,6 @@ GAME
 					title = 在Kerbin回收Ailixun Kerman
 					failOn = All
 					winOn = All
-				}
-			}
-			CONTRACT_FINISHED
-			{
-				guid = 2ca0193c-4488-4d56-a22e-145f18b4384f
-				type = TourismContract
-				prestige = 1
-				seed = 68118745
-				state = Completed
-				viewed = Read
-				agent = O.M.B.爆破企业
-				agentName = O.M.B. Demolition Enterprises
-				deadlineType = Floating
-				expiryType = Floating
-				values = 21600,92016000,0,0,0,0,22.72727,12,292257.627555356,270942.247555621,92286942.2475556,0
-				preposition = 到Kerbin上
-				homeDestinations = False
-				isGeeAdventure = False
-				tourists = Manbi Kerman|Shendai Kerman
-				PARAM
-				{
-					name = KerbalTourParameter
-					state = Complete
-					disableOnStateChange = False
-					allowPartialFailure = True
-					values = 0,0,0,0,0
-					kerbalName = Manbi Kerman
-					kerbalGender = Male
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						enabled = False
-						state = Complete
-						values = 0,0,0,0,0
-						targetBody = 1
-						targetType = Suborbit
-						kerbalName = Manbi Kerman
-					}
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						enabled = False
-						state = Complete
-						values = 0,0,0,0,0
-						targetBody = 2
-						targetType = Flyby
-						kerbalName = Manbi Kerman
-					}
-				}
-				PARAM
-				{
-					name = KerbalTourParameter
-					state = Complete
-					disableOnStateChange = False
-					allowPartialFailure = True
-					values = 0,0,0,0,0
-					kerbalName = Shendai Kerman
-					kerbalGender = Female
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						enabled = False
-						state = Complete
-						values = 0,0,0,0,0
-						targetBody = 1
-						targetType = Orbit
-						kerbalName = Shendai Kerman
-					}
-					PARAM
-					{
-						name = KerbalDestinationParameter
-						enabled = False
-						state = Complete
-						values = 0,0,0,0,0
-						targetBody = 1
-						targetType = Suborbit
-						kerbalName = Shendai Kerman
-					}
 				}
 			}
 		}
@@ -7625,7 +7631,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.12.5
-		UT = 513043.89694561821
+		UT = 513104.17694567435
 		activeVessel = 0
 		mapViewFiltering = 11263
 		commNetUIModeTracking = None
@@ -8659,9 +8665,9 @@ GAME
 				ECC = 1
 				INC = 162.53892021899011
 				LPE = 90
-				LAN = 291.57842791130378
+				LAN = 291.97134790503753
 				MNA = 0
-				EPH = 513039.85694561445
+				EPH = 513063.37694563635
 				REF = 1
 			}
 			PART
@@ -13796,13 +13802,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 101448.84766837739
-				ECC = 0.99999999999999978
+				SMA = 0
+				ECC = 1
 				INC = 85.571007807610286
 				LPE = 90
-				LAN = 74.857471045112504
-				MNA = 3.1415926303452304
-				EPH = 513039.85694561445
+				LAN = 74.918393000634239
+				MNA = 0
+				EPH = 513063.37694563635
 				REF = 2
 			}
 			PART
@@ -87750,13 +87756,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 0
-				ECC = 1
-				INC = 90.125255544330969
-				LPE = 90
-				LAN = 216.08127693947645
-				MNA = 0
-				EPH = 513039.85694561445
+				SMA = 300034.33049656067
+				ECC = 0.99999999999999978
+				INC = 90.125255544360016
+				LPE = 90.000000000000014
+				LAN = 216.47419693317738
+				MNA = 3.1415926303452304
+				EPH = 513063.37694563635
 				REF = 1
 			}
 			PART
@@ -91765,6 +91771,306 @@ GAME
 				CommNetVessel
 				{
 					controlState = KerbalFull
+					canComm = True
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 46a2732ffda94fedbecaaabe0707d0c2
+			persistentId = 484132705
+			name = Kaka的机体
+			type = Ship
+			sit = ORBITING
+			landed = False
+			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
+			vesselSpawning = True
+			launchedFrom = 
+			landedAt = 
+			displaylandedAt = 
+			splashed = False
+			met = 513054.41694562801
+			lct = 513054.41694562801
+			lastUT = -1
+			distanceTraveled = 0
+			root = 0
+			lat = 7.0924673879650735
+			lon = 165.41202020448594
+			alt = 12945366.9656846
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.0313037597,-0.524459302,-0.656425118,0.541357994
+			CoM = 0,0,0
+			stg = 0
+			prst = True
+			ref = 0
+			ctrl = False
+			PQSMin = 0
+			PQSMax = 0
+			GroupOverride = 0
+			OverrideDefault = False,False,False,False
+			OverrideActionControl = 0,0,0,0
+			OverrideAxisControl = 0,0,0,0
+			OverrideGroupNames = ,,,
+			altDispState = DEFAULT
+			ORBIT
+			{
+				SMA = 12294271.485696649
+				ECC = 0.10194134038454079
+				INC = 9.2862838402929828
+				LPE = 313.14401527547477
+				LAN = 55.935180269151601
+				MNA = 5.8427071739550573
+				EPH = 0
+				REF = 1
+			}
+			PART
+			{
+				name = mk1pod.v2
+				cid = 0
+				uid = 151430311
+				mid = 151430311
+				persistentId = 1171303981
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				sameVesselCollision = False
+				srfN = None, -1
+				attN = bottom, -1
+				attN = top, -1
+				mass = 0.70600003
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/Rokea
+				rTrf = 
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				crew = Kaka Kerman
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 0
+					maxAmount = 50
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = MonoPropellant
+					amount = 0
+					maxAmount = 10
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 29
+				lastObservedTime = 513054.41694562801
+				lifetime = 76071426.576376006
+				refTime = 76071426.576376006
+				size = 0
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				AxisGroupsModule
+				{
+				}
+				SuspensionLoadBalancer
+				{
+				}
+				CommNetVessel
+				{
+					controlState = None
+					canComm = True
+				}
+			}
+		}
+		VESSEL
+		{
+			pid = 816884e1598f458cbb55c763577fb9e0
+			persistentId = 3473155060
+			name = Maolin的载人舱
+			type = Ship
+			sit = ORBITING
+			landed = False
+			skipGroundPositioning = False
+			skipGroundPositioningForDroppedPart = False
+			vesselSpawning = True
+			launchedFrom = 
+			landedAt = 
+			displaylandedAt = 
+			splashed = False
+			met = 513054.41694562801
+			lct = 513054.41694562801
+			lastUT = -1
+			distanceTraveled = 0
+			root = 0
+			lat = 0.00053849346719882566
+			lon = -79.91073040392321
+			alt = 78694.468891688273
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.306295842,-0.547538042,-0.597204626,0.499731392
+			CoM = 0,0,0
+			stg = 0
+			prst = True
+			ref = 0
+			ctrl = False
+			PQSMin = 0
+			PQSMax = 0
+			GroupOverride = 0
+			OverrideDefault = False,False,False,False
+			OverrideActionControl = 0,0,0,0
+			OverrideAxisControl = 0,0,0,0
+			OverrideGroupNames = ,,,
+			altDispState = DEFAULT
+			ORBIT
+			{
+				SMA = 679972.4375
+				ECC = 0.0038454770110547543
+				INC = -0.00062220788095146418
+				LPE = 0.99974584579467773
+				LAN = 0.99933034181594849
+				MNA = 2.0754471377503529
+				EPH = 1.0004684925079346
+				REF = 1
+			}
+			PART
+			{
+				name = mk1-3pod
+				cid = 0
+				uid = 2311407645
+				mid = 2311407645
+				persistentId = 3516429202
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				sameVesselCollision = False
+				srfN = None, -1
+				attN = bottom, -1
+				attN = top, -1
+				mass = 2.31799984
+				shielded = False
+				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
+				staticPressureAtm = 0
+				expt = 0.5
+				state = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Agencies/IntegratedIntegrals
+				rTrf = 
+				modCost = 0
+				modMass = 0
+				moduleVariantName = 
+				moduleCargoStackableQuantity = 1
+				crew = Maolin Kerman
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 0
+					maxAmount = 150
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = MonoPropellant
+					amount = 0
+					maxAmount = 30
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 29
+				lastObservedTime = 513054.41694562801
+				lifetime = 91104950.766563401
+				refTime = 91104950.766563401
+				size = 0
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				AxisGroupsModule
+				{
+				}
+				SuspensionLoadBalancer
+				{
+				}
+				CommNetVessel
+				{
+					controlState = None
 					canComm = True
 				}
 			}
@@ -101374,7 +101680,7 @@ GAME
 			gExperienced = 0
 			outDueToG = False
 			ToD = 0
-			idx = -1
+			idx = 0
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
@@ -101603,7 +101909,7 @@ GAME
 			gExperienced = 0
 			outDueToG = False
 			ToD = 0
-			idx = -1
+			idx = 0
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
