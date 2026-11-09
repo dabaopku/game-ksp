@@ -9,7 +9,7 @@ GAME
 	Status = 1
 	Seed = 1012858149
 	ROCSeed = -1
-	scene = 7
+	scene = 5
 	editor = None
 	flag = Squad/Flags/circles
 	launchID = 246
@@ -208,7 +208,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 8842951.887680959
+		funds = 9059914.7799361236
 	}
 	SCENARIO
 	{
@@ -547,6 +547,14 @@ GAME
 						crews = Jebediah Kerman, Panan Kerman, Valentina Kerman
 					}
 				}
+				Spacewalk
+				{
+					completed = 786899.3853825503
+					crew
+					{
+						crews = Maien Kerman
+					}
+				}
 				ReturnFromOrbit
 				{
 					completedManned = 711072.47742190654
@@ -584,7 +592,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 301.796265
+		sci = 97.4891739
 		Tech
 		{
 			id = start
@@ -1186,6 +1194,17 @@ GAME
 			part = Size3SmallTank
 			part = Size3MediumTank
 			part = Decoupler.3
+		}
+		Tech
+		{
+			id = scienceTech
+			state = Available
+			cost = 300
+			part = RobotArmScanner.S2
+			part = sensorAtmosphere
+			part = SurveyScanner
+			part = SurfaceScanner
+			part = InfraredTelescope
 		}
 		Science
 		{
@@ -5972,6 +5991,17 @@ GAME
 			asc = True
 			cap = 12
 		}
+		Science
+		{
+			id = evaScience@MinmusInSpaceHigh
+			title = 在距离Minmus较远的太空中的EVA科学实验
+			dsc = 1
+			scv = 0
+			sbv = 2.5
+			sci = 62.5
+			asc = True
+			cap = 62.5
+		}
 	}
 	SCENARIO
 	{
@@ -5982,7 +6012,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 910.087463
+		rep = 906.877319
 	}
 	SCENARIO
 	{
@@ -6395,7 +6425,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 786307.46538199903
+		update = 808606.78968691512
 		version = 1.12.5
 		WEIGHTS
 		{
@@ -6412,8 +6442,8 @@ GAME
 			PartTest = 82
 			GrandTour = 30
 			CollectScience = 90
-			TourismContract = 90
-			SurveyContract = 90
+			TourismContract = 82
+			SurveyContract = 82
 			StationContract = 90
 			SatelliteContract = 90
 			ISRUContract = 30
@@ -6435,7 +6465,7 @@ GAME
 			Eve = 78
 			Moho = 30
 			Minmus = 90
-			Mun = 82
+			Mun = 66
 			Kerbin = 90
 			Sun = 30
 		}
@@ -6557,8 +6587,9 @@ GAME
 					PARAM
 					{
 						name = KerbalDestinationParameter
-						state = Incomplete
-						values = 8125,0,0,0,0
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
 						targetBody = 3
 						targetType = Flyby
 						kerbalName = Faan Kerman
@@ -6566,80 +6597,13 @@ GAME
 					PARAM
 					{
 						name = KerbalDestinationParameter
-						state = Incomplete
-						values = 8125,0,0,0,0
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
 						targetBody = 3
 						targetType = Orbit
 						kerbalName = Faan Kerman
 					}
-				}
-			}
-			CONTRACT
-			{
-				guid = 3cd93da8-094d-4d8e-9ebc-fd8210845d52
-				type = StationContract
-				prestige = 0
-				seed = -1506195919
-				state = Active
-				viewed = Read
-				agent = 弗拉伊德动力研究实验室
-				agentName = FLOOYD Dynamics Research Labs
-				deadlineType = Floating
-				expiryType = Floating
-				values = 129600,161028000,88000,239662.489116192,92399.995803833,0,19.04762,10,664480.788452443,535170.208452713,161563170.208453,0
-				targetBody = 3
-				capacity = 5
-				contextual = False
-				PARAM
-				{
-					name = VesselSystemsParameter
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					typeString = 空间站
-					mannedStatus = 2
-					requireNew = True
-					checkModuleTypes = Antenna|Generator|Dock
-					checkModuleDescriptions = 拥有一根天线|拥有一个对接口|能够发电
-					launchID = 215
-				}
-				PARAM
-				{
-					name = CrewCapacityParameter
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					targetCapacity = 5
-				}
-				PARAM
-				{
-					name = ResourcePossessionParameter
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					goalResource = 2000
-					resourceName = LiquidFuel
-					resourceTitle = 液体燃料
-					vesselName = 空间站
-				}
-				PARAM
-				{
-					name = StabilityParameter
-					state = Complete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					holdSeconds = 10
-				}
-				PARAM
-				{
-					name = LocationAndSituationParameter
-					state = Complete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					targetBody = 3
-					targetSituation = ORBITING
-					noun = 空间站
-					finalObjective = False
 				}
 			}
 			CONTRACT
@@ -6828,8 +6792,9 @@ GAME
 				PARAM
 				{
 					name = ProgressTrackingParameter
-					state = Incomplete
-					values = 60000,0,2,5,0
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
 					targetBody = 3
 					targetType = SPACEWALK
 				}
@@ -6950,7 +6915,7 @@ GAME
 				PARAM
 				{
 					name = PartRequestParameter
-					state = Complete
+					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					article = a
@@ -6961,7 +6926,7 @@ GAME
 				PARAM
 				{
 					name = PartRequestParameter
-					state = Complete
+					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					article = a
@@ -6972,7 +6937,7 @@ GAME
 				PARAM
 				{
 					name = PartRequestParameter
-					state = Complete
+					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					article = a
@@ -6983,7 +6948,7 @@ GAME
 				PARAM
 				{
 					name = StabilityParameter
-					state = Complete
+					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					holdSeconds = 10
@@ -7050,7 +7015,7 @@ GAME
 				PARAM
 				{
 					name = PartRequestParameter
-					state = Complete
+					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					article = a
@@ -7061,7 +7026,7 @@ GAME
 				PARAM
 				{
 					name = StabilityParameter
-					state = Complete
+					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					holdSeconds = 10
@@ -7339,8 +7304,9 @@ GAME
 					PARAM
 					{
 						name = KerbalDestinationParameter
-						state = Incomplete
-						values = 12188,0,0,0,0
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
 						targetBody = 3
 						targetType = Flyby
 						kerbalName = Zaika Kerman
@@ -7376,8 +7342,9 @@ GAME
 					PARAM
 					{
 						name = KerbalDestinationParameter
-						state = Incomplete
-						values = 12188,0,0,0,0
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
 						targetBody = 3
 						targetType = Flyby
 						kerbalName = Fanxing Kerman
@@ -7435,8 +7402,9 @@ GAME
 					PARAM
 					{
 						name = KerbalDestinationParameter
-						state = Incomplete
-						values = 12188,0,0,0,0
+						enabled = False
+						state = Complete
+						values = 0,0,0,0,0
 						targetBody = 3
 						targetType = Flyby
 						kerbalName = Jiangfa Kerman
@@ -7765,7 +7733,7 @@ GAME
 				PARAM
 				{
 					name = StabilityParameter
-					state = Complete
+					state = Incomplete
 					disableOnStateChange = False
 					values = 0,0,0,0,0
 					holdSeconds = 10
@@ -7780,6 +7748,93 @@ GAME
 					targetSituation = ORBITING
 					noun = 空间站
 					finalObjective = False
+				}
+			}
+			CONTRACT
+			{
+				guid = 509763cf-c4b0-4900-927e-b1217fc2ec89
+				type = SurveyContract
+				prestige = 0
+				seed = 972525421
+				state = Offered
+				viewed = Unseen
+				agent = 真空高级吸力系统公司
+				agentName = Vac-Co Advanced Suction Systems
+				deadlineType = Floating
+				expiryType = Floating
+				values = 42772.2773551941,91104950.7665634,62417.9976768494,115785.380432387,64889.995250702,0,8.321776,9,851367.227042098,0,0,0
+				targetBody = 2
+				centerLatitude = -6.6091332577757376
+				centerLongitude = 0.39988033771509346
+				dataName = 地震
+				anomalyName = 干扰
+				reportName = 读数
+				locationName = 坐标 XPM-P附近的Mun
+				focusedSurvey = False
+				targetBand = GROUND
+				contextual = False
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 17600,0,3,3,0
+					targetBody = 2
+					actionDescription = 获取地震仪读数
+					experiment = seismicScan
+					flightThreshold = 8200
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 414398957
+					wpIndex = 0
+					wpTexture = seismic
+					wpLatitude = -6.3961310091669672
+					wpLongitude = 0.1593333571037584
+					wpLandlocked = False
+					wpNavigationId = 7c3b97f0-46f1-4528-8361-d146ea9064a3
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 17600,0,3,3,0
+					targetBody = 2
+					actionDescription = 获取地震仪读数
+					experiment = seismicScan
+					flightThreshold = 8200
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 414398957
+					wpIndex = 1
+					wpTexture = seismic
+					wpLatitude = -6.9099372820615406
+					wpLongitude = 0.3682502335045561
+					wpLandlocked = False
+					wpNavigationId = 726adf42-ff13-4a60-9714-97fbbe138cb7
+				}
+				PARAM
+				{
+					name = SurveyWaypointParameter
+					state = Incomplete
+					values = 17600,0,3,3,0
+					targetBody = 2
+					actionDescription = 获取地震仪读数
+					experiment = seismicScan
+					flightThreshold = 9000
+					band = 1
+					clusterState = FULL
+					verified = True
+					contextual = False
+					wpSeed = 414398957
+					wpIndex = 2
+					wpTexture = seismic
+					wpLatitude = -6.7073254395252473
+					wpLongitude = 0.50769670799115951
+					wpLandlocked = False
+					wpNavigationId = 77a759bd-5456-41ba-ac17-92c538c7b2b0
 				}
 			}
 			CONTRACT_FINISHED
@@ -10698,13 +10753,106 @@ GAME
 					winOn = AllCandidates
 				}
 			}
+			CONTRACT_FINISHED
+			{
+				guid = 3cd93da8-094d-4d8e-9ebc-fd8210845d52
+				type = StationContract
+				prestige = 0
+				seed = -1506195919
+				state = Completed
+				viewed = Read
+				agent = 弗拉伊德动力研究实验室
+				agentName = FLOOYD Dynamics Research Labs
+				deadlineType = Floating
+				expiryType = Floating
+				values = 129600,161028000,88000,239662.489116192,92399.995803833,0,19.04762,10,664480.788452443,535170.208452713,161563170.208453,0
+				targetBody = 3
+				capacity = 5
+				contextual = False
+				PARAM
+				{
+					name = VesselSystemsParameter
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					typeString = 空间站
+					mannedStatus = 2
+					requireNew = True
+					checkModuleTypes = Antenna|Generator|Dock
+					checkModuleDescriptions = 拥有一根天线|拥有一个对接口|能够发电
+					launchID = 215
+				}
+				PARAM
+				{
+					name = CrewCapacityParameter
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					targetCapacity = 5
+				}
+				PARAM
+				{
+					name = ResourcePossessionParameter
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					goalResource = 2000
+					resourceName = LiquidFuel
+					resourceTitle = 液体燃料
+					vesselName = 空间站
+				}
+				PARAM
+				{
+					name = StabilityParameter
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					holdSeconds = 10
+				}
+				PARAM
+				{
+					name = LocationAndSituationParameter
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					targetBody = 3
+					targetSituation = ORBITING
+					noun = 空间站
+					finalObjective = False
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 35089cf0-713f-48f9-b42c-fc528ce76a9e
+				type = CollectScience
+				prestige = 0
+				seed = 1275664905
+				state = Completed
+				viewed = Read
+				agent = 冬鸮飞行器商城
+				agentName = WinterOwl Aircraft Emporium
+				deadlineType = Floating
+				expiryType = Floating
+				values = 63219.5137023926,112214636.821747,17957.7459543943,46091.5458564538,20081.2490880489,3,5.046811,2.912621,871747.503389234,808528.929686843,113023165.751434,0
+				body = 3
+				location = Space
+				PARAM
+				{
+					name = CollectScience
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					body = 3
+					location = Space
+				}
+			}
 		}
 	}
 	SCENARIO
 	{
 		name = SentinelScenario
 		scene = 7, 8, 5
-		NextSpawnTime = 792698.43475138466
+		NextSpawnTime = 810809.6331703295
 	}
 	SCENARIO
 	{
@@ -10728,71 +10876,11 @@ GAME
 			ALARM
 			{
 				type = AlarmTypeManeuver
-				id = 1072133770
-				title = Minmus 空间站
+				id = 3116568692
+				title = Minmus - 对接2
 				description = 
-				ut = 792906.59000020113
-				eventOffset = 61.196839002310298
-				triggered = False
-				actioned = False
-				vesselId = 1091330082
-				actionWarp = KillWarp
-				actionMessage = Yes
-				actionSound = False
-				actionDelete = False
-				maneuverUT = 792967.78683920344
-				maneuverStartBurnUT = 792966.59000020113
-				marginEntry = 60
-				useBurnTimeMargin = True
-			}
-			ALARM
-			{
-				type = AlarmTypeManeuver
-				id = 3421735420
-				title = 返回01
-				description = 
-				ut = 795134.82401510759
-				eventOffset = 59.960000006132759
-				triggered = False
-				actioned = False
-				vesselId = 112214209
-				actionWarp = KillWarp
-				actionMessage = Yes
-				actionSound = False
-				actionDelete = False
-				maneuverUT = 795194.78401511372
-				maneuverStartBurnUT = 795194.82401510759
-				marginEntry = 60
-				useBurnTimeMargin = True
-			}
-			ALARM
-			{
-				type = AlarmTypeManeuver
-				id = 482033606
-				title = 空间站 - Minmus
-				description = 
-				ut = 807013.48135865841
-				eventOffset = 75.639814606402069
-				triggered = False
-				actioned = False
-				vesselId = 2097806510
-				actionWarp = KillWarp
-				actionMessage = Yes
-				actionSound = False
-				actionDelete = False
-				maneuverUT = 807089.12117326481
-				maneuverStartBurnUT = 807073.48135865841
-				marginEntry = 60
-				useBurnTimeMargin = True
-			}
-			ALARM
-			{
-				type = AlarmTypeManeuver
-				id = 270189660
-				title = 补给 - Minmus
-				description = 
-				ut = 807020.41292978008
-				eventOffset = 68.613657887093723
+				ut = 810858.29982767231
+				eventOffset = 61.331785048358142
 				triggered = False
 				actioned = False
 				vesselId = 1489225025
@@ -10800,8 +10888,28 @@ GAME
 				actionMessage = Yes
 				actionSound = False
 				actionDelete = False
-				maneuverUT = 807089.02658766718
-				maneuverStartBurnUT = 807080.41292978008
+				maneuverUT = 810919.63161272067
+				maneuverStartBurnUT = 810918.29982767231
+				marginEntry = 60
+				useBurnTimeMargin = True
+			}
+			ALARM
+			{
+				type = AlarmTypeManeuver
+				id = 3991136261
+				title = 返回01
+				description = 
+				ut = 813679.50987147726
+				eventOffset = 59.98006419907324
+				triggered = False
+				actioned = False
+				vesselId = 112214209
+				actionWarp = KillWarp
+				actionMessage = Yes
+				actionSound = False
+				actionDelete = False
+				maneuverUT = 813739.48993567633
+				maneuverStartBurnUT = 813739.50987147726
 				marginEntry = 60
 				useBurnTimeMargin = True
 			}
@@ -10822,6 +10930,26 @@ GAME
 				actionDelete = False
 				maneuverUT = 816694.60713984061
 				maneuverStartBurnUT = 816690.16354091163
+				marginEntry = 60
+				useBurnTimeMargin = True
+			}
+			ALARM
+			{
+				type = AlarmTypeManeuver
+				id = 2267317718
+				title = 对接1
+				description = 
+				ut = 820558.7367281476
+				eventOffset = 62.424914268194698
+				triggered = False
+				actioned = False
+				vesselId = 2097806510
+				actionWarp = KillWarp
+				actionMessage = Yes
+				actionSound = False
+				actionDelete = False
+				maneuverUT = 820621.1616424158
+				maneuverStartBurnUT = 820618.7367281476
 				marginEntry = 60
 				useBurnTimeMargin = True
 			}
@@ -10920,6 +11048,26 @@ GAME
 				actionDelete = False
 				maneuverUT = 1025311.2190924619
 				maneuverStartBurnUT = 1025311.2390923569
+				marginEntry = 60
+				useBurnTimeMargin = True
+			}
+			ALARM
+			{
+				type = AlarmTypeManeuver
+				id = 2163318383
+				title = 空间站 - Minmus -  2号
+				description = 
+				ut = 2728077.3035114487
+				eventOffset = 59.980390110518783
+				triggered = False
+				actioned = False
+				vesselId = 1091330082
+				actionWarp = KillWarp
+				actionMessage = Yes
+				actionSound = False
+				actionDelete = False
+				maneuverUT = 2728137.2839015592
+				maneuverStartBurnUT = 2728137.3035114487
 				marginEntry = 60
 				useBurnTimeMargin = True
 			}
@@ -11133,16 +11281,16 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.12.5
-		UT = 786310.8653820022
-		activeVessel = 28
-		mapViewFiltering = 7151
+		UT = 808610.5296869186
+		activeVessel = 0
+		mapViewFiltering = 3055
 		commNetUIModeTracking = Network
-		commNetUIModeFlight = None
+		commNetUIModeFlight = Path
 		VESSEL
 		{
 			pid = 62bc15d91f1f41f395112d1ff41362df
 			persistentId = 2030081596
-			name = Kerbin - 极地01
+			name = Kerbin - 极轨1号
 			type = Relay
 			sit = ORBITING
 			landed = False
@@ -11153,18 +11301,18 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 67043.032648387481
+			met = 73723.577705052565
 			lct = 712846.80767719133
-			lastUT = 779889.86032557883
-			distanceTraveled = 2364793.8958289456
+			lastUT = 786570.3853822439
+			distanceTraveled = 2369377.9861219763
 			root = 0
-			lat = 80.42021261156475
-			lon = 65.794584581232229
-			alt = 21537924.503281944
-			hgt = 21537924
-			nrm = -0.824556291,0.16302824,-0.541782975
-			rot = 0.488136023,-0.0990543738,-0.510802865,0.700708151
-			CoM = -1.75833702E-06,0.775809288,1.93715096E-06
+			lat = 78.621548421525958
+			lon = -45.809144745119298
+			alt = 21363634.2574572
+			hgt = 21363634
+			nrm = -0.751183987,0.193157852,-0.631199539
+			rot = -0.10326241,0.551429033,-0.698960423,0.443528324
+			CoM = 5.51342964E-07,0.775809526,1.49011612E-07
 			stg = 0
 			prst = False
 			ref = 653885214
@@ -11182,13 +11330,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 11453562.811322024
-				ECC = 0.9329244801382689
-				INC = 89.999999948647684
-				LPE = 279.43766288518674
-				LAN = 44.464262553512299
-				MNA = 3.1673309685797628
-				EPH = 779889.84032557881
+				SMA = 11453562.810997922
+				ECC = 0.93292448128370031
+				INC = 89.999999891212809
+				LPE = 279.43766304331109
+				LAN = 44.464263512223965
+				MNA = 3.4912129221117887
+				EPH = 786570.3853822439
 				REF = 1
 			}
 			PART
@@ -11217,8 +11365,8 @@ GAME
 				attN = bottom, 20
 				mass = 0.200000003
 				shielded = False
-				temp = 219.19716176075588
-				tempExt = 217.87824096537216
+				temp = 220.50255116476768
+				tempExt = 219.98537256741582
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12096,7 +12244,7 @@ GAME
 							MarkUT = 712846.82767719135
 							DeltaVExpended = NaN
 							DragLosses = NaN
-							GravityLosses = 1341.1422353454059
+							GravityLosses = 1341.0028136759022
 							SteeringLosses = NaN
 							MarkLAN = 134.05233506184601
 							MarkLatitude = -0.09719705803671258
@@ -12152,7 +12300,7 @@ GAME
 				}
 				VESSELNAMING
 				{
-					name = Kerbin - 极地01
+					name = Kerbin - 极轨1号
 					type = Relay
 					priority = 10
 				}
@@ -12183,8 +12331,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 218.92386064725883
-				tempExt = 217.73078357603325
+				temp = 220.23051513699494
+				tempExt = 219.88480442370457
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12307,8 +12455,8 @@ GAME
 				attN = top, 3
 				mass = 0.125
 				shielded = False
-				temp = 219.07456103374474
-				tempExt = 217.81376026659652
+				temp = 220.31809456045664
+				tempExt = 219.93487280767749
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12392,8 +12540,8 @@ GAME
 				attN = top, 4
 				mass = 0.125
 				shielded = False
-				temp = 218.77802711378027
-				tempExt = 217.60315109048639
+				temp = 220.09222606062195
+				tempExt = 219.79351869896669
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12477,8 +12625,8 @@ GAME
 				attN = top, 5
 				mass = 0.125
 				shielded = False
-				temp = 218.7452596968603
-				tempExt = 217.55687088298512
+				temp = 220.07563758048852
+				tempExt = 219.73232285504398
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12562,8 +12710,8 @@ GAME
 				attN = top, 6
 				mass = 0.125
 				shielded = False
-				temp = 219.12156000382936
-				tempExt = 217.70955061407659
+				temp = 220.36578814272571
+				tempExt = 219.85125636071217
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12647,8 +12795,8 @@ GAME
 				attN = top, 7
 				mass = 0.125
 				shielded = False
-				temp = 218.75751383967207
-				tempExt = 217.57567464323057
+				temp = 220.07824469906032
+				tempExt = 219.74138547323736
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12732,8 +12880,8 @@ GAME
 				attN = top, 8
 				mass = 0.125
 				shielded = False
-				temp = 219.1198528900272
-				tempExt = 217.69343263531394
+				temp = 220.36500705776612
+				tempExt = 219.83829091514795
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12817,8 +12965,8 @@ GAME
 				attN = top, 9
 				mass = 0.125
 				shielded = False
-				temp = 218.74200402438808
-				tempExt = 217.55618445878147
+				temp = 220.07385065352111
+				tempExt = 219.73133687113986
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12902,8 +13050,8 @@ GAME
 				attN = top, -1
 				mass = 0.125
 				shielded = False
-				temp = 218.73121787340614
-				tempExt = 217.53214824318857
+				temp = 220.06027336561448
+				tempExt = 219.70845100340475
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -12987,8 +13135,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 218.72133285959478
-				tempExt = 217.52533689127179
+				temp = 220.05780953979843
+				tempExt = 219.70379240719754
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13116,8 +13264,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 218.72133824310905
-				tempExt = 217.5254822330414
+				temp = 220.0572669044505
+				tempExt = 219.70318760832149
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13245,8 +13393,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 218.72640792470821
-				tempExt = 217.52981525763423
+				temp = 220.06633442733079
+				tempExt = 219.7116211998285
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13374,8 +13522,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 218.7264141710323
-				tempExt = 217.52984870428725
+				temp = 220.0677009443346
+				tempExt = 219.71356695525122
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13503,8 +13651,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 218.73665465809407
-				tempExt = 217.53884937788382
+				temp = 220.06760630167545
+				tempExt = 219.71271338408121
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13632,8 +13780,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 218.73665350201983
-				tempExt = 217.5389967924103
+				temp = 220.06632538723755
+				tempExt = 219.71113247796774
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13761,8 +13909,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 218.72952990136338
-				tempExt = 217.53253891116211
+				temp = 220.06784719826598
+				tempExt = 219.71295252460118
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -13890,8 +14038,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 218.72954932969793
-				tempExt = 217.53261694691443
+				temp = 220.06940416642126
+				tempExt = 219.71515606292593
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14019,8 +14167,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 218.76459336066745
-				tempExt = 217.64458768047311
+				temp = 220.08691725668317
+				tempExt = 219.8156744465563
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14148,8 +14296,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 218.76370862174778
-				tempExt = 217.64843533270584
+				temp = 220.08700919641541
+				tempExt = 219.84214249052278
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14277,8 +14425,8 @@ GAME
 				attN = bottom, 21
 				mass = 2
 				shielded = False
-				temp = 219.42919235383724
-				tempExt = 217.55618684772205
+				temp = 220.62267552459025
+				tempExt = 219.54090926678975
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14383,8 +14531,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.75
 				shielded = False
-				temp = 219.34237836726274
-				tempExt = 218.67556759382776
+				temp = 220.55047086157757
+				tempExt = 220.33876476649127
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14721,8 +14869,8 @@ GAME
 				srfN = srfAttach, 20,collider
 				mass = 0.300000012
 				shielded = False
-				temp = 218.74281125854395
-				tempExt = 209.55208863402694
+				temp = 219.75160561799063
+				tempExt = 213.12508272587289
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14767,7 +14915,7 @@ GAME
 					isEnabled = True
 					efficiencyMult = 1
 					launchUT = 712846.82767719135
-					currentRotation = (-0.498589873, -0.498400718, 0.501421213, -0.501579165)
+					currentRotation = (-0.50000298, -0.49981606, 0.500013053, -0.500167966)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
 					deployState = EXTENDED
@@ -14841,8 +14989,8 @@ GAME
 				srfN = srfAttach, 20,collider
 				mass = 0.300000012
 				shielded = False
-				temp = 218.76677960001146
-				tempExt = 209.57783838486128
+				temp = 219.79496744027685
+				tempExt = 213.19296940551544
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -14887,7 +15035,7 @@ GAME
 					isEnabled = True
 					efficiencyMult = 1
 					launchUT = 712846.82767719135
-					currentRotation = (-0.50160718, -0.501393676, 0.498420984, -0.498569131)
+					currentRotation = (-0.500198543, -0.499982417, 0.499836862, -0.499982297)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
 					deployState = EXTENDED
@@ -14969,8 +15117,8 @@ GAME
 			}
 			CTRLSTATE
 			{
-				pitch = 0.000250990386
-				yaw = 0.000176249247
+				pitch = -0.000190482227
+				yaw = -0.000124252008
 				roll = 0
 				trimPitch = 0
 				trimYaw = 0
@@ -14999,7 +15147,7 @@ GAME
 		{
 			pid = afb63272a2a74c9d8fa9b281f1ef2948
 			persistentId = 1340328586
-			name = Kerbin - 极地02
+			name = Kerbin - 极轨2号
 			type = Relay
 			sit = ORBITING
 			landed = False
@@ -15010,18 +15158,18 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 67587.008835710119
+			met = 72694.145663313568
 			lct = 713859.43971891468
-			lastUT = 781446.4485546248
-			distanceTraveled = 4893236.2261915142
+			lastUT = 786553.60538222827
+			distanceTraveled = 4988086.6442354321
 			root = 0
-			lat = -47.337673363720953
-			lon = 39.790095405024978
-			alt = 3021536.5241678078
-			hgt = 3021536.5
-			nrm = -0.599957526,0.657729447,0.455459237
-			rot = 0.691775084,0.55879581,-0.146782562,0.433185309
-			CoM = -1.07288361E-06,1.38310552,1.90734863E-06
+			lat = -69.00598580055545
+			lon = -45.52861921480828
+			alt = 7432727.1326851565
+			hgt = 7432727
+			nrm = -0.813237667,0.348464429,0.466065705
+			rot = 0.480761349,0.691113472,-0.518791318,-0.148614973
+			CoM = 2.13086605E-06,1.38310552,-1.31875277E-06
 			stg = 0
 			prst = False
 			ref = 446823342
@@ -15034,18 +15182,18 @@ GAME
 			OverrideAxisControl = 0,0,0,0
 			OverrideGroupNames = ,,,
 			altDispState = ASL
-			cPch = 0.5659997
-			cHdg = -3.782
+			cPch = 0.502
+			cHdg = -7.480005
 			cMod = 0
 			ORBIT
 			{
-				SMA = 11453562.816684572
-				ECC = 0.93293643599230847
-				INC = 89.999999864983891
-				LPE = 98.106975469631735
-				LAN = 44.464125833043113
-				MNA = 0.11348211496018112
-				EPH = 781446.4485546248
+				SMA = 11453562.966467146
+				ECC = 0.93293643214407063
+				INC = 90.000000007363525
+				LPE = 98.106975852393759
+				LAN = 44.464127265094589
+				MNA = 0.36108308425729019
+				EPH = 786553.58538222825
 				REF = 1
 			}
 			PART
@@ -15074,8 +15222,8 @@ GAME
 				attN = bottom, 20
 				mass = 0.200000003
 				shielded = False
-				temp = 158.58074200151196
-				tempExt = 158.2963253772069
+				temp = 236.36519145013628
+				tempExt = 236.08033558211915
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -15953,7 +16101,7 @@ GAME
 							MarkUT = 713859.4597189147
 							DeltaVExpended = NaN
 							DragLosses = NaN
-							GravityLosses = 2710.4535900181099
+							GravityLosses = 2717.9464609102206
 							SteeringLosses = NaN
 							MarkLAN = 151.00193186354801
 							MarkLatitude = -0.097197057170068255
@@ -16009,7 +16157,7 @@ GAME
 				}
 				VESSELNAMING
 				{
-					name = Kerbin - 极地02
+					name = Kerbin - 极轨2号
 					type = Relay
 					priority = 10
 				}
@@ -16040,8 +16188,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 153.81277096639357
-				tempExt = 154.27102861713027
+				temp = 236.02269164170022
+				tempExt = 235.81831046444134
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16164,8 +16312,8 @@ GAME
 				attN = top, 3
 				mass = 0.125
 				shielded = False
-				temp = 147.67083335535304
-				tempExt = 151.43435285596391
+				temp = 236.02928667635351
+				tempExt = 235.77711698429152
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16249,8 +16397,8 @@ GAME
 				attN = top, 4
 				mass = 0.125
 				shielded = False
-				temp = 146.74295505579556
-				tempExt = 146.54175976563718
+				temp = 235.93347811555026
+				tempExt = 235.69093214817809
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16334,8 +16482,8 @@ GAME
 				attN = top, 5
 				mass = 0.125
 				shielded = False
-				temp = 146.00194396897649
-				tempExt = 145.98911280578849
+				temp = 235.87920531111675
+				tempExt = 235.5834971816486
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16419,8 +16567,8 @@ GAME
 				attN = top, 6
 				mass = 0.125
 				shielded = False
-				temp = 145.63781159360818
-				tempExt = 145.59879581126265
+				temp = 235.92870661187615
+				tempExt = 235.61791842768099
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16504,8 +16652,8 @@ GAME
 				attN = top, 7
 				mass = 0.125
 				shielded = False
-				temp = 145.22845491512649
-				tempExt = 145.21305175364611
+				temp = 235.86244104004811
+				tempExt = 235.57064849354319
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16589,8 +16737,8 @@ GAME
 				attN = top, 8
 				mass = 0.125
 				shielded = False
-				temp = 145.00589724335188
-				tempExt = 144.96129968752575
+				temp = 235.92685486154619
+				tempExt = 235.61141102598981
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16674,8 +16822,8 @@ GAME
 				attN = top, 9
 				mass = 0.125
 				shielded = False
-				temp = 144.72905355206692
-				tempExt = 144.70780029170839
+				temp = 235.87341315689312
+				tempExt = 235.5818610139178
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16759,8 +16907,8 @@ GAME
 				attN = top, -1
 				mass = 0.125
 				shielded = False
-				temp = 144.58191224635416
-				tempExt = 144.56734145915445
+				temp = 235.88786978601402
+				tempExt = 235.58888641334306
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16844,8 +16992,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 144.5793755359721
-				tempExt = 144.53911218064846
+				temp = 235.88999537548406
+				tempExt = 235.59380123983777
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -16973,8 +17121,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 144.57953500525409
-				tempExt = 144.54086128567727
+				temp = 235.88196142373397
+				tempExt = 235.58347202833019
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17102,8 +17250,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 144.72690447134033
-				tempExt = 144.6868869827905
+				temp = 235.8944368227761
+				tempExt = 235.59749732905865
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17231,8 +17379,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 144.72677941425721
-				tempExt = 144.68551192234727
+				temp = 235.86854723825482
+				tempExt = 235.57021665031758
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17360,8 +17508,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 145.22529185353147
-				tempExt = 145.1837492134066
+				temp = 235.89963432325928
+				tempExt = 235.60197544517581
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17489,8 +17637,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 145.22548450666707
-				tempExt = 145.1858627562458
+				temp = 235.85595287653425
+				tempExt = 235.55829465200642
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17618,8 +17766,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 145.99624197306321
-				tempExt = 145.95607376733562
+				temp = 235.91071829179114
+				tempExt = 235.61526737432393
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17747,8 +17895,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 145.99597247040978
-				tempExt = 145.9531176240742
+				temp = 235.87330472212406
+				tempExt = 235.57432547036484
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -17876,8 +18024,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 146.74087750222998
-				tempExt = 146.8110234806816
+				temp = 235.98116513397335
+				tempExt = 235.76232668875559
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18005,8 +18153,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.649999976
 				shielded = False
-				temp = 146.74154158901553
-				tempExt = 146.81880901327816
+				temp = 235.92989768487041
+				tempExt = 235.73689846137924
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18134,8 +18282,8 @@ GAME
 				attN = bottom, 21
 				mass = 2
 				shielded = False
-				temp = 158.62812090100542
-				tempExt = 158.64359887042622
+				temp = 236.38132205337203
+				tempExt = 236.11613727993307
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18240,8 +18388,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.75
 				shielded = False
-				temp = 158.69414800182656
-				tempExt = 159.33138499473213
+				temp = 236.409363342972
+				tempExt = 236.50124211644177
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18578,8 +18726,8 @@ GAME
 				srfN = srfAttach, 20,collider
 				mass = 0.300000012
 				shielded = False
-				temp = 157.96759486475989
-				tempExt = 159.90399696863832
+				temp = 235.91394795585578
+				tempExt = 235.7258416653597
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18624,7 +18772,7 @@ GAME
 					isEnabled = True
 					efficiencyMult = 1
 					launchUT = 713859.4597189147
-					currentRotation = (-0.499917507, -0.500086069, 0.500077009, -0.499919564)
+					currentRotation = (-0.496907532, -0.497071803, 0.503074348, -0.502910256)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
 					deployState = EXTENDED
@@ -18698,8 +18846,8 @@ GAME
 				srfN = srfAttach, 20,collider
 				mass = 0.300000012
 				shielded = False
-				temp = 157.9577451190525
-				tempExt = 159.88496725417039
+				temp = 235.640554106926
+				tempExt = 235.04943474804216
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -18744,7 +18892,7 @@ GAME
 					isEnabled = True
 					efficiencyMult = 1
 					launchUT = 713859.4597189147
-					currentRotation = (0.499951988, 0.500045776, -0.500101745, 0.49990049)
+					currentRotation = (0.502946138, 0.5030393, -0.497090697, 0.496887743)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
 					deployState = EXTENDED
@@ -18826,8 +18974,8 @@ GAME
 			}
 			CTRLSTATE
 			{
-				pitch = -0.000113547372
-				yaw = -0.000196233144
+				pitch = -8.75895494E-05
+				yaw = 0.000256579922
 				roll = 0
 				trimPitch = 0
 				trimYaw = 0
@@ -18867,18 +19015,18 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 294874.52029900911
+			met = 469903.50617643731
 			lct = 316553.13920570066
-			lastUT = 611427.67950470978
-			distanceTraveled = 772286.62103435618
+			lastUT = 786456.66538213799
+			distanceTraveled = 779607.80565047881
 			root = 0
-			lat = -3.4700863520848823E-05
-			lon = -4.9729400778781105
-			alt = 1000942.0153546049
-			hgt = 1000942
-			nrm = -0.060259074,-5.6437068E-07,0.998182774
-			rot = 5.11344886E-08,0.757152557,2.09913669E-08,0.653238177
-			CoM = -3.58130601E-05,0.588276029,4.40913936E-08
+			lat = -2.962981324070341E-05
+			lon = 46.430049050747101
+			alt = 1000944.2797674385
+			hgt = 1000944.25
+			nrm = -0.818818688,-4.92788558E-07,0.574052215
+			rot = 2.20138805E-08,0.757773817,-9.79991057E-08,0.652517378
+			CoM = -3.61231214E-05,0.588275909,1.21903668E-07
 			stg = 1
 			prst = False
 			ref = 0
@@ -18891,18 +19039,18 @@ GAME
 			OverrideAxisControl = 0,0,0,0
 			OverrideGroupNames = ,,,
 			altDispState = ASL
-			cPch = 0.548
-			cHdg = -1.47
+			cPch = 0.196
+			cHdg = -4.154001
 			cMod = 0
 			ORBIT
 			{
-				SMA = 1200943.2027622901
-				ECC = 1.0006367642004505E-06
-				INC = 7.1034178180412281E-06
-				LPE = 240.22301025720731
-				LAN = 119.68715268771086
-				MNA = 0.15443614490439747
-				EPH = 611427.65950470977
+				SMA = 1200943.2038924363
+				ECC = 9.9991811802804762E-07
+				INC = 6.1384499158069847E-06
+				LPE = 191.60946360801097
+				LAN = 168.28413212610258
+				MNA = 2.6813755321860597
+				EPH = 786456.64538213797
 				REF = 2
 			}
 			PART
@@ -18931,8 +19079,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.129999995
 				shielded = False
-				temp = 227.29570121102691
-				tempExt = 227.08305812711734
+				temp = 217.37635841220197
+				tempExt = 217.32514145828694
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19209,8 +19357,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.0250000004
 				shielded = False
-				temp = 227.3101492812896
-				tempExt = 227.08766834422653
+				temp = 217.37770644962117
+				tempExt = 217.18732666584918
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19316,8 +19464,8 @@ GAME
 				attN = bottom, 1
 				mass = 0.00999999978
 				shielded = False
-				temp = 227.3091304378224
-				tempExt = 227.2354877389505
+				temp = 217.36076164491973
+				tempExt = 217.2352043745023
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19412,8 +19560,8 @@ GAME
 				attN = bottom, 2
 				mass = 0.00999999978
 				shielded = False
-				temp = 227.34093127799841
-				tempExt = 227.48140936669557
+				temp = 217.38121010154313
+				tempExt = 217.35256427358752
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -19508,8 +19656,8 @@ GAME
 				attN = top, 5
 				mass = 0.0399999991
 				shielded = False
-				temp = 227.31924530377188
-				tempExt = 227.2743456973551
+				temp = 217.38107959813817
+				tempExt = 217.26439839997076
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0
@@ -20220,6 +20368,9 @@ GAME
 						MechJebModuleCustomInfoWindow
 						{
 						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
 						MechJebModuleWarpController
 						{
 							unlockParts = 
@@ -20325,7 +20476,7 @@ GAME
 							MarkUT = 559211.38948646304
 							DeltaVExpended = NaN
 							DragLosses = NaN
-							GravityLosses = -0.0072767330896410312
+							GravityLosses = -0.0072760014677766011
 							SteeringLosses = NaN
 							MarkLAN = 18.756209333881856
 							MarkLatitude = -6.8416299073594008E-07
@@ -20414,8 +20565,8 @@ GAME
 				attN = top, 6
 				mass = 0.0500000007
 				shielded = False
-				temp = 227.30390551922429
-				tempExt = 227.15717369963019
+				temp = 217.38444697625141
+				tempExt = 217.33471142140979
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -20537,8 +20688,8 @@ GAME
 				attN = bottom, 5
 				mass = 0.300000012
 				shielded = False
-				temp = 227.30175614283274
-				tempExt = 227.24102176356826
+				temp = 217.39091600988974
+				tempExt = 217.42470365698054
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -20668,8 +20819,8 @@ GAME
 				srfN = srfAttach, 3,node_collider
 				mass = 0.0250000004
 				shielded = False
-				temp = 227.31287207939104
-				tempExt = 227.20787899249044
+				temp = 217.30237213813047
+				tempExt = 216.57636796641276
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -20714,7 +20865,7 @@ GAME
 					isEnabled = True
 					efficiencyMult = 1
 					launchUT = 250352.87393396153
-					currentRotation = (0.500135243, -0.500142694, 0.49983421, -0.499887854)
+					currentRotation = (0.499955088, -0.500310659, 0.499934524, -0.499799609)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
 					deployState = EXTENDED
@@ -20789,8 +20940,8 @@ GAME
 				srfN = srfAttach, 3,node_collider
 				mass = 0.0250000004
 				shielded = False
-				temp = 227.50189937691508
-				tempExt = 229.17688719381457
+				temp = 217.50997547036604
+				tempExt = 218.67412825611612
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -20835,7 +20986,7 @@ GAME
 					isEnabled = True
 					efficiencyMult = 1
 					launchUT = 250352.87393396153
-					currentRotation = (-0.499827057, -0.499775589, 0.500540078, 0.49985683)
+					currentRotation = (0.500034511, -0.500362813, 0.500322163, -0.499279767)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
 					deployState = EXTENDED
@@ -20910,8 +21061,8 @@ GAME
 				srfN = srfAttach, 3,node_collider
 				mass = 0.0250000004
 				shielded = False
-				temp = 227.24382107772948
-				tempExt = 226.46308269383866
+				temp = 217.34279105767419
+				tempExt = 216.98125625912712
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -20956,7 +21107,7 @@ GAME
 					isEnabled = True
 					efficiencyMult = 1
 					launchUT = 250352.87393396153
-					currentRotation = (-0.501209974, -0.499612868, 0.498973846, 0.500200748)
+					currentRotation = (-0.500487804, -0.500325918, 0.499693364, 0.499492168)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
 					deployState = EXTENDED
@@ -21029,8 +21180,8 @@ GAME
 				srfN = srfAttach, 1,collider
 				mass = 9.99999975E-05
 				shielded = False
-				temp = 227.29619102064515
-				tempExt = 227.09953751687226
+				temp = 217.36610401283002
+				tempExt = 217.20342924878881
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -21288,8 +21439,8 @@ GAME
 			}
 			CTRLSTATE
 			{
-				pitch = -6.74763851E-06
-				yaw = 1.97414702E-05
+				pitch = 4.29926013E-06
+				yaw = -1.30989349E-06
 				roll = 0
 				trimPitch = 0
 				trimYaw = 0
@@ -82455,18 +82606,18 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 238400.05614867562
+			met = 264901.81728035258
 			lct = 543704.95240656252
-			lastUT = 782105.02855523815
-			distanceTraveled = 1863419.3205896793
+			lastUT = 808606.7696869151
+			distanceTraveled = 1935481.2570660885
 			root = 0
-			lat = -0.057316852306962152
-			lon = -119.65689851171742
-			alt = 47664466.199240349
-			hgt = 47664468
-			nrm = 0.535494149,0.698873997,0.474153429
-			rot = 0.676717877,-0.602662683,-0.205064356,-0.369863957
-			CoM = -2.62260437E-06,-8.8429184,-0.000466346741
+			lat = -0.98852713732399089
+			lon = 34.075272859900807
+			alt = 266683.95508342644
+			hgt = 266683.969
+			nrm = -0.811789691,0.390864432,0.433846146
+			rot = -0.207435906,-0.695064306,0.447330236,-0.52321291
+			CoM = -7.15255737E-07,-8.77331257,-0.000500679016
 			stg = 1
 			prst = False
 			ref = 1012975630
@@ -82479,19 +82630,19 @@ GAME
 			OverrideAxisControl = 0,0,0,0
 			OverrideGroupNames = ,,,
 			altDispState = ASL
-			cPch = -0.156
-			cHdg = -2.86
+			cPch = 0.4320001
+			cHdg = -1.51
 			cMod = 0
 			ORBIT
 			{
-				SMA = 24819956.673683941
-				ECC = 0.97195865955323202
-				INC = 0.099059150337169971
-				LPE = 33.719976774375141
-				LAN = 220.66592359437388
-				MNA = 3.6085524775295155
-				EPH = 782105.00855523814
-				REF = 1
+				SMA = 242948.74936594226
+				ECC = 0.47091809497589304
+				INC = 2.5016043196754678
+				LPE = 183.25389394590505
+				LAN = 292.76582619446174
+				MNA = 2.0709417209246705
+				EPH = 808606.7696869151
+				REF = 3
 			}
 			PART
 			{
@@ -82519,8 +82670,8 @@ GAME
 				attN = bottom, 1
 				mass = 0.200000003
 				shielded = False
-				temp = 173.83009660175318
-				tempExt = 173.84258546678848
+				temp = 186.67895665331679
+				tempExt = 186.4894708597464
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -82700,6 +82851,29 @@ GAME
 							actionGroup = None
 							wasActiveBeforePartWasAdjusted = False
 						}
+					}
+					ScienceData
+					{
+						data = 8
+						scienceValueRatio = 1
+						subjectID = evaReport@KerbinInSpaceHigh
+						xmit = 0
+						xmitBonus = 0
+						title = 在距离Kerbin较远的太空中的EVA报告
+						triggered = False
+						container = 4287125060
+					}
+					ScienceData
+					{
+						data = 25
+						scienceValueRatio = 1
+						subjectID = evaScience@KerbinInSpaceHigh
+						xmit = 0
+						xmitBonus = 0
+						title = 在距离Kerbin较远的太空中的EVA科学实验
+						triggered = False
+						container = 4287125060
+						extraResultString = 在太空中旋转这个轮缘后，产生了意想不到的有趣效果——在没有任何力作用在它上面时，仍然在不停地翻转。而更令人惊讶的是，我们的飞船在缺少这块部件的情况下竟然仍在继续运作。
 					}
 					UPGRADESAPPLIED
 					{
@@ -83121,7 +83295,7 @@ GAME
 						MechJebModuleSmartASS
 						{
 							mode = ADVANCED
-							target = ADVANCED
+							target = KILLROT
 							advReference = SUN
 							advDirection = DOWN
 							forceRol = False
@@ -83398,7 +83572,7 @@ GAME
 							MarkUT = 609668.5370990471
 							DeltaVExpended = NaN
 							DragLosses = NaN
-							GravityLosses = 1.0984674580993579
+							GravityLosses = -15.121136635171945
 							SteeringLosses = NaN
 							MarkLAN = 23.152009212684419
 							MarkLatitude = -0.0040328402272459627
@@ -83436,6 +83610,8 @@ GAME
 						0 = Flight,Kerbin
 						0 = Suborbit,Kerbin
 						0 = Orbit,Kerbin
+						0 = Flyby,Minmus
+						0 = Orbit,Minmus
 					}
 					UPGRADESAPPLIED
 					{
@@ -83444,7 +83620,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 999.9993590403144
+					amount = 997.58033875414424
 					maxAmount = 1000
 					flowState = True
 					isTweakable = True
@@ -83479,8 +83655,8 @@ GAME
 				attN = top, 0
 				mass = 2.44799995
 				shielded = False
-				temp = 173.81744319029906
-				tempExt = 173.86942282435993
+				temp = 186.71911100478439
+				tempExt = 186.66348291560803
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -83800,7 +83976,7 @@ GAME
 								cid = 4294236298
 								uid = 0
 								mid = 0
-								persistentId = 2758977816
+								persistentId = 2975946755
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -83888,7 +84064,7 @@ GAME
 								cid = 4294235212
 								uid = 0
 								mid = 0
-								persistentId = 2081761460
+								persistentId = 65329990
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -83976,7 +84152,7 @@ GAME
 								cid = 4292351264
 								uid = 0
 								mid = 0
-								persistentId = 1893232707
+								persistentId = 141145377
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -84179,6 +84355,8 @@ GAME
 						0 = Flight,Kerbin
 						0 = Suborbit,Kerbin
 						0 = Orbit,Kerbin
+						0 = Flyby,Minmus
+						0 = Orbit,Minmus
 					}
 					UPGRADESAPPLIED
 					{
@@ -84187,7 +84365,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 149.99990385604718
+					amount = 149.63705081312727
 					maxAmount = 150
 					flowState = True
 					isTweakable = True
@@ -84239,8 +84417,8 @@ GAME
 				attN = bottom, 7
 				mass = 3.64899993
 				shielded = False
-				temp = 173.82167076478152
-				tempExt = 173.86386985503091
+				temp = 186.80659949449296
+				tempExt = 186.78074516925906
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -84305,8 +84483,8 @@ GAME
 				{
 					name = ModuleScienceLab
 					isEnabled = True
-					dataStored = 60.6789284
-					storedScience = 6.61842251
+					dataStored = 179.480255
+					storedScience = 0.646146834
 					stagingEnabled = True
 					EVENTS
 					{
@@ -84318,6 +84496,9 @@ GAME
 					{
 						experiment = evaScience@KerbinInSpaceHigh
 						experiment = evaReport@KerbinInSpaceHigh
+						experiment = crewReport@MinmusInSpaceHigh
+						experiment = evaReport@MinmusInSpaceHigh
+						experiment = evaScience@MinmusInSpaceHigh
 					}
 					UPGRADESAPPLIED
 					{
@@ -84330,7 +84511,7 @@ GAME
 					EfficiencyBonus = 1
 					IsActivated = True
 					stagingEnabled = True
-					lastUpdateTime = 782105.02855523815
+					lastUpdateTime = 808606.7696869151
 					EVENTS
 					{
 					}
@@ -84456,7 +84637,7 @@ GAME
 								cid = 4294235000
 								uid = 0
 								mid = 0
-								persistentId = 457707861
+								persistentId = 3342655663
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -84544,7 +84725,7 @@ GAME
 								cid = 4294234800
 								uid = 0
 								mid = 0
-								persistentId = 202735390
+								persistentId = 2616631577
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -84641,6 +84822,8 @@ GAME
 						0 = Flight,Kerbin
 						0 = Suborbit,Kerbin
 						0 = Orbit,Kerbin
+						0 = Flyby,Minmus
+						0 = Orbit,Minmus
 					}
 					UPGRADESAPPLIED
 					{
@@ -84671,8 +84854,8 @@ GAME
 				srfN = srfAttach, 2,ColliderMain
 				mass = 0.0500000007
 				shielded = False
-				temp = 173.81716722063177
-				tempExt = 173.81895233663514
+				temp = 186.784533465262
+				tempExt = 186.74124212545939
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -84811,8 +84994,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0700000003
 				shielded = False
-				temp = 173.81531280269309
-				tempExt = 173.81972675443569
+				temp = 186.66194550943737
+				tempExt = 186.70357053706988
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -84942,6 +85125,8 @@ GAME
 						0 = Flight,Kerbin
 						0 = Suborbit,Kerbin
 						0 = Orbit,Kerbin
+						0 = Flyby,Minmus
+						0 = Orbit,Minmus
 					}
 					UPGRADESAPPLIED
 					{
@@ -84973,8 +85158,8 @@ GAME
 				srfN = srfAttach, 2,ColliderMain
 				mass = 0.129999995
 				shielded = False
-				temp = 173.85697975999372
-				tempExt = 174.09049475022891
+				temp = 186.79140642744747
+				tempExt = 186.73192584701411
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -85019,7 +85204,7 @@ GAME
 					isEnabled = True
 					efficiencyMult = 1
 					launchUT = 543704.97240656253
-					currentRotation = (-0.499380857, 0.499438465, 0.500536323, 0.500643015)
+					currentRotation = (0.51052475, -0.510760069, 0.489095569, 0.489156693)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
 					deployState = EXTENDED
@@ -85093,8 +85278,8 @@ GAME
 				srfN = srfAttach, 2,ColliderMain
 				mass = 0.129999995
 				shielded = False
-				temp = 173.85688527124753
-				tempExt = 174.09039322707648
+				temp = 186.94042294451896
+				tempExt = 187.19227655087573
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -85139,7 +85324,7 @@ GAME
 					isEnabled = True
 					efficiencyMult = 1
 					launchUT = 543704.97240656253
-					currentRotation = (-0.500688076, 0.500491679, 0.499479353, 0.49933961)
+					currentRotation = (-0.489200622, 0.489038348, -0.510833263, -0.510464132)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
 					deployState = EXTENDED
@@ -85216,8 +85401,8 @@ GAME
 				attN = bottom, 27
 				mass = 0.300000012
 				shielded = False
-				temp = 173.81471277575849
-				tempExt = 173.69993938165567
+				temp = 187.22990144918097
+				tempExt = 187.31304354491601
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -85371,8 +85556,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0500000007
 				shielded = True
-				temp = 173.81516549144078
-				tempExt = 173.81416787391248
+				temp = 188.61679220162307
+				tempExt = 188.62770928648777
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -85492,8 +85677,8 @@ GAME
 				srfN = srfAttach, 8,C1
 				mass = 0.100000001
 				shielded = True
-				temp = 173.81516152398547
-				tempExt = 173.81416760932279
+				temp = 188.62625229559038
+				tempExt = 188.62753901434857
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -85654,8 +85839,8 @@ GAME
 				srfN = srfAttach, 8,C1
 				mass = 0.100000001
 				shielded = True
-				temp = 173.81516152398547
-				tempExt = 173.81416760932279
+				temp = 188.62625229559038
+				tempExt = 188.62753901434857
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -85816,8 +86001,8 @@ GAME
 				srfN = srfAttach, 8,C1
 				mass = 0.100000001
 				shielded = True
-				temp = 173.81516152398547
-				tempExt = 173.81416760932279
+				temp = 188.62625229559038
+				tempExt = 188.62753901434857
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -85978,8 +86163,8 @@ GAME
 				srfN = srfAttach, 8,C1
 				mass = 0.100000001
 				shielded = True
-				temp = 173.81516152398547
-				tempExt = 173.81416760932279
+				temp = 188.62625229559038
+				tempExt = 188.62753901434857
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -86131,7 +86316,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 0
+				sidx = 1
 				attm = 1
 				sameVesselCollision = False
 				sym = 14
@@ -86140,8 +86325,8 @@ GAME
 				srfN = srfAttach, 8,C4
 				mass = 0.075000003
 				shielded = True
-				temp = 173.81516864830772
-				tempExt = 173.81417284093541
+				temp = 188.625164511772
+				tempExt = 188.62716097974882
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -86293,7 +86478,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 0
+				sidx = 1
 				attm = 1
 				sameVesselCollision = False
 				sym = 13
@@ -86302,8 +86487,8 @@ GAME
 				srfN = srfAttach, 8,C4
 				mass = 0.075000003
 				shielded = True
-				temp = 173.81516864830772
-				tempExt = 173.81417284093541
+				temp = 188.625164511772
+				tempExt = 188.62716097974882
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -86455,7 +86640,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 0
+				sidx = 1
 				attm = 1
 				sameVesselCollision = False
 				sym = 13
@@ -86464,8 +86649,8 @@ GAME
 				srfN = srfAttach, 8,C4
 				mass = 0.075000003
 				shielded = True
-				temp = 173.81516864830772
-				tempExt = 173.81417284093541
+				temp = 188.625164511772
+				tempExt = 188.62716097974882
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -86617,7 +86802,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 0
+				sidx = 1
 				attm = 1
 				sameVesselCollision = False
 				sym = 13
@@ -86626,8 +86811,8 @@ GAME
 				srfN = srfAttach, 8,C4
 				mass = 0.075000003
 				shielded = True
-				temp = 173.81516864830772
-				tempExt = 173.81417284093541
+				temp = 188.625164511772
+				tempExt = 188.62716097974882
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -86786,8 +86971,8 @@ GAME
 				srfN = srfAttach, 7,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 173.81513626643388
-				tempExt = 173.81413970141747
+				temp = 188.20297392972537
+				tempExt = 188.20545353158519
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -86847,7 +87032,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 399.99974361612567
+					amount = 399.03213550166009
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -86881,8 +87066,8 @@ GAME
 				srfN = srfAttach, 7,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 173.81513626643388
-				tempExt = 173.81413970141747
+				temp = 188.20297392972537
+				tempExt = 188.20545353158519
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -86942,7 +87127,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 399.99974361612567
+					amount = 399.03213550166009
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -86976,8 +87161,8 @@ GAME
 				srfN = srfAttach, 7,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 173.81513626643388
-				tempExt = 173.81413970141747
+				temp = 188.20297392972537
+				tempExt = 188.20545353158519
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -87037,7 +87222,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 399.99974361612567
+					amount = 399.03213550166009
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -87071,8 +87256,8 @@ GAME
 				srfN = srfAttach, 7,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 173.81513626643388
-				tempExt = 173.81413970141747
+				temp = 188.20297392972537
+				tempExt = 188.20545353158519
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -87132,7 +87317,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 399.99974361612567
+					amount = 399.03213550166009
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -87166,8 +87351,8 @@ GAME
 				srfN = srfAttach, 7,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 173.81513626643388
-				tempExt = 173.81413970141747
+				temp = 188.20297392972537
+				tempExt = 188.20545353158519
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -87227,7 +87412,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 399.99974361612567
+					amount = 399.03213550166009
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -87261,8 +87446,8 @@ GAME
 				srfN = srfAttach, 7,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 173.81513626643388
-				tempExt = 173.81413970141747
+				temp = 188.20297392972537
+				tempExt = 188.20545353158519
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -87322,7 +87507,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 399.99974361612567
+					amount = 399.03213550166009
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -87356,8 +87541,8 @@ GAME
 				srfN = srfAttach, 7,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 173.81513626643388
-				tempExt = 173.81413970141747
+				temp = 188.20297392972537
+				tempExt = 188.20545353158519
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -87417,7 +87602,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 399.99974361612567
+					amount = 399.03213550166009
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -87451,8 +87636,8 @@ GAME
 				srfN = srfAttach, 7,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 173.81513626643388
-				tempExt = 173.81413970141747
+				temp = 188.20297392972537
+				tempExt = 188.20545353158519
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -87512,7 +87697,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 399.99974361612567
+					amount = 399.03213550166009
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -87546,8 +87731,8 @@ GAME
 				srfN = srfAttach, 7,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 173.81513626643388
-				tempExt = 173.81413970141747
+				temp = 188.20297392972537
+				tempExt = 188.20545353158519
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -87607,7 +87792,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 399.99974361612567
+					amount = 399.03213550166009
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -87641,8 +87826,8 @@ GAME
 				srfN = srfAttach, 7,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 173.81513626643388
-				tempExt = 173.81413970141747
+				temp = 188.20297392972537
+				tempExt = 188.20545353158519
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -87702,7 +87887,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 399.99974361612567
+					amount = 399.03213550166009
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -87737,8 +87922,8 @@ GAME
 				attN = bottom, 28
 				mass = 0.400000006
 				shielded = False
-				temp = 173.81486621173602
-				tempExt = 173.72927087905222
+				temp = 187.7185829492673
+				tempExt = 187.86521511709071
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -87832,8 +88017,8 @@ GAME
 				attN = bottom, 33
 				mass = 2
 				shielded = False
-				temp = 173.81499727004558
-				tempExt = 173.73188430962844
+				temp = 188.07356657500497
+				tempExt = 188.31777377523369
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -87891,7 +88076,7 @@ GAME
 				RESOURCE
 				{
 					name = LiquidFuel
-					amount = 3528.2972594106695
+					amount = 3263.2207010981824
 					maxAmount = 1440
 					flowState = True
 					isTweakable = True
@@ -87902,7 +88087,7 @@ GAME
 				RESOURCE
 				{
 					name = Oxidizer
-					amount = 3645.6965967205911
+					amount = 3321.714120955628
 					maxAmount = 1760
 					flowState = True
 					isTweakable = True
@@ -87938,8 +88123,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0500000007
 				shielded = False
-				temp = 173.81090683632689
-				tempExt = 173.76042721207722
+				temp = 188.11121770047234
+				tempExt = 188.21072261471488
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -88127,8 +88312,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0500000007
 				shielded = False
-				temp = 173.81107309788848
-				tempExt = 173.76050938778627
+				temp = 188.11121770047234
+				tempExt = 188.21072261471488
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -88312,8 +88497,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = False
-				temp = 173.80828128648059
-				tempExt = 173.72756520322181
+				temp = 188.11056739424535
+				tempExt = 188.21519595231433
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -88480,8 +88665,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = False
-				temp = 173.80839835008766
-				tempExt = 173.72761694725529
+				temp = 188.11056739424535
+				tempExt = 188.21519595231433
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -88643,8 +88828,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.75
 				shielded = False
-				temp = 173.81133399395668
-				tempExt = 173.72496446245208
+				temp = 189.53119984162939
+				tempExt = 189.40218108370038
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -88848,7 +89033,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0
+					animState = 0.0152015937
 					stagingEnabled = True
 					EVENTS
 					{
@@ -88864,7 +89049,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0
+					animState = 0.0152015937
 					stagingEnabled = True
 					EVENTS
 					{
@@ -88980,8 +89165,8 @@ GAME
 				srfN = srfAttach, 7,COL_Back
 				mass = 9.99999975E-05
 				shielded = True
-				temp = 173.81517354716979
-				tempExt = 173.81498747270206
+				temp = 189.15345587054463
+				tempExt = 189.21183329392446
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -89187,6 +89372,8 @@ GAME
 						0 = Flight,Kerbin
 						0 = Suborbit,Kerbin
 						0 = Orbit,Kerbin
+						0 = Flyby,Minmus
+						0 = Orbit,Minmus
 					}
 					UPGRADESAPPLIED
 					{
@@ -89195,7 +89382,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 4.9999967952015725
+					amount = 4.9879016937708682
 					maxAmount = 5
 					flowState = True
 					isTweakable = True
@@ -89231,8 +89418,8 @@ GAME
 				srfN = srfAttach, 0,COL
 				mass = 0.0149999997
 				shielded = False
-				temp = 173.85775171443623
-				tempExt = 174.09205879285446
+				temp = 186.47347596189857
+				tempExt = 186.44105476170716
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -89420,8 +89607,8 @@ GAME
 				srfN = srfAttach, 0,COL
 				mass = 0.0149999997
 				shielded = False
-				temp = 173.85638585332725
-				tempExt = 174.09088537045443
+				temp = 186.47983277420366
+				tempExt = 186.45509106398475
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -89609,8 +89796,8 @@ GAME
 				srfN = srfAttach, 0,COL
 				mass = 0.0149999997
 				shielded = False
-				temp = 173.86485430244133
-				tempExt = 174.09807688139975
+				temp = 186.47347596189874
+				tempExt = 186.44105476170722
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -89798,8 +89985,8 @@ GAME
 				srfN = srfAttach, 0,COL
 				mass = 0.0149999997
 				shielded = False
-				temp = 173.8653878408002
-				tempExt = 174.09853475040956
+				temp = 186.53499787204228
+				tempExt = 186.46248798106191
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -89986,8 +90173,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 173.84225989762626
-				tempExt = 173.99044638143167
+				temp = 184.82074184935169
+				tempExt = 185.10297339200676
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -90110,8 +90297,8 @@ GAME
 				attN = bottom, 39
 				mass = 0.0500000007
 				shielded = False
-				temp = 173.85944724870549
-				tempExt = 174.28380696288789
+				temp = 184.22229840449364
+				tempExt = 184.40442783376793
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -90278,7 +90465,7 @@ GAME
 				Gear = False, 0
 				Light = False, 0
 				RCS = False, 0
-				SAS = False, 544632.559567995
+				SAS = False, 808464.225223895
 				Brakes = False, 0
 				Abort = False, 0
 				Custom01 = False, 0
@@ -90304,15 +90491,20 @@ GAME
 			{
 				MANEUVER
 				{
-					UT = 807089.12117326481
-					dV = 0,0,-154
+					UT = 820621.1616424158
+					dV = -1.5942255383396668,4.3753969383351565,-24.622890771713838
 				}
+			}
+			TARGET
+			{
+				type = Vessel
+				vesselID = 65f1bb1b-e1ff-4eea-a008-eedacf99d305
 			}
 			CTRLSTATE
 			{
-				pitch = 0.000243410119
-				yaw = -0.000217403722
-				roll = 0
+				pitch = -0.000124338301
+				yaw = -0.00033416762
+				roll = -3.2561461E-06
 				trimPitch = 0
 				trimYaw = 0
 				trimRoll = 0
@@ -91106,13 +91298,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 0
+				SMA = NaN
 				ECC = 1
-				INC = 162.53892021898992
-				LPE = 90
-				LAN = 112.95960886794961
+				INC = 90.096909954700777
+				LPE = 90.000000000000014
+				LAN = 113.80810902676427
 				MNA = 0
-				EPH = 782490.34855559701
+				EPH = 808606.7696869151
 				REF = 1
 			}
 			PART
@@ -91312,11 +91504,11 @@ GAME
 			{
 				SMA = NaN
 				ECC = 1
-				INC = 85.5710078076103
+				INC = 90.004617144074587
 				LPE = 90
-				LAN = 52.793306499354287
+				LAN = 121.48869400046681
 				MNA = 0
-				EPH = 782490.34855559701
+				EPH = 808606.7696869151
 				REF = 2
 			}
 			PART
@@ -91756,13 +91948,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 100431.27139838504
-				ECC = 0.99999999999999989
-				INC = 122.21757288539686
+				SMA = NaN
+				ECC = 1
+				INC = 90.004617144074587
 				LPE = 90
-				LAN = 7.0548008990462563
-				MNA = 3.1415926207170166
-				EPH = 782490.34855559701
+				LAN = 121.48869400046681
+				MNA = 0
+				EPH = 808606.7696869151
 				REF = 2
 			}
 			PART
@@ -100896,18 +101088,18 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 2680.6583804362454
+			met = 263093.07735536736
 			lct = 544066.71226771222
-			lastUT = 546747.37064814847
-			distanceTraveled = 1750128.9700405931
+			lastUT = 807159.80962307961
+			distanceTraveled = 1768886.2729436317
 			root = 0
-			lat = 0.13492644559511527
-			lon = 154.40543096967389
-			alt = 2394463.5983238732
-			hgt = 2394463.5
-			nrm = 0.123318598,0.982735395,0.137926191
-			rot = 0.556561291,-0.710872591,-0.429637611,-0.0176432077
-			CoM = -1.25318766E-05,-7.73591185,0.000118479133
+			lat = -1.1049912193402198
+			lon = 18.885045964051219
+			alt = 357481.58743936504
+			hgt = 357481.594
+			nrm = 0.763777912,-0.00959953666,0.645407736
+			rot = 0.576122403,-0.147646576,0.330669761,-0.732762575
+			CoM = -1.62124634E-05,-7.98544931,0.000125110149
 			stg = 1
 			prst = False
 			ref = 1854464164
@@ -100920,19 +101112,19 @@ GAME
 			OverrideAxisControl = 0,0,0,0
 			OverrideGroupNames = ,,,
 			altDispState = ASL
-			cPch = 0.2
-			cHdg = 0.3
+			cPch = 0.05
+			cHdg = -0.5700001
 			cMod = 0
 			ORBIT
 			{
-				SMA = 24781558.352015432
-				ECC = 0.97186778000457708
-				INC = 0.22049163201869534
-				LPE = 18.451704553711501
-				LAN = 235.97679957673495
-				MNA = 0.026081956790042771
-				EPH = 546747.37064814847
-				REF = 1
+				SMA = 508005.90577958862
+				ECC = 0.17820197205960159
+				INC = 6.834390821000401
+				LPE = 188.73159769826424
+				LAN = 52.136944815652782
+				MNA = 0.0071357619913836939
+				EPH = 807159.78962307959
+				REF = 3
 			}
 			PART
 			{
@@ -100958,8 +101150,8 @@ GAME
 				srfN = srfAttach, 7,COL_Back
 				mass = 9.99999975E-05
 				shielded = False
-				temp = 148.64634741522394
-				tempExt = 148.60337865110347
+				temp = 170.52310696194428
+				tempExt = 171.00482379736769
 				tempExtUnexp = 307.67641582878406
 				staticPressureAtm = 0
 				expt = 0.5
@@ -101594,6 +101786,9 @@ GAME
 						MechJebModuleCustomInfoWindow
 						{
 						}
+						MechJebModuleCustomInfoWindow
+						{
+						}
 						MechJebModuleWarpController
 						{
 							unlockParts = 
@@ -101699,7 +101894,7 @@ GAME
 							MarkUT = 546729.57064813189
 							DeltaVExpended = NaN
 							DragLosses = NaN
-							GravityLosses = 6.1450602371961587
+							GravityLosses = 6.1349582244720384
 							SteeringLosses = NaN
 							MarkLAN = 23.597679916249994
 							MarkLatitude = 0.013569250333572504
@@ -101749,6 +101944,8 @@ GAME
 					Log
 					{
 						flight = 0
+						0 = Flyby,Minmus
+						0 = Orbit,Minmus
 					}
 					UPGRADESAPPLIED
 					{
@@ -101757,7 +101954,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 4.984884910333232
+					amount = 4.9989709678716672
 					maxAmount = 5
 					flowState = True
 					isTweakable = True
@@ -101792,8 +101989,8 @@ GAME
 				attN = top, 21
 				mass = 2.47199988
 				shielded = False
-				temp = 148.75296094093898
-				tempExt = 148.88432828772679
+				temp = 170.59303359125727
+				tempExt = 172.14800060566128
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -102195,6 +102392,112 @@ GAME
 				}
 				MODULE
 				{
+					name = MechJebCore
+					isEnabled = True
+					running = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						OnOrbitProgradeAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnOrbitRetrogradeAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnOrbitNormalAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnOrbitAntinormalAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnOrbitRadialInAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnOrbitRadialOutAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnKillRotationAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnDeactivateSmartASSAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnLandsomewhereAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnLandTargetAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnPanicAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnTranslatronOffAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnTranslatronKeepVertAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnTranslatronZeroSpeedAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnTranslatronPlusOneSpeedAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnTranslatronMinusOneSpeedAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnTranslatronToggleHSAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						OnAscentAPToggleAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
 					name = ModuleTripLogger
 					isEnabled = True
 					stagingEnabled = True
@@ -102210,6 +102513,8 @@ GAME
 						0 = Flight,Kerbin
 						0 = Suborbit,Kerbin
 						0 = Orbit,Kerbin
+						0 = Flyby,Minmus
+						0 = Orbit,Minmus
 					}
 					UPGRADESAPPLIED
 					{
@@ -102218,7 +102523,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 149.54654730940703
+					amount = 149.96912903617095
 					maxAmount = 150
 					flowState = True
 					isTweakable = True
@@ -102272,8 +102577,8 @@ GAME
 				attN = bottom, 4
 				mass = 0.300000012
 				shielded = False
-				temp = 148.61900811673024
-				tempExt = 148.26899339868947
+				temp = 170.41740603866276
+				tempExt = 171.44686862200408
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -102426,8 +102731,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 148.69491471023537
-				tempExt = 148.69497125547434
+				temp = 170.3582606657782
+				tempExt = 170.35661675652963
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -102487,7 +102792,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 398.79079282668386
+					amount = 399.91767742978931
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -102521,8 +102826,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 148.68956450946604
-				tempExt = 148.68906608208022
+				temp = 170.35776652620706
+				tempExt = 170.35616077067621
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -102582,7 +102887,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 398.79079282668386
+					amount = 399.91767742978931
 					maxAmount = 400
 					flowState = True
 					isTweakable = True
@@ -102617,8 +102922,8 @@ GAME
 				attN = bottom, 5
 				mass = 2
 				shielded = False
-				temp = 148.68516938889704
-				tempExt = 148.72368356852914
+				temp = 170.76185441683063
+				tempExt = 173.21148515934425
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -102676,7 +102981,7 @@ GAME
 				RESOURCE
 				{
 					name = LiquidFuel
-					amount = 1440.9721418651568
+					amount = 1084.4744955416079
 					maxAmount = 1440
 					flowState = True
 					isTweakable = True
@@ -102687,7 +102992,7 @@ GAME
 				RESOURCE
 				{
 					name = Oxidizer
-					amount = 1850.0769799208817
+					amount = 1414.3576134271577
 					maxAmount = 1760
 					flowState = True
 					isTweakable = True
@@ -102722,8 +103027,8 @@ GAME
 				attN = bottom, 6
 				mass = 2
 				shielded = False
-				temp = 148.69044213361971
-				tempExt = 148.75893140174824
+				temp = 170.35106189616519
+				tempExt = 170.63778802645069
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -102827,8 +103132,8 @@ GAME
 				attN = bottom, 7
 				mass = 0.400000006
 				shielded = False
-				temp = 148.68383562886419
-				tempExt = 148.66837851427491
+				temp = 175.17862340866219
+				tempExt = 178.70329039845925
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -102922,8 +103227,8 @@ GAME
 				attN = bottom, 8
 				mass = 2
 				shielded = False
-				temp = 148.68480367383521
-				tempExt = 148.70408988054166
+				temp = 170.35224484388004
+				tempExt = 170.7089445260363
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -103027,8 +103332,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.75
 				shielded = False
-				temp = 148.68676143452763
-				tempExt = 148.66036363397521
+				temp = 179.92210124874489
+				tempExt = 180.82853252176295
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -103232,7 +103537,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.000360997161
+					animState = 0.10484539
 					stagingEnabled = True
 					EVENTS
 					{
@@ -103248,7 +103553,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.000360997161
+					animState = 0.10484539
 					stagingEnabled = True
 					EVENTS
 					{
@@ -103367,8 +103672,8 @@ GAME
 				srfN = srfAttach, 7,collider
 				mass = 0.899999976
 				shielded = False
-				temp = 148.68382405018238
-				tempExt = 148.64913761720285
+				temp = 193.24632456728503
+				tempExt = 190.06438806599118
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -103533,7 +103838,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0
+					animState = 0.0525843948
 					stagingEnabled = True
 					EVENTS
 					{
@@ -103621,8 +103926,8 @@ GAME
 				srfN = srfAttach, 7,collider
 				mass = 0.899999976
 				shielded = False
-				temp = 148.68382405018238
-				tempExt = 148.64913761720285
+				temp = 193.24633405565424
+				tempExt = 190.06439549914177
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -103779,7 +104084,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0
+					animState = 0.0525843948
 					stagingEnabled = True
 					EVENTS
 					{
@@ -103867,8 +104172,8 @@ GAME
 				srfN = srfAttach, 7,collider
 				mass = 0.899999976
 				shielded = False
-				temp = 148.68382405018238
-				tempExt = 148.64913761720285
+				temp = 193.24625158715833
+				tempExt = 190.06433089364975
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -104025,7 +104330,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0
+					animState = 0.0525843948
 					stagingEnabled = True
 					EVENTS
 					{
@@ -104113,8 +104418,8 @@ GAME
 				srfN = srfAttach, 7,collider
 				mass = 0.899999976
 				shielded = False
-				temp = 148.68382405018238
-				tempExt = 148.64913761720285
+				temp = 193.24632392846641
+				tempExt = 190.06438756554297
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -104271,7 +104576,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0
+					animState = 0.0525843948
 					stagingEnabled = True
 					EVENTS
 					{
@@ -104359,8 +104664,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.100000001
 				shielded = True
-				temp = 148.68800430109403
-				tempExt = 148.68881239149806
+				temp = 170.34683606425989
+				tempExt = 170.34583775327297
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -104521,8 +104826,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.100000001
 				shielded = True
-				temp = 148.68800430109403
-				tempExt = 148.68881239149806
+				temp = 170.34683606425989
+				tempExt = 170.34583775327297
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -104683,8 +104988,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.100000001
 				shielded = True
-				temp = 148.68800430109403
-				tempExt = 148.68881239149806
+				temp = 170.34683606425989
+				tempExt = 170.34583775327297
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -104845,8 +105150,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.100000001
 				shielded = True
-				temp = 148.68800430109403
-				tempExt = 148.68881239149806
+				temp = 170.34683606425989
+				tempExt = 170.34583775327297
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -104998,7 +105303,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 18
@@ -105007,8 +105312,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.075000003
 				shielded = True
-				temp = 148.68691576273733
-				tempExt = 148.68786066900893
+				temp = 170.34412764878485
+				tempExt = 170.34382541965957
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -105160,7 +105465,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 17
@@ -105169,8 +105474,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.075000003
 				shielded = True
-				temp = 148.68691576273733
-				tempExt = 148.68786066900893
+				temp = 170.34412764878485
+				tempExt = 170.34382541965957
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -105322,7 +105627,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 17
@@ -105331,8 +105636,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.075000003
 				shielded = True
-				temp = 148.93494190145415
-				tempExt = 148.93594038830946
+				temp = 170.34412764878485
+				tempExt = 170.34382541965957
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -105484,7 +105789,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 17
@@ -105493,8 +105798,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.075000003
 				shielded = True
-				temp = 148.76777598664148
-				tempExt = 148.75504369007353
+				temp = 170.37362563259711
+				tempExt = 170.37283345536824
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -105654,8 +105959,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 148.64225928223536
-				tempExt = 148.59903340130188
+				temp = 170.46568361479541
+				tempExt = 170.64534283324193
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -105780,8 +106085,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0500000007
 				shielded = False
-				temp = 150.76831714833492
-				tempExt = 151.37626527313893
+				temp = 170.40971285600838
+				tempExt = 170.3326667728353
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -105971,8 +106276,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0500000007
 				shielded = False
-				temp = 148.8495237567578
-				tempExt = 148.88630759053399
+				temp = 170.35700012516392
+				tempExt = 170.31581926866198
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -106161,9 +106466,19 @@ GAME
 			{
 				MANEUVER
 				{
-					UT = 807089.02658766718
-					dV = 0,0,-185
+					UT = 810919.63161272067
+					dV = 16.5526339936544,8.6547901591031415,-24.014352309511807
 				}
+				MANEUVER
+				{
+					UT = 827919.91194278223
+					dV = -10.292687324714862,16.409979615854606,-31.060528567873561
+				}
+			}
+			TARGET
+			{
+				type = Vessel
+				vesselID = 65f1bb1b-e1ff-4eea-a008-eedacf99d305
 			}
 			CTRLSTATE
 			{
@@ -106388,14 +106703,14 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 25408184.710258354
-				ECC = 0.93279437429066681
-				INC = 0.26845428651644532
-				LPE = 338.94735091862032
-				LAN = 276.68275897395426
-				MNA = 3.2542841161996034
-				EPH = 763531.46310478484
-				REF = 1
+				SMA = -38046.612140210338
+				ECC = 14.452472587597773
+				INC = 18.288330221747039
+				LPE = 248.83266626388081
+				LAN = 350.97159027275853
+				MNA = -56.202900042748453
+				EPH = 806768.88767264504
+				REF = 3
 			}
 			PART
 			{
@@ -107621,15 +107936,16 @@ GAME
 					ACTIONS
 					{
 					}
+					UPGRADESAPPLIED
+					{
+					}
 					Log
 					{
 						flight = 0
 						0 = Flight,Kerbin
 						0 = Suborbit,Kerbin
 						0 = Orbit,Kerbin
-					}
-					UPGRADESAPPLIED
-					{
+						0 = Flyby,Minmus
 					}
 				}
 				RESOURCE
@@ -110553,15 +110869,16 @@ GAME
 					ACTIONS
 					{
 					}
+					UPGRADESAPPLIED
+					{
+					}
 					Log
 					{
 						flight = 0
 						0 = Flight,Kerbin
 						0 = Suborbit,Kerbin
 						0 = Orbit,Kerbin
-					}
-					UPGRADESAPPLIED
-					{
+						0 = Flyby,Minmus
 					}
 				}
 				RESOURCE
@@ -123139,8 +123456,8 @@ GAME
 		{
 			pid = 65f1bb1be1ff4eeaa008eedacf99d305
 			persistentId = 1091330082
-			name = 任务 - Minmus旅行
-			type = Ship
+			name = Minmus - 空间站2号
+			type = Station
 			sit = ORBITING
 			landed = False
 			skipGroundPositioning = False
@@ -123150,18 +123467,18 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 174681.945877105
+			met = 187668.59262527083
 			lct = 611628.9195048972
-			lastUT = 786310.8653820022
-			distanceTraveled = 2056160.6597611064
+			lastUT = 799297.53213016805
+			distanceTraveled = 2112991.9140030318
 			root = 0
-			lat = -10.853148670747579
-			lon = -125.27341259115664
-			alt = 105926.53150513582
-			hgt = 105926.531
-			nrm = -0.463446379,-0.118382215,0.878181696
-			rot = 0.664217472,-0.576866865,-0.0169957262,0.475132585
-			CoM = 0.000561892986,-2.05572987,-0.0024471283
+			lat = -0.00042080659768001797
+			lon = -49.284990269433415
+			alt = 70007.328496590577
+			hgt = 70007.3281
+			nrm = -0.660866976,-0.418694913,-0.62285614
+			rot = 0.192890212,-0.396448612,0.646214545,0.622919559
+			CoM = 0.000567317009,-2.01549268,-0.00246626139
 			stg = 1
 			prst = False
 			ref = 933079494
@@ -123174,18 +123491,18 @@ GAME
 			OverrideAxisControl = 0,0,0,0
 			OverrideGroupNames = ,,,
 			altDispState = ASL
-			cPch = 0
-			cHdg = 0
+			cPch = 0.7560003
+			cHdg = -0.7620023
 			cMod = 0
 			ORBIT
 			{
-				SMA = 147976.61487351166
-				ECC = 0.12130481340412128
-				INC = 11.955235049773048
-				LPE = 65.549221400726424
-				LAN = 26.571972944925847
-				MNA = 3.1375258599706393
-				EPH = 786310.8653820022
+				SMA = 130000.9138022648
+				ECC = 0.00023615580417499929
+				INC = 0.0078370218449692816
+				LPE = 79.967378405873788
+				LAN = 279.51006717240347
+				MNA = 1.8092982127422528
+				EPH = 799297.51213016803
 				REF = 3
 			}
 			PART
@@ -123212,10 +123529,10 @@ GAME
 				srfN = , -1
 				attN = bottom, 1
 				attN = top, 26
-				mass = 2.52199984
+				mass = 2.47699976
 				shielded = False
-				temp = 192.45850247744917
-				tempExt = 192.35382485298541
+				temp = 252.59705917401547
+				tempExt = 252.26906039046025
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -123232,7 +123549,6 @@ GAME
 				moduleCargoStackableQuantity = 1
 				crew = Keti Kerman
 				crew = Maien Kerman
-				crew = Shanglong Kerman
 				EVENTS
 				{
 				}
@@ -123537,7 +123853,7 @@ GAME
 								cid = 4291927856
 								uid = 0
 								mid = 0
-								persistentId = 1593782690
+								persistentId = 2143428495
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -123625,7 +123941,7 @@ GAME
 								cid = 4290740818
 								uid = 0
 								mid = 0
-								persistentId = 488788670
+								persistentId = 3048760508
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -124414,7 +124730,7 @@ GAME
 							MarkUT = 611628.93950489722
 							DeltaVExpended = NaN
 							DragLosses = NaN
-							GravityLosses = 1461.7268076621503
+							GravityLosses = 1429.0463373500036
 							SteeringLosses = NaN
 							MarkLAN = 242.97607177776794
 							MarkLatitude = -0.09711737974318313
@@ -124481,6 +124797,12 @@ GAME
 					isVisible = True
 					flowMode = Both
 				}
+				VESSELNAMING
+				{
+					name = Minmus - 空间站2号
+					type = Station
+					priority = 10
+				}
 			}
 			PART
 			{
@@ -124510,8 +124832,8 @@ GAME
 				attN = bottom, 15
 				mass = 0.300000012
 				shielded = False
-				temp = 191.95298168847401
-				tempExt = 192.33624761179135
+				temp = 249.21163515257339
+				tempExt = 250.03236742240469
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -124664,8 +124986,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 191.8938988410944
-				tempExt = 191.89290187060462
+				temp = 255.09412727950132
+				tempExt = 255.10908110502245
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -124759,8 +125081,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 191.8938988410944
-				tempExt = 191.89290187060462
+				temp = 255.09412727950132
+				tempExt = 255.10908110502245
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -124856,8 +125178,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.100000001
 				shielded = True
-				temp = 194.01669294337688
-				tempExt = 194.01806318562885
+				temp = 257.68033268771956
+				tempExt = 257.685912067353
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -125018,8 +125340,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.100000001
 				shielded = True
-				temp = 194.01669294337688
-				tempExt = 194.01806318562885
+				temp = 257.68033268771956
+				tempExt = 257.685912067353
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -125180,8 +125502,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.100000001
 				shielded = True
-				temp = 194.01669294337688
-				tempExt = 194.01806318562885
+				temp = 257.68033268771956
+				tempExt = 257.685912067353
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -125342,8 +125664,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.100000001
 				shielded = True
-				temp = 194.01669294337688
-				tempExt = 194.01806318562885
+				temp = 257.68033268771956
+				tempExt = 257.685912067353
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -125495,7 +125817,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 9
@@ -125504,8 +125826,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.075000003
 				shielded = True
-				temp = 194.7268219753262
-				tempExt = 194.72782499855012
+				temp = 258.46465119068074
+				tempExt = 258.46668223733337
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -125657,7 +125979,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 8
@@ -125666,8 +125988,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.075000003
 				shielded = True
-				temp = 194.7268219753262
-				tempExt = 194.72782499855012
+				temp = 258.46465119068074
+				tempExt = 258.46668223733337
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -125819,7 +126141,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 8
@@ -125828,8 +126150,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.075000003
 				shielded = True
-				temp = 194.7268219753262
-				tempExt = 194.72782499855012
+				temp = 258.46465119068074
+				tempExt = 258.46668223733337
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -125981,7 +126303,7 @@ GAME
 				dstg = 0
 				sqor = 0
 				sepI = -1
-				sidx = 1
+				sidx = 0
 				attm = 1
 				sameVesselCollision = False
 				sym = 8
@@ -125990,8 +126312,8 @@ GAME
 				srfN = srfAttach, 1,COL_BOT
 				mass = 0.075000003
 				shielded = True
-				temp = 194.7268219753262
-				tempExt = 194.72782499855012
+				temp = 258.46465119068074
+				tempExt = 258.46668223733337
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -126152,8 +126474,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = True
-				temp = 194.78647257659705
-				tempExt = 194.78747010221207
+				temp = 258.68063967338412
+				tempExt = 258.68175124170136
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -126249,8 +126571,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = True
-				temp = 194.78647257659705
-				tempExt = 194.78747010221207
+				temp = 258.68063967338412
+				tempExt = 258.68175124170136
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -126345,8 +126667,8 @@ GAME
 				attN = top, -1
 				mass = 0.0399999991
 				shielded = True
-				temp = 192.70157994035651
-				tempExt = 192.70257350803931
+				temp = 253.09850608463051
+				tempExt = 253.09950291224749
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0
@@ -126656,10 +126978,10 @@ GAME
 				srfN = , -1
 				attN = bottom, 16
 				attN = top, 1
-				mass = 0.506000042
+				mass = 0.551000059
 				shielded = False
-				temp = 192.83477889236337
-				tempExt = 192.71594456930342
+				temp = 252.98959679370969
+				tempExt = 251.47633287409192
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -126674,6 +126996,7 @@ GAME
 				modMass = 0
 				moduleVariantName = 
 				moduleCargoStackableQuantity = 1
+				crew = Shanglong Kerman
 				EVENTS
 				{
 				}
@@ -127090,8 +127413,8 @@ GAME
 				attN = bottom, 17
 				mass = 0.0799999982
 				shielded = False
-				temp = 193.08267020672884
-				tempExt = 193.49644094576018
+				temp = 253.13362209712275
+				tempExt = 252.53792548145688
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -127186,8 +127509,8 @@ GAME
 				attN = bottom, 24
 				mass = 2
 				shielded = False
-				temp = 193.83304906547465
-				tempExt = 194.39067557631301
+				temp = 253.47775091144317
+				tempExt = 253.30025091987051
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -127245,7 +127568,7 @@ GAME
 				RESOURCE
 				{
 					name = LiquidFuel
-					amount = 417.52126852852399
+					amount = 407.20557535480754
 					maxAmount = 1440
 					flowState = True
 					isTweakable = True
@@ -127256,7 +127579,7 @@ GAME
 				RESOURCE
 				{
 					name = Oxidizer
-					amount = 510.30371245343201
+					amount = 497.69564241160657
 					maxAmount = 1760
 					flowState = True
 					isTweakable = True
@@ -127290,8 +127613,8 @@ GAME
 				srfN = srfAttach, 17,collider
 				mass = 0.129999995
 				shielded = False
-				temp = 194.47801417500685
-				tempExt = 194.89929476799921
+				temp = 253.44952011663386
+				tempExt = 253.27384850199809
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -127336,7 +127659,7 @@ GAME
 					isEnabled = True
 					efficiencyMult = 1
 					launchUT = 611628.93950489722
-					currentRotation = (0.344495237, -0.344419748, 0.617654979, 0.617414355)
+					currentRotation = (0.363553345, -0.363234341, -0.606606841, -0.606562316)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
 					deployState = EXTENDED
@@ -127410,8 +127733,8 @@ GAME
 				srfN = srfAttach, 17,collider
 				mass = 0.129999995
 				shielded = False
-				temp = 194.47362625818826
-				tempExt = 194.82927937593269
+				temp = 253.52461056306313
+				tempExt = 253.54059112592375
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -127456,7 +127779,7 @@ GAME
 					isEnabled = True
 					efficiencyMult = 1
 					launchUT = 611628.93950489722
-					currentRotation = (-0.617569447, 0.617465794, -0.344508559, -0.34446761)
+					currentRotation = (0.606692791, -0.606436014, -0.363404721, -0.363450468)
 					storedAnimationTime = 0
 					storedAnimationSpeed = 0
 					deployState = EXTENDED
@@ -127532,8 +127855,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0500000007
 				shielded = False
-				temp = 194.0452312641489
-				tempExt = 194.22515059206728
+				temp = 253.45784490979599
+				tempExt = 253.21615716432834
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -127721,8 +128044,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0500000007
 				shielded = False
-				temp = 194.0452312641489
-				tempExt = 194.22515059206728
+				temp = 253.45784490979599
+				tempExt = 253.21615716432834
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -127906,8 +128229,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = False
-				temp = 193.98255054682667
-				tempExt = 194.21227092815775
+				temp = 253.45744502416704
+				tempExt = 253.21958327583016
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -128074,8 +128397,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0199999996
 				shielded = False
-				temp = 193.98255054682667
-				tempExt = 194.21227092815775
+				temp = 253.45744502416704
+				tempExt = 253.21958327583016
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -128237,8 +128560,8 @@ GAME
 				attN = bottom, 25
 				mass = 2
 				shielded = False
-				temp = 195.08759492564329
-				tempExt = 195.39141819985994
+				temp = 253.56789747201381
+				tempExt = 253.27824692849188
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -128296,7 +128619,7 @@ GAME
 				RESOURCE
 				{
 					name = LiquidFuel
-					amount = 417.52126852852399
+					amount = 407.20557535480754
 					maxAmount = 1440
 					flowState = True
 					isTweakable = True
@@ -128307,7 +128630,7 @@ GAME
 				RESOURCE
 				{
 					name = Oxidizer
-					amount = 510.30371245343201
+					amount = 497.69564241160657
 					maxAmount = 1760
 					flowState = True
 					isTweakable = True
@@ -128342,8 +128665,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.75
 				shielded = False
-				temp = 197.9951087493514
-				tempExt = 197.34754625687188
+				temp = 253.5674669318729
+				tempExt = 253.22385421157486
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -128547,7 +128870,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.0534042493
+					animState = 8.92233074E-05
 					stagingEnabled = True
 					EVENTS
 					{
@@ -128563,7 +128886,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.0534042493
+					animState = 8.92233074E-05
 					stagingEnabled = True
 					EVENTS
 					{
@@ -128681,8 +129004,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 189.88421821124919
-				tempExt = 190.0156616054214
+				temp = 247.37209675971977
+				tempExt = 247.50619444209397
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -128805,8 +129128,8 @@ GAME
 				attN = bottom, 26
 				mass = 0.0500000007
 				shielded = False
-				temp = 187.50874213622663
-				tempExt = 188.11261296940205
+				temp = 242.50889171361672
+				tempExt = 243.59481369457527
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -128989,8 +129312,8 @@ GAME
 				attN = bottom, 29
 				mass = 0.0500000007
 				shielded = False
-				temp = 187.45935514388702
-				tempExt = 187.63237694819023
+				temp = 242.41171982828121
+				tempExt = 242.55055902335067
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -129181,8 +129504,8 @@ GAME
 				attN = bottom, 28
 				mass = 1.5
 				shielded = False
-				temp = 187.4312548879841
-				tempExt = 187.50686208267902
+				temp = 242.36114126963975
+				tempExt = 242.18926830964216
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -129266,8 +129589,8 @@ GAME
 				attN = bottom, 29
 				mass = 0.0500000007
 				shielded = False
-				temp = 187.36066676266742
-				tempExt = 187.38459685701216
+				temp = 242.2791029969701
+				tempExt = 242.05252996318012
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -129454,8 +129777,8 @@ GAME
 				attN = bottom, 32
 				mass = 0.0500000007
 				shielded = False
-				temp = 187.29013638721244
-				tempExt = 187.28541272985183
+				temp = 242.20563524574692
+				tempExt = 241.92346822394452
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -129642,8 +129965,8 @@ GAME
 				attN = bottom, 33
 				mass = 0.100000001
 				shielded = False
-				temp = 187.24040862180087
-				tempExt = 187.34704514646506
+				temp = 242.14825728716255
+				tempExt = 241.88007830368781
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -129744,8 +130067,8 @@ GAME
 				attN = bottom, 32
 				mass = 0.5
 				shielded = False
-				temp = 187.21080793204655
-				tempExt = 187.17702641198559
+				temp = 242.17909351339685
+				tempExt = 241.82547246882254
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -129829,7 +130152,7 @@ GAME
 								cid = 4288195870
 								uid = 0
 								mid = 0
-								persistentId = 3193859615
+								persistentId = 4156531446
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -129920,7 +130243,7 @@ GAME
 								cid = 4288190696
 								uid = 0
 								mid = 0
-								persistentId = 75834723
+								persistentId = 2803002537
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -130011,7 +130334,7 @@ GAME
 								cid = 4288190354
 								uid = 0
 								mid = 0
-								persistentId = 682277816
+								persistentId = 1966234564
 								launchID = 0
 								parent = 0
 								position = 0,0,0
@@ -130132,8 +130455,8 @@ GAME
 				attN = bottom, 33
 				mass = 0.400000006
 				shielded = False
-				temp = 187.19620474177333
-				tempExt = 186.99391815523211
+				temp = 242.19690981798627
+				tempExt = 241.70313845523023
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -130236,8 +130559,8 @@ GAME
 				srfN = srfAttach, 34,collider
 				mass = 0.0399999991
 				shielded = False
-				temp = 187.16314019063262
-				tempExt = 187.03863920772105
+				temp = 242.16103260565743
+				tempExt = 241.78737561753533
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -130385,8 +130708,8 @@ GAME
 				srfN = srfAttach, 34,collider
 				mass = 0.0399999991
 				shielded = False
-				temp = 187.16314019063262
-				tempExt = 187.03863920772105
+				temp = 242.16101280963412
+				tempExt = 241.78736926798618
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -130534,8 +130857,8 @@ GAME
 				srfN = srfAttach, 34,collider
 				mass = 0.0399999991
 				shielded = False
-				temp = 187.16314019063262
-				tempExt = 187.03863920772105
+				temp = 242.16095519775143
+				tempExt = 241.78735078892316
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -130683,8 +131006,8 @@ GAME
 				srfN = srfAttach, 34,collider
 				mass = 0.0399999991
 				shielded = False
-				temp = 187.16483475293097
-				tempExt = 187.05303350832679
+				temp = 242.16095519775143
+				tempExt = 241.78735078892316
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -130833,8 +131156,8 @@ GAME
 				attN = bottom, 34
 				mass = 0.300000012
 				shielded = False
-				temp = 187.15960750840011
-				tempExt = 186.78993113249928
+				temp = 242.29725473092208
+				tempExt = 241.43086687081933
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -130990,8 +131313,8 @@ GAME
 				attN = bottom, 39
 				mass = 0.300000012
 				shielded = False
-				temp = 187.22960141972931
-				tempExt = 186.87369334509452
+				temp = 242.66183555576166
+				tempExt = 241.16608272052355
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -131037,7 +131360,7 @@ GAME
 					aniState = LOCKED
 					animSwitch = True
 					animTime = 0
-					animSpeed = 1
+					animSpeed = -1
 					deployPercent = 100
 					animationIsDisabled = False
 					stagingEnabled = True
@@ -131143,8 +131466,8 @@ GAME
 				attN = bottom, 40
 				mass = 0.300000012
 				shielded = False
-				temp = 187.30109941499924
-				tempExt = 186.68738499680072
+				temp = 243.04053475171568
+				tempExt = 241.66140134741516
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -131190,7 +131513,7 @@ GAME
 					aniState = LOCKED
 					animSwitch = True
 					animTime = 0
-					animSpeed = 1
+					animSpeed = -1
 					deployPercent = 100
 					animationIsDisabled = False
 					stagingEnabled = True
@@ -131300,8 +131623,8 @@ GAME
 				attN = bottom, 41
 				mass = 0.300000012
 				shielded = False
-				temp = 187.36739656021282
-				tempExt = 186.97012214774705
+				temp = 243.30044395305171
+				tempExt = 241.68313532575488
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -131345,8 +131668,8 @@ GAME
 					name = ModuleAnimateGeneric
 					isEnabled = True
 					aniState = LOCKED
-					animSwitch = True
-					animTime = 0
+					animSwitch = False
+					animTime = 1
 					animSpeed = 1
 					deployPercent = 100
 					animationIsDisabled = False
@@ -131457,8 +131780,8 @@ GAME
 				attN = bottom, 42
 				mass = 0.300000012
 				shielded = False
-				temp = 186.42309916139692
-				tempExt = 186.26896407029889
+				temp = 243.16600005252434
+				tempExt = 242.27784360223805
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -131504,7 +131827,7 @@ GAME
 					aniState = LOCKED
 					animSwitch = True
 					animTime = 0
-					animSpeed = -10
+					animSpeed = -1
 					deployPercent = 100
 					animationIsDisabled = False
 					stagingEnabled = True
@@ -131612,8 +131935,8 @@ GAME
 				attN = bottom, 43
 				mass = 0.0500000007
 				shielded = True
-				temp = 191.77891031733728
-				tempExt = 191.86571112679084
+				temp = 243.80451727453894
+				tempExt = 243.6992184738701
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -131683,6 +132006,72 @@ GAME
 							wasActiveBeforePartWasAdjusted = False
 						}
 					}
+					ScienceData
+					{
+						data = 5
+						scienceValueRatio = 1
+						subjectID = crewReport@MinmusInSpaceHigh
+						xmit = 0
+						xmitBonus = 0
+						title = 在距离Minmus较远的太空中的乘员报告
+						triggered = False
+						container = 4144486435
+					}
+					ScienceData
+					{
+						data = 8
+						scienceValueRatio = 1
+						subjectID = evaReport@MinmusInSpaceHigh
+						xmit = 0
+						xmitBonus = 0
+						title = 在距离Minmus较远的太空中的EVA报告
+						triggered = False
+						container = 4144486435
+					}
+					ScienceData
+					{
+						data = 8
+						scienceValueRatio = 1
+						subjectID = temperatureScan@MinmusInSpaceHigh
+						xmit = 0
+						xmitBonus = 0
+						title = 在距离Minmus较远的太空中的温度扫描
+						triggered = False
+						container = 4144486435
+					}
+					ScienceData
+					{
+						data = 45
+						scienceValueRatio = 1
+						subjectID = magnetometer@MinmusInSpaceHigh
+						xmit = 0
+						xmitBonus = 0
+						title = 在距离Minmus较远的太空中的磁强计报告
+						triggered = False
+						container = 4144486435
+					}
+					ScienceData
+					{
+						data = 12
+						scienceValueRatio = 1
+						subjectID = barometerScan@MinmusInSpaceHigh
+						xmit = 0
+						xmitBonus = 0
+						title = 在距离Minmus较远的太空中的大气压扫描
+						triggered = False
+						container = 4144486435
+					}
+					ScienceData
+					{
+						data = 10
+						scienceValueRatio = 1
+						subjectID = mysteryGoo@MinmusInSpaceHigh
+						xmit = 0.300000012
+						xmitBonus = 1.4000001
+						title = 在距离Minmus较远的太空中的神秘黏性物质™观察结果
+						triggered = False
+						container = 4144486435
+					}
 					UPGRADESAPPLIED
 					{
 					}
@@ -131730,8 +132119,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.00499999989
 				shielded = True
-				temp = 192.77343755806245
-				tempExt = 192.78215965257587
+				temp = 243.95680392035007
+				tempExt = 243.95786556987429
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -131862,8 +132251,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 189.95469665522296
-				tempExt = 189.96367005790242
+				temp = 243.5645551134817
+				tempExt = 243.56555793839607
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -131956,8 +132345,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 189.95469665522296
-				tempExt = 189.96367005790242
+				temp = 243.5645551134817
+				tempExt = 243.56555793839607
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -132050,8 +132439,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 189.95469665522296
-				tempExt = 189.96367005790242
+				temp = 243.5645551134817
+				tempExt = 243.56555793839607
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -132144,8 +132533,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 189.95469665522296
-				tempExt = 189.96367005790242
+				temp = 243.5645551134817
+				tempExt = 243.56555793839607
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -132238,8 +132627,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 189.95469665522296
-				tempExt = 189.96367005790242
+				temp = 243.5645551134817
+				tempExt = 243.56555793839607
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -132332,8 +132721,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 189.95469665522296
-				tempExt = 189.96367005790242
+				temp = 243.5645551134817
+				tempExt = 243.56555793839607
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -132426,8 +132815,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 189.95469665522296
-				tempExt = 189.96367005790242
+				temp = 243.5645551134817
+				tempExt = 243.56555793839607
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -132520,8 +132909,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.0199999996
 				shielded = True
-				temp = 189.95469665522296
-				tempExt = 189.96367005790242
+				temp = 243.5645551134817
+				tempExt = 243.56555793839607
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -132615,8 +133004,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0599999987
 				shielded = True
-				temp = 193.26057013752049
-				tempExt = 193.26529038283422
+				temp = 244.10292063899084
+				tempExt = 244.10392426722771
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -132775,8 +133164,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0500000007
 				shielded = True
-				temp = 194.23047648484598
-				tempExt = 194.23237166240858
+				temp = 247.50227425410864
+				tempExt = 247.50332412339102
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -132821,7 +133210,7 @@ GAME
 					isEnabled = True
 					currentRotation = (0, 0, 0, 0)
 					storedAnimationTime = 0
-					storedAnimationSpeed = 1
+					storedAnimationSpeed = -1
 					deployState = RETRACTED
 					stagingEnabled = True
 					EVENTS
@@ -132920,8 +133309,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.00499999989
 				shielded = True
-				temp = 192.31001947274308
-				tempExt = 192.31544954178614
+				temp = 243.79851854609328
+				tempExt = 243.79951702225466
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -133052,8 +133441,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.00499999989
 				shielded = True
-				temp = 191.66496560961164
-				tempExt = 191.67231338586504
+				temp = 243.62371650871282
+				tempExt = 243.62471807593749
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -133184,8 +133573,8 @@ GAME
 				srfN = srfAttach, 43,COL_BOT
 				mass = 0.0500000007
 				shielded = True
-				temp = 193.50025024546278
-				tempExt = 193.5039128298894
+				temp = 244.60306084249709
+				tempExt = 244.60406329909077
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -133229,9 +133618,9 @@ GAME
 					name = ModuleAnimateGeneric
 					isEnabled = True
 					aniState = LOCKED
-					animSwitch = True
-					animTime = 0
-					animSpeed = 1
+					animSwitch = False
+					animTime = 0.999395132
+					animSpeed = 0
 					deployPercent = 100
 					animationIsDisabled = False
 					stagingEnabled = True
@@ -133268,8 +133657,8 @@ GAME
 				{
 					name = ModuleScienceExperiment
 					isEnabled = True
-					Deployed = False
-					Inoperable = False
+					Deployed = True
+					Inoperable = True
 					cooldownToGo = 0
 					stagingEnabled = True
 					EVENTS
@@ -133285,6 +133674,7 @@ GAME
 						ResetAction
 						{
 							actionGroup = None
+							active = False
 							wasActiveBeforePartWasAdjusted = False
 						}
 					}
@@ -133337,8 +133727,8 @@ GAME
 				attN = bottom, 43
 				mass = 0.100000001
 				shielded = False
-				temp = 186.6456472509966
-				tempExt = 186.64266568656805
+				temp = 243.02885519774796
+				tempExt = 242.84565184427512
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -133439,8 +133829,8 @@ GAME
 				attN = bottom, 59
 				mass = 0.0500000007
 				shielded = False
-				temp = 186.65171916231799
-				tempExt = 186.58783189692511
+				temp = 242.85894887236103
+				tempExt = 242.69898535786862
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -133627,8 +134017,8 @@ GAME
 				attN = bottom, 62
 				mass = 0.0500000007
 				shielded = False
-				temp = 186.66584381176497
-				tempExt = 186.61906682256063
+				temp = 242.69365639193151
+				tempExt = 242.54936797540577
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -133819,8 +134209,8 @@ GAME
 				attN = bottom, 61
 				mass = 1.5
 				shielded = False
-				temp = 186.68295445445523
-				tempExt = 186.65891767511019
+				temp = 242.61828208723531
+				tempExt = 242.66494281289047
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -133904,8 +134294,8 @@ GAME
 				attN = bottom, 62
 				mass = 0.0500000007
 				shielded = False
-				temp = 186.68035433681507
-				tempExt = 186.62277109418699
+				temp = 242.60856443627716
+				tempExt = 242.5182166945518
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -134092,8 +134482,8 @@ GAME
 				attN = bottom, 62
 				mass = 0.0500000007
 				shielded = False
-				temp = 186.68035433759735
-				tempExt = 186.62277109438369
+				temp = 242.6085041263552
+				tempExt = 242.5173107002054
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -134280,8 +134670,8 @@ GAME
 				attN = bottom, 62
 				mass = 0.0500000007
 				shielded = False
-				temp = 186.68035433702289
-				tempExt = 186.62277109417556
+				temp = 242.60850412525562
+				tempExt = 242.51731069980497
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -134468,8 +134858,8 @@ GAME
 				attN = bottom, 62
 				mass = 0.0500000007
 				shielded = False
-				temp = 186.68092973773437
-				tempExt = 186.63219391523273
+				temp = 242.6085041263552
+				tempExt = 242.5173107002054
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -134656,8 +135046,8 @@ GAME
 				attN = bottom, 62
 				mass = 0.0500000007
 				shielded = False
-				temp = 186.68035433731006
-				tempExt = 186.62277109427967
+				temp = 242.6085041263552
+				tempExt = 242.5173107002054
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -134845,8 +135235,8 @@ GAME
 				srfN = srfAttach, 32,collider
 				mass = 0.0149999997
 				shielded = False
-				temp = 187.23741799447876
-				tempExt = 187.27127882816848
+				temp = 242.11762485436697
+				tempExt = 241.8468727027182
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -135058,8 +135448,8 @@ GAME
 				srfN = srfAttach, 32,collider
 				mass = 0.0149999997
 				shielded = False
-				temp = 187.23741799447876
-				tempExt = 187.27127882816848
+				temp = 242.11294334572673
+				tempExt = 241.84510888689357
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -135247,8 +135637,8 @@ GAME
 				srfN = srfAttach, 32,collider
 				mass = 0.0149999997
 				shielded = False
-				temp = 187.23741799447876
-				tempExt = 187.27127882816848
+				temp = 242.11294334572673
+				tempExt = 241.84510888689357
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -135436,8 +135826,8 @@ GAME
 				srfN = srfAttach, 32,collider
 				mass = 0.0149999997
 				shielded = False
-				temp = 187.23741799447876
-				tempExt = 187.27127882816848
+				temp = 242.11534352411579
+				tempExt = 241.84601212663088
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -135624,8 +136014,8 @@ GAME
 				attN = bottom, 29
 				mass = 0.0500000007
 				shielded = False
-				temp = 187.43125185857642
-				tempExt = 187.43418752514566
+				temp = 242.34906608545776
+				tempExt = 242.12410818877689
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -135812,8 +136202,8 @@ GAME
 				attN = bottom, 29
 				mass = 0.0500000007
 				shielded = False
-				temp = 187.43125185855061
-				tempExt = 187.43418752513173
+				temp = 242.34906608545776
+				tempExt = 242.12410818877689
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -136000,8 +136390,8 @@ GAME
 				attN = bottom, 29
 				mass = 0.0500000007
 				shielded = False
-				temp = 187.43240507048358
-				tempExt = 187.44398478579984
+				temp = 242.34906608800281
+				tempExt = 242.12410818967743
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -136188,8 +136578,8 @@ GAME
 				attN = bottom, 29
 				mass = 0.0500000007
 				shielded = False
-				temp = 187.43125185856357
-				tempExt = 187.4341875251387
+				temp = 242.34906608673023
+				tempExt = 242.12410818922712
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -136356,7 +136746,7 @@ GAME
 				Gear = False, 0
 				Light = False, 0
 				RCS = False, 0
-				SAS = False, 786204.76571882
+				SAS = False, 799073.430086505
 				Brakes = False, 0
 				Abort = False, 0
 				Custom01 = False, 0
@@ -136382,8 +136772,8 @@ GAME
 			{
 				MANEUVER
 				{
-					UT = 792967.78683920344
-					dV = 0.26182625584297403,21.652128676347797,-2.2520096670980649
+					UT = 2728137.2839015592
+					dV = 0,0,0
 				}
 			}
 			CTRLSTATE
@@ -136460,11 +136850,11 @@ GAME
 			{
 				SMA = NaN
 				ECC = 1
-				INC = 122.22010018145407
-				LPE = 90.000000000000014
-				LAN = 7.0535554526821329
+				INC = 90.004617144074587
+				LPE = 90
+				LAN = 121.48869400046681
 				MNA = 0
-				EPH = 782490.34855559701
+				EPH = 808606.7696869151
 				REF = 2
 			}
 			PART
@@ -136890,13 +137280,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 0
+				SMA = NaN
 				ECC = 1
-				INC = 102.05287371923426
+				INC = 90.004617144074587
 				LPE = 90
-				LAN = 187.45654592594596
+				LAN = 121.48869400046681
 				MNA = 0
-				EPH = 782490.34855559701
+				EPH = 808606.7696869151
 				REF = 2
 			}
 			PART
@@ -146025,13 +146415,13 @@ GAME
 			cMod = 0
 			ORBIT
 			{
-				SMA = 31633.501753489229
+				SMA = 23677727.22233614
 				ECC = 0.99999999999999989
-				INC = 93.583694014324664
+				INC = 89.977852338788864
 				LPE = 90
-				LAN = 126.46889061720492
-				MNA = 3.1415926864625696
-				EPH = 782490.34855559701
+				LAN = 167.18879952635837
+				MNA = 3.1415926207170166
+				EPH = 808606.7696869151
 				REF = 3
 			}
 			PART
@@ -149265,11 +149655,11 @@ GAME
 			{
 				SMA = NaN
 				ECC = 1
-				INC = 59.587123382447722
+				INC = 90.004617144074587
 				LPE = 90
-				LAN = 252.40925132057311
+				LAN = 121.48869400046681
 				MNA = 0
-				EPH = 782490.34855559701
+				EPH = 808606.7696869151
 				REF = 2
 			}
 			PART
@@ -149472,11 +149862,11 @@ GAME
 			{
 				SMA = NaN
 				ECC = 1
-				INC = 59.587619737064209
+				INC = 90.004617144074587
 				LPE = 90
-				LAN = 252.40829184402639
+				LAN = 121.48869400046681
 				MNA = 0
-				EPH = 782490.34855559701
+				EPH = 808606.7696869151
 				REF = 2
 			}
 			PART
@@ -188528,7 +188918,7 @@ GAME
 			persistentId = 112214209
 			name = 返回01
 			type = Station
-			sit = ESCAPING
+			sit = SUB_ORBITAL
 			landed = False
 			skipGroundPositioning = False
 			skipGroundPositioningForDroppedPart = False
@@ -188537,18 +188927,18 @@ GAME
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
-			met = 3011.2947570559336
+			met = 40455.347135249875
 			lct = 767053.66795175988
-			lastUT = 770064.98270881583
-			distanceTraveled = 494195.88115661452
+			lastUT = 807509.03508700978
+			distanceTraveled = 1846558.4751638339
 			root = 0
-			lat = 0.010603711553106016
-			lon = 5.4869136548368633
-			alt = 101361.82515892194
-			hgt = 101361.828
-			nrm = 0.639008284,0.114679843,-0.76060313
-			rot = 0.638092518,-0.292420745,-0.304714441,0.643799067
-			CoM = -0.00164651871,-6.68645954,0.0061621666
+			lat = -0.050769889180339943
+			lon = -123.72071100816673
+			alt = 72059.587380228215
+			hgt = 72059.5859
+			nrm = -0.00854341686,1.13657734E-05,-0.999963582
+			rot = -0.000792723615,0.285948515,-0.00105031859,0.958244085
+			CoM = -0.00168204587,-6.74932432,0.00629193056
 			stg = 2
 			prst = False
 			ref = 3411005389
@@ -188561,18 +188951,18 @@ GAME
 			OverrideAxisControl = 0,0,0,0
 			OverrideGroupNames = ,,,
 			altDispState = ASL
-			cPch = 0.2529996
-			cHdg = -7.335998
+			cPch = 0.3200001
+			cHdg = -1.545999
 			cMod = 0
 			ORBIT
 			{
-				SMA = 5981588.3852918101
-				ECC = 0.89132522610458731
-				INC = 0.026836003279706842
-				LPE = 0.98054107832004311
-				LAN = 110.64398142543473
-				MNA = 3.8213555775116936
-				EPH = 776095.8535477327
+				SMA = 1529002.9605134234
+				ECC = 0.57529526313969603
+				INC = 0.15070153434408093
+				LPE = 175.09217585596724
+				LAN = 296.42887805167453
+				MNA = 0.097789934778068133
+				EPH = 807509.01508700976
 				REF = 1
 			}
 			PART
@@ -188601,8 +188991,8 @@ GAME
 				attN = bottom, 1
 				mass = 0.200000003
 				shielded = False
-				temp = 262.33300915001689
-				tempExt = 261.79664119326077
+				temp = 989.70356660436948
+				tempExt = 877.83565691652382
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -188698,7 +189088,7 @@ GAME
 					isEnabled = True
 					actuatorModeCycle = 0
 					authorityLimiter = 100
-					stateString = 空闲
+					stateString = 运转中
 					stagingEnabled = True
 					WheelState = Active
 					EVENTS
@@ -189645,7 +190035,7 @@ GAME
 						MechJebModuleSmartASS
 						{
 							mode = ORBITAL
-							target = OFF
+							target = NORMAL_PLUS
 							advReference = INERTIAL
 							advDirection = FORWARD
 							forceRol = False
@@ -189922,7 +190312,7 @@ GAME
 							MarkUT = 767053.6879517599
 							DeltaVExpended = NaN
 							DragLosses = NaN
-							GravityLosses = 1.0209688367759031
+							GravityLosses = -2089.5406191504317
 							SteeringLosses = NaN
 							MarkLAN = 32.247312093614873
 							MarkLatitude = -0.001324471600410979
@@ -189954,9 +190344,6 @@ GAME
 					ACTIONS
 					{
 					}
-					UPGRADESAPPLIED
-					{
-					}
 					Log
 					{
 						flight = 0
@@ -189968,11 +190355,14 @@ GAME
 						0 = Escape,Mun
 						0 = Flyby,Kerbin
 					}
+					UPGRADESAPPLIED
+					{
+					}
 				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 978.1164314956352
+					amount = 723.96482847757477
 					maxAmount = 1000
 					flowState = True
 					isTweakable = True
@@ -190013,8 +190403,8 @@ GAME
 				attN = top, 0
 				mass = 0.604000092
 				shielded = False
-				temp = 262.46695666449796
-				tempExt = 262.61506009094967
+				temp = 583.8290274883318
+				tempExt = 631.98618408726543
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -190089,7 +190479,7 @@ GAME
 					isEnabled = True
 					actuatorModeCycle = 0
 					authorityLimiter = 100
-					stateString = 空闲
+					stateString = 运转中
 					stagingEnabled = True
 					WheelState = Active
 					EVENTS
@@ -190542,9 +190932,6 @@ GAME
 					ACTIONS
 					{
 					}
-					UPGRADESAPPLIED
-					{
-					}
 					Log
 					{
 						flight = 0
@@ -190556,11 +190943,14 @@ GAME
 						0 = Escape,Mun
 						0 = Flyby,Kerbin
 					}
+					UPGRADESAPPLIED
+					{
+					}
 				}
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 48.905821574757148
+					amount = 36.198241423815467
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -190606,8 +190996,8 @@ GAME
 				attN = bottom, 12
 				mass = 2
 				shielded = False
-				temp = 262.7888180585847
-				tempExt = 263.26468356181982
+				temp = 626.28177642669289
+				tempExt = 649.28326666952876
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -190665,7 +191055,7 @@ GAME
 				RESOURCE
 				{
 					name = LiquidFuel
-					amount = 209.08382678729711
+					amount = 188.50012829931791
 					maxAmount = 1440
 					flowState = True
 					isTweakable = True
@@ -190676,7 +191066,7 @@ GAME
 				RESOURCE
 				{
 					name = Oxidizer
-					amount = 169.40908874648338
+					amount = 144.2512338272164
 					maxAmount = 1760
 					flowState = True
 					isTweakable = True
@@ -190712,8 +191102,8 @@ GAME
 				srfN = srfAttach, 2,collider
 				mass = 0.100000001
 				shielded = False
-				temp = 262.61609941184668
-				tempExt = 262.78164028258789
+				temp = 617.73185030522393
+				tempExt = 637.1812167064536
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -190874,8 +191264,8 @@ GAME
 				srfN = srfAttach, 2,collider
 				mass = 0.100000001
 				shielded = False
-				temp = 262.61609941184668
-				tempExt = 262.78164028258789
+				temp = 617.73213732448551
+				tempExt = 637.13830945305028
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -191036,8 +191426,8 @@ GAME
 				srfN = srfAttach, 2,collider
 				mass = 0.100000001
 				shielded = False
-				temp = 262.61609941184668
-				tempExt = 262.78164028258789
+				temp = 618.44616050603429
+				tempExt = 637.36604198884083
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -191198,8 +191588,8 @@ GAME
 				srfN = srfAttach, 2,collider
 				mass = 0.100000001
 				shielded = False
-				temp = 262.61609941184668
-				tempExt = 262.78164028258789
+				temp = 617.73112813208695
+				tempExt = 637.13798756751362
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -191360,8 +191750,8 @@ GAME
 				srfN = srfAttach, 2,collider
 				mass = 0.075000003
 				shielded = False
-				temp = 262.53184373645701
-				tempExt = 262.76487693410991
+				temp = 555.93648397894833
+				tempExt = 618.88467097036153
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -191522,8 +191912,8 @@ GAME
 				srfN = srfAttach, 2,collider
 				mass = 0.075000003
 				shielded = False
-				temp = 262.53184373645701
-				tempExt = 262.76487693410991
+				temp = 555.97842859527202
+				tempExt = 618.84578932927241
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -191684,8 +192074,8 @@ GAME
 				srfN = srfAttach, 2,collider
 				mass = 0.075000003
 				shielded = False
-				temp = 262.53184373645701
-				tempExt = 262.76487693410991
+				temp = 556.79686759387255
+				tempExt = 619.09308889656825
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -191846,8 +192236,8 @@ GAME
 				srfN = srfAttach, 2,collider
 				mass = 0.075000003
 				shielded = False
-				temp = 262.53184373649088
-				tempExt = 262.76487693412099
+				temp = 555.94612435492172
+				tempExt = 618.8360279599691
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -192005,8 +192395,8 @@ GAME
 				srfN = srfAttach, 2,collider
 				mass = 0.0149999997
 				shielded = False
-				temp = 262.62755532804374
-				tempExt = 262.90444541397454
+				temp = 639.04988459484969
+				tempExt = 647.89679808010226
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -192112,8 +192502,8 @@ GAME
 				attN = bottom, 13
 				mass = 2
 				shielded = False
-				temp = 264.15741379656367
-				tempExt = 264.47636831415355
+				temp = 677.20850245248016
+				tempExt = 675.67888995273108
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -192217,8 +192607,8 @@ GAME
 				attN = bottom, 14
 				mass = 2
 				shielded = False
-				temp = 266.0599239638567
-				tempExt = 266.00780799519777
+				temp = 703.32044546853069
+				tempExt = 690.08294517923741
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -192322,8 +192712,8 @@ GAME
 				attN = bottom, -1
 				mass = 1.75
 				shielded = False
-				temp = 270.17360131597889
-				tempExt = 268.6694408112271
+				temp = 680.73088430336611
+				tempExt = 675.52810809952473
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -192527,7 +192917,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.0868655741
+					animState = 0
 					stagingEnabled = True
 					EVENTS
 					{
@@ -192543,7 +192933,7 @@ GAME
 				{
 					name = FXModuleAnimateThrottle
 					isEnabled = True
-					animState = 0.0868655741
+					animState = 0
 					stagingEnabled = True
 					EVENTS
 					{
@@ -192661,8 +193051,8 @@ GAME
 				attN = bottom, -1
 				mass = 0.0500000007
 				shielded = False
-				temp = 262.5334425236623
-				tempExt = 262.31988321888844
+				temp = 481.42008673173859
+				tempExt = 698.8752877470273
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -192979,8 +193369,8 @@ GAME
 				attN = bottom, 0
 				mass = 0.100000001
 				shielded = False
-				temp = 255.21632005056321
-				tempExt = 256.34483207890952
+				temp = 779.77076044945977
+				tempExt = 798.12200643743915
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -193025,7 +193415,7 @@ GAME
 					isEnabled = True
 					actuatorModeCycle = 0
 					authorityLimiter = 100
-					stateString = 空闲
+					stateString = 运转中
 					stagingEnabled = True
 					WheelState = Active
 					EVENTS
@@ -193103,8 +193493,8 @@ GAME
 				attN = bottom, 16
 				mass = 0.0500000007
 				shielded = False
-				temp = 252.70126694058834
-				tempExt = 253.56131911977991
+				temp = 821.63421101648828
+				tempExt = 794.42308004156337
 				tempExtUnexp = 4
 				staticPressureAtm = 0
 				expt = 0.5
@@ -193270,7 +193660,7 @@ GAME
 				SAS = False, 769986.600169683
 				Brakes = False, 0
 				Abort = False, 0
-				Custom01 = False, 0
+				Custom01 = True, 795248.862708369
 				Custom02 = False, 0
 				Custom03 = False, 0
 				Custom04 = False, 0
@@ -193293,14 +193683,14 @@ GAME
 			{
 				MANEUVER
 				{
-					UT = 795194.78401511372
+					UT = 813739.48993567633
 					dV = 0,0,0
 				}
 			}
 			CTRLSTATE
 			{
-				pitch = 0
-				yaw = 0
+				pitch = -3.08390299E-05
+				yaw = -3.25264846E-05
 				roll = 0
 				trimPitch = 0
 				trimYaw = 0
@@ -194949,10 +195339,12 @@ GAME
 					DeployAction
 					{
 						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
 					}
 					CutAction
 					{
 						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
 					}
 				}
 				UPGRADESAPPLIED
@@ -194961,7 +195353,16 @@ GAME
 			}
 			INVENTORY
 			{
+				name = ModuleInventoryPart
+				isEnabled = True
+				stagingEnabled = True
 				inventory = evaChute,evaJetpack
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
 				STOREDPARTS
 				{
 					STOREDPART
@@ -194977,7 +195378,7 @@ GAME
 							cid = 4294883938
 							uid = 0
 							mid = 0
-							persistentId = 0
+							persistentId = 983044435
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -195068,7 +195469,7 @@ GAME
 							cid = 4294884000
 							uid = 0
 							mid = 0
-							persistentId = 0
+							persistentId = 1740771259
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -195157,6 +195558,9 @@ GAME
 							}
 						}
 					}
+				}
+				UPGRADESAPPLIED
+				{
 				}
 			}
 			CAREER_LOG
@@ -195343,6 +195747,8 @@ GAME
 				42 = Orbit,Kerbin
 				42 = Flyby,Minmus
 				42 = Orbit,Minmus
+				42 = ExitVessel,Minmus
+				42 = BoardVessel,Minmus
 			}
 		}
 		KERBAL
@@ -196528,6 +196934,8 @@ GAME
 				39 = Flight,Kerbin
 				39 = Suborbit,Kerbin
 				39 = Orbit,Kerbin
+				39 = Flyby,Minmus
+				39 = Orbit,Minmus
 			}
 		}
 		KERBAL
@@ -197671,10 +198079,12 @@ GAME
 					DeployAction
 					{
 						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
 					}
 					CutAction
 					{
 						actionGroup = None
+						wasActiveBeforePartWasAdjusted = False
 					}
 				}
 				UPGRADESAPPLIED
@@ -197683,7 +198093,16 @@ GAME
 			}
 			INVENTORY
 			{
+				name = ModuleInventoryPart
+				isEnabled = True
+				stagingEnabled = True
 				inventory = evaChute,evaJetpack
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
 				STOREDPARTS
 				{
 					STOREDPART
@@ -197699,7 +198118,7 @@ GAME
 							cid = 4294883980
 							uid = 0
 							mid = 0
-							persistentId = 0
+							persistentId = 1320281058
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -197790,7 +198209,7 @@ GAME
 							cid = 4294884042
 							uid = 0
 							mid = 0
-							persistentId = 0
+							persistentId = 2446312214
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -197880,6 +198299,9 @@ GAME
 						}
 					}
 				}
+				UPGRADESAPPLIED
+				{
+				}
 			}
 			CAREER_LOG
 			{
@@ -197919,6 +198341,10 @@ GAME
 				7 = Flight,Kerbin
 				7 = Suborbit,Kerbin
 				7 = Orbit,Kerbin
+				7 = Flyby,Minmus
+				7 = Orbit,Minmus
+				7 = ExitVessel,Minmus
+				7 = BoardVessel,Minmus
 			}
 		}
 		KERBAL
@@ -201972,7 +202398,7 @@ GAME
 							cid = 4294884042
 							uid = 0
 							mid = 0
-							persistentId = 3251269959
+							persistentId = 1229367944
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -202074,7 +202500,7 @@ GAME
 							cid = 4292351264
 							uid = 0
 							mid = 0
-							persistentId = 4000193451
+							persistentId = 1175944474
 							launchID = 0
 							parent = 0
 							position = 0,0,0
@@ -202179,6 +202605,10 @@ GAME
 				2 = Orbit,Kerbin
 				2 = ExitVessel,Kerbin
 				2 = BoardVessel,Kerbin
+				2 = Flyby,Minmus
+				2 = Orbit,Minmus
+				2 = ExitVessel,Minmus
+				2 = BoardVessel,Minmus
 			}
 		}
 		KERBAL
@@ -204354,7 +204784,7 @@ GAME
 			dumb = 0.259960383
 			badS = False
 			veteran = False
-			tour = False
+			tour = True
 			state = Assigned
 			inactive = False
 			inactiveTimeEnd = 0
@@ -204386,6 +204816,8 @@ GAME
 				1 = Flight,Kerbin
 				1 = Suborbit,Kerbin
 				1 = Orbit,Kerbin
+				1 = Flyby,Minmus
+				1 = Orbit,Minmus
 			}
 		}
 		KERBAL
@@ -204658,6 +205090,7 @@ GAME
 				0 = Flight,Kerbin
 				0 = Suborbit,Kerbin
 				0 = Orbit,Kerbin
+				0 = Flyby,Minmus
 			}
 		}
 		KERBAL
@@ -204701,6 +205134,7 @@ GAME
 				0 = Flight,Kerbin
 				0 = Suborbit,Kerbin
 				0 = Orbit,Kerbin
+				0 = Flyby,Minmus
 			}
 		}
 		KERBAL
@@ -204713,7 +205147,7 @@ GAME
 			dumb = 0.50057292
 			badS = False
 			veteran = False
-			tour = False
+			tour = True
 			state = Assigned
 			inactive = False
 			inactiveTimeEnd = 0
@@ -204744,6 +205178,7 @@ GAME
 				0 = Flight,Kerbin
 				0 = Suborbit,Kerbin
 				0 = Orbit,Kerbin
+				0 = Flyby,Minmus
 			}
 		}
 		KERBAL
@@ -204954,7 +205389,7 @@ GAME
 			gExperienced = 0
 			outDueToG = False
 			ToD = 0
-			idx = 2
+			idx = 0
 			extraXP = 0
 			hasHelmetOn = False
 			hasNeckRingOn = False
@@ -205951,13 +206386,5 @@ GAME
 	MESSAGESYSTEM
 	{
 		flash = True
-		MESSAGE
-		{
-			title = 合同条件完成
-			message = <b>带5名游客安全地到达目的地并返回。</b>~n~n环绕Minmus进行在轨飞行已完成！~n~n<color=#B4D455><sprite="CurrencySpriteAsset" name="Funds" tint=1> 6,094 <color=#feb200>(-6,094)</color>  </color><color=#6DCFF6><sprite="CurrencySpriteAsset" name="Science" tint=1> 1 <color=#caff00>(+1)</color>  </color>
-			color = 2
-			icon = 3
-			read = False
-		}
 	}
 }
